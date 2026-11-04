@@ -159,6 +159,8 @@ document.addEventListener("click", (ev) => {
   if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
   const a = ev.target.closest("a[href]");
   if (!a || (a.target && a.target !== "_self") || a.hasAttribute("download")) return;
+  // Links to a section of the same page (the contents list) just scroll.
+  if ((a.getAttribute("href") || "").startsWith("#")) return;
   const url = new URL(a.href, location.href);
   if (url.origin !== location.origin) return;
   const page = pageFor(url.pathname);
