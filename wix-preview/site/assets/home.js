@@ -5,6 +5,14 @@ import { categoriesReady, card, catHref, esc } from "/assets/site.js";
 
 const $ = (s) => document.querySelector(s);
 
+// The topic shelves load at the same time as the latest articles.
+const shelvesReady = categoriesReady.then((cats) =>
+  Promise.all(
+    [...cats].sort((a, b) => b.postCount - a.postCount).slice(0, 4)
+      .map((c) => fetchPosts({ categoryId: c.id, limit: 4 }).then((r) => ({ c, posts: r.posts })).catch(() => ({ c, posts: [] }))),
+  ),
+);
+
 async function main() {
   const [page, cats] = await Promise.all([fetchPosts({ limit: 18 }), categoriesReady]);
   const posts = page.posts;
@@ -22,11 +30,7 @@ async function main() {
   if (more.length) $("[data-more]").innerHTML = more.map(card.rank).join("");
   else $("[data-more-section]").hidden = true;
 
-  // Shelves: the four topics with the most articles.
-  const top = [...cats].sort((a, b) => b.postCount - a.postCount).slice(0, 4);
-  const shelves = await Promise.all(
-    top.map((c) => fetchPosts({ categoryId: c.id, limit: 4 }).then((r) => ({ c, posts: r.posts })).catch(() => ({ c, posts: [] }))),
-  );
+  const shelves = await shelvesReady;
   $("[data-shelves]").innerHTML = shelves
     .filter((s) => s.posts.length)
     .map(({ c, posts }) => `

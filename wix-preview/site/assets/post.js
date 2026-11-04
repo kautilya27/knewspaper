@@ -1,14 +1,15 @@
 // One article (post.html?slug=…) on the Wix post store, with its comments.
 import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
-import { categoriesReady, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
+import { imgSrc, imgSrcSet } from "/js/wix/media.js";
+import { cachedCategories, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
 
 const root = document.querySelector("[data-article]");
 const slug = (new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
 const mediaId = (url) => (String(url).match(/\/media\/([^/?#]+)/) || [])[1] || "";
 let mounted = false;
 
-const store = createPostStore({ slug });
+const store = createPostStore({ slug, ...(cachedCategories ? { initialCategories: cachedCategories } : {}) });
 
 function render(s) {
   if (s.notFound || !slug) {
@@ -65,7 +66,7 @@ function mount(p, s) {
         </div>
       </div>
     </header>
-    ${p.coverUrl ? `<figure class="wrap article__hero"><img src="${esc(p.coverUrl)}" alt="${esc(p.coverAlt)}" fetchpriority="high" decoding="async"></figure>` : ""}
+    ${p.coverUrl ? `<figure class="wrap article__hero"><img src="${esc(imgSrc(p.coverUrl, 1280, 720))}" srcset="${esc(imgSrcSet(p.coverUrl, [640, 960, 1280, 1600], 0.5625))}" sizes="(min-width: 1240px) 1160px, 100vw" width="1280" height="720" alt="${esc(p.coverAlt)}" fetchpriority="high" decoding="async"></figure>` : ""}
     <div class="wrap article__layout">
       <nav class="toc" aria-labelledby="toc-title" hidden><h2 id="toc-title" class="toc__title">In this article</h2><ol data-toc></ol></nav>
       <div class="prose" data-body></div>
@@ -168,7 +169,6 @@ function mountComments(referenceId) {
   comments.start();
 }
 
-await categoriesReady;
 store.subscribe(render);
 render(store.getState());
 store.start();

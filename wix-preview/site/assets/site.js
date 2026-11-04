@@ -1,6 +1,7 @@
 // Shared page code: category navigation, story cards, newsletter, copy link.
 // All content comes from the Wix blog layer in /js/wix/ (installed by Wix).
 import { fetchBlogCategories } from "/js/wix/taxonomy.js";
+import { imgSrc, imgSrcSet } from "/js/wix/media.js";
 
 export const EMAIL = "knewspaper.in@gmail.com";
 
@@ -11,9 +12,23 @@ export const postHref = (slug) => "/post/" + encodeURIComponent(slug);
 export const catHref = (slug) => "/blog/categories/" + encodeURIComponent(slug);
 
 // Categories with posts, in the blog's menu order. [] when the read fails.
-export const categoriesReady = fetchBlogCategories()
-  .then((list) => list.filter((c) => c.postCount > 0))
-  .catch(() => []);
+// Kept in the browser for 30 minutes so each page doesn't fetch them again.
+const CAT_KEY = "knews.categories.v1";
+const CAT_TTL = 30 * 60 * 1000;
+export const cachedCategories = (() => {
+  try {
+    const c = JSON.parse(localStorage.getItem(CAT_KEY) || "null");
+    return c && Date.now() - c.at < CAT_TTL && Array.isArray(c.list) ? c.list : null;
+  } catch { return null; }
+})();
+export const categoriesReady = cachedCategories
+  ? Promise.resolve(cachedCategories.filter((c) => c.postCount > 0))
+  : fetchBlogCategories()
+      .then((list) => {
+        if (list.length) try { localStorage.setItem(CAT_KEY, JSON.stringify({ at: Date.now(), list })); } catch {}
+        return list.filter((c) => c.postCount > 0);
+      })
+      .catch(() => []);
 
 let catById = new Map();
 categoriesReady.then((list) => { catById = new Map(list.map((c) => [c.id, c])); });
@@ -31,18 +46,27 @@ export function meta(p, { author = false } = {}) {
   if (p.minutesToRead) bits.push(`<span>${p.minutesToRead} min read</span>`);
   return bits.length ? `<p class="meta">${bits.join("")}</p>` : "";
 }
-const cover = (p, { eager = false } = {}) =>
-  p.coverUrl
-    ? `<div class="story__media"><img class="cover" src="${esc(p.coverUrl)}" alt="${esc(p.coverAlt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></div>`
-    : "";
+// Card images at the size they are shown, not the full-size cover.
+const SIZES = {
+  lead: { w: 960, ratio: 0.625, widths: [480, 720, 960, 1280], sizes: "(min-width: 1100px) 760px, (min-width: 760px) 62vw, 100vw" },
+  stack: { w: 264, ratio: 0.75, widths: [160, 264, 400], sizes: "(min-width: 760px) 132px, 112px" },
+  row: { w: 440, ratio: 0.667, widths: [240, 360, 480], sizes: "(min-width: 640px) 220px, 34vw" },
+  tile: { w: 480, ratio: 0.667, widths: [320, 480, 640], sizes: "(min-width: 900px) 25vw, 50vw" },
+};
+const cover = (p, { eager = false, size = "row" } = {}) => {
+  if (!p.coverUrl) return "";
+  const s = SIZES[size];
+  const h = Math.round(s.w * s.ratio);
+  return `<div class="story__media"><img class="cover" src="${esc(imgSrc(p.coverUrl, s.w, h))}" srcset="${esc(imgSrcSet(p.coverUrl, s.widths, s.ratio))}" sizes="${s.sizes}" width="${s.w}" height="${h}" alt="${esc(p.coverAlt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></div>`;
+};
 const title = (p, tag = "h3", cls = "") => `<${tag} class="story__title ${cls}"><a href="${postHref(p.slug)}">${esc(p.title)}</a></${tag}>`;
 const noMedia = (p) => (p.coverUrl ? "" : " story--text");
 
 export const card = {
-  lead: (p) => `<article class="story story--lead${noMedia(p)}">${cover(p, { eager: true })}<div class="story__body">${kicker(p)}${title(p, "h2", "story__title--lead")}${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta(p, { author: true })}</div></article>`,
-  stack: (p) => `<article class="story story--stack${noMedia(p)}">${cover(p)}<div class="story__body">${kicker(p)}${title(p)}${meta(p)}</div></article>`,
+  lead: (p) => `<article class="story story--lead${noMedia(p)}">${cover(p, { eager: true, size: "lead" })}<div class="story__body">${kicker(p)}${title(p, "h2", "story__title--lead")}${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta(p, { author: true })}</div></article>`,
+  stack: (p) => `<article class="story story--stack${noMedia(p)}">${cover(p, { size: "stack" })}<div class="story__body">${kicker(p)}${title(p)}${meta(p)}</div></article>`,
   row: (p, level = "h3") => `<article class="story story--row${noMedia(p)}"><div class="story__body">${kicker(p)}${title(p, level)}${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta(p)}</div>${cover(p)}</article>`,
-  tile: (p) => `<article class="story story--tile${noMedia(p)}">${cover(p)}<div class="story__body">${title(p)}${meta(p)}</div></article>`,
+  tile: (p) => `<article class="story story--tile${noMedia(p)}">${cover(p, { size: "tile" })}<div class="story__body">${title(p)}${meta(p)}</div></article>`,
   rank: (p) => `<li class="rank">${title(p, "h3", "story__title--small")}${kicker(p)}</li>`,
 };
 

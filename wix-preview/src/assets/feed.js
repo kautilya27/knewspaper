@@ -2,7 +2,7 @@
 // Wix blog feed store: paging and the topic filter run on Wix.
 import { createBlogFeedStore } from "/js/wix/blog-feed-store.js";
 import { fetchCategoryBySlug } from "/js/wix/taxonomy.js";
-import { categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
+import { cachedCategories, categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
 
 const list = document.querySelector("[data-rows]");
 const status = document.querySelector("[data-status]");
@@ -15,7 +15,7 @@ async function main() {
   let category = null;
   if (isCategory) {
     const slug = new URLSearchParams(location.search).get("slug") || "";
-    category = slug ? await fetchCategoryBySlug(slug) : null;
+    category = slug ? (cachedCategories || []).find((c) => c.slug === slug) || (await fetchCategoryBySlug(slug)) : null;
     if (!category) {
       titleEl.textContent = "Topic not found";
       introEl.innerHTML = 'This topic doesn’t exist or has no articles. <a href="/blog">See all articles</a>.';
@@ -33,8 +33,8 @@ async function main() {
     if (md) md.content = introEl.textContent;
   }
 
-  await categoriesReady;
-  const feed = createBlogFeedStore({ initialCategoryId: category ? category.id : null, pageSize: 20 });
+  // Seeded with the cached topics so the store doesn't fetch them again.
+  const feed = createBlogFeedStore({ initialCategoryId: category ? category.id : null, pageSize: 20, ...(cachedCategories ? { initialCategories: cachedCategories } : {}) });
   const render = (s) => {
     if (s.posts === null) { status.textContent = "Loading articles…"; return; }
     list.innerHTML = s.posts.map((p) => card.row(p, "h2")).join("");
@@ -48,6 +48,8 @@ async function main() {
   feed.subscribe(render);
   render(feed.getState());
   feed.start();
+  // Topic labels on the rows appear as soon as the topics are known.
+  categoriesReady.then(() => render(feed.getState()));
 }
 
 main().catch((err) => {
