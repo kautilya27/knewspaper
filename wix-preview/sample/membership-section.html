@@ -1,0 +1,250 @@
+<style>
+/* Write for us: plans + submission (sample) */
+.wfu-plans{margin-top:40px}
+.wfu-eyebrow{font:700 .78rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.wfu-h2{font-family:var(--serif);font-size:1.75rem;line-height:1.15;margin:6px 0 8px;color:var(--ink)}
+.wfu-sub{color:var(--ink-2);max-width:60ch}
+.wfu-single{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+.wfu-single h3{font:700 1.15rem/1.2 var(--sans);margin:0}
+.wfu-single p{margin:4px 0 0;color:var(--ink-2);font-size:.95rem}
+.wfu-price{font:700 1.9rem/1 var(--serif);color:var(--ink);white-space:nowrap}
+.wfu-price small{font:500 .85rem var(--sans);color:var(--ink-3);margin-left:4px}
+.wfu-member-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:34px}
+.wfu-member-head h3{font:700 1.15rem/1.2 var(--sans);margin:0}
+.wfu-member-head p{margin:0;color:var(--ink-3);font-size:.9rem}
+.wfu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+@media (min-width:860px){.wfu-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.wfu-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:18px 16px 16px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);text-align:left;cursor:pointer;font:inherit;color:inherit}
+.wfu-card:hover{border-color:var(--blue)}
+.wfu-card[aria-pressed="true"],.wfu-single[data-selected="true"]{border-color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue);background:#f3f6fb}
+.wfu-card__count{font:700 1.05rem/1.2 var(--sans)}
+.wfu-card__price{font:700 1.6rem/1 var(--serif);margin-top:4px}
+.wfu-card__per{font-size:.85rem;color:var(--ink-3)}
+.wfu-badge{position:absolute;top:-10px;left:14px;background:var(--marigold);color:var(--ink);font:700 .72rem/1 var(--sans);padding:5px 8px;border-radius:999px}
+.wfu-includes{display:grid;gap:8px;margin:20px 0 0;padding:0;list-style:none;color:var(--ink-2);font-size:.95rem}
+@media (min-width:700px){.wfu-includes{grid-template-columns:1fr 1fr}}
+.wfu-includes li{display:flex;gap:8px}
+.wfu-includes li::before{content:"✓";color:var(--blue);font-weight:700}
+.wfu-steps{counter-reset:s;display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none}
+@media (min-width:560px){.wfu-steps{grid-template-columns:1fr 1fr}}
+.wfu-steps li{counter-increment:s;padding:16px;border-radius:10px;background:var(--paper);font-size:.93rem;color:var(--ink-2)}
+.wfu-steps li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font:700 .9rem var(--sans);margin-bottom:8px}
+.wfu-steps strong{display:block;color:var(--ink);margin-bottom:2px}
+.wfu-form{margin-top:18px;padding:22px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);display:grid;gap:16px}
+.wfu-row{display:grid;gap:16px}
+@media (min-width:700px){.wfu-row--2{grid-template-columns:1fr 1fr}}
+.wfu-field{display:grid;gap:6px}
+.wfu-field label,.wfu-legend{font:600 .92rem var(--sans);color:var(--ink)}
+.wfu-field input,.wfu-field select,.wfu-field textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--rule);border-radius:var(--radius);font:400 1rem var(--sans);color:var(--ink);background:#fff}
+.wfu-field input,.wfu-field select{height:48px;min-height:0}
+.wfu-field textarea{min-height:180px;resize:vertical;line-height:1.5}
+.wfu-field input:focus-visible,.wfu-field select:focus-visible,.wfu-field textarea:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.wfu-hint{font-size:.84rem;color:var(--ink-3);display:flex;justify-content:space-between;gap:8px}
+.wfu-hint [data-over]{color:#b42318;font-weight:600}
+.wfu-slug{display:flex;align-items:stretch;border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;background:#fff}
+.wfu-slug span{display:flex;align-items:center;padding:0 10px;background:var(--paper);color:var(--ink-3);font-size:.9rem;white-space:nowrap;border-right:1px solid var(--rule)}
+.wfu-slug input{border:0!important;min-width:0}
+.wfu-serp{border:1px dashed var(--rule);border-radius:8px;padding:12px 14px;background:var(--paper)}
+.wfu-serp__url{font-size:.82rem;color:#1e6a39;word-break:break-all}
+.wfu-serp__title{font:500 1.05rem/1.3 var(--sans);color:#1a0dab;margin:2px 0}
+.wfu-serp__desc{font-size:.88rem;color:var(--ink-2)}
+.wfu-drop{display:grid;place-items:center;gap:6px;min-height:150px;padding:16px;border:1.5px dashed var(--rule);border-radius:10px;background:var(--paper);text-align:center;color:var(--ink-3);font-size:.9rem;cursor:pointer}
+.wfu-drop img{max-height:180px;border-radius:6px}
+.wfu-check{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--ink-2)}
+.wfu-check input{width:18px;height:18px;margin-top:2px;flex:none}
+.wfu-pay{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:6px;border-top:1px solid var(--rule)}
+.wfu-pay__total{font:700 1.2rem var(--sans)}
+.wfu-pay__total small{display:block;font:400 .82rem var(--sans);color:var(--ink-3)}
+.wfu-member-note{font-size:.9rem;color:var(--ink-2);background:var(--marigold-soft);border-radius:8px;padding:10px 12px}
+.wfu-sample-banner{background:var(--ink);color:#fff;font:600 .85rem var(--sans);text-align:center;padding:8px 12px}
+</style>
+
+<section class="wfu-plans" id="plans" aria-labelledby="plans-title">
+  <p class="wfu-eyebrow">Publish on Knewspaper</p>
+  <h2 class="wfu-h2" id="plans-title">Choose how you'd like to publish</h2>
+  <p class="wfu-sub">Publish a single guest post, or get a one-year membership and publish several articles at a lower price per article.</p>
+
+  <div class="wfu-single" data-plan="single" data-selected="false">
+    <div>
+      <h3>Single guest post</h3>
+      <p>One article, published after editorial review.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span class="wfu-price">₹499</span>
+      <button type="button" class="btn" data-pick="single">Choose</button>
+    </div>
+  </div>
+
+  <div class="wfu-member-head">
+    <h3>One-year membership</h3>
+    <p>Valid for 12 months from purchase</p>
+  </div>
+  <div class="wfu-grid" role="group" aria-label="Membership plans">
+    <button type="button" class="wfu-card" data-pick="m5" aria-pressed="false">
+      <span class="wfu-card__count">5 articles</span>
+      <span class="wfu-card__price">₹999</span>
+      <span class="wfu-card__per">₹200 per article</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m10" aria-pressed="false">
+      <span class="wfu-card__count">10 articles</span>
+      <span class="wfu-card__price">₹1,499</span>
+      <span class="wfu-card__per">₹150 per article</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m50" aria-pressed="false">
+      <span class="wfu-card__count">50 articles</span>
+      <span class="wfu-card__price">₹2,999</span>
+      <span class="wfu-card__per">₹60 per article</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m100" aria-pressed="false">
+      <span class="wfu-badge">Best value</span>
+      <span class="wfu-card__count">100 articles</span>
+      <span class="wfu-card__price">₹4,999</span>
+      <span class="wfu-card__per">₹50 per article</span>
+    </button>
+  </div>
+
+  <ul class="wfu-includes">
+    <li>Your own article title, content and featured image</li>
+    <li>Choose your URL slug (knewspaper.in/post/your-slug)</li>
+    <li>Set your SEO title and meta description</li>
+    <li>Editorial review before publishing</li>
+  </ul>
+</section>
+
+<section class="wfu-plans" aria-labelledby="how-title">
+  <h2 class="wfu-h2" id="how-title">How it works</h2>
+  <ol class="wfu-steps">
+    <li><strong>Pick a plan</strong>A single post, or a membership if you'll publish more.</li>
+    <li><strong>Add your article</strong>Content, slug, meta tags and featured image.</li>
+    <li><strong>Pay securely</strong>Pay online. Members use an article credit instead.</li>
+    <li><strong>We review &amp; publish</strong>We check it against the guidelines above and email you the live link.</li>
+  </ol>
+</section>
+
+<section class="wfu-plans" id="submit" aria-labelledby="submit-title">
+  <h2 class="wfu-h2" id="submit-title">Submit your article</h2>
+  <p class="wfu-member-note">Already a member? <a href="#" data-demo>Log in</a> to use one of your article credits. You won't be charged again.</p>
+
+  <form class="wfu-form" novalidate>
+    <div class="wfu-field">
+      <label for="wfu-plan">Plan</label>
+      <select id="wfu-plan" name="plan">
+        <option value="single">Single guest post · ₹499</option>
+        <option value="m5">Membership · 5 articles / year · ₹999</option>
+        <option value="m10">Membership · 10 articles / year · ₹1,499</option>
+        <option value="m50">Membership · 50 articles / year · ₹2,999</option>
+        <option value="m100">Membership · 100 articles / year · ₹4,999</option>
+      </select>
+    </div>
+
+    <div class="wfu-row wfu-row--2">
+      <div class="wfu-field"><label for="wfu-name">Your name</label><input id="wfu-name" autocomplete="name" placeholder="Priya Sharma"></div>
+      <div class="wfu-field"><label for="wfu-email">Email</label><input id="wfu-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    </div>
+
+    <div class="wfu-field">
+      <label for="wfu-title">Article title</label>
+      <input id="wfu-title" placeholder="e.g. 10 Budget Hill Stations to Visit This Winter">
+    </div>
+
+    <div class="wfu-field">
+      <label for="wfu-body">Article</label>
+      <textarea id="wfu-body" placeholder="Paste your article here (500 to 1,500 words). Headings, lists and links are kept."></textarea>
+      <div class="wfu-hint"><span>Or upload a .docx file</span><span data-words>0 words</span></div>
+    </div>
+
+    <div class="wfu-field">
+      <label for="wfu-slug">URL slug</label>
+      <div class="wfu-slug"><span>knewspaper.in/post/</span><input id="wfu-slug" placeholder="budget-hill-stations-winter"></div>
+      <div class="wfu-hint"><span>Lowercase letters, numbers and hyphens. Filled in from your title; you can edit it.</span></div>
+    </div>
+
+    <div class="wfu-row wfu-row--2">
+      <div class="wfu-field">
+        <label for="wfu-mtitle">SEO title (meta title)</label>
+        <input id="wfu-mtitle" maxlength="70" placeholder="Shown as the headline in Google">
+        <div class="wfu-hint"><span>Best under 60 characters</span><span data-count="wfu-mtitle" data-max="60">0/60</span></div>
+      </div>
+      <div class="wfu-field">
+        <label for="wfu-category">Topic</label>
+        <select id="wfu-category"><option>Travel</option><option>Technology</option><option>Education</option><option>Health &amp; Fitness</option><option>Finance</option><option>Entertainment</option><option>Gaming</option><option>Sports</option><option>Fashion</option><option>Food</option><option>Other</option></select>
+      </div>
+    </div>
+
+    <div class="wfu-field">
+      <label for="wfu-mdesc">Meta description</label>
+      <textarea id="wfu-mdesc" style="min-height:80px" maxlength="200" placeholder="One or two sentences that sum up the article for Google results"></textarea>
+      <div class="wfu-hint"><span>Best between 120 and 155 characters</span><span data-count="wfu-mdesc" data-max="155">0/155</span></div>
+    </div>
+
+    <div class="wfu-field">
+      <span class="wfu-legend">Google preview</span>
+      <div class="wfu-serp" aria-live="polite">
+        <div class="wfu-serp__url" data-serp-url>https://www.knewspaper.in/post/your-slug</div>
+        <div class="wfu-serp__title" data-serp-title>Your SEO title appears here</div>
+        <div class="wfu-serp__desc" data-serp-desc>Your meta description appears here.</div>
+      </div>
+    </div>
+
+    <div class="wfu-field">
+      <span class="wfu-legend">Featured image</span>
+      <label class="wfu-drop" for="wfu-image" data-drop>
+        <span><strong>Click to upload</strong> or drag an image here</span>
+        <span>JPG, PNG or WebP · at least 1200 × 675 px · you must own the rights</span>
+      </label>
+      <input id="wfu-image" type="file" accept="image/*" hidden>
+      <div class="wfu-field" style="margin-top:6px"><label for="wfu-alt">Image alt text</label><input id="wfu-alt" placeholder="Describe the image for screen readers"></div>
+    </div>
+
+    <label class="wfu-check"><input type="checkbox"> The article is my original work and hasn't been published elsewhere.</label>
+    <label class="wfu-check"><input type="checkbox"> I've read the guidelines. I understand Knewspaper may edit for clarity or decline articles that don't meet them.</label>
+
+    <div class="wfu-pay">
+      <div class="wfu-pay__total"><span data-total>₹499</span><small data-total-note>Single guest post</small></div>
+      <button type="submit" class="btn" data-paybtn>Continue to payment</button>
+    </div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<script>
+(() => {
+  const plans = { single: [499, "Single guest post"], m5: [999, "Membership · 5 articles for 1 year"], m10: [1499, "Membership · 10 articles for 1 year"], m50: [2999, "Membership · 50 articles for 1 year"], m100: [4999, "Membership · 100 articles for 1 year"] };
+  const $ = (s) => document.querySelector(s);
+  const sel = $("#wfu-plan");
+  const inr = (n) => "₹" + n.toLocaleString("en-IN");
+  const setPlan = (key, scroll) => {
+    sel.value = key;
+    document.querySelectorAll("[data-pick]").forEach((b) => b.classList.contains("wfu-card") && b.setAttribute("aria-pressed", String(b.dataset.pick === key)));
+    $(".wfu-single").dataset.selected = String(key === "single");
+    $("[data-total]").textContent = inr(plans[key][0]);
+    $("[data-total-note]").textContent = plans[key][1];
+    if (scroll) $("#submit").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  document.querySelectorAll("[data-pick]").forEach((b) => b.addEventListener("click", () => setPlan(b.dataset.pick, true)));
+  sel.addEventListener("change", () => setPlan(sel.value, false));
+  const slugify = (t) => t.toLowerCase().normalize("NFKD").replace(/[^\w\s-]/g, "").trim().replace(/[\s_]+/g, "-").replace(/-+/g, "-").slice(0, 80);
+  let slugEdited = false;
+  const slug = $("#wfu-slug"), title = $("#wfu-title"), mt = $("#wfu-mtitle"), md = $("#wfu-mdesc");
+  const serp = () => {
+    $("[data-serp-url]").textContent = "https://www.knewspaper.in/post/" + (slug.value || "your-slug");
+    $("[data-serp-title]").textContent = (mt.value || title.value || "Your SEO title appears here") + " | Knewspaper";
+    $("[data-serp-desc]").textContent = md.value || "Your meta description appears here.";
+  };
+  title.addEventListener("input", () => { if (!slugEdited) slug.value = slugify(title.value); serp(); });
+  slug.addEventListener("input", () => { slugEdited = true; slug.value = slugify(slug.value); serp(); });
+  document.querySelectorAll("[data-count]").forEach((c) => {
+    const el = document.getElementById(c.dataset.count), max = +c.dataset.max;
+    el.addEventListener("input", () => { c.textContent = el.value.length + "/" + max; c.toggleAttribute("data-over", el.value.length > max); serp(); });
+  });
+  $("#wfu-body").addEventListener("input", (e) => { const n = e.target.value.trim().split(/\s+/).filter(Boolean).length; $("[data-words]").textContent = n + " words"; });
+  $("#wfu-image").addEventListener("change", (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    const drop = $("[data-drop]"); drop.replaceChildren();
+    const img = new Image(); img.alt = ""; img.src = URL.createObjectURL(f); drop.append(img);
+  });
+  document.querySelectorAll("[data-demo]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); const s = $(".form-status"); s.dataset.kind = "ok"; s.textContent = "Sample only: member login isn't connected yet."; }));
+  $(".wfu-form").addEventListener("submit", (e) => { e.preventDefault(); const s = $(".form-status"); s.dataset.kind = "ok"; s.textContent = "Sample only: payment isn't connected yet. On the live page this goes to secure checkout for " + $("[data-total]").textContent + "."; });
+  setPlan("single", false);
+})();
+</script>
