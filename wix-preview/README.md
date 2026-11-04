@@ -59,3 +59,13 @@ also keep what they showed in `localStorage` (`knews.*` keys):
 
 A reader's first visit still waits for Wix's answer (about 1 s); only a
 server-rendered site avoids that.
+
+## Write for us: paid guest posts
+
+`write-for-us.html` sells guest posts (₹499 single, or one-year memberships of 5, 10, 50
+or 100 articles) and takes the article itself. It is built by
+`python3 write-for-us/build.py` from `write-for-us/main.html` and `wfu.css` inside the
+published page's shell, and loads `assets/write.bundle.js` (entry `assets/write.js`,
+rules in `assets/guest-rules.js`). It uses Wix's members (`/js/wix/member-store.js`)
+and pricing-plans (`/js/wix/purchase.js`) modules. Articles are published by the
+GitHub workflow in `guest-posts/` (see its README).

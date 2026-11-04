@@ -160,7 +160,7 @@ if (contact) {
 // /blog/categories/<slug>, /about-us …) 301-redirect to them. Put the old
 // path back in the address bar and use it as the canonical URL.
 export function showOldUrl(path) {
-  try { history.replaceState(history.state, "", path + location.hash); } catch {}
+  try { history.replaceState(history.state, "", path + location.search + location.hash); } catch {}
   let link = document.querySelector('link[rel="canonical"]');
   if (!link) { link = document.createElement("link"); link.rel = "canonical"; document.head.append(link); }
   link.href = location.origin + path;

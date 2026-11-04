@@ -1,0 +1,34 @@
+# Publishes paid guest posts from www.knewspaper.in/write-for-us.
+# Every 10 minutes it checks new submissions, matches them to the writer's paid
+# plan, and puts them live on the Wix blog. Needs one repository secret:
+# WIX_API_KEY (Settings → Secrets and variables → Actions). See guest-posts/README.md.
+name: Publish guest posts
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: guest-posts
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Self-test
+        run: node guest-posts/test.mjs
+      - name: Publish paid guest posts
+        run: node guest-posts/publish.mjs
+        env:
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          WIX_SITE_ID: fc7a03c1-28fe-4510-90ba-025a62b06835

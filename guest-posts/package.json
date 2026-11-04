@@ -1,0 +1,10 @@
+{
+  "name": "knewspaper-guest-posts",
+  "private": true,
+  "type": "module",
+  "description": "Publishes paid guest posts from the Write for us page (runs on GitHub Actions).",
+  "scripts": {
+    "publish-guest-posts": "node publish.mjs",
+    "test": "node test.mjs"
+  }
+}

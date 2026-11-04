@@ -1,0 +1,7 @@
+{
+  "57bd1c30-084b-437b-94da-270f365b0c0e": { "key": "single", "name": "Single guest post", "credits": 1, "price": 499 },
+  "04f4d952-fc28-4c5d-99ce-559ff5e51b12": { "key": "m5", "name": "Membership: 5 articles", "credits": 5, "price": 999 },
+  "b86d4fef-a32d-4ef8-84a7-c78100993911": { "key": "m10", "name": "Membership: 10 articles", "credits": 10, "price": 1499 },
+  "ced45f94-49c2-4e41-a75c-e2465eb21c7c": { "key": "m50", "name": "Membership: 50 articles", "credits": 50, "price": 2999 },
+  "204dbc14-ce23-4cd4-aed4-bf60e7fd0974": { "key": "m100", "name": "Membership: 100 articles", "credits": 100, "price": 4999 }
+}
