@@ -1,0 +1,69 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Rebuild every hour so newly published Wix posts appear automatically.
+  schedule:
+    - cron: '17 * * * *'
+  # Manual "Run workflow" button, and a hook you can call from a Wix
+  # automation or webhook (event type: wix-content-updated).
+  workflow_dispatch:
+  repository_dispatch:
+    types: [wix-content-updated]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build site from Wix
+        env:
+          CI: 'true'
+          # Public OAuth Client ID (not a secret). Set a repository variable
+          # WIX_CLIENT_ID to override the value in site.config.mjs.
+          WIX_CLIENT_ID: ${{ vars.WIX_CLIENT_ID }}
+          WIX_NEWSLETTER_FORM_ID: ${{ vars.WIX_NEWSLETTER_FORM_ID }}
+          WIX_CONTACT_FORM_ID: ${{ vars.WIX_CONTACT_FORM_ID }}
+          # Derived from the Pages settings, e.g. https://kautilya27.github.io + /knewspaper
+          SITE_ORIGIN: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          CANONICAL_BASE: ${{ vars.CANONICAL_BASE }}
+          ALLOW_INDEXING: ${{ vars.ALLOW_INDEXING }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

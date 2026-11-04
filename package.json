@@ -1,0 +1,25 @@
+{
+  "name": "knewspaper-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Knewspaper — fast, static, SEO-friendly news frontend powered by Wix Headless (Wix Blog via @wix/sdk).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "build:fixtures": "node scripts/build.mjs --fixtures",
+    "preview": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@wix/blog": "^1.0.0",
+    "@wix/forms": "^1.0.0",
+    "@wix/members": "^1.0.0",
+    "@wix/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
