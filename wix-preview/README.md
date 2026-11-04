@@ -33,3 +33,14 @@ The live site (www.knewspaper.in) keeps the old Wix addresses working with
 then shows the old address again (`showOldUrl` in `assets/site.js`) and uses it
 as the canonical URL. A post published after 4 Nov 2026 needs its own redirect
 (`/post/<slug>` → `/post.html?slug=<slug>`) to get an old-style address.
+
+## Speed: one script per page
+
+Wix static hosting answers each script file with its own round trip, so the
+pages load a single bundle each (`assets/home.bundle.js`, `feed`, `post`,
+`search`, `site`) instead of 15 separate modules. `bundle.mjs` builds them from
+`assets/*.js` and Wix's `/js/wix/*` modules. After changing any script in
+`assets/`, rebuild the bundles (run `bundle()` over the site's files, as done
+through the Wix connector) and upload them, or the pages keep running the old
+code. `perf-patch.mjs` holds the earlier speed changes (topic cache, image
+sizes, non-blocking font).
