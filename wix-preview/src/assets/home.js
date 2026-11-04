@@ -1,37 +1,45 @@
 // Homepage: lead story, featured stack, latest list, topic shelves and topics,
-// all read live from the Wix Blog.
-import { fetchPosts } from "/js/wix/posts.js";
-import { categoriesReady, card, catHref, esc } from "/assets/site.js";
+// all read live from the Wix Blog. The copy this device saved last time shows
+// at once while the live one loads.
+import { learnAuthors, quickPosts, withKnownAuthors } from "/assets/fast.js";
+import { cacheGet, cacheSet, categoriesReady, card, catHref, esc } from "/assets/site.js";
 
 const $ = (s) => document.querySelector(s);
+// Only touches the page when the markup actually changed, so the live refresh
+// doesn't make an unchanged page flicker.
+const last = new Map();
+const put = (sel, html) => {
+  const el = $(sel);
+  if (el && last.get(sel) !== html) { el.innerHTML = html; last.set(sel, html); }
+};
 
+const saved = cacheGet("home", 24 * 60 * 60 * 1000);
+
+const livePage = quickPosts({ limit: 18 });
 // The topic shelves load at the same time as the latest articles.
-const shelvesReady = categoriesReady.then((cats) =>
+const liveShelves = categoriesReady.then((cats) =>
   Promise.all(
     [...cats].sort((a, b) => b.postCount - a.postCount).slice(0, 4)
-      .map((c) => fetchPosts({ categoryId: c.id, limit: 4 }).then((r) => ({ c, posts: r.posts })).catch(() => ({ c, posts: [] }))),
+      .map((c) => quickPosts({ categoryId: c.id, limit: 4 }).then((r) => ({ c, posts: r.posts })).catch(() => ({ c, posts: [] }))),
   ),
 );
 
-async function main() {
-  const [page, cats] = await Promise.all([fetchPosts({ limit: 18 }), categoriesReady]);
-  const posts = page.posts;
-
+function top(posts) {
   if (!posts.length) {
-    $("[data-top]").innerHTML = '<p class="empty">No articles are published yet.</p>';
-    $("[data-latest]").innerHTML = "";
+    put("[data-top]", '<p class="empty">No articles are published yet.</p>');
+    put("[data-latest]", "");
     return;
   }
-  const [lead, ...rest] = posts;
-  $("[data-top]").innerHTML = `<div class="top__grid">${card.lead(lead)}<div class="top__stack">${rest.slice(0, 3).map(card.stack).join("")}</div></div>`;
-  $("[data-latest]").innerHTML = rest.slice(3, 13).map((p) => card.row(p)).join("");
-
+  const [lead, ...rest] = withKnownAuthors(posts);
+  put("[data-top]", `<div class="top__grid">${card.lead(lead)}<div class="top__stack">${rest.slice(0, 3).map(card.stack).join("")}</div></div>`);
+  put("[data-latest]", rest.slice(3, 13).map((p) => card.row(p)).join(""));
   const more = rest.slice(13, 18);
-  if (more.length) $("[data-more]").innerHTML = more.map(card.rank).join("");
-  else $("[data-more-section]").hidden = true;
+  $("[data-more-section]").hidden = !more.length;
+  put("[data-more]", more.map(card.rank).join(""));
+}
 
-  const shelves = await shelvesReady;
-  $("[data-shelves]").innerHTML = shelves
+function shelvesAndTopics(shelves, cats) {
+  put("[data-shelves]", shelves
     .filter((s) => s.posts.length)
     .map(({ c, posts }) => `
       <section class="wrap shelf" aria-labelledby="shelf-${esc(c.slug)}">
@@ -41,16 +49,34 @@ async function main() {
         </div>
         <div class="tiles">${posts.map(card.tile).join("")}</div>
       </section>`)
-    .join("");
-
-  $("[data-topics]").innerHTML = cats
+    .join(""));
+  put("[data-topics]", cats
     .map((c) => `<li><a href="${catHref(c.slug)}"><span>${esc(c.label)}</span><span class="topics__count">${c.postCount} ${c.postCount === 1 ? "article" : "articles"}</span></a></li>`)
-    .join("");
-  if (!cats.length) $("[data-topics-section]").hidden = true;
+    .join(""));
+  $("[data-topics-section]").hidden = !cats.length;
 }
 
-main().catch((err) => {
+let shown = null;
+const show = (posts) => { shown = posts; top(posts); };
+// Topic labels on the cards appear as soon as the topics are known.
+categoriesReady.then(() => { if (shown) top(shown); });
+
+if (saved) {
+  show(saved.posts);
+  shelvesAndTopics(saved.shelves, saved.cats);
+}
+
+livePage.then((page) => {
+  show(page.posts);
+  // The lead story's byline appears once its author's name is known.
+  learnAuthors(page.posts.slice(0, 1)).then((learned) => { if (learned) top(page.posts); });
+  return Promise.all([liveShelves, categoriesReady]).then(([shelves, cats]) => {
+    shelvesAndTopics(shelves, cats);
+    if (page.posts.length) cacheSet("home", { posts: page.posts, shelves, cats });
+  });
+}).catch((err) => {
   console.error("[knews] home", err);
-  $("[data-top]").innerHTML = '<p class="empty" role="alert">The latest articles could not load. Check your connection and refresh the page.</p>';
-  $("[data-latest]").innerHTML = "";
+  if (saved) return;
+  put("[data-top]", '<p class="empty" role="alert">The latest articles could not load. Check your connection and refresh the page.</p>');
+  put("[data-latest]", "");
 });

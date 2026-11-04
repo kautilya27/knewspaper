@@ -44,3 +44,18 @@ pages load a single bundle each (`assets/home.bundle.js`, `feed`, `post`,
 through the Wix connector) and upload them, or the pages keep running the old
 code. `perf-patch.mjs` holds the earlier speed changes (topic cache, image
 sizes, non-blocking font).
+
+## Speed: no waiting on author names, and a copy on the reader's device
+
+`assets/fast.js` reads articles with the same Wix requests as the layer's
+`fetchPosts`/`fetchPostBySlug`, but returns them as soon as Wix answers; author
+names are looked up afterwards and kept on the device for a week. The pages
+also keep what they showed in `localStorage` (`knews.*` keys):
+
+- home page and article lists: shown at once on the next visit, then refreshed
+  from Wix in the background;
+- articles: the last 25 read stay for 6 hours, and an article starts loading as
+  soon as a reader points at, touches or tabs to its link.
+
+A reader's first visit still waits for Wix's answer (about 1 s); only a
+server-rendered site avoids that.

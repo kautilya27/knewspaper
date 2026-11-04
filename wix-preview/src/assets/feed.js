@@ -1,8 +1,10 @@
 // All articles (blog.html) and one topic (category.html?slug=…), on the
-// Wix blog feed store: paging and the topic filter run on Wix.
+// Wix blog feed store: paging and the topic filter run on Wix. The rows this
+// device saved last time show at once while the live first page loads.
 import { createBlogFeedStore } from "/js/wix/blog-feed-store.js";
 import { fetchCategoryBySlug } from "/js/wix/taxonomy.js";
-import { cachedCategories, categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
+import { quickPosts } from "/assets/fast.js";
+import { cacheGet, cacheSet, cachedCategories, categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
 
 const list = document.querySelector("[data-rows]");
 const status = document.querySelector("[data-status]");
@@ -15,7 +17,10 @@ async function main() {
   let category = null;
   if (isCategory) {
     const slug = new URLSearchParams(location.search).get("slug") || "";
-    category = slug ? (cachedCategories || []).find((c) => c.slug === slug) || (await fetchCategoryBySlug(slug)) : null;
+    // The topic list is already loading for the menu; ask Wix separately only
+    // for a topic that isn't in it.
+    const bySlug = (list) => (list || []).find((c) => c.slug === slug);
+    category = slug ? bySlug(cachedCategories) || bySlug(await categoriesReady) || (await fetchCategoryBySlug(slug)) : null;
     if (!category) {
       titleEl.textContent = "Topic not found";
       introEl.innerHTML = 'This topic doesn’t exist or has no articles. <a href="/blog">See all articles</a>.';
@@ -33,11 +38,36 @@ async function main() {
     if (md) md.content = introEl.textContent;
   }
 
-  // Seeded with the cached topics so the store doesn't fetch them again.
-  const feed = createBlogFeedStore({ initialCategoryId: category ? category.id : null, pageSize: 20, ...(cachedCategories ? { initialCategories: cachedCategories } : {}) });
+  const categoryId = category ? category.id : null;
+  const feedKey = "feed." + (category ? category.slug : "all");
+  const savedRows = cacheGet(feedKey, 6 * 60 * 60 * 1000);
+  let html = "";
+  const rows = (posts) => {
+    const next = posts.map((p) => card.row(p, "h2")).join("");
+    if (next !== html) list.innerHTML = html = next;
+  };
+  let live = false;
+  if (savedRows) {
+    rows(savedRows);
+    status.textContent = "";
+    categoriesReady.then(() => { if (!live) rows(savedRows); });
+  } else status.textContent = "Loading articles…";
+
+  // The first page is read without waiting for author names (rows don't show
+  // them) and handed to the store, which does the paging from there. The
+  // store is seeded with the cached topics so it doesn't fetch them again.
+  let firstPage;
+  try {
+    firstPage = await quickPosts({ limit: 20, categoryId });
+    if (firstPage.posts.length) cacheSet(feedKey, firstPage.posts);
+  } catch {
+    firstPage = undefined; // the store makes its own request and reports any error
+  }
+  live = true;
+  const feed = createBlogFeedStore({ initialPage: firstPage, initialCategoryId: categoryId, pageSize: 20, ...(cachedCategories ? { initialCategories: cachedCategories } : {}) });
   const render = (s) => {
-    if (s.posts === null) { status.textContent = "Loading articles…"; return; }
-    list.innerHTML = s.posts.map((p) => card.row(p, "h2")).join("");
+    if (s.posts === null) { if (!savedRows) status.textContent = "Loading articles…"; return; }
+    rows(s.posts);
     status.textContent = s.error ? `Articles could not load: ${s.error}` : s.posts.length ? "" : "No articles in this topic yet.";
     status.dataset.kind = s.error ? "error" : "";
     moreBtn.hidden = !s.hasMore;

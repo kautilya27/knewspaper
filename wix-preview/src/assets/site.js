@@ -192,3 +192,24 @@ document.addEventListener("click", (ev) => {
   ev.preventDefault();
   location.assign(page + url.hash);
 });
+
+// ------------------------------------------------------ device cache
+// What this device saved last time, so pages can show it at once and
+// refresh it from Wix in the background. null when missing or too old.
+export function cacheGet(key, maxAgeMs) {
+  try {
+    const c = JSON.parse(localStorage.getItem("knews." + key) || "null");
+    return c && Date.now() - c.at < maxAgeMs ? c.v : null;
+  } catch { return null; }
+}
+export function cacheSet(key, value) {
+  const item = JSON.stringify({ at: Date.now(), v: value });
+  try { localStorage.setItem("knews." + key, item); }
+  catch {
+    // Storage full: drop the saved articles and try once more.
+    try {
+      for (const k of Object.keys(localStorage)) if (k.startsWith("knews.post.")) localStorage.removeItem(k);
+      localStorage.setItem("knews." + key, item);
+    } catch {}
+  }
+}

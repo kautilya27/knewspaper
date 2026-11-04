@@ -4,6 +4,8 @@
 import { wixRequest } from "/js/wix/client.js";
 import { imgSrc } from "/js/wix/media.js";
 import { esc, postHref } from "/assets/site.js";
+// Loads an article when its result is pointed at or touched (see fast.js).
+import { savedPost } from "/assets/fast.js";
 
 const input = document.getElementById("search-page-q");
 const status = document.querySelector("[data-status]");

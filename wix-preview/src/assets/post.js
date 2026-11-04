@@ -2,14 +2,15 @@
 import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
 import { imgSrc, imgSrcSet } from "/js/wix/media.js";
-import { cachedCategories, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
+import { learnAuthors, quickPost, savePost, savedPost, withKnownAuthors } from "/assets/fast.js";
+import { cachedCategories, categoriesReady, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
 
 const root = document.querySelector("[data-article]");
 const slug = (new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
 const mediaId = (url) => (String(url).match(/\/media\/([^/?#]+)/) || [])[1] || "";
 let mounted = false;
 
-const store = createPostStore({ slug, ...(cachedCategories ? { initialCategories: cachedCategories } : {}) });
+let store = null;
 
 function render(s) {
   if (s.notFound || !slug) {
@@ -169,6 +170,44 @@ function mountComments(referenceId) {
   comments.start();
 }
 
-store.subscribe(render);
-render(store.getState());
-store.start();
+// The byline is added once the author's name is known.
+function fillByline(name) {
+  if (!name || root.querySelector(".article__meta .meta__author")) return;
+  const span = `<span class="meta__author">By ${esc(name)}</span>`;
+  const line = root.querySelector(".article__meta .meta");
+  if (line) line.insertAdjacentHTML("afterbegin", span);
+  else root.querySelector(".article__meta")?.insertAdjacentHTML("afterbegin", `<p class="meta">${span}</p>`);
+}
+
+// The article this device saved (or loaded when its link was pointed at)
+// shows at once. Otherwise it is read from Wix without waiting for the
+// author's name, then saved for next time. The store takes it from there
+// (topics, likes, related articles) without reading it again.
+async function init() {
+  if (!slug) return render({ notFound: true });
+  const saved = savedPost(slug);
+  let post = saved ? withKnownAuthors([saved])[0] : null;
+  if (!post) {
+    try {
+      post = await quickPost(slug);
+      if (!post) return render({ notFound: true });
+      savePost(post);
+    } catch {
+      post = null; // the store reads it again and shows the error if that fails too
+    }
+  }
+  // The breadcrumb, topic links and health note need the topics: the copy
+  // saved on this device (even an older one), else the list that has been
+  // loading alongside the article.
+  let stale = null;
+  try { stale = JSON.parse(localStorage.getItem("knews.categories.v1") || "null")?.list || null; } catch {}
+  const cats = cachedCategories || stale || (await categoriesReady);
+  store = createPostStore({ slug, ...(post ? { initialPost: post } : {}), ...(cats.length ? { initialCategories: cats } : {}) });
+  store.subscribe(render);
+  render(store.getState());
+  store.start();
+  if (post) learnAuthors([post]).then((learned) => { if (learned) fillByline(withKnownAuthors([post])[0].authorName); });
+  // A saved copy is refreshed in the background for the next visit.
+  if (saved) quickPost(slug).then((p) => p && savePost(p)).catch(() => {});
+}
+init();
