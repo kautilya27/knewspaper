@@ -223,4 +223,5 @@ await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT + '/assets', { recursive: true });
 for (const [name, html] of Object.entries(files)) await writeFile(`${OUT}/${name}`, html);
 await cp(new URL('./src/assets', import.meta.url), OUT + '/assets', { recursive: true });
+// Upload output is minified after this step (see README).
 console.log('wrote', Object.keys(files).length, 'pages');
