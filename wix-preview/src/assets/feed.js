@@ -18,7 +18,7 @@ async function main() {
     category = slug ? await fetchCategoryBySlug(slug) : null;
     if (!category) {
       titleEl.textContent = "Topic not found";
-      introEl.innerHTML = 'This topic doesn’t exist or has no articles. <a href="/blog.html">See all articles</a>.';
+      introEl.innerHTML = 'This topic doesn’t exist or has no articles. <a href="/blog">See all articles</a>.';
       status.textContent = "";
       moreBtn.hidden = true;
       return;

@@ -7,8 +7,8 @@ export const EMAIL = "knewspaper.in@gmail.com";
 export function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
-export const postHref = (slug) => "/post.html?slug=" + encodeURIComponent(slug);
-export const catHref = (slug) => "/category.html?slug=" + encodeURIComponent(slug);
+export const postHref = (slug) => "/post/" + encodeURIComponent(slug);
+export const catHref = (slug) => "/blog/categories/" + encodeURIComponent(slug);
 
 // Categories with posts, in the blog's menu order. [] when the read fails.
 export const categoriesReady = fetchBlogCategories()
@@ -143,3 +143,26 @@ export function showOldUrl(path) {
 }
 const OLD_PATHS = { "/blog.html": "/blog", "/about.html": "/about-us", "/contact.html": "/contact", "/write-for-us.html": "/write-for-us", "/privacy-policy.html": "/privacy-policy" };
 if (OLD_PATHS[location.pathname]) showOldUrl(OLD_PATHS[location.pathname]);
+
+// Links show the old addresses. A normal click opens the matching .html page
+// directly (no redirect hop); a copied link or a new tab goes through the
+// site's 301 redirect to the same page.
+const STATIC_PAGES = { "/blog": "/blog.html", "/about-us": "/about.html", "/contact": "/contact.html", "/write-for-us": "/write-for-us.html", "/privacy-policy": "/privacy-policy.html" };
+export function pageFor(pathname) {
+  const p = pathname.replace(/\/+$/, "");
+  let m;
+  if ((m = p.match(/^\/post\/([^/]+)$/))) return "/post.html?slug=" + m[1];
+  if ((m = p.match(/^\/blog\/categories\/([^/]+)$/))) return "/category.html?slug=" + m[1];
+  return STATIC_PAGES[p] || null;
+}
+document.addEventListener("click", (ev) => {
+  if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+  const a = ev.target.closest("a[href]");
+  if (!a || (a.target && a.target !== "_self") || a.hasAttribute("download")) return;
+  const url = new URL(a.href, location.href);
+  if (url.origin !== location.origin) return;
+  const page = pageFor(url.pathname);
+  if (!page) return;
+  ev.preventDefault();
+  location.assign(page + url.hash);
+});

@@ -13,7 +13,7 @@ const store = createPostStore({ slug });
 function render(s) {
   if (s.notFound || !slug) {
     document.title = "Article not found | Knewspaper";
-    root.innerHTML = `<div class="wrap narrow page"><h1 class="listing__title">This article isn’t here</h1><p class="listing__intro">It may have been moved or unpublished. <a href="/search.html">Search the site</a> or <a href="/blog.html">see all articles</a>.</p></div>`;
+    root.innerHTML = `<div class="wrap narrow page"><h1 class="listing__title">This article isn’t here</h1><p class="listing__intro">It may have been moved or unpublished. <a href="/search.html">Search the site</a> or <a href="/blog">see all articles</a>.</p></div>`;
     return;
   }
   if (!s.post) {

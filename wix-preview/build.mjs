@@ -46,14 +46,14 @@ const masthead = `<a class="skip" href="#main">Skip to content</a>
       <button type="submit" class="search__btn" aria-label="Search"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
     </form>
     <nav class="utility" aria-label="Site">
-      <a href="/about.html">About</a>
-      <a href="/write-for-us.html">Write for us</a>
-      <a href="/contact.html" class="account">Contact</a>
+      <a href="/about-us">About</a>
+      <a href="/write-for-us">Write for us</a>
+      <a href="/contact" class="account">Contact</a>
     </nav>
   </div>
   <nav class="catnav" aria-label="Topics">
     <div class="wrap catnav__inner">
-      <ul class="catnav__list" data-catnav><li><a href="/blog.html">Latest</a></li></ul>
+      <ul class="catnav__list" data-catnav><li><a href="/blog">Latest</a></li></ul>
     </div>
   </nav>
 </header>`;
@@ -69,10 +69,10 @@ const footer = `<footer class="footer">
     <nav aria-label="About Knewspaper">
       <h2 class="footer__heading">Knewspaper</h2>
       <ul>
-        <li><a href="/about.html">About us</a></li>
-        <li><a href="/write-for-us.html">Write for us</a></li>
-        <li><a href="/contact.html">Contact us</a></li>
-        <li><a href="/privacy-policy.html">Privacy policy</a></li>
+        <li><a href="/about-us">About us</a></li>
+        <li><a href="/write-for-us">Write for us</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><a href="/privacy-policy">Privacy policy</a></li>
       </ul>
     </nav>
   </div>
@@ -115,7 +115,7 @@ files['index.html'] = page(
 <section class="wrap top" aria-label="Featured articles" data-top><p class="feed-status skeleton">Loading the latest articles…</p></section>
 <div class="wrap split">
   <section class="split__main" aria-labelledby="latest-title">
-    <div class="section-head"><h2 id="latest-title" class="section-head__title">Latest</h2><a class="section-head__more" href="/blog.html">All articles</a></div>
+    <div class="section-head"><h2 id="latest-title" class="section-head__title">Latest</h2><a class="section-head__more" href="/blog">All articles</a></div>
     <div class="rows" data-latest></div>
   </section>
   <aside class="split__side" aria-label="More">
@@ -137,13 +137,13 @@ files['index.html'] = page(
       <h2 class="band__title">About Knewspaper</h2>
       <p class="band__lede">${ABOUT}</p>
       <p>${ABOUT2}</p>
-      <p><a href="/about.html">More about us</a> or <a href="/write-for-us.html">write for us</a>.</p>
+      <p><a href="/about-us">More about us</a> or <a href="/write-for-us">write for us</a>.</p>
     </div>
     <div id="contact">
       <h2 class="band__title">Contact</h2>
       <p>${CONTACT}</p>
       <p class="band__email"><a href="mailto:${EMAIL}">${EMAIL}</a></p>
-      <p><a class="btn btn--quiet" href="/contact.html">Send a message</a></p>
+      <p><a class="btn btn--quiet" href="/contact">Send a message</a></p>
     </div>
   </div>
 </section>`,
@@ -166,7 +166,7 @@ const feedBody = (crumb) => `<section class="wrap listing">
   </div>
 </section>`;
 
-files['blog.html'] = (page({ title: 'Latest articles | Knewspaper', description: 'Every article on Knewspaper, newest first.', script: 'feed' }, feedBody('Latest articles'), ' data-page="blog" data-active-cat="__latest"')).replace('<li><a href="/blog.html">Latest</a>', '<li><a href="/blog.html" aria-current="page">Latest</a>');
+files['blog.html'] = (page({ title: 'Latest articles | Knewspaper', description: 'Every article on Knewspaper, newest first.', script: 'feed' }, feedBody('Latest articles'), ' data-page="blog" data-active-cat="__latest"')).replace('<li><a href="/blog">Latest</a>', '<li><a href="/blog" aria-current="page">Latest</a>');
 files['category.html'] = page({ title: 'Topic | Knewspaper', description: 'Articles and explainers from Knewspaper.', script: 'feed' }, feedBody('Topic'), ' data-page="category"');
 
 files['post.html'] = page(
@@ -193,7 +193,7 @@ files['search.html'] = page(
 
 files['about.html'] = staticPage('About us', `About Knewspaper. ${ABOUT}`,
   `<p class="lede">${ABOUT}</p><p>${ABOUT2}</p><p>Health and medical articles are for general information. Always consult a doctor for medical advice.</p>
-  <h2>Get in touch</h2><p>Write to <a href="mailto:${EMAIL}">${EMAIL}</a>, or use the <a href="/contact.html">contact page</a>. Want to contribute? See <a href="/write-for-us.html">Write for us</a>.</p>
+  <h2>Get in touch</h2><p>Write to <a href="mailto:${EMAIL}">${EMAIL}</a>, or use the <a href="/contact">contact page</a>. Want to contribute? See <a href="/write-for-us">Write for us</a>.</p>
   <p>Thank you for reading Knewspaper.</p>`);
 
 files['write-for-us.html'] = staticPage('Write for us', 'Guest posting guidelines for Knewspaper.',
@@ -217,7 +217,7 @@ files['contact.html'] = staticPage('Contact us', 'Contact Knewspaper.',
 
 const { privacyHtml } = await import('../src/templates/privacy.mjs');
 files['privacy-policy.html'] = staticPage('Privacy policy', 'How Knewspaper collects, uses and protects your information.',
-  privacyHtml({ name: 'Knewspaper', email: EMAIL, basePath: '/' }).replace('href="/contact/"', 'href="/contact.html"'));
+  privacyHtml({ name: 'Knewspaper', email: EMAIL, basePath: '/' }).replace('href="/contact/"', 'href="/contact"'));
 
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT + '/assets', { recursive: true });
