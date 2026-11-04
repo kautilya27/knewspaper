@@ -1,10 +1,10 @@
 // One article (post.html?slug=…) on the Wix post store, with its comments.
 import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
-import { categoriesReady, card, catHref, esc, markActive, meta } from "/assets/site.js";
+import { categoriesReady, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
 
 const root = document.querySelector("[data-article]");
-const slug = new URLSearchParams(location.search).get("slug") || "";
+const slug = (new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
 const mediaId = (url) => (String(url).match(/\/media\/([^/?#]+)/) || [])[1] || "";
 let mounted = false;
 
@@ -35,6 +35,7 @@ function render(s) {
 
 function mount(p, s) {
   mounted = true;
+  showOldUrl("/post/" + p.slug);
   document.title = `${p.seoTitle || p.title} | Knewspaper`;
   const md = document.querySelector('meta[name="description"]');
   if (md && p.seoDescription) md.content = p.seoDescription;

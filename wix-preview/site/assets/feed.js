@@ -2,7 +2,7 @@
 // Wix blog feed store: paging and the topic filter run on Wix.
 import { createBlogFeedStore } from "/js/wix/blog-feed-store.js";
 import { fetchCategoryBySlug } from "/js/wix/taxonomy.js";
-import { categoriesReady, card, markActive } from "/assets/site.js";
+import { categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
 
 const list = document.querySelector("[data-rows]");
 const status = document.querySelector("[data-status]");
@@ -24,6 +24,7 @@ async function main() {
       return;
     }
     markActive(category.slug);
+    showOldUrl("/blog/categories/" + category.slug);
     titleEl.textContent = category.label;
     document.querySelector("[data-crumb]").textContent = category.label;
     introEl.textContent = category.description || `${category.label} articles and explainers from Knewspaper.`;

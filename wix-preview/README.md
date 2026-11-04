@@ -23,3 +23,13 @@ Completing the migration in the Wix dashboard makes this frontend the live
 www.knewspaper.in. Article URLs then become `/post.html?slug=…`; add redirects from
 the old `/post/<slug>` paths first, or use the Astro build route (keeps the old
 URLs) from a machine where the Wix CLI and npm work.
+
+## Old URLs
+
+The live site (www.knewspaper.in) keeps the old Wix addresses working with
+418 permanent (301) redirects in Wix SEO settings: every `/post/<slug>`,
+`/blog/categories/<slug>`, `/blog`, `/blog/page/N`, `/about-us`, `/contact`,
+`/write-for-us` and `/privacy-policy` goes to its `.html` page, and the page
+then shows the old address again (`showOldUrl` in `assets/site.js`) and uses it
+as the canonical URL. A post published after 4 Nov 2026 needs its own redirect
+(`/post/<slug>` → `/post.html?slug=<slug>`) to get an old-style address.
