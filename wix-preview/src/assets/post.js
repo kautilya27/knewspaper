@@ -3,7 +3,8 @@ import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
 import { imgSrc, imgSrcSet } from "/js/wix/media.js";
 import { learnAuthors, quickPost, savePost, savedPost, withKnownAuthors } from "/assets/fast.js";
-import { cachedCategories, categoriesReady, card, catHref, esc, markActive, meta, showOldUrl } from "/assets/site.js";
+import { cachedCategories, categoriesReady, card, catHref, esc, markActive, meta, postHref, showOldUrl } from "/assets/site.js";
+import { PUBLISHER, SITE, breadcrumbs, faqFromBody, setJsonLd, setMetaTag } from "/assets/seo.js";
 
 const root = document.querySelector("[data-article]");
 const slug = (new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
@@ -32,7 +33,60 @@ function render(s) {
   const rel = root.querySelector("[data-related]");
   if (s.related === null) rel.innerHTML = "";
   else if (!s.related.length) rel.closest("section").hidden = true;
-  else rel.innerHTML = s.related.slice(0, 4).map(card.tile).join("");
+  else {
+    rel.innerHTML = s.related.slice(0, 4).map(card.tile).join("");
+    alsoRead(s.related);
+  }
+}
+
+// "Also read" links inside the article, to related articles on the same topic.
+let alsoReadDone = false;
+function alsoRead(related) {
+  const body = root.querySelector("[data-body]");
+  if (alsoReadDone || !body) return;
+  const picks = related.filter((r) => r.slug !== slug).slice(0, 2);
+  if (!picks.length) return;
+  alsoReadDone = true;
+  const box = (r) => `<p class="also-read"><strong>Also read:</strong> <a href="${postHref(r.slug)}">${esc(r.title)}</a></p>`;
+  const heads = [...body.querySelectorAll(":scope > h2")];
+  const paras = [...body.querySelectorAll(":scope > p")];
+  const spots = heads.length >= 3 ? [heads[1], heads[Math.max(2, Math.floor(heads.length * 0.7))]] : [paras[2], paras[Math.floor(paras.length * 0.7)]];
+  picks.forEach((r, i) => {
+    const at = spots[i];
+    if (!at || (i && at === spots[0])) return;
+    if (at.tagName === "H2") at.insertAdjacentHTML("beforebegin", box(r));
+    else at.insertAdjacentHTML("afterend", box(r));
+  });
+}
+
+// Article structured data (BlogPosting, breadcrumbs, FAQ) and social tags.
+let schemaPost = null, schemaCat = null;
+function postSchema(p, cat, authorName) {
+  schemaPost = p; schemaCat = cat;
+  const url = `${SITE}/post/${p.slug}`;
+  const body = root.querySelector("[data-body]");
+  const graph = [
+    {
+      "@type": "BlogPosting", "@id": url + "#article", mainEntityOfPage: url, url,
+      headline: p.title.slice(0, 110), description: p.seoDescription || p.excerpt || undefined,
+      image: p.coverUrl ? [p.coverUrl] : undefined, inLanguage: "en-IN",
+      datePublished: p.dateISO || undefined, dateModified: p.updatedISO || p.dateISO || undefined,
+      author: authorName ? { "@type": "Person", name: authorName } : { "@type": "Organization", name: "Knewspaper", url: SITE + "/" },
+      publisher: PUBLISHER, articleSection: cat ? cat.label : undefined,
+    },
+    breadcrumbs([["Home", SITE + "/"], ...(cat ? [[cat.label, SITE + catHref(cat.slug)]] : []), [p.title, url]]),
+  ];
+  const faq = body && faqFromBody(body);
+  if (faq) graph.push(faq);
+  setJsonLd("ld-article", { "@context": "https://schema.org", "@graph": graph });
+  setMetaTag("property", "og:type", "article");
+  setMetaTag("property", "og:title", p.seoTitle || p.title);
+  setMetaTag("property", "og:description", p.seoDescription);
+  setMetaTag("property", "og:url", url);
+  if (p.coverUrl) setMetaTag("property", "og:image", p.coverUrl);
+  if (p.dateISO) setMetaTag("property", "article:published_time", p.dateISO);
+  setMetaTag("name", "twitter:title", p.seoTitle || p.title);
+  setMetaTag("name", "twitter:description", p.seoDescription);
 }
 
 function mount(p, s) {
@@ -115,6 +169,7 @@ function mount(p, s) {
   if (isHealth) body.insertAdjacentHTML("beforeend", '<aside class="note" role="note"><p>This article is for general information only and is not medical advice. Please consult a qualified doctor about your health.</p></aside>');
   if (s.categories.length) body.insertAdjacentHTML("beforeend", `<p class="article__topics">Filed under ${s.categories.map((c) => `<a href="${catHref(c.slug)}">${esc(c.label)}</a>`).join(", ")}</p>`);
 
+  postSchema(p, cat, p.authorName);
   root.querySelector("[data-like]").addEventListener("click", () => store.toggleLike().catch(() => {}));
   if (p.commentingEnabled && p.referenceId) mountComments(p.referenceId);
 }
@@ -176,6 +231,7 @@ function fillByline(name) {
   const span = `<span class="meta__author">By ${esc(name)}</span>`;
   const line = root.querySelector(".article__meta .meta");
   if (line) line.insertAdjacentHTML("afterbegin", span);
+  if (schemaPost) postSchema(schemaPost, schemaCat, name);
   else root.querySelector(".article__meta")?.insertAdjacentHTML("afterbegin", `<p class="meta">${span}</p>`);
 }
 

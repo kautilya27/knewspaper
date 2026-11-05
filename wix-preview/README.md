@@ -74,8 +74,7 @@ GitHub workflow in `guest-posts/` (see its README).
 
 `terms.html` and `refund-policy.html` (sources in `legal/`, built inside the privacy
 page's shell) are reached at `/terms-and-conditions` and `/refund-policy` through 301
-redirects, and linked in every footer; the footer also names the operator (Kautilya
-Upadhyay), as Razorpay's website review asks. Every page's header has a "Log in" link
+redirects, and linked in every footer. Every page's header has a "Log in" link
 to `/write-for-us.html#account`; a small inline script turns it into "My account" when a
 member session is stored. Its style is inline in each page because the CDN keeps the old
 `assets/styles.css` for a while.

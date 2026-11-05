@@ -4,7 +4,8 @@
 import { createBlogFeedStore } from "/js/wix/blog-feed-store.js";
 import { fetchCategoryBySlug } from "/js/wix/taxonomy.js";
 import { quickPosts } from "/assets/fast.js";
-import { cacheGet, cacheSet, cachedCategories, categoriesReady, card, markActive, showOldUrl } from "/assets/site.js";
+import { cacheGet, cacheSet, cachedCategories, categoriesReady, card, catHref, markActive, showOldUrl } from "/assets/site.js";
+import { PUBLISHER, SITE, breadcrumbs, setJsonLd } from "/assets/seo.js";
 
 const list = document.querySelector("[data-rows]");
 const status = document.querySelector("[data-status]");
@@ -37,6 +38,13 @@ async function main() {
     const md = document.querySelector('meta[name="description"]');
     if (md) md.content = introEl.textContent;
   }
+  // Structured data: this listing as a collection, with its breadcrumb.
+  const pageUrl = category ? SITE + catHref(category.slug) : SITE + "/blog";
+  const pageName = category ? category.label : "All articles";
+  setJsonLd("ld-listing", { "@context": "https://schema.org", "@graph": [
+    { "@type": "CollectionPage", "@id": pageUrl, url: pageUrl, name: pageName, description: introEl.textContent || undefined, isPartOf: { "@type": "WebSite", "@id": SITE + "/#website" }, publisher: PUBLISHER },
+    breadcrumbs([["Home", SITE + "/"], ...(category ? [["Articles", SITE + "/blog"]] : []), [pageName, pageUrl]]),
+  ] });
 
   const categoryId = category ? category.id : null;
   const feedKey = "feed." + (category ? category.slug : "all");
