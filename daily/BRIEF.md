@@ -31,15 +31,21 @@ Run `daily/existing-posts-template.js` (`hasMutations: false`). It returns every
 
 ### 2. Choose today's 3 topics
 
-**Plan topics (2):** read `plan.csv` from row `order = state.nextPlanOrder` onward. For each row:
+**Plan topics (2), balanced:** the plan is mostly health, so each day take **at most 1 topic from
+Health & Fitness or Psychology & Mental Health**, and **1 from Education, Career & Jobs or
+Self-Improvement** (if those run out, take both from health). Within each group, go through
+`plan.csv` in `order`, taking the first row whose `order` is not in `state.usedPlan` or
+`state.skippedPlan`. For each candidate row:
 - Skip it if the site (step 1) or `state.published` already has an article on the same subject,
   even with different wording (e.g. "Add vs ADHD" vs an existing `add-vs-adhd`; "How to stop
-  procrastinating" vs "procrastination tips"). Record skipped rows in `state.skippedPlan` with the
-  reason ("duplicate of <slug>").
+  procrastinating" vs "procrastination tips"). Add `{"order", "reason": "duplicate of <slug>"}` to
+  `state.skippedPlan`.
 - Skip topics that would be harmful or that a general Indian news/explainer site shouldn't publish
-  (explicit sexual content, instructions for anything dangerous); record the reason. Sexual-health
+  (explicit sexual content, instructions for anything dangerous) and record the reason. Sexual-health
   topics are fine when written as respectful, medically accurate health information.
-- Take the first 2 usable rows. Set `state.nextPlanOrder` to the row after the last one you used.
+- Skip topics aimed only at another country's system (e.g. UK GCSE or US-only rules) unless you can
+  write them usefully for Indian readers; record the reason.
+- Add the `order` of each row you use to `state.usedPlan`.
 
 **Trending topic (1):** use WebSearch to find what people in India are searching for this week
 (e.g. Google Trends India daily/realtime trends, "trending in India today", upcoming exams/results,
