@@ -1,6 +1,6 @@
 # Knewspaper daily articles: run brief
 
-Every day this job publishes **3 new articles** on www.knewspaper.in (Wix site ID
+Every day this job publishes **up to 3 new articles** (only ones that pass the quality gate) on www.knewspaper.in (Wix site ID
 `fc7a03c1-28fe-4510-90ba-025a62b06835`) under the **Knewspaper Editorial Team**:
 
 - **2 from the owner's content plan** (`daily/plan.csv`, in `order`), and
@@ -8,6 +8,31 @@ Every day this job publishes **3 new articles** on www.knewspaper.in (Wix site I
 
 Each gets a featured image made with the owner's ChatGPT (in their Chrome), when Chrome is reachable.
 Never publish a duplicate of an article already on the site.
+
+## Quality comes before the number (read this first)
+
+Google demotes whole sites for "scaled content abuse": many AI-written pages that add nothing new.
+That happened to other sites doing exactly this kind of daily publishing. So:
+
+- **3 is a maximum, not a target.** Publish an article only if it passes the quality gate (step 3b).
+  Publishing 1 or 2 good articles, or none, is a successful run. Never lower the bar to fill the quota.
+- **Information gain:** before writing, look at the top 5 Google results for the topic's main query
+  (WebSearch). Write down what they all say and what they miss. The article must give the reader
+  something those pages don't: an Indian angle (Indian rules, institutions, prices, examples),
+  official data or documents, a clear comparison table, worked examples, a step-by-step from an
+  official process, or a clearer, more accurate answer. If you can't find a real gap, skip the topic
+  (record "no information gain" in `skippedPlan`) and take the next one.
+- **No template look.** Don't reuse the same skeleton every day. Structure each article around what
+  the reader needs. No filler intros ("In today's fast-paced world…"), no generic advice that fits
+  any topic, no padding to reach a word count (900 good words beat 1,500 padded ones), no
+  "In conclusion", no fake experience ("we tested", "I tried"), no invented quotes or studies.
+- **Sources visible:** name the source of every important fact in the text ("according to the
+  Income Tax Department…"), and link 1–2 official sources.
+- **Health topics** (most of the plan): only general, well-established information from WHO, ICMR,
+  NHS, MoHFW or major hospitals; no diagnosis, treatment plans, dosages or supplement claims; say
+  when to see a doctor. Skip topics that need a medical professional's judgement to write safely.
+- **Every run, also check yesterday's articles** (from `state.published`): reread them on the live
+  site; fix any error you find (read it with `daily/read-post-template.js`, replacing `PUT-SLUG-HERE`, then republish the corrected markdown with `daily/update-post-template.js`, which takes `meta.json` + `article.md` like the create script and keeps every existing link) and note it in the log.
 
 All files mentioned are in this repo (`kautilya27/knewspaper`, branch `main`), under `daily/`.
 `daily/state.json` records progress; read it first and commit it at the end.
@@ -85,6 +110,20 @@ For each topic:
   Health & Fitness → health-fitness, Psychology & Mental Health → health-fitness, Education →
   education, Career & Jobs → career, Self-Improvement → career; trending topics: the closest topic).
 - Re-read the article once for accuracy, tone and duplicate content before publishing.
+
+### 3b. Quality gate (an independent check before publishing)
+For each finished draft, start a separate review agent (the Agent tool, `general-purpose`) that has
+NOT seen you write it. Give it only: the topic, the markdown, the meta, and this checklist. It must
+answer PASS or FAIL with reasons:
+1. Every fact, figure, date and rule is correct as of today: it checks the important ones itself
+   with WebSearch/WebFetch against official or major sources.
+2. It answers the main query in the first two paragraphs.
+3. It offers something the top 5 results for the query don't (it searches and compares).
+4. No filler, generic or padded passages; no repeated points; reads as written for a person.
+5. Safe and responsible (health/finance/relationship rules above); no unverified claims.
+6. Not a near-duplicate of an existing Knewspaper article.
+On FAIL, fix the listed problems and run the gate once more with a fresh agent. If it fails twice,
+don't publish: record the topic and reasons in `daily/log.md` and move on.
 
 ### 4. Featured image (when Chrome is reachable)
 Do this for each article before publishing it. If the Chrome tools are missing, don't respond, or
