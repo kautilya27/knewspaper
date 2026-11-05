@@ -53,13 +53,13 @@ A REIT payout is not one kind of income. Every distribution is split into parts,
 | Part of the payout | How it is taxed |
 |---|---|
 | Interest | Added to your income and taxed at your slab rate; TDS of 10% |
-| Dividend | Exempt if the SPV paying it has not opted for the lower company tax regime; otherwise taxable at your slab rate (see note below) |
+| Dividend | Exempt in your hands from tax year 2026-27 (1 April 2026), including where the SPV has opted for the lower company tax regime (see note below) |
 | Rental income | Taxed at your slab rate |
 | Repayment of debt / return of capital | Not taxed until your total receipts of this kind exceed what you paid for the unit; the untaxed part reduces your cost |
 | Selling units (held 12 months or less) | Short-term capital gain, taxed at 20% |
 | Selling units (held more than 12 months) | Long-term capital gain, taxed at 12.5% above ₹1.25 lakh a year (limit shared with shares and equity funds) |
 
-**Note on dividends:** in August 2026 Parliament passed the Taxation and Other Laws (Amendment) Bill, 2026, which is meant to keep the dividend part exempt even where the SPV has moved to the lower company tax regime. Check the final notified rules for the year you receive the payout. Remember that the new Income-tax Act, 2025 applies from April 2026, so section numbers in older articles may no longer match.
+**Note on dividends:** the Taxation and Other Laws (Amendment) Act, 2026 received the President's assent on 17 August 2026. It makes dividends that unitholders receive from business trusts such as REITs and InvITs exempt from 1 April 2026 (tax year 2026-27), including where the SPV has opted for the lower company tax regime; earlier, those dividends were taxable at your slab rate. Interest, rental income and other parts of the payout are still taxed as before. Remember that the new Income-tax Act, 2025 applies from April 2026, so section numbers in older articles may no longer match.
 
 Report each part correctly in your return; our [step-by-step guide to filing ITR online](https://www.knewspaper.in/post/how-to-file-itr-online) can help. If your REIT income is large, speak to a tax adviser.
 
@@ -105,7 +105,7 @@ Yes. India has SEBI-regulated REITs whose units are listed on the NSE and BSE, s
 
 ### How are REIT payouts taxed in India?
 
-Each REIT payout is split into parts that are taxed differently: interest and rental income at your slab rate, dividends exempt or taxable depending on the SPV's tax regime, and repayment of debt taxed only after you have received more than your cost. Profit from selling units is taxed as capital gains, so check your REIT's tax statement each year.
+Each REIT payout is split into parts that are taxed differently: interest and rental income at your slab rate, dividends exempt from tax year 2026-27, and repayment of debt taxed only after you have received more than your cost. Profit from selling units is taxed as capital gains, so check your REIT's tax statement each year.
 
 ### Are REITs risky?
 

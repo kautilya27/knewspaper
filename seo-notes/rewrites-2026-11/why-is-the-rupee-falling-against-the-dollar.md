@@ -53,7 +53,7 @@ By early October 2026 the rupee had fallen more than 7% for the year and was tra
 
 The RBI's aim is to stop panicky, one-way moves, not to defend a fixed number. In 2026 it has:
 
-- **Sold dollars from its reserves** in the spot and forward markets. India's foreign exchange reserves hit a record of about $785 billion in early September 2026 and fell to about $734 billion by 2 October, RBI data showed, which still covers roughly 11 months of imports.
+- **Sold dollars from its reserves** in the spot and forward markets. RBI weekly data showed India's foreign exchange reserves falling by about $13 billion to $734.6 billion in the week ended 2 October 2026, and to about $726 billion a week later, still enough to cover roughly 11 months of imports.
 - **Curbed speculation**, for example by capping banks' net open positions in the rupee at $100 million from April 2026.
 - **Raised interest rates.** In October 2026 the Monetary Policy Committee lifted the repo rate by 0.25 percentage points to 5.50%, its first increase since February 2023, citing inflation from oil and pressure on the rupee. It also changed its stance to "calibrated tightening".
 

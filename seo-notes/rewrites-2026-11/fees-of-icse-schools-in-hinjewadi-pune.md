@@ -1,6 +1,6 @@
 Hinjewadi's IT parks have brought thousands of young families to west Pune, and many of them want an ICSE school for their children. The big question is cost: how much do ICSE schools in Hinjewadi charge, and what else should you budget for?
 
-**Quick answer:** fees at ICSE (CISCE-affiliated) schools in and around Hinjewadi vary widely from school to school. For the 2026-27 session, one school-admission portal listed monthly fees of about ₹3,750 to ₹18,800 for CISCE schools in Hinjewadi, or very roughly ₹45,000 to ₹2.25 lakh a year. On top of tuition, expect a one-time admission fee and yearly charges for transport, books, uniforms and activities. Most schools don't publish full fee structures online, so always ask each school for its official fee sheet for the year you are applying.
+**Quick answer:** fees at ICSE (CISCE-affiliated) schools in and around Hinjewadi vary widely from school to school, and most schools don't publish their full fee structures online, so the only reliable figure is the school's own fee sheet for the year you are applying. Budget for the tuition fee plus a one-time admission fee and yearly charges for transport, books, uniforms and activities, and ask each school for its official 2026-27 fee sheet before you decide.
 
 [[IMAGE 0]]
 
