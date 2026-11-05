@@ -1,4 +1,4 @@
-// Write for us (write-for-us.html): plans, member login, the article form and
+// Submit your article (submit-article.html): member login, the article form and
 // the writer's own articles. Plans are bought by email and paid manually; the
 // owner then adds the plan to the writer's account in Wix Pricing Plans (an
 // offline order), which gives the article credits. The article is saved to the GuestSubmissions collection as the logged-in
@@ -7,78 +7,20 @@ import { subscribeMember, getMemberState, login, register, verifyEmail, logout, 
 import { wixRequest, mintTokens, setTokens } from "/js/wix/client.js";
 import { WIX_CLIENT_ID } from "/js/wix/config.js";
 import { categoriesReady, esc } from "/assets/site.js";
+import { PLANS, planKeyById, inr, showBuy } from "/assets/plans.js";
 import { RULES, PLAN_CREDITS, slugify, isValidSlug, countWords, parseLink, checkSubmission, linkCounts } from "/assets/guest-rules.js";
 
 const SITE = "https://www.knewspaper.in";
-const PAGE = "/write-for-us.html";
+const PAGE = "/submit-article.html";
 const COLLECTION = "GuestSubmissions";
 const DRAFT_KEY = "knews.wfu.draft";
-const PLANS = {
-  single: { id: "57bd1c30-084b-437b-94da-270f365b0c0e", price: 499, label: "Single guest post" },
-  m5: { id: "04f4d952-fc28-4c5d-99ce-559ff5e51b12", price: 999, label: "Membership · 5 articles for 1 year" },
-  m10: { id: "b86d4fef-a32d-4ef8-84a7-c78100993911", price: 1499, label: "Membership · 10 articles for 1 year" },
-  m50: { id: "ced45f94-49c2-4e41-a75c-e2465eb21c7c", price: 2999, label: "Membership · 50 articles for 1 year" },
-  m100: { id: "204dbc14-ce23-4cd4-aed4-bf60e7fd0974", price: 4999, label: "Membership · 100 articles for 1 year" },
-};
-const planKeyById = Object.fromEntries(Object.entries(PLANS).map(([k, p]) => [p.id, k]));
-const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
-const MAIL = "knewspaper.in@gmail.com";
-// Buying a plan: an email with the plan, the writer's account email and the
-// article filled in. Not everyone has a mail app, so the buy box offers Gmail in
-// the browser, copying the address or the message, and the mail app.
-function buyMessage(key, articleTitle) {
-  const plan = PLANS[key] || PLANS.single;
-  let email = "";
-  try { const m = getMemberState().member || {}; email = m.loginEmail || (m.contact && m.contact.emails && m.contact.emails[0]) || ""; } catch {}
-  const subject = `Buy guest post plan: ${plan.label} (${inr(plan.price)})`;
-  const body = [
-    "Hi Knewspaper team,",
-    "",
-    `I'd like to buy: ${plan.label} (${inr(plan.price)}).`,
-    `My Knewspaper account email: ${email}`,
-    articleTitle ? `Article I've submitted: ${articleTitle}` : "",
-    "",
-    "Please send me the payment details.",
-  ].filter((l, i, a) => l || a[i - 1]).join("\n");
-  return { plan, subject, body };
-}
-function buyLink(key, articleTitle) {
-  const { subject, body } = buyMessage(key, articleTitle);
-  return `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-let buyDialog = null;
-function showBuy(key, articleTitle) {
-  const { plan, subject, body } = buyMessage(key, articleTitle);
-  const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(MAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  if (!buyDialog) {
-    buyDialog = document.createElement("dialog");
-    buyDialog.className = "wfu-buydlg";
-    document.body.append(buyDialog);
-    document.head.insertAdjacentHTML("beforeend", `<style>.wfu-buydlg{max-width:460px;width:calc(100% - 32px);border:0;border-radius:14px;padding:22px 22px 18px;box-shadow:0 18px 50px rgba(0,0,0,.25);font-family:var(--sans)}.wfu-buydlg::backdrop{background:rgba(15,23,42,.45)}.wfu-buydlg h3{margin:0 0 6px;font-size:1.15rem}.wfu-buydlg p{margin:.4em 0;color:#444}.wfu-buydlg .addr{display:flex;gap:8px;align-items:center;margin:12px 0;padding:10px 12px;border:1px solid #d5dbe8;border-radius:8px;background:#f6f8fc;font-weight:600;word-break:break-all}.wfu-buydlg .addr span{flex:1}.wfu-buydlg .opts{display:grid;gap:8px;margin-top:12px}.wfu-buydlg .opts .btn,.wfu-buydlg .opts button{width:100%;text-align:center;justify-content:center}.wfu-buydlg .close{position:absolute;top:10px;right:12px;border:0;background:none;font-size:1.4rem;cursor:pointer;color:#666}.wfu-buydlg .ok{color:#137333;font-size:.9rem;min-height:1.2em}</style>`);
-    buyDialog.addEventListener("click", (e) => { if (e.target === buyDialog) buyDialog.close(); });
-  }
-  buyDialog.innerHTML = `<button type="button" class="close" aria-label="Close" data-close>×</button>
-    <h3>Buy: ${esc(plan.label)} (${inr(plan.price)})</h3>
-    <p>Email us with the plan you want. We reply with the payment details, and add the plan to your account once you've paid.</p>
-    <div class="addr"><span>${MAIL}</span><button type="button" class="btn btn--quiet" data-copy-addr>Copy</button></div>
-    <div class="opts">
-      <a class="btn" href="${esc(gmail)}" target="_blank" rel="noopener">Write the email in Gmail</a>
-      <button type="button" class="btn btn--quiet" data-copy-msg>Copy the message</button>
-      <a class="btn btn--quiet" href="${esc(buyLink(plan === PLANS[key] ? key : "single", articleTitle))}">Open my mail app</a>
-    </div>
-    <p class="ok" role="status" aria-live="polite"></p>`;
-  const ok = $(".ok", buyDialog);
-  const copy = (text, msg) => (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => { ok.textContent = msg; }, () => { ok.textContent = "Couldn't copy. Select the text and copy it instead."; });
-  $("[data-copy-addr]", buyDialog).onclick = () => copy(MAIL, "Email address copied.");
-  $("[data-copy-msg]", buyDialog).onclick = () => copy(`To: ${MAIL}\nSubject: ${subject}\n\n${body}`, "Message copied. Paste it into any email to us.");
-  $("[data-close]", buyDialog).onclick = () => buyDialog.close();
-  if (buyDialog.showModal) buyDialog.showModal(); else buyDialog.setAttribute("open", "");
-}
+// The plans, the buy box and the buy email live in plans.js (shared with the Write for us page).
+const accountEmail = () => { try { const m = getMemberState().member || {}; return m.loginEmail || (m.contact && m.contact.emails && m.contact.emails[0]) || ""; } catch { return ""; } };
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-buy], [data-buy-mail]");
   if (!b) return;
   e.preventDefault();
-  showBuy(b.dataset.buy || planKey, b.dataset.title || "");
+  showBuy(b.dataset.buy || planKey, b.dataset.title || "", accountEmail());
 });
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -93,7 +35,6 @@ let planKey = "single";
 function setPlan(key, scroll) {
   if (!PLANS[key]) return;
   planKey = key;
-  $$("[data-buy-mail]").forEach((l) => { l.href = buyLink(key); l.textContent = `Buy: ${PLANS[key].label} (${inr(PLANS[key].price)})`; });
   form.elements.plan.value = key;
   $$(".wfu-card").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.pick === key)));
   const single = $(".wfu-single");
@@ -651,7 +592,7 @@ form.addEventListener("submit", async (e) => {
       account.loaded = false;
       loadAccount();
       $("#my-articles").scrollIntoView({ behavior: "smooth" });
-      if (!useCredit) setTimeout(() => showBuy(key, title), 600);
+      if (!useCredit) setTimeout(() => showBuy(key, title, accountEmail()), 600);
     }
   } catch (err) {
     const tooBig = /size|too large|413/i.test(err && err.message);
@@ -664,7 +605,10 @@ form.addEventListener("submit", async (e) => {
 // ------------------------------------------------------------ start
 drop.dataset.empty = drop.innerHTML;
 try { fillForm(JSON.parse(localStorage.getItem(DRAFT_KEY) || "null")); } catch {}
-if (!form.elements.plan.value) setPlan("single", false);
+// A plan chosen on the Write for us page (?plan=…) comes first.
+const askedPlan = new URLSearchParams(location.search).get("plan");
+if (askedPlan && PLANS[askedPlan]) setPlan(askedPlan, false);
+else if (!form.elements.plan.value) setPlan("single", false);
 serp();
 updateMeter();
 updatePay();

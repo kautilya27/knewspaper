@@ -44,7 +44,7 @@
     </div>
     <div class="wfu-single__buy">
       <span class="wfu-price">₹499</span>
-      <button type="button" class="btn" data-pick="single">Choose</button>
+      <button type="button" class="btn" data-pick="single">Write your article</button>
     </div>
   </div>
 
@@ -53,26 +53,30 @@
     <p>Valid for 12 months from purchase</p>
   </div>
   <div class="wfu-grid" role="group" aria-label="Membership plans">
-    <button type="button" class="wfu-card" data-pick="m5" aria-pressed="false">
+    <button type="button" class="wfu-card" data-pick="m5" aria-pressed="false" aria-label="Buy this membership by email">
       <span class="wfu-card__count">5 articles</span>
       <span class="wfu-card__price">₹999</span>
       <span class="wfu-card__per">₹200 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
     </button>
-    <button type="button" class="wfu-card" data-pick="m10" aria-pressed="false">
+    <button type="button" class="wfu-card" data-pick="m10" aria-pressed="false" aria-label="Buy this membership by email">
       <span class="wfu-card__count">10 articles</span>
       <span class="wfu-card__price">₹1,499</span>
       <span class="wfu-card__per">₹150 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
     </button>
-    <button type="button" class="wfu-card" data-pick="m50" aria-pressed="false">
+    <button type="button" class="wfu-card" data-pick="m50" aria-pressed="false" aria-label="Buy this membership by email">
       <span class="wfu-card__count">50 articles</span>
       <span class="wfu-card__price">₹2,999</span>
       <span class="wfu-card__per">₹60 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
     </button>
-    <button type="button" class="wfu-card" data-pick="m100" aria-pressed="false">
+    <button type="button" class="wfu-card" data-pick="m100" aria-pressed="false" aria-label="Buy this membership by email">
       <span class="wfu-badge">Best value</span>
       <span class="wfu-card__count">100 articles</span>
       <span class="wfu-card__price">₹4,999</span>
       <span class="wfu-card__per">₹50 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
     </button>
   </div>
 
@@ -88,14 +92,14 @@
   <div class="wfu-buy" id="buy">
     <h3>How to buy a plan</h3>
     <ol>
-      <li>Create your free account below (or log in).</li>
+      <li>Click a membership above, or the button below, and choose your plan.</li>
       <li>Email us at <a href="mailto:knewspaper.in@gmail.com">knewspaper.in@gmail.com</a> with the plan you want and your account email.</li>
       <li>We reply with the payment details. Pay, and send us the payment reference.</li>
-      <li>We add the plan to your account, usually within 24 hours. Your credits then show here, and any article you've already submitted goes live.</li>
+      <li>We add the plan to your account, usually within 24 hours. Your credits then show on the <a href="/submit-article">Submit your article</a> page, and any article you've already submitted goes live.</li>
     </ol>
-    <a class="btn" data-buy-mail href="mailto:knewspaper.in@gmail.com?subject=Buy%20guest%20post%20plan">Email us to buy a plan</a>
+    <button type="button" class="btn" data-buy-mail>Buy a plan by email</button>
   </div>
-  <style>.wfu-buy{margin-top:24px;padding:20px 22px;border:1.5px solid var(--blue);border-radius:12px;background:#f5f8ff}.wfu-buy h3{margin:0 0 8px}.wfu-buy ol{margin:0 0 14px;padding-left:1.2em}.wfu-buy li{margin:.3em 0}</style>
+  <style>.wfu-card__buy{display:block;margin-top:10px;font-weight:600;color:var(--blue);font-size:.9rem}.wfu-buy{margin-top:24px;padding:20px 22px;border:1.5px solid var(--blue);border-radius:12px;background:#f5f8ff}.wfu-buy h3{margin:0 0 8px}.wfu-buy ol{margin:0 0 14px;padding-left:1.2em}.wfu-buy li{margin:.3em 0}</style>
 </section>
 
 <section class="wfu-plans" aria-labelledby="how-title">
@@ -103,170 +107,16 @@
   <ol class="wfu-steps">
     <li><strong>Log in or create an account</strong>It keeps your article credits and shows each article's status.</li>
     <li><strong>Email us to buy a plan</strong>We send the payment details; once you've paid, we add the plan to your account.</li>
-    <li><strong>Add your article</strong>Content with subheadings, slug, meta tags and featured image.</li>
+    <li><strong>Add your article</strong>On the <a href="/submit-article">Submit your article</a> page: content with subheadings, slug, meta tags and featured image.</li>
     <li><strong>It goes live</strong>Automatically once your plan is active and the article passes the checks. You can submit before paying; it waits for your plan.</li>
   </ol>
 </section>
 
-<section class="wfu-plans" id="submit" aria-labelledby="submit-title">
-  <h2 class="wfu-h2" id="submit-title">Submit your article</h2>
-
-  <div class="wfu-account" id="account" data-account>
-    <div data-pane="loading"><p class="wfu-muted">Checking your account…</p></div>
-    <div data-pane="out" hidden>
-      <h3 class="wfu-h3">Log in or create an account</h3>
-      <p class="wfu-muted">Your account keeps your article credits and shows the status of each article you submit.</p>
-      <button type="button" class="wfu-google" data-google><svg aria-hidden="true" width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.2-8.5 2.2-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>
-      <p class="wfu-or"><span>or use your email</span></p>
-      <style>.wfu-google{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:360px;padding:11px 16px;margin:6px 0 4px;border:1.5px solid #c9ced8;border-radius:8px;background:#fff;color:#1f1f1f;font:600 .98rem/1.2 var(--sans);cursor:pointer}.wfu-google:hover{background:#f6f8fb;border-color:#9aa3b2}.wfu-google:disabled{opacity:.6;cursor:wait}.wfu-or{display:flex;align-items:center;gap:12px;color:var(--ink-3);font-size:.85rem;margin:12px 0 4px;max-width:360px}.wfu-or::before,.wfu-or::after{content:"";flex:1;border-top:1px solid #dde1e8}</style>
-      <div class="wfu-tabs" role="tablist" aria-label="Account">
-        <button type="button" role="tab" data-auth-tab="login" aria-selected="true">Log in</button>
-        <button type="button" role="tab" data-auth-tab="signup" aria-selected="false">Create account</button>
-      </div>
-      <form class="wfu-auth" data-login>
-        <div class="wfu-row wfu-row--2">
-          <div class="wfu-field"><label for="li-email">Email</label><input id="li-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="wfu-field"><label for="li-pass">Password</label><input id="li-pass" name="password" type="password" autocomplete="current-password" required></div>
-        </div>
-        <div class="wfu-auth__go"><button type="submit" class="btn">Log in</button><p class="form-status" role="status" aria-live="polite"></p></div>
-      </form>
-      <form class="wfu-auth" data-signup hidden>
-        <div class="wfu-row wfu-row--2">
-          <div class="wfu-field"><label for="su-first">First name</label><input id="su-first" name="firstName" autocomplete="given-name" required></div>
-          <div class="wfu-field"><label for="su-last">Last name</label><input id="su-last" name="lastName" autocomplete="family-name"></div>
-        </div>
-        <div class="wfu-row wfu-row--2">
-          <div class="wfu-field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="wfu-field"><label for="su-pass">Password</label><input id="su-pass" name="password" type="password" autocomplete="new-password" minlength="6" required></div>
-        </div>
-        <p class="wfu-muted">Your first and last name appear as the author of your articles.</p>
-        <div class="wfu-auth__go"><button type="submit" class="btn">Create account</button><p class="form-status" role="status" aria-live="polite"></p></div>
-      </form>
-      <form class="wfu-auth" data-verify hidden>
-        <p>We've emailed you a code. Enter it here to finish creating your account.</p>
-        <div class="wfu-field"><label for="vf-code">Code</label><input id="vf-code" name="code" inputmode="numeric" autocomplete="one-time-code" required></div>
-        <div class="wfu-auth__go"><button type="submit" class="btn">Confirm</button><p class="form-status" role="status" aria-live="polite"></p></div>
-      </form>
-      <p class="wfu-member-note" data-approval hidden>Your account has been created and is waiting for approval. We'll email you when it's ready.</p>
-    </div>
-    <div data-pane="in" hidden>
-      <p class="wfu-signed">Logged in as <strong data-member-name></strong> <button type="button" class="wfu-link" data-logout>Log out</button></p>
-      <p class="wfu-credits" data-credits></p>
-    </div>
-  </div>
-
-  <form class="wfu-form" data-wfu-form novalidate>
-    <div class="wfu-field" data-plan-field>
-      <label for="wfu-plan">Plan</label>
-      <select id="wfu-plan" name="plan">
-        <option value="single">Single guest post · ₹499</option>
-        <option value="m5">Membership · 5 articles / year · ₹999</option>
-        <option value="m10">Membership · 10 articles / year · ₹1,499</option>
-        <option value="m50">Membership · 50 articles / year · ₹2,999</option>
-        <option value="m100">Membership · 100 articles / year · ₹4,999</option>
-      </select>
-    </div>
-
-    <div class="wfu-field">
-      <label for="wfu-title">Article title</label>
-      <input id="wfu-title" name="title" maxlength="120" placeholder="e.g. 10 Budget Hill Stations to Visit This Winter">
-    </div>
-
-    <div class="wfu-field">
-      <span class="wfu-legend" id="wfu-body-label">Article</span>
-      <div class="wfu-editor">
-        <div class="wfu-toolbar" role="toolbar" aria-label="Formatting" data-toolbar>
-          <button type="button" data-cmd="p" title="Normal text">Text</button>
-          <button type="button" data-cmd="h2" title="Main heading">H2</button>
-          <button type="button" data-cmd="h3" title="Subheading">H3</button>
-          <span class="wfu-sep" aria-hidden="true"></span>
-          <button type="button" data-cmd="bold" title="Bold"><b>B</b></button>
-          <button type="button" data-cmd="italic" title="Italic"><i>I</i></button>
-          <span class="wfu-sep" aria-hidden="true"></span>
-          <button type="button" data-cmd="insertUnorderedList" title="Bulleted list">• List</button>
-          <button type="button" data-cmd="insertOrderedList" title="Numbered list">1. List</button>
-          <button type="button" data-cmd="blockquote" title="Quote">Quote</button>
-          <span class="wfu-sep" aria-hidden="true"></span>
-          <button type="button" data-cmd="link" title="Add a link">Link</button>
-        </div>
-        <div class="wfu-linkbar" data-linkbar hidden>
-          <input type="url" data-link-url aria-label="Link address" placeholder="https://">
-          <button type="button" class="btn" data-add-link>Save link</button>
-          <button type="button" class="wfu-link" data-unlink hidden>Remove link</button>
-          <button type="button" class="wfu-link" data-cancel-link>Cancel</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </div>
-        <div class="wfu-rich" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="wfu-body-label" data-editor data-placeholder="Write or paste your article here. Use H2 and H3 for subheadings. Paste from Google Docs or Word keeps headings, lists and links."></div>
-      </div>
-      <div class="wfu-meter" aria-live="polite">
-        <span data-meter="words">0 words</span>
-        <span data-meter="headings">0 subheadings</span>
-        <span data-meter="links">Links to other sites 0/5</span>
-      </div>
-      <p class="wfu-hint"><span>500 to 1,500 words · at least 2 subheadings (one an H2) · up to 5 links to other sites (published as sponsored); click a link to edit it.</span></p>
-    </div>
-
-    <div class="wfu-field">
-      <label for="wfu-slug">URL slug</label>
-      <div class="wfu-slug"><span>knewspaper.in/post/</span><input id="wfu-slug" name="slug" maxlength="80" placeholder="budget-hill-stations-winter" autocapitalize="off" spellcheck="false"></div>
-      <div class="wfu-hint"><span data-slug-hint>Lowercase letters, numbers and hyphens. Filled in from your title; you can edit it.</span></div>
-    </div>
-
-    <div class="wfu-row wfu-row--2">
-      <div class="wfu-field">
-        <label for="wfu-mtitle">SEO title (meta title)</label>
-        <input id="wfu-mtitle" name="metaTitle" maxlength="70" placeholder="Shown as the headline in Google">
-        <div class="wfu-hint"><span>Best under 60 characters</span><span data-count="metaTitle" data-max="60">0/60</span></div>
-      </div>
-      <div class="wfu-field">
-        <label for="wfu-category">Topic</label>
-        <select id="wfu-category" name="categoryId"><option value="">Choose a topic</option></select>
-      </div>
-    </div>
-
-    <div class="wfu-field">
-      <label for="wfu-mdesc">Meta description</label>
-      <textarea id="wfu-mdesc" name="metaDescription" maxlength="170" placeholder="One or two sentences that sum up the article for Google results"></textarea>
-      <div class="wfu-hint"><span>Best between 120 and 155 characters</span><span data-count="metaDescription" data-max="155">0/155</span></div>
-    </div>
-
-    <div class="wfu-field">
-      <span class="wfu-legend">Google preview</span>
-      <div class="wfu-serp" aria-live="polite">
-        <div class="wfu-serp__url" data-serp-url>https://www.knewspaper.in/post/your-slug</div>
-        <div class="wfu-serp__title" data-serp-title>Your SEO title appears here</div>
-        <div class="wfu-serp__desc" data-serp-desc>Your meta description appears here.</div>
-      </div>
-    </div>
-
-    <div class="wfu-field">
-      <span class="wfu-legend">Featured image</span>
-      <label class="wfu-drop" for="wfu-image" data-drop>
-        <span><strong>Click to upload</strong> or drag an image here</span>
-        <span>JPG, PNG or WebP · at least 1200 × 675 px · you must own the rights</span>
-      </label>
-      <input id="wfu-image" name="image" type="file" accept="image/jpeg,image/png,image/webp" class="sr-only">
-      <p class="wfu-hint wfu-hint--error" data-image-hint></p>
-      <div class="wfu-field wfu-alt"><label for="wfu-alt">Image alt text</label><input id="wfu-alt" name="imageAlt" maxlength="150" placeholder="Describe the image for screen readers"></div>
-    </div>
-
-    <label class="wfu-check"><input type="checkbox" name="original"> The article is my original work and hasn't been published elsewhere.</label>
-    <label class="wfu-check"><input type="checkbox" name="agree"> I've read the guidelines. I understand my article goes live without review, and that Knewspaper may remove it if it goes against them (I'll get one more article credit in its place).</label>
-
-    <div class="wfu-problems" data-problems hidden role="alert"></div>
-
-    <div class="wfu-pay">
-      <div class="wfu-pay__total"><span data-total>₹499</span><small data-total-note>Single guest post</small></div>
-      <button type="submit" class="btn" data-paybtn>Submit article</button>
-    </div>
-    <p class="wfu-muted wfu-agree-note">By buying a plan you agree to our <a href="/terms-and-conditions">terms and conditions</a> and <a href="/refund-policy">refund policy</a>. All payments are final; there are no refunds.</p>
-    <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-  </form>
-</section>
-
-<section class="wfu-plans" id="my-articles" aria-labelledby="mine-title">
-  <h2 class="wfu-h2" id="mine-title">Your articles</h2>
-  <p class="form-status" data-paid role="status" aria-live="polite"></p>
-  <div data-my-articles><p class="wfu-muted">Log in to see the articles you've submitted.</p></div>
+<section class="wfu-plans wfu-cta" id="submit" aria-labelledby="submit-title">
+  <h2 class="wfu-h2" id="submit-title">Ready to publish?</h2>
+  <p class="wfu-sub">Log in with Google or your email, add your article with its title, URL slug, meta tags and featured image, and it goes live once your plan is active.</p>
+  <p><a class="btn wfu-cta__btn" href="/submit-article">Submit your article</a></p>
+  <p class="wfu-muted">Already a writer? <a href="/submit-article#my-articles">See your articles and credits</a>.</p>
+  <style>.wfu-cta{text-align:center}.wfu-cta__btn{font-size:1.1rem;padding:14px 28px}</style>
 </section>
 </section>

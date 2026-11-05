@@ -46,6 +46,30 @@ async () => {
     changed.add(e.path);
   }
 
+  // Write for us (guidelines and plans) and Submit your article (account, form,
+  // the writer's articles) are two pages built in the live Write for us shell.
+  if (given["prerender/wfu-main.html"] && given["prerender/submit-main.html"]) {
+    const base = text["write-for-us.html"];
+    const withMain = (h, main) => h.replace(/(<main id="main" tabindex="-1">)[\s\S]*?(<\/main>)/, (_, a, b) => a + main + b);
+    let sub = withMain(base, given["prerender/submit-main.html"])
+      .replace(/<title>[^<]*<\/title>/, "<title>Submit your article | Knewspaper</title>")
+      .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="Log in and submit your guest post to Knewspaper: title, URL slug, meta tags and featured image.">')
+      .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="Submit your article | Knewspaper">')
+      .replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://www.knewspaper.in/submit-article">')
+      .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="Log in and submit your guest post to Knewspaper.">')
+      .replace(/<link rel="canonical"[^>]*>/g, "")
+      .replace("</head>", '<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://www.knewspaper.in/submit-article"></head>');
+    text["submit-article.html"] = sub.replace(/src="\/assets\/wfu\.bundle\.js/, 'src="/assets/write.bundle.js');
+    text["write-for-us.html"] = withMain(base, given["prerender/wfu-main.html"]).replace(/src="\/assets\/write\.bundle\.js/, 'src="/assets/wfu.bundle.js');
+    changed.add("submit-article.html");
+    changed.add("write-for-us.html");
+  }
+  // The header "Log in" / "My account" link goes to the Submit your article page.
+  for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) {
+    const h = text[p].replace(/\/write-for-us(?:\.html)?#(account|my-articles)/g, "/submit-article.html#$1");
+    if (h !== text[p]) { text[p] = h; changed.add(p); }
+  }
+
   // ---------------------------------------------------------------- data
   const posts = [];
   let cursor = null;
@@ -414,7 +438,7 @@ async () => {
     return [`// Bundled ${new Date().toISOString().slice(0, 10)} from ${entry} and ${order.length - 1} imported modules.`, "(() => {", "const __d = {}, __m = {};",
       "const __r = (k) => { if (__m[k]) return __m[k]; const e = (__m[k] = {}); __d[k](e); return e; };", ...order.map(body), `__r(${JSON.stringify(entry)});`, "})();", ""].join("\n");
   }
-  for (const name of ["home", "feed", "post", "search", "site", "write"]) out[`assets/${name}.bundle.js`] = bundle(`/assets/${name}.js`);
+  for (const name of ["home", "feed", "post", "search", "site", "write", "wfu"]) out[`assets/${name}.bundle.js`] = bundle(`/assets/${name}.js`);
   // New bundle names in every page, so the CDN's cached copies of the old ones aren't used.
   const ver = Date.now().toString(36);
   const bust = (h) => h.replace(/(src="\/assets\/[a-z]+\.bundle\.js)(\?v=[^"]*)?"/g, `$1?v=${ver}"`);
@@ -443,6 +467,10 @@ async () => {
     }
     // Articles that never had a redirect get one too.
     const have = new Set(all.map((r) => r.from));
+    if (!have.has("/submit-article")) {
+      const r = await wix.request({ method: "POST", url: API + "/seo-redirects-service/v1/bulk/redirects/create", body: { redirects: [{ from: "/submit-article", to: "/submit-article.html" }] } });
+      report.submitRedirect = r.bulkActionMetadata;
+    }
     for (const s of pre) { const from = "/post/" + encodeURIComponent(s); if (!have.has(from) && slugs.has(s)) wanted.push({ from, to: filePath(s), options: { forceReplace: true } }); }
     let ok = 0; const failed = [];
     for (let i = 0; i < wanted.length; i += 100) {
