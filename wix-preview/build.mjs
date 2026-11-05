@@ -9,8 +9,8 @@ const OUT = fileURLToPath(new URL('./site', import.meta.url));
 
 const LOGO = 'https://static.wixstatic.com/media/a6d18f_52e30208d4a84944b1729aac5f215b57~mv2.png/v1/fit/w_520,h_80,q_90,enc_avif,quality_auto/a6d18f_52e30208d4a84944b1729aac5f215b57~mv2.png';
 const EMAIL = 'knewspaper.in@gmail.com';
-const ABOUT = 'Knewspaper is where news meets curiosity. We publish clear explainers, thoughtful articles and engaging stories on technology, health, education, culture, lifestyle and more.';
-const ABOUT2 = 'Our writers, editors and contributors aim to bring fresh perspectives, timely updates and useful analysis to curious readers, trendsetters and lifelong learners.';
+const ABOUT = 'Knewspaper publishes explainers, guides and opinion pieces on technology, health, education, culture, lifestyle and more. It is not a news website.';
+const ABOUT2 = 'Our writers, editors and contributors aim to bring fresh perspectives, clear explanations and useful analysis to curious readers, trendsetters and lifelong learners.';
 const CONTACT = 'Have a question, feedback, a suggestion or a collaboration idea? Send us a message, or just say hello.';
 
 const head = ({ title, description, script, noindex = false }) => `<!doctype html>
@@ -76,7 +76,7 @@ const footer = `<footer class="footer">
       </ul>
     </nav>
   </div>
-  <div class="wrap footer__legal"><p>© 2026 by KNEWSPAPER.</p></div>
+  <div class="wrap footer__legal"><p class="footer__notice">Knewspaper is an information and opinion website, not a news website. Our articles explain topics and share views for general information only; we don't claim they are complete, official or always up to date, and they are not professional advice. If you think something is wrong or out of date, email <a href="mailto:${EMAIL}">${EMAIL}</a> and we'll check it.</p><p>© 2026 by KNEWSPAPER.</p></div>
 </footer>`;
 
 const newsletter = (id) => `<section class="newsletter" aria-labelledby="${id}-title">
@@ -107,9 +107,9 @@ const staticPage = (title, description, content) =>
 const files = {};
 
 files['index.html'] = page(
-  { title: 'Knewspaper | Stay informed with latest updates', description: 'Discover the latest trends, articles and updates on Knewspaper. Clear news and explainers on health, education, technology, careers, festivals and more.', script: 'home' },
+  { title: 'Knewspaper | Stay informed with latest updates', description: 'Discover the latest trends, articles and updates on Knewspaper. Clear explainers, guides and opinions on health, education, technology, careers, festivals and more.', script: 'home' },
   `<section class="wrap intro">
-  <h1 class="intro__title">Knewspaper: news and explainers, made clear</h1>
+  <h1 class="intro__title">Knewspaper: explainers and opinions, made clear</h1>
   <p class="intro__sub">Read what’s new in health, education, careers, technology, festivals and more</p>
 </section>
 <section class="wrap top" aria-label="Featured articles" data-top><p class="feed-status skeleton">Loading the latest articles…</p></section>
