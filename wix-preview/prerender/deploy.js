@@ -57,16 +57,57 @@ async () => {
       .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="Submit your article | Knewspaper">')
       .replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://www.knewspaper.in/submit-article">')
       .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="Log in and submit your guest post to Knewspaper.">')
-      .replace(/<link rel="canonical"[^>]*>/g, "")
+      .replace(/<meta name="robots"[^>]*>/g, "").replace(/<link rel="canonical"[^>]*>/g, "")
+      .replace(/<script type="application\/ld\+json" id="ld-wfu">[\s\S]*?<\/script>/g, "")
       .replace("</head>", '<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://www.knewspaper.in/submit-article"></head>');
     text["submit-article.html"] = sub.replace(/src="\/assets\/wfu\.bundle\.js/, 'src="/assets/write.bundle.js');
     text["write-for-us.html"] = withMain(base, given["prerender/wfu-main.html"]).replace(/src="\/assets\/write\.bundle\.js/, 'src="/assets/wfu.bundle.js');
     changed.add("submit-article.html");
     changed.add("write-for-us.html");
+    // Write for us: title, description, canonical and structured data (FAQ from the page's own FAQ section).
+    const faqHtml = (given["prerender/wfu-main.html"].match(/<h2>Frequently asked questions<\/h2>([\s\S]*?)<\/div>/) || [, ""])[1];
+    const strip = (x) => x.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+    const faq = [...faqHtml.matchAll(/<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].map((m) => ({ "@type": "Question", name: strip(m[1]), acceptedAnswer: { "@type": "Answer", text: strip(m[2]) } }));
+    const WFU_TITLE = "Write for Us: Submit a Guest Post | Knewspaper";
+    const WFU_DESC = "Write for Knewspaper: we accept guest posts on education, careers, sports, technology, health, finance and more. Read our guidelines and submit your article.";
+    const wfuLd = { "@context": "https://schema.org", "@graph": [
+      { "@type": "WebPage", "@id": SITE + "/write-for-us", url: SITE + "/write-for-us", name: WFU_TITLE, description: WFU_DESC, inLanguage: "en-IN", isPartOf: { "@id": SITE + "/#website" }, publisher: { "@id": SITE + "/#organization" } },
+      { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" }, { "@type": "ListItem", position: 2, name: "Write for us", item: SITE + "/write-for-us" }] },
+      ...(faq.length >= 2 ? [{ "@type": "FAQPage", mainEntity: faq }] : []),
+    ] };
+    text["write-for-us.html"] = text["write-for-us.html"]
+      .replace(/<title>[^<]*<\/title>/, `<title>${WFU_TITLE}</title>`)
+      .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${WFU_DESC}">`)
+      .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${WFU_TITLE}">`)
+      .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${WFU_DESC}">`)
+      .replace(/<link rel="canonical"[^>]*>/g, "").replace(/<meta property="og:url"[^>]*>/g, "")
+      .replace(/<script type="application\/ld\+json" id="ld-wfu">[\s\S]*?<\/script>/g, "")
+      .replace("</head>", `<link rel="canonical" href="${SITE}/write-for-us"><meta property="og:url" content="${SITE}/write-for-us"><script type="application/ld+json" id="ld-wfu">${JSON.stringify(wfuLd).replace(/</g, "\\u003c")}</script></head>`);
+    // My account: login, credits, plan and the writer's articles (not indexed).
+    if (given["prerender/account-main.html"]) {
+      text["my-account.html"] = withMain(base, given["prerender/account-main.html"])
+        .replace(/<title>[^<]*<\/title>/, "<title>My account | Knewspaper</title>")
+        .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="Your Knewspaper writer account: article credits, plan and the status of your articles.">')
+        .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="My account | Knewspaper">')
+        .replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://www.knewspaper.in/my-account">')
+        .replace(/<meta name="robots"[^>]*>/g, "").replace(/<link rel="canonical"[^>]*>/g, "")
+        .replace(/<script type="application\/ld\+json" id="ld-wfu">[\s\S]*?<\/script>/g, "")
+        .replace("</head>", '<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://www.knewspaper.in/my-account"></head>')
+        .replace(/src="\/assets\/(?:wfu|write)\.bundle\.js/, 'src="/assets/account.bundle.js');
+      changed.add("my-account.html");
+    }
+  }
+  // Prices are only on the Submit your article page; the account page is My account.
+  for (const p of ["terms.html", "refund-policy.html"]) if (text[p]) {
+    const h = text[p]
+      .replace(/<p>We sell the right to publish guest articles on Knewspaper through these plans, priced in Indian rupees \(INR\):<\/p>\s*<ul>[\s\S]*?<\/ul>/, '<p>We sell the right to publish guest articles on Knewspaper through plans: a single guest post, or a one-year membership for several articles. Current prices, in Indian rupees (INR), are shown on the <a href="/submit-article">Submit your article</a> page before you buy.</p>')
+      .replace("The price shown on the Write for us page is the amount charged.", "The price shown on the Submit your article page is the amount charged.")
+      .replace('no plan shows in your account on the <a href="/write-for-us">Write for us</a> page', 'no plan shows on your <a href="/my-account">My account</a> page');
+    if (h !== text[p]) { text[p] = h; changed.add(p); }
   }
   // The header "Log in" / "My account" link goes to the Submit your article page.
   for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) {
-    const h = text[p].replace(/\/write-for-us(?:\.html)?#(account|my-articles)/g, "/submit-article.html#$1")
+    const h = text[p].replace(/\/write-for-us(?:\.html)?#(account|my-articles)/g, "/my-account").replace(/\/submit-article(?:\.html)?#my-articles/g, "/my-account")
       // Header: "Submit article" in place of "Write for us" (the footer keeps Write for us).
       .replace(/(<nav class="utility"[^>]*>[\s\S]*?)<a href="\/write-for-us(?:\.html)?">Write for us<\/a>/, '$1<a href="/submit-article">Submit article</a>')
       // Footer: no "Popular reads" column; three columns instead of four.
@@ -445,7 +486,7 @@ async () => {
     return [`// Bundled ${new Date().toISOString().slice(0, 10)} from ${entry} and ${order.length - 1} imported modules.`, "(() => {", "const __d = {}, __m = {};",
       "const __r = (k) => { if (__m[k]) return __m[k]; const e = (__m[k] = {}); __d[k](e); return e; };", ...order.map(body), `__r(${JSON.stringify(entry)});`, "})();", ""].join("\n");
   }
-  for (const name of ["home", "feed", "post", "search", "site", "write", "wfu"]) out[`assets/${name}.bundle.js`] = bundle(`/assets/${name}.js`);
+  for (const name of ["home", "feed", "post", "search", "site", "write", "wfu", "account"]) out[`assets/${name}.bundle.js`] = bundle(`/assets/${name}.js`);
   // New bundle names in every page, so the CDN's cached copies of the old ones aren't used.
   const ver = Date.now().toString(36);
   const bust = (h) => h.replace(/(src="\/assets\/[a-z]+\.bundle\.js)(\?v=[^"]*)?"/g, `$1?v=${ver}"`);
@@ -476,6 +517,10 @@ async () => {
     }
     // Articles that never had a redirect get one too.
     const have = new Set(all.map((r) => r.from));
+    if (!have.has("/my-account")) {
+      const r = await wix.request({ method: "POST", url: API + "/seo-redirects-service/v1/bulk/redirects/create", body: { redirects: [{ from: "/my-account", to: "/my-account.html" }] } });
+      report.accountRedirect = r.bulkActionMetadata;
+    }
     if (!have.has("/submit-article")) {
       const r = await wix.request({ method: "POST", url: API + "/seo-redirects-service/v1/bulk/redirects/create", body: { redirects: [{ from: "/submit-article", to: "/submit-article.html" }] } });
       report.submitRedirect = r.bulkActionMetadata;

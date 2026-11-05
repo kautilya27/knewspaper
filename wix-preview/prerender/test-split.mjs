@@ -14,7 +14,7 @@ const nodes=[{type:"IMAGE",imageData:{image:{src:{id:"abc_123~mv2.jpg"}},altText
 const posts=[{id:"1",slug:"test-post",title:"Test Post Title That Is Quite Long Indeed For Testing",excerpt:"Short excerpt",firstPublishedDate:"2024-05-01T10:00:00Z",lastPublishedDate:"2026-11-05T05:00:00Z",minutesToRead:4,categoryIds:["c1"],memberId:"c0f544a7-207e-490b-b7d9-830ef39f49c7",media:{wixMedia:{image:{id:"abc_123~mv2.jpg",url:"x",width:800,height:600}},displayed:true},richContent:{nodes},seoData:{tags:[{type:"title",children:"SEO Title"},{type:"meta",props:{name:"description",content:"SEO desc \"quoted\""}}]},relatedPostIds:[]},
 {id:"2",slug:"other-post",title:"Other",firstPublishedDate:"2025-01-01T00:00:00Z",lastPublishedDate:"2025-01-01T00:00:00Z",categoryIds:["c1"],memberId:"m2",richContent:{nodes:[P(T("x"))]}}];
 let patched=null, redir=[];
-globalThis.files=[];
+globalThis.files=[["assets/site.js","src/assets/site.js"],["assets/plans.js","src/assets/plans.js"],["assets/wfu.js","src/assets/wfu.js"],["assets/write.js","src/assets/write.js"],["assets/account.js","src/assets/account.js"],["assets/account-core.js","src/assets/account-core.js"],["prerender/header-nav.html","prerender/header-nav.html"],["prerender/wfu-main.html","write-for-us/main.html"],["prerender/submit-main.html","write-for-us/submit.html"],["prerender/account-main.html","write-for-us/account.html"]].map(([path,f])=>({path,content:fs.readFileSync(W+f,"utf8")+"\n§END"}));
 globalThis.wix={headless:{files:{
  list:async({offset=0})=>({files:offset?[]:[...Object.keys(live),"js/wix/post-store.js","js/wix/comments-store.js","js/wix/media.js","js/wix/posts-core.js","js/wix/client.js","js/wix/authors.js","js/wix/taxonomy.js","js/wix/blog-feed-store.js","js/wix/member-store.js","js/wix/purchase.js","js/wix/search.js",...["config","auth","guest-posts","members","plans","orders"].map(n=>"js/wix/"+n+".js"),"post/zz-test.html"].map(path=>({path})),hasMore:false}),
  read:async({path})=>({text:live[path]??"export const x = 1;\n",offset:0,length:1,hasMore:false}),
@@ -32,7 +32,7 @@ console.log(JSON.stringify(rep));
 console.log(redir);
 const out=Object.fromEntries(patched.files.map(f=>[f.path,f.content]));
 console.log(Object.keys(out).join(" "));
-for (const k of ["write-for-us.html","submit-article.html","assets/wfu.bundle.js","assets/write.bundle.js","post/test-post.html","index.html"]) fs.writeFileSync(process.argv[2]+"/"+k.replace("/","_"),out[k]||"MISSING");process.exit(0);
+for (const k of ["write-for-us.html","submit-article.html","my-account.html","assets/account.bundle.js","assets/write.bundle.js","post/test-post.html","index.html"]) fs.writeFileSync(process.argv[2]+"/"+k.replace("/","_"),out[k]||"MISSING");process.exit(0);
 fs.writeFileSync(process.argv[2]+"/ed.html",out["editorial-team.html"]);
 for (const k of ["assets/post.bundle.js","assets/site.js","assets/prerendered.js","sitemap-articles.xml"]) fs.writeFileSync(process.argv[2]+"/"+k.replace("/","_"),out[k]||"MISSING");
 const want={"assets/site.js":"site.js","assets/post.js":"post.js","assets/fast.js":"fast.js","assets/seo.js":"seo.js","assets/guest-rules.js":"guest-rules.js","assets/write.js":"write.js"};

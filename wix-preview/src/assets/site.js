@@ -177,13 +177,13 @@ export function showOldUrl(path) {
   if (!link) { link = document.createElement("link"); link.rel = "canonical"; document.head.append(link); }
   link.href = location.origin + path;
 }
-const OLD_PATHS = { "/blog.html": "/blog", "/about.html": "/about-us", "/contact.html": "/contact", "/write-for-us.html": "/write-for-us", "/submit-article.html": "/submit-article", "/privacy-policy.html": "/privacy-policy" };
+const OLD_PATHS = { "/blog.html": "/blog", "/about.html": "/about-us", "/contact.html": "/contact", "/write-for-us.html": "/write-for-us", "/submit-article.html": "/submit-article", "/my-account.html": "/my-account", "/privacy-policy.html": "/privacy-policy" };
 if (OLD_PATHS[location.pathname]) showOldUrl(OLD_PATHS[location.pathname]);
 
 // Links show the old addresses. A normal click opens the matching .html page
 // directly (no redirect hop); a copied link or a new tab goes through the
 // site's 301 redirect to the same page.
-const STATIC_PAGES = { "/blog": "/blog.html", "/about-us": "/about.html", "/contact": "/contact.html", "/write-for-us": "/write-for-us.html", "/submit-article": "/submit-article.html", "/privacy-policy": "/privacy-policy.html" };
+const STATIC_PAGES = { "/blog": "/blog.html", "/about-us": "/about.html", "/contact": "/contact.html", "/write-for-us": "/write-for-us.html", "/submit-article": "/submit-article.html", "/my-account": "/my-account.html", "/privacy-policy": "/privacy-policy.html" };
 export function pageFor(pathname) {
   const p = pathname.replace(/\/+$/, "");
   let m;

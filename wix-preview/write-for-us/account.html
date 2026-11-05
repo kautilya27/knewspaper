@@ -1,0 +1,65 @@
+<section class="wrap narrow page">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">My account</span></li></ol></nav>
+<h1 class="listing__title">My account</h1>
+<p class="listing__intro">Your article credits, your plan and every article you've submitted, with its status.</p>
+
+<section class="wfu-plans" id="account-box" aria-label="Your account">
+  <div class="wfu-account" id="account" data-account>
+    <div data-pane="loading"><p class="wfu-muted">Checking your account…</p></div>
+    <div data-pane="out" hidden>
+      <h2 class="wfu-h3">Log in or create an account</h2>
+      <p class="wfu-muted">Your account keeps your article credits and shows the status of each article you submit.</p>
+      <button type="button" class="wfu-google" data-google><svg aria-hidden="true" width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.2-8.5 2.2-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>
+      <p class="wfu-or"><span>or use your email</span></p>
+      <style>.wfu-google{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:360px;padding:11px 16px;margin:6px 0 4px;border:1.5px solid #c9ced8;border-radius:8px;background:#fff;color:#1f1f1f;font:600 .98rem/1.2 var(--sans);cursor:pointer}.wfu-google:hover{background:#f6f8fb;border-color:#9aa3b2}.wfu-google:disabled{opacity:.6;cursor:wait}.wfu-or{display:flex;align-items:center;gap:12px;color:var(--ink-3);font-size:.85rem;margin:12px 0 4px;max-width:360px}.wfu-or::before,.wfu-or::after{content:"";flex:1;border-top:1px solid #dde1e8}</style>
+      <div class="wfu-tabs" role="tablist" aria-label="Account">
+        <button type="button" role="tab" data-auth-tab="login" aria-selected="true">Log in</button>
+        <button type="button" role="tab" data-auth-tab="signup" aria-selected="false">Create account</button>
+      </div>
+      <form class="wfu-auth" data-login>
+        <div class="wfu-row wfu-row--2">
+          <div class="wfu-field"><label for="li-email">Email</label><input id="li-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="wfu-field"><label for="li-pass">Password</label><input id="li-pass" name="password" type="password" autocomplete="current-password" required></div>
+        </div>
+        <div class="wfu-auth__go"><button type="submit" class="btn">Log in</button><p class="form-status" role="status" aria-live="polite"></p></div>
+      </form>
+      <form class="wfu-auth" data-signup hidden>
+        <div class="wfu-row wfu-row--2">
+          <div class="wfu-field"><label for="su-first">First name</label><input id="su-first" name="firstName" autocomplete="given-name" required></div>
+          <div class="wfu-field"><label for="su-last">Last name</label><input id="su-last" name="lastName" autocomplete="family-name"></div>
+        </div>
+        <div class="wfu-row wfu-row--2">
+          <div class="wfu-field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="wfu-field"><label for="su-pass">Password</label><input id="su-pass" name="password" type="password" autocomplete="new-password" minlength="6" required></div>
+        </div>
+        <p class="wfu-muted">Your first and last name appear as the author of your articles.</p>
+        <div class="wfu-auth__go"><button type="submit" class="btn">Create account</button><p class="form-status" role="status" aria-live="polite"></p></div>
+      </form>
+      <form class="wfu-auth" data-verify hidden>
+        <p>We've emailed you a code. Enter it here to finish creating your account.</p>
+        <div class="wfu-field"><label for="vf-code">Code</label><input id="vf-code" name="code" inputmode="numeric" autocomplete="one-time-code" required></div>
+        <div class="wfu-auth__go"><button type="submit" class="btn">Confirm</button><p class="form-status" role="status" aria-live="polite"></p></div>
+      </form>
+      <p class="wfu-member-note" data-approval hidden>Your account has been created and is waiting for approval. We'll email you when it's ready.</p>
+    </div>
+    <div data-pane="in" hidden>
+      <div class="acct-head">
+        <div><p class="acct-name" data-member-name></p><p class="wfu-muted" data-member-email></p></div>
+        <button type="button" class="btn btn--quiet" data-logout>Log out</button>
+      </div>
+      <p class="wfu-credits" data-credits></p>
+      <div class="acct-actions">
+        <a class="btn" href="/submit-article.html#submit">Submit a new article</a>
+        <a class="btn btn--quiet" href="/submit-article.html#plans">See plans</a>
+        <button type="button" class="btn btn--quiet" data-buy-mail>Buy a plan by email</button>
+      </div>
+    </div>
+  </div>
+  <style>.acct-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}.acct-name{margin:0;font:650 1.25rem/1.3 var(--sans);color:var(--ink)}.acct-head .wfu-muted{margin:2px 0 0}.acct-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}</style>
+</section>
+
+<section class="wfu-plans" id="my-articles" aria-labelledby="mine-title">
+  <h2 class="wfu-h2" id="mine-title">Your articles</h2>
+  <div data-my-articles><p class="wfu-muted">Log in to see the articles you've submitted.</p></div>
+</section>
+</section>

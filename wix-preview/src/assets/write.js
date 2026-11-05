@@ -1,27 +1,20 @@
-// Submit your article (submit-article.html): member login, the article form and
-// the writer's own articles. Plans are bought by email and paid manually; the
-// owner then adds the plan to the writer's account in Wix Pricing Plans (an
-// offline order), which gives the article credits. The article is saved to the GuestSubmissions collection as the logged-in
-// member, and the GitHub publisher (guest-posts/publish.mjs) puts it live.
-import { subscribeMember, getMemberState, login, register, verifyEmail, logout, refreshMember } from "/js/wix/member-store.js";
-import { wixRequest, mintTokens, setTokens } from "/js/wix/client.js";
-import { WIX_CLIENT_ID } from "/js/wix/config.js";
+// Submit your article (submit-article.html): the plans, the account box and the
+// article form. Plans are bought by email and paid manually; the owner then adds
+// the plan to the writer's account in Wix Pricing Plans (an offline order), which
+// gives the article credits. The article is saved to the GuestSubmissions
+// collection as the logged-in member, and the GitHub publisher
+// (guest-posts/publish.mjs) puts it live. The writer's articles are listed on
+// My account (my-account.html); login and credits come from account-core.js.
+import { subscribeMember, getMemberState } from "/js/wix/member-store.js";
+import { wixRequest } from "/js/wix/client.js";
 import { categoriesReady, esc } from "/assets/site.js";
 import { PLANS, planKeyById, inr, showBuy } from "/assets/plans.js";
-import { RULES, PLAN_CREDITS, slugify, isValidSlug, countWords, parseLink, checkSubmission, linkCounts } from "/assets/guest-rules.js";
+import { RULES, slugify, isValidSlug, countWords, parseLink, checkSubmission, linkCounts } from "/assets/guest-rules.js";
+import { initAccount, account, onAccount, accountEmail, reloadAccount, COLLECTION } from "/assets/account-core.js";
 
 const SITE = "https://www.knewspaper.in";
 const PAGE = "/submit-article.html";
-const COLLECTION = "GuestSubmissions";
 const DRAFT_KEY = "knews.wfu.draft";
-// The plans, the buy box and the buy email live in plans.js (shared with the Write for us page).
-const accountEmail = () => { try { const m = getMemberState().member || {}; return m.loginEmail || (m.contact && m.contact.emails && m.contact.emails[0]) || ""; } catch { return ""; } };
-document.addEventListener("click", (e) => {
-  const b = e.target.closest("[data-buy], [data-buy-mail]");
-  if (!b) return;
-  e.preventDefault();
-  showBuy(b.dataset.buy || planKey, b.dataset.title || "", accountEmail());
-});
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -54,191 +47,8 @@ $$("[data-pick]").forEach((b) => b.addEventListener("click", () => {
 form.elements.plan.addEventListener("change", () => setPlan(form.elements.plan.value, false));
 
 // ---------------------------------------------------------------- account
-let account = { loaded: false, credits: 0, total: 0, validUntil: "", submissions: [] };
 const accountEl = $("[data-account]");
-const listEl = $("[data-my-articles]");
-
-function renderAccount(s) {
-  const panes = { loading: $("[data-pane=loading]"), out: $("[data-pane=out]"), in: $("[data-pane=in]") };
-  const show = (name) => Object.entries(panes).forEach(([k, el]) => { el.hidden = k !== name; });
-  if (s.loading) { show("loading"); return; }
-  if (!s.loggedIn) {
-    show("out");
-    account = { loaded: false, credits: 0, total: 0, validUntil: "", submissions: [] };
-    listEl.innerHTML = `<p class="wfu-muted">Log in to see the articles you've submitted.</p>`;
-    updatePay();
-    return;
-  }
-  show("in");
-  const m = s.member || {};
-  $("[data-member-name]").textContent = m.displayName || m.firstName || m.loginEmail || "your account";
-  if (!account.loaded) loadAccount();
-}
-
-async function loadAccount() {
-  const creditsEl = $("[data-credits]");
-  creditsEl.textContent = "Checking your article credits…";
-  try {
-    const [orders, subs] = await Promise.all([
-      wixRequest("/pricing-plans/v2/member/orders", { method: "GET", query: { orderStatuses: ["ACTIVE"] } }).then((r) => r.orders || []),
-      wixRequest("/wix-data/v2/items/query", {
-        body: {
-          dataCollectionId: COLLECTION,
-          query: { sort: [{ fieldName: "_createdDate", order: "DESC" }], paging: { limit: 100 }, fields: ["title", "slug", "status", "message", "postUrl", "planId", "orderId"] },
-        },
-      }).then((r) => (r.dataItems || []).map((d) => ({ id: d.id, ...d.data }))),
-    ]);
-    const mine = orders.filter((o) => PLAN_CREDITS[o.planId]);
-    const activeIds = new Set(mine.map((o) => o.id));
-    const total = mine.reduce((n, o) => n + PLAN_CREDITS[o.planId], 0);
-    const used = subs.filter((x) => (x.status === "live" && activeIds.has(x.orderId)) || x.status === "publishing" || x.status === "queued").length;
-    const ends = mine.map((o) => o.endDate || (o.currentCycle && o.currentCycle.endedDate)).filter(Boolean).sort();
-    account = { loaded: true, credits: Math.max(0, total - used), total, validUntil: ends.length ? ends[ends.length - 1] : "", submissions: subs };
-  } catch (e) {
-    account = { loaded: true, credits: 0, total: 0, validUntil: "", submissions: [], error: true };
-  }
-  renderCredits();
-  renderList();
-  updatePay();
-}
-
-function renderCredits() {
-  const el = $("[data-credits]");
-  if (account.error) { el.textContent = "We couldn't load your credits just now. Reload the page to try again."; return; }
-  if (!account.total) { el.innerHTML = `You have no article credits yet. <a href="#buy">Email us to buy a plan</a>; we add it to your account once you've paid.`; return; }
-  const until = account.validUntil ? ` (valid until ${new Date(account.validUntil).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })})` : "";
-  el.innerHTML = `<strong>${account.credits} of ${account.total}</strong> article credit${account.total === 1 ? "" : "s"} left${esc(until)}.`;
-}
-
-const STATUS = {
-  queued: ["In the queue", "Goes live within about 15 minutes."],
-  publishing: ["Publishing", "Goes live in a moment."],
-  awaiting_payment: ["Waiting for your plan", "Buy the plan by email. It goes live once we've added the plan to your account."],
-  live: ["Live", ""],
-  needs_changes: ["Needs changes", ""],
-  removed: ["Removed", ""],
-  error: ["Problem", ""],
-};
-function renderList() {
-  const subs = account.submissions;
-  if (!subs.length) { listEl.innerHTML = `<p class="wfu-muted">You haven't submitted an article yet.</p>`; return; }
-  listEl.innerHTML = `<ul class="wfu-list">${subs.map((x) => {
-    const [label, hint] = STATUS[x.status] || [x.status || "Submitted", ""];
-    const plan = PLANS[planKeyById[x.planId]];
-    const actions = [
-      x.status === "live" && x.postUrl ? `<a class="btn btn--quiet" href="${esc(x.postUrl)}">View article</a>` : "",
-      x.status === "awaiting_payment" && plan ? `<button type="button" class="btn" data-buy="${esc(planKeyById[x.planId])}" data-title="${esc(x.title || "")}">Buy this plan (${inr(plan.price)})</button>` : "",
-      x.status === "needs_changes" ? `<button type="button" class="btn btn--quiet" data-fix="${esc(x.id)}">Fix and submit again</button>` : "",
-    ].join("");
-    return `<li class="wfu-item" data-status="${esc(x.status)}">
-      <div class="wfu-item__head"><strong>${esc(x.title || "Untitled")}</strong><span class="wfu-badge2">${esc(label)}</span></div>
-      <p class="wfu-item__msg">${esc(x.status === "live" || !x.message ? hint || x.message || "" : x.message)}</p>
-      ${actions ? `<div class="wfu-item__actions">${actions}</div>` : ""}
-    </li>`;
-  }).join("")}</ul>`;
-}
-listEl.addEventListener("click", async (e) => {
-  const fix = e.target.closest("[data-fix]");
-  if (fix) {
-    fix.disabled = true;
-    try {
-      const r = await wixRequest(`/wix-data/v2/items/${encodeURIComponent(fix.dataset.fix)}`, { method: "GET", query: { dataCollectionId: COLLECTION } });
-      fillForm(r.dataItem.data);
-      say(status, "Your article is back in the form. Fix the points listed, then submit it again.", "ok");
-      $("#submit").scrollIntoView({ behavior: "smooth" });
-    } catch (err) { say(status, "We couldn't load that article. Reload the page and try again.", "error"); }
-    fix.disabled = false;
-  }
-});
-
-subscribeMember(renderAccount);
-renderAccount(getMemberState());
-
-// login / sign up / verification
-const loginForm = $("[data-login]"), signupForm = $("[data-signup]"), verifyForm = $("[data-verify]"), approvalEl = $("[data-approval]");
-function showAuth(which) {
-  [loginForm, signupForm, verifyForm, approvalEl].forEach((el) => { el.hidden = el !== which; });
-  $$("[data-auth-tab]").forEach((t) => t.setAttribute("aria-selected", String((t.dataset.authTab === "login" && which === loginForm) || (t.dataset.authTab === "signup" && which === signupForm))));
-}
-$$("[data-auth-tab]").forEach((t) => t.addEventListener("click", () => showAuth(t.dataset.authTab === "signup" ? signupForm : loginForm)));
-function authResult(result, f) {
-  if (result.state === "SUCCESS") { account.loaded = false; return; }
-  // Wix sometimes asks for a captcha, which only its own sign-in page can show.
-  if (/^-1997[01]$/.test(String(result.errorCode || "")) || /captcha/i.test(result.error || "")) {
-    say($(".form-status", f), "Opening Wix's secure sign-in page…", "ok");
-    wixSignIn(null, $(".form-status", f));
-    return;
-  }
-  if (result.state === "EMAIL_VERIFICATION_REQUIRED") { showAuth(verifyForm); return; }
-  if (result.state === "OWNER_APPROVAL_REQUIRED") { showAuth(approvalEl); return; }
-  say($(".form-status", f), result.error || "That didn't work. Check the details and try again.", "error");
-}
-function bindAuth(f, action) {
-  f.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (!f.reportValidity()) return;
-    const btn = $("button[type=submit]", f);
-    btn.disabled = true;
-    say($(".form-status", f), "");
-    action(f.elements)
-      .then((r) => authResult(r, f))
-      .catch((err) => authResult({ state: "FAILURE", error: err && err.message ? err.message : String(err) }, f))
-      .then(() => { btn.disabled = false; });
-  });
-}
-bindAuth(loginForm, (f) => login(f.email.value.trim(), f.password.value));
-bindAuth(signupForm, (f) => register(f.email.value.trim(), f.password.value, { firstName: f.firstName.value.trim(), lastName: f.lastName.value.trim() }));
-bindAuth(verifyForm, (f) => verifyEmail(f.code.value.trim()));
-
-// ------------------------------------------------- Google / Wix sign-in
-// "Continue with Google" sends the member straight to Google through Wix
-// (idp below); Wix's own sign-in page is the fallback when Wix asks for a
-// captcha, which a custom form can't show. Both come back to this page with a
-// code in the URL fragment, exchanged here for member tokens (PKCE).
-const GOOGLE_IDP = "0e6a50f5-b523-4e29-990d-f37fa2ffdd69";
-const CALLBACK = SITE + PAGE;
-const OAUTH_KEY = "knews.oauth";
-const b64url = (bytes) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-const randomString = () => b64url(crypto.getRandomValues(new Uint8Array(32)));
-async function wixSignIn(idp, statusEl) {
-  try {
-    const verifier = randomString(), state = randomString();
-    const challenge = b64url(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier))));
-    try { localStorage.setItem(OAUTH_KEY, JSON.stringify({ verifier, state, at: Date.now() })); } catch {}
-    const authRequest = {
-      redirectUri: CALLBACK, clientId: WIX_CLIENT_ID, codeChallenge: challenge, codeChallengeMethod: "S256",
-      responseMode: "fragment", responseType: "code", scope: "offline_access", state, ...(idp ? { idp } : {}),
-    };
-    const res = await wixRequest("/headless/v1/redirect-session", { body: { auth: { authRequest } } });
-    const url = res && res.redirectSession && res.redirectSession.fullUrl;
-    if (!url) throw new Error("no sign-in address");
-    location.assign(url);
-  } catch (err) {
-    if (statusEl) say(statusEl, "Sign-in couldn't start. Reload the page and try again.", "error");
-  }
-}
-async function finishWixSignIn() {
-  const hash = new URLSearchParams(location.hash.slice(1));
-  if (!hash.has("code") && !hash.has("error")) return;
-  let saved = null;
-  try { saved = JSON.parse(localStorage.getItem(OAUTH_KEY) || "null"); localStorage.removeItem(OAUTH_KEY); } catch {}
-  history.replaceState(history.state, "", location.pathname + location.search + "#account");
-  const note = $(".form-status", loginForm);
-  if (hash.has("error")) { say(note, "Sign-in was cancelled or failed. Try again.", "error"); return; }
-  if (!saved || saved.state !== hash.get("state")) { say(note, "Sign-in expired. Please try again.", "error"); return; }
-  try {
-    const tokens = await mintTokens({ grantType: "authorization_code", code: hash.get("code"), codeVerifier: saved.verifier, redirectUri: CALLBACK }, "member");
-    setTokens(tokens);
-    account.loaded = false;
-    await refreshMember();
-    $("#account").scrollIntoView({ block: "center" });
-  } catch {
-    say(note, "Sign-in couldn't finish. Please try again.", "error");
-  }
-}
-$$("[data-google]").forEach((b) => b.addEventListener("click", () => { b.disabled = true; wixSignIn(GOOGLE_IDP, $(".form-status", loginForm)).finally(() => { b.disabled = false; }); }));
-finishWixSignIn();
-$("[data-logout]").addEventListener("click", () => logout(PAGE + "#submit").catch(() => location.reload()));
+onAccount(() => updatePay());
 
 // ----------------------------------------------------------------- editor
 const ALLOWED = { P: "p", DIV: "p", H1: "h2", H2: "h2", H3: "h3", H4: "h3", H5: "h3", H6: "h3", UL: "ul", OL: "ol", LI: "li", BLOCKQUOTE: "blockquote", STRONG: "strong", B: "strong", EM: "em", I: "em", A: "a", BR: "br" };
@@ -586,8 +396,8 @@ form.addEventListener("submit", async (e) => {
     try { localStorage.removeItem(DRAFT_KEY); } catch {}
     const title = fields.title;
     say(status, useCredit
-      ? `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}`
-      : "Saved. Now buy your plan by email (the button under “Your articles”). Your article goes live once we've added the plan to your account.", "ok");
+      ? `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}. You can follow it on your My account page.`
+      : "Saved. Now buy your plan by email; your article goes live once we've added the plan to your account. You can follow it on your My account page.", "ok");
     {
       const key = planKey;
       form.reset();
@@ -596,9 +406,8 @@ form.addEventListener("submit", async (e) => {
       editor.innerHTML = "";
       imageData = "";
       drop.innerHTML = drop.dataset.empty;
-      account.loaded = false;
-      loadAccount();
-      $("#my-articles").scrollIntoView({ behavior: "smooth" });
+      reloadAccount();
+      status.scrollIntoView({ behavior: "smooth", block: "center" });
       if (!useCredit) setTimeout(() => showBuy(key, title, accountEmail()), 600);
     }
   } catch (err) {
@@ -610,6 +419,7 @@ form.addEventListener("submit", async (e) => {
 });
 
 // ------------------------------------------------------------ start
+initAccount({ page: PAGE, plansHref: "#plans", defaultPlan: () => planKey });
 drop.dataset.empty = drop.innerHTML;
 try { fillForm(JSON.parse(localStorage.getItem(DRAFT_KEY) || "null")); } catch {}
 // A plan chosen on the Write for us page (?plan=…) comes first.
@@ -619,3 +429,19 @@ else if (!form.elements.plan.value) setPlan("single", false);
 serp();
 updateMeter();
 updatePay();
+
+// "Fix and submit again" on My account opens this page with ?fix=<article id>.
+const fixId = new URLSearchParams(location.search).get("fix");
+let fixDone = false;
+async function loadFix() {
+  const s = getMemberState();
+  if (!fixId || fixDone || !s.loggedIn) return;
+  fixDone = true;
+  try {
+    const r = await wixRequest(`/wix-data/v2/items/${encodeURIComponent(fixId)}`, { method: "GET", query: { dataCollectionId: COLLECTION } });
+    fillForm(r.dataItem.data);
+    say(status, "Your article is back in the form. Fix the points listed on My account, then submit it again.", "ok");
+    $("#submit").scrollIntoView({ behavior: "smooth" });
+  } catch (err) { say(status, "We couldn't load that article. Reload the page and try again.", "error"); }
+}
+if (fixId) { subscribeMember(loadFix); loadFix(); }
