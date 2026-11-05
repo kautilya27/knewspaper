@@ -66,7 +66,12 @@ async () => {
   }
   // The header "Log in" / "My account" link goes to the Submit your article page.
   for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) {
-    const h = text[p].replace(/\/write-for-us(?:\.html)?#(account|my-articles)/g, "/submit-article.html#$1");
+    const h = text[p].replace(/\/write-for-us(?:\.html)?#(account|my-articles)/g, "/submit-article.html#$1")
+      // Header: "Submit article" in place of "Write for us" (the footer keeps Write for us).
+      .replace(/(<nav class="utility"[^>]*>[\s\S]*?)<a href="\/write-for-us(?:\.html)?">Write for us<\/a>/, '$1<a href="/submit-article">Submit article</a>')
+      // Footer: no "Popular reads" column; three columns instead of four.
+      .replace(/<nav aria-label="Popular articles">[\s\S]*?<\/nav>/, "")
+      .replace("grid-template-columns:1.2fr 1.3fr .9fr .8fr", "grid-template-columns:1.3fr 1.6fr 1fr");
     if (h !== text[p]) { text[p] = h; changed.add(p); }
   }
 
@@ -447,7 +452,9 @@ async () => {
   for (const p of changed) if (!out[p]) out[p] = text[p];
 
   // ---------------------------------------------------------------- upload
-  const del = ["post/zz-test.html", "post/zz-test3"].filter((p) => listing.includes(p));
+  // Pages of articles that are no longer published are removed.
+  const del = listing.filter((p) => p === "post/zz-test3" || (MODE === "all" && /^post\/.+\.html$/.test(p) && !out[p]));
+  if (del.length > 10) throw Error(`refusing to delete ${del.length} article pages; check the posts query`);
   const patchFiles = Object.entries(out).map(([path, content]) => ({ path, content }));
   const bytes = patchFiles.reduce((n, f) => n + f.content.length, 0);
   const res = await F.patch({ files: patchFiles, deletePaths: del });
