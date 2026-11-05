@@ -115,3 +115,4 @@
 .wfu-field{position:relative}#wfu-image{left:0;top:0}
 .wfu-field{align-content:start}#wfu-mdesc{min-height:96px}.wfu-meter{margin-top:4px}
 @media (max-width:560px){.wfu-form,.wfu-account{padding:16px}}
+.page>.listing__title{font-size:clamp(1.7rem,1.3rem + 1.6vw,2.4rem);line-height:1.15}
