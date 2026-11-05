@@ -40,14 +40,21 @@ export function breadcrumbs(items) {
 // "Frequently asked questions" sections written as an H2 followed by H3
 // questions, each with its answer below it.
 export function faqFromBody(body) {
-  const h2 = [...body.querySelectorAll("h2")].find((h) => /\b(faqs?|frequently asked)\b/i.test(h.textContent));
-  if (!h2) return null;
+  // An "FAQs" heading (H2, H3 or H4), then questions as smaller headings or as
+  // paragraphs ending in "?" (often "Q. ...?" followed by "A. ...").
+  const head = [...body.querySelectorAll("h2, h3, h4")].find((h) => /\b(faqs?|frequently asked)\b/i.test(h.textContent));
+  if (!head) return null;
+  const top = Number(head.tagName[1]);
   const qa = [];
   let q = null, a = [];
   const flush = () => { if (q && a.join(" ").trim()) qa.push({ q, a: a.join(" ").replace(/\s+/g, " ").trim() }); };
-  for (let el = h2.nextElementSibling; el && el.tagName !== "H2"; el = el.nextElementSibling) {
-    if (el.tagName === "H3") { flush(); q = el.textContent.trim(); a = []; }
-    else if (q) a.push(el.textContent);
+  for (let el = head.nextElementSibling; el; el = el.nextElementSibling) {
+    const l = /^H[2-6]$/.test(el.tagName) ? Number(el.tagName[1]) : 0;
+    const t = el.textContent.trim();
+    if (l && l <= top) break;
+    if (!t || el.matches("aside, .article__topics, .ad-slot, .also-read")) continue;
+    if (l || (el.tagName === "P" && /\?\s*$/.test(t) && t.length <= 200)) { flush(); q = t.replace(/^Q(?:uestion)?\s*\d*\s*[.:)\-–]\s*/i, "").trim(); a = []; continue; }
+    if (q) a.push(t.replace(/^A(?:ns(?:wer)?)?\s*[.:)\-–]\s*/i, ""));
   }
   flush();
   if (qa.length < 2) return null;
