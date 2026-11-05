@@ -32,7 +32,7 @@ async () => {
     if (!r.hasMore) break;
   }
   const text = {};
-  const want = listing.filter((p) => /^(assets\/[^/]+\.js|js\/wix\/[^/]+\.js|[^/]+\.html|sitemap-articles\.xml)$/.test(p) && !/\.bundle\.js$/.test(p));
+  const want = listing.filter((p) => /^(assets\/[^/]+\.(js|css)|js\/wix\/[^/]+\.js|[^/]+\.html|sitemap-articles\.xml)$/.test(p) && !/\.bundle\.js$/.test(p));
   await Promise.all(want.map(async (p) => { text[p] = await read(p); }));
   for (const [p, c] of Object.entries(given)) if (p !== "edits.json" && !p.startsWith("prerender/")) text[p] = c;
   const changed = new Set(Object.keys(given).filter((p) => p !== "edits.json" && !p.startsWith("prerender/")));
@@ -143,7 +143,8 @@ async () => {
   const imgTag = (image, alt) => {
     const id = image?.src?.id;
     const url = id ? fill(id, 1200, 800) : (/^https?:\/\//i.test(image?.src?.url || "") ? image.src.url : "");
-    return url ? `<img src="${esc(url)}" alt="${esc(String(alt ?? ""))}" width="1200" height="800" loading="lazy" decoding="async">` : "";
+    const set = id ? ` srcset="${esc(srcset(id, [480, 800, 1200], 2 / 3))}" sizes="(min-width: 760px) 680px, 100vw"` : "";
+    return url ? `<img src="${esc(url)}"${set} alt="${esc(String(alt ?? ""))}" width="1200" height="800" loading="lazy" decoding="async">` : "";
   };
   const kids = (n) => (n.nodes || []).map(nodeHtml).join("");
   const nodeHtml = (n) => {
@@ -259,7 +260,7 @@ async () => {
     }
     const share = encodeURIComponent(url), shareText = encodeURIComponent(p.title || "");
     const shortTitle = (p.title || "").length > 48 ? p.title.slice(0, 47) + "…" : p.title || "";
-    const hero = s.cover ? `<figure class="wrap article__hero"><img src="${esc(fill(s.cover, 1280, 720))}" srcset="${esc(srcset(s.cover, [640, 960, 1280, 1600], 0.5625))}" sizes="(min-width: 1240px) 1160px, 100vw" width="1280" height="720" alt="${esc(s.coverAlt)}" fetchpriority="high" decoding="async"></figure>` : "";
+    const hero = s.cover ? `<figure class="wrap article__hero"><img src="${esc(fill(s.cover, 1280, 720))}" srcset="${esc(srcset(s.cover, [480, 640, 960, 1280, 1600], 0.5625))}" sizes="(min-width: 1240px) 1160px, 100vw" width="1280" height="720" alt="${esc(s.coverAlt)}" fetchpriority="high" decoding="async"></figure>` : "";
     const article = `<article class="article" data-article data-prerendered="${esc(p.slug)}" data-updated="${esc(s.updatedISO)}">
     <header class="wrap article__head">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${cat ? `<li><a href="${catHref(cat.slug)}">${esc(cat.label)}</a></li>` : ""}<li><span aria-current="page">${esc(shortTitle)}</span></li></ol></nav>
@@ -321,7 +322,7 @@ async () => {
       s.updatedISO ? `<meta property="article:modified_time" content="${esc(s.updatedISO)}">` : "",
       `<meta name="twitter:title" content="${esc(seoTitle)}">`,
       `<meta name="twitter:description" content="${esc(seoDesc)}">`,
-      s.cover ? `<link rel="preload" as="image" href="${esc(fill(s.cover, 1280, 720))}" imagesrcset="${esc(srcset(s.cover, [640, 960, 1280, 1600], 0.5625))}" imagesizes="(min-width: 1240px) 1160px, 100vw" fetchpriority="high">` : "",
+      s.cover ? `<link rel="preload" as="image" href="${esc(fill(s.cover, 1280, 720))}" imagesrcset="${esc(srcset(s.cover, [480, 640, 960, 1280, 1600], 0.5625))}" imagesizes="(min-width: 1240px) 1160px, 100vw" fetchpriority="high">` : "",
       `<script type="application/ld+json" id="ld-article">${ld}</script>`,
     ].join("");
     html = html
@@ -331,6 +332,8 @@ async () => {
       .replace(/<meta property="og:description" content="[^"]*">/, () => `<meta property="og:description" content="${esc(seoDesc)}">`)
       .replace(/<meta property="og:image" content="[^"]*">/, (m) => (ogImage ? `<meta property="og:image" content="${esc(ogImage)}">` : m))
       .replace("</head>", () => head + "</head>");
+    // The stylesheet inline: one less request before the article can show.
+    if (text["assets/styles.css"]) html = html.replace('<link rel="stylesheet" href="/assets/styles.css">', () => `<style>${text["assets/styles.css"]}</style>`);
     return html;
   }
 
