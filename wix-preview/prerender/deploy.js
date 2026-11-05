@@ -71,6 +71,8 @@ async () => {
       .replace(/(<nav class="utility"[^>]*>[\s\S]*?)<a href="\/write-for-us(?:\.html)?">Write for us<\/a>/, '$1<a href="/submit-article">Submit article</a>')
       // Footer: no "Popular reads" column; three columns instead of four.
       .replace(/<nav aria-label="Popular articles">[\s\S]*?<\/nav>/, "")
+      // The header links (prerender/header-nav.html): About us, Contact us, Log in, and a Submit article button at the right.
+      .replace(/<nav class="utility" aria-label="Site">[\s\S]*?<\/nav>/, (m) => (given["prerender/header-nav.html"] ? given["prerender/header-nav.html"].trim() : m))
       .replace("grid-template-columns:1.2fr 1.3fr .9fr .8fr", "grid-template-columns:1.3fr 1.6fr 1fr");
     if (h !== text[p]) { text[p] = h; changed.add(p); }
   }

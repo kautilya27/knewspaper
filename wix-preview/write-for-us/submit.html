@@ -1,10 +1,70 @@
 <section class="wrap narrow page">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/write-for-us">Write for us</a></li><li><span aria-current="page">Submit your article</span></li></ol></nav>
 <h1 class="listing__title">Submit your article</h1>
-<p class="listing__intro">Log in, add your guest post with its title, URL slug, meta tags and featured image, and it goes live once your plan is active and it passes the <a href="/write-for-us">Write for us guidelines</a>.</p>
+<p class="listing__intro">Log in, add your guest post with its title, URL slug, meta tags and featured image, and it goes live once your plan is active and it passes our <a href="/write-for-us">guidelines</a>.</p>
+
+<section class="wfu-plans" id="plans" aria-labelledby="plans-title">
+  <h2 class="wfu-h2" id="plans-title">Choose a plan</h2>
+  <p class="wfu-sub">Publish a single guest post, or get a one-year membership and publish several articles at a lower price per article. Every guest post is labelled as sponsored, and its links to other websites are marked rel="sponsored".</p>
+
+  <div class="wfu-single" data-selected="false">
+    <div>
+      <h3>Single guest post</h3>
+      <p>One article, live as soon as it passes the checks.</p>
+    </div>
+    <div class="wfu-single__buy">
+      <span class="wfu-price">₹499</span>
+      <button type="button" class="btn" data-pick="single">Write your article</button>
+    </div>
+  </div>
+
+  <div class="wfu-member-head">
+    <h3>One-year membership</h3>
+    <p>Valid for 12 months from purchase</p>
+  </div>
+  <div class="wfu-grid" role="group" aria-label="Membership plans">
+    <button type="button" class="wfu-card" data-pick="m5" aria-pressed="false" aria-label="5 articles for ₹999: buy this membership by email">
+      <span class="wfu-card__count">5 articles</span>
+      <span class="wfu-card__price">₹999</span>
+      <span class="wfu-card__per">₹200 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m10" aria-pressed="false" aria-label="10 articles for ₹1,499: buy this membership by email">
+      <span class="wfu-card__count">10 articles</span>
+      <span class="wfu-card__price">₹1,499</span>
+      <span class="wfu-card__per">₹150 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m50" aria-pressed="false" aria-label="50 articles for ₹2,999: buy this membership by email">
+      <span class="wfu-card__count">50 articles</span>
+      <span class="wfu-card__price">₹2,999</span>
+      <span class="wfu-card__per">₹60 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
+    </button>
+    <button type="button" class="wfu-card" data-pick="m100" aria-pressed="false" aria-label="100 articles for ₹4,999: buy this membership by email">
+      <span class="wfu-badge">Best value</span>
+      <span class="wfu-card__count">100 articles</span>
+      <span class="wfu-card__price">₹4,999</span>
+      <span class="wfu-card__per">₹50 per article</span>
+      <span class="wfu-card__buy">Buy by email</span>
+    </button>
+  </div>
+
+  <div class="wfu-buy" id="buy">
+    <h3>How to buy a plan</h3>
+    <ol>
+      <li>Click a membership above, or the button below, and choose your plan.</li>
+      <li>Email us at <a href="mailto:knewspaper.in@gmail.com">knewspaper.in@gmail.com</a> with the plan you want and your account email.</li>
+      <li>We reply with the payment details. Pay, and send us the payment reference.</li>
+      <li>We add the plan to your account, usually within 24 hours. Your credits then show below, and any article you've already submitted goes live.</li>
+    </ol>
+    <button type="button" class="btn" data-buy-mail>Buy a plan by email</button>
+  </div>
+  <style>.wfu-card__buy{display:block;margin-top:10px;font-weight:600;color:var(--blue);font-size:.9rem}.wfu-buy{margin-top:24px;padding:20px 22px;border:1.5px solid var(--blue);border-radius:12px;background:#f5f8ff}.wfu-buy h3{margin:0 0 8px}.wfu-buy ol{margin:0 0 14px;padding-left:1.2em}.wfu-buy li{margin:.3em 0}</style>
+</section>
 
 <section class="wfu-plans" id="submit" aria-labelledby="submit-title">
-  <h2 class="wfu-h2 sr-only" id="submit-title">Your account and article</h2>
+  <h2 class="wfu-h2" id="submit-title">Your account and article</h2>
 
   <div class="wfu-account" id="account" data-account>
     <div data-pane="loading"><p class="wfu-muted">Checking your account…</p></div>
@@ -159,12 +219,6 @@
   </form>
 </section>
 
-<div class="wfu-buy" id="buy">
-  <h3>No plan yet?</h3>
-  <p>Email us to buy one: we send the payment details and add the plan to your account once you've paid. You can submit your article before paying; it waits for your plan.</p>
-  <button type="button" class="btn" data-buy-mail>Buy a plan by email</button>
-</div>
-<style>.wfu-buy{margin-top:24px;padding:20px 22px;border:1.5px solid var(--blue);border-radius:12px;background:#f5f8ff}.wfu-buy h3{margin:0 0 8px}.wfu-buy p{margin:0 0 14px}</style>
 
 <section class="wfu-plans" id="my-articles" aria-labelledby="mine-title">
   <h2 class="wfu-h2" id="mine-title">Your articles</h2>

@@ -43,7 +43,14 @@ function setPlan(key, scroll) {
   saveDraft();
   if (scroll) $("#submit").scrollIntoView({ behavior: "smooth", block: "start" });
 }
-$$("[data-pick]").forEach((b) => b.addEventListener("click", () => setPlan(b.dataset.pick, true)));
+// Plan cards: a single post goes to the form with that plan chosen; a membership
+// opens the buy box (a writer may buy now and publish later).
+$$("[data-pick]").forEach((b) => b.addEventListener("click", () => {
+  const key = b.dataset.pick;
+  if (key === "single") { setPlan(key, true); return; }
+  setPlan(key, false);
+  showBuy(key, "", accountEmail());
+}));
 form.elements.plan.addEventListener("change", () => setPlan(form.elements.plan.value, false));
 
 // ---------------------------------------------------------------- account
