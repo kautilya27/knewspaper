@@ -2,13 +2,20 @@
 // All content comes from the Wix blog layer in /js/wix/ (installed by Wix).
 import { fetchBlogCategories } from "/js/wix/taxonomy.js";
 import { imgSrc, imgSrcSet } from "/js/wix/media.js";
+import { PRERENDERED } from "/assets/prerendered.js";
 
 export const EMAIL = "knewspaper.in@gmail.com";
+// The byline of the site's own articles; it links to the team's page.
+export const EDITORIAL = "Knewspaper Editorial Team";
 
 export function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
-export const postHref = (slug) => "/post/" + encodeURIComponent(slug);
+// An article's address: its pre-rendered page when there is one, else the
+// page that reads it from Wix in the browser.
+export const isPrerendered = (slug) => PRERENDERED.has(slug);
+export const postPath = (slug) => (PRERENDERED.has(slug) ? "/post/" + encodeURIComponent(slug) + ".html" : "/post.html?slug=" + encodeURIComponent(slug));
+export const postHref = postPath;
 export const catHref = (slug) => "/blog/categories/" + encodeURIComponent(slug);
 
 // Categories with posts, in the blog's menu order. [] when the read fails.
@@ -41,7 +48,7 @@ const kicker = (p) => {
 };
 export function meta(p, { author = false } = {}) {
   const bits = [];
-  if (author && p.authorName) bits.push(`<span class="meta__author">By ${esc(p.authorName)}</span>`);
+  if (author && p.authorName) bits.push(`<span class="meta__author">By ${p.authorName === EDITORIAL ? `<a href="/editorial-team.html">${esc(p.authorName)}</a>` : esc(p.authorName)}</span>`);
   if (p.dateLabel) bits.push(`<time datetime="${esc(p.dateISO)}">${esc(p.dateLabel)}</time>`);
   if (p.minutesToRead) bits.push(`<span>${p.minutesToRead} min read</span>`);
   return bits.length ? `<p class="meta">${bits.join("")}</p>` : "";
@@ -179,7 +186,12 @@ const STATIC_PAGES = { "/blog": "/blog.html", "/about-us": "/about.html", "/cont
 export function pageFor(pathname) {
   const p = pathname.replace(/\/+$/, "");
   let m;
-  if ((m = p.match(/^\/post\/([^/]+)$/))) return "/post.html?slug=" + m[1];
+  if ((m = p.match(/^\/post\/([^/]+)$/))) {
+    if (/\.html$/.test(m[1])) return null; // a pre-rendered page: a real file
+    let slug = m[1];
+    try { slug = decodeURIComponent(slug); } catch {}
+    return postPath(slug);
+  }
   if ((m = p.match(/^\/blog\/categories\/([^/]+)$/))) return "/category.html?slug=" + m[1];
   return STATIC_PAGES[p] || null;
 }

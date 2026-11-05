@@ -6,8 +6,9 @@ export const RULES = {
   minWords: 500,
   maxWords: 1500,
   minHeadings: 2, // H2 or H3, at least one of them an H2
-  maxDofollow: 2,
-  maxNofollow: 3,
+  // Paid posts: every outside link is marked rel="sponsored" (Google's rule
+  // for paid links), so there is one limit instead of do-follow/no-follow.
+  maxLinks: 5,
   titleMin: 10,
   titleMax: 120,
   metaTitleMin: 10,
@@ -63,8 +64,8 @@ export function parseLink(href) {
 
 /**
  * Check a submission. `doc` is what the article's HTML holds:
- *   { words, h2, h3, links: [{ href, follow }], badLinks }
- * (follow = true for a do-follow link). `fields` are the form fields.
+ *   { words, h2, h3, links: [{ href, internal }], badLinks }
+ * `fields` are the form fields.
  * Returns a list of problems in plain words; empty means it passes.
  */
 export function checkSubmission(fields, doc) {
@@ -89,17 +90,15 @@ export function checkSubmission(fields, doc) {
   if (doc.h2 < 1 || doc.h2 + doc.h3 < R.minHeadings)
     out.push(`Add subheadings: at least ${R.minHeadings}, and at least one of them a main heading (H2).`);
 
-  const external = doc.links.filter((l) => !l.internal);
-  const dofollow = external.filter((l) => l.follow).length;
-  const nofollow = external.length - dofollow;
-  if (dofollow > R.maxDofollow) out.push(`The article has ${dofollow} do-follow links. The limit is ${R.maxDofollow}.`);
-  if (nofollow > R.maxNofollow) out.push(`The article has ${nofollow} no-follow links. The limit is ${R.maxNofollow}.`);
+  const external = doc.links.filter((l) => !l.internal).length;
+  if (external > R.maxLinks) out.push(`The article has ${external} links to other websites. The limit is ${R.maxLinks}.`);
   if (doc.badLinks) out.push("Every link must be a full web address starting with https:// or http://.");
   return out;
 }
 
 export function linkCounts(doc) {
-  const external = doc.links.filter((l) => !l.internal);
-  const dofollow = external.filter((l) => l.follow).length;
-  return { dofollow, nofollow: external.length - dofollow };
+  return { external: doc.links.filter((l) => !l.internal).length };
 }
+
+// The note at the top of every published guest post.
+export const SPONSORED_NOTE = "Sponsored guest post. Links to other websites in this article are paid placements.";

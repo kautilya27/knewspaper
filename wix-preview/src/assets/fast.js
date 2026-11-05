@@ -72,10 +72,12 @@ export function savePost(post) {
 // its link, so it is usually ready by the time the next page opens.
 const started = new Set();
 function prefetch(ev) {
-  const a = ev.target && ev.target.closest ? ev.target.closest('a[href^="/post/"]') : null;
+  const a = ev.target && ev.target.closest ? ev.target.closest('a[href^="/post/"], a[href^="/post.html?slug="]') : null;
   if (!a) return;
   let slug = "";
-  try { slug = decodeURIComponent(a.getAttribute("href").slice(6).replace(/[?#].*$/, "").replace(/\/+$/, "")); } catch { return; }
+  const qs = a.getAttribute("href").match(/^\/post\.html\?slug=([^&#]+)/);
+  if (qs) { try { slug = decodeURIComponent(qs[1]); } catch { return; } }
+  else try { slug = decodeURIComponent(a.getAttribute("href").slice(6).replace(/[?#].*$/, "").replace(/\/+$/, "").replace(/\.html$/, "")); } catch { return; }
   if (!slug || started.has(slug) || savedPost(slug)) return;
   started.add(slug);
   quickPost(slug).then(savePost).catch(() => started.delete(slug));

@@ -1,13 +1,24 @@
-// One article (post.html?slug=…) on the Wix post store, with its comments.
+// One article on the Wix post store, with its comments. Most articles have a
+// pre-rendered page (/post/<slug>.html, written by the pre-render step) that
+// already holds the article; this script then only adds what is live (likes,
+// comments, ads) and redraws the article if it changed since it was rendered.
+// Other articles open at post.html?slug=… and are drawn here from Wix.
 import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
 import { imgSrc, imgSrcSet } from "/js/wix/media.js";
 import { learnAuthors, quickPost, savePost, savedPost, withKnownAuthors } from "/assets/fast.js";
-import { cachedCategories, categoriesReady, card, catHref, esc, markActive, meta, postHref, showOldUrl } from "/assets/site.js";
-import { PUBLISHER, SITE, breadcrumbs, faqFromBody, setJsonLd, setMetaTag } from "/assets/seo.js";
+import { EDITORIAL, cachedCategories, categoriesReady, card, catHref, esc, isPrerendered, markActive, meta, postHref } from "/assets/site.js";
+import { PUBLISHER, SITE, breadcrumbs, faqFromBody, noindex, setCanonical, setJsonLd, setMetaTag } from "/assets/seo.js";
 
 const root = document.querySelector("[data-article]");
-const slug = (new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
+const pathSlug = (location.pathname.match(/^\/post\/([^/]+)\.html$/) || [])[1];
+const slug = (pathSlug ? decodeURIComponent(pathSlug) : new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
+// This page holds the article already (a pre-rendered page).
+let pre = !!slug && root.dataset.prerendered === slug;
+// The article's one address: its pre-rendered page, else post.html?slug=….
+const pagePath = isPrerendered(slug) ? `/post/${encodeURIComponent(slug)}.html` : `/post.html?slug=${encodeURIComponent(slug)}`;
+// An old post.html?slug=… link to an article that has its own page goes there.
+if (!pathSlug && slug && isPrerendered(slug)) location.replace(pagePath + location.hash);
 const mediaId = (url) => (String(url).match(/\/media\/([^/?#]+)/) || [])[1] || "";
 let mounted = false;
 
@@ -15,11 +26,14 @@ let store = null;
 
 function render(s) {
   if (s.notFound || !slug) {
+    if (pre) return; // the pre-rendered article stays; Wix just didn't answer
+    noindex();
     document.title = "Article not found | Knewspaper";
     root.innerHTML = `<div class="wrap narrow page"><h1 class="listing__title">This article isn’t here</h1><p class="listing__intro">It may have been moved or unpublished. <a href="/search.html">Search the site</a> or <a href="/blog">see all articles</a>.</p></div>`;
     return;
   }
   if (!s.post) {
+    if (pre) return; // the pre-rendered article stays while Wix answers
     root.querySelector("[data-status]").textContent = s.error ? `The article could not load: ${s.error}` : "Loading article…";
     return;
   }
@@ -31,6 +45,7 @@ function render(s) {
   like.disabled = s.liking;
   like.textContent = (s.isLiked ? "Liked" : "Like") + (s.likeCountLoaded && s.likeCount !== undefined ? ` · ${s.likeCount}` : "");
   const rel = root.querySelector("[data-related]");
+  if (pre && rel.children.length) return; // the pre-rendered "Read next" stays
   if (s.related === null) rel.innerHTML = "";
   else if (!s.related.length) rel.closest("section").hidden = true;
   else {
@@ -40,7 +55,7 @@ function render(s) {
 }
 
 // "Also read" links inside the article, to related articles on the same topic.
-let alsoReadDone = false;
+let alsoReadDone = pre;
 function alsoRead(related) {
   const body = root.querySelector("[data-body]");
   if (alsoReadDone || !body) return;
@@ -63,6 +78,13 @@ function alsoRead(related) {
 // after the intro, in the middle of a long article, and after the article.
 const AD = '<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6382255537358474" data-ad-slot="1425864328" data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
 function placeAds(body) {
+  if (root.querySelector(".ad-slot ins.adsbygoogle")) {
+    // Pre-rendered slots: just fill them.
+    root.querySelectorAll(".ad-slot ins.adsbygoogle:not([data-adsbygoogle-status])").forEach(() => {
+      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch {}
+    });
+    return;
+  }
   const paras = [...body.querySelectorAll(":scope > p")];
   const heads = [...body.querySelectorAll(":scope > h2")];
   const spots = [];
@@ -81,7 +103,7 @@ function placeAds(body) {
 let schemaPost = null, schemaCat = null;
 function postSchema(p, cat, authorName) {
   schemaPost = p; schemaCat = cat;
-  const url = `${SITE}/post/${p.slug}`;
+  const url = SITE + pagePath;
   const body = root.querySelector("[data-body]");
   const graph = [
     {
@@ -89,7 +111,8 @@ function postSchema(p, cat, authorName) {
       headline: p.title.slice(0, 110), description: p.seoDescription || p.excerpt || undefined,
       image: p.coverUrl ? [p.coverUrl] : undefined, inLanguage: "en-IN",
       datePublished: p.dateISO || undefined, dateModified: p.updatedISO || p.dateISO || undefined,
-      author: authorName ? { "@type": "Person", name: authorName } : { "@type": "Organization", name: "Knewspaper", url: SITE + "/" },
+      author: authorName === EDITORIAL ? { "@type": "Organization", name: EDITORIAL, url: SITE + "/editorial-team.html" }
+        : authorName ? { "@type": "Person", name: authorName } : { "@type": "Organization", name: "Knewspaper", url: SITE + "/" },
       publisher: PUBLISHER, articleSection: cat ? cat.label : undefined,
     },
     breadcrumbs([["Home", SITE + "/"], ...(cat ? [[cat.label, SITE + catHref(cat.slug)]] : []), [p.title, url]]),
@@ -107,9 +130,30 @@ function postSchema(p, cat, authorName) {
   setMetaTag("name", "twitter:description", p.seoDescription);
 }
 
-function mount(p, s) {
+// Body images are scaled to 1200×800 by the renderer: give them that size so
+// the text doesn't jump when they load.
+function sizeImages(body) {
+  body.querySelectorAll("img").forEach((img) => {
+    const m = (img.getAttribute("src") || "").match(/\/fill\/w_(\d+),h_(\d+)/);
+    if (m && !img.hasAttribute("width")) { img.width = +m[1]; img.height = +m[2]; }
+  });
+}
+
+// A pre-rendered article that is still current: wire up what is live.
+function hydrate(p) {
   mounted = true;
-  showOldUrl("/post/" + p.slug);
+  schemaPost = p;
+  placeAds(root.querySelector("[data-body]"));
+  root.querySelector("[data-like]")?.addEventListener("click", () => store.toggleLike().catch(() => {}));
+  if (p.commentingEnabled && p.referenceId) mountComments(p.referenceId);
+}
+
+function mount(p, s) {
+  if (pre && root.dataset.updated === (p.updatedISO || "")) return hydrate(p);
+  pre = false; // changed since it was rendered: draw it again from Wix
+  alsoReadDone = false;
+  mounted = true;
+  setCanonical(SITE + pagePath);
   document.title = `${p.seoTitle || p.title} | Knewspaper`;
   const md = document.querySelector('meta[name="description"]');
   if (md && p.seoDescription) md.content = p.seoDescription;
@@ -168,6 +212,7 @@ function mount(p, s) {
   const firstImg = body.querySelector("img");
   if (coverId && firstImg && mediaId(firstImg.src) === coverId) (firstImg.closest("figure") || firstImg).remove();
   body.querySelectorAll("img").forEach((img) => { img.loading = "lazy"; img.decoding = "async"; });
+  sizeImages(body);
   body.querySelectorAll("table").forEach((t) => { if (!t.parentElement.classList.contains("table-wrap")) { const w = document.createElement("div"); w.className = "table-wrap"; t.replaceWith(w); w.append(t); } });
 
   // Contents list from the article's own headings.
@@ -246,8 +291,8 @@ function mountComments(referenceId) {
 
 // The byline is added once the author's name is known.
 function fillByline(name) {
-  if (!name || root.querySelector(".article__meta .meta__author")) return;
-  const span = `<span class="meta__author">By ${esc(name)}</span>`;
+  if (pre || !name || root.querySelector(".article__meta .meta__author")) return;
+  const span = `<span class="meta__author">By ${name === EDITORIAL ? `<a href="/editorial-team.html">${esc(name)}</a>` : esc(name)}</span>`;
   const line = root.querySelector(".article__meta .meta");
   if (line) line.insertAdjacentHTML("afterbegin", span);
   if (schemaPost) postSchema(schemaPost, schemaCat, name);
@@ -260,7 +305,9 @@ function fillByline(name) {
 // (topics, likes, related articles) without reading it again.
 async function init() {
   if (!slug) return render({ notFound: true });
-  const saved = savedPost(slug);
+  let saved = savedPost(slug);
+  // A copy saved on this device before the page was last rendered is out of date.
+  if (pre && saved && (saved.updatedISO || "") < (root.dataset.updated || "")) saved = null;
   let post = saved ? withKnownAuthors([saved])[0] : null;
   if (!post) {
     try {

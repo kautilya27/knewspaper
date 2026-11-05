@@ -17,17 +17,18 @@ assert.deepEqual(types, ["HEADING", "PARAGRAPH", "HEADING", "BULLETED_LIST", "OR
 assert.equal(r.nodes[3].nodes.length, 3, "nested list item flattened into the list");
 assert.equal(r.doc.h2, 2); assert.equal(r.doc.h3, 1);
 assert.equal(r.doc.badLinks, 1);
-assert.deepEqual(r.doc.links.map((l) => [l.internal, l.follow]), [[false, false], [false, true], [true, true]]);
+assert.deepEqual(r.doc.links.map((l) => l.internal), [false, false, true]);
 const links = r.nodes[1].nodes.filter((t) => t.textData.decorations.some((d) => d.type === "LINK")).map((t) => t.textData.decorations.find((d) => d.type === "LINK").linkData.link);
-assert.equal(links[0].rel.nofollow, true); assert.equal(links[1].rel.nofollow, false); assert.equal(links[2].target, "SELF");
+assert.equal(links[0].rel.sponsored, true); assert.equal(links[1].rel.sponsored, true); assert.ok(!links[1].rel.nofollow); assert.equal(links[2].target, "SELF");
 assert.ok(!JSON.stringify(r.nodes).includes("alert"), "script content dropped");
 assert.ok(r.nodes[1].nodes.some((t) => t.textData.text.includes("& ")), "entities decoded");
 assert.ok(r.doc.words > 520 && r.doc.words < 600, "words " + r.doc.words);
 
 const fields = { title: "A good title here", slug: "a-good-title", metaTitle: "A good SEO title", metaDescription: "x".repeat(120), imageAlt: "A photo of a thing", hasImage: true };
 assert.deepEqual(checkSubmission(fields, { ...r.doc, badLinks: 0 }), []);
-const many = { ...r.doc, badLinks: 0, links: [1, 2, 3].map(() => ({ internal: false, follow: true })).concat([1, 2, 3, 4].map(() => ({ internal: false, follow: false }))) };
-assert.equal(checkSubmission(fields, many).length, 2, "3 do-follow and 4 no-follow both flagged");
+const many = { ...r.doc, badLinks: 0, links: [1, 2, 3, 4, 5, 6].map(() => ({ internal: false })).concat([{ internal: true }]) };
+assert.equal(checkSubmission(fields, many).length, 1, "6 outside links flagged");
+assert.equal(checkSubmission(fields, { ...many, links: many.links.slice(1) }).length, 0, "5 outside links pass");
 assert.equal(checkSubmission(fields, { ...r.doc, badLinks: 0, h2: 0, h3: 3 }).length, 1, "needs an H2");
 assert.equal(checkSubmission({ ...fields, slug: "Bad Slug" }, { ...r.doc, badLinks: 0 }).length, 1);
 assert.equal(slugify("  Héllo, World!  10 Tips — 2026 "), "hello-world-10-tips-2026");

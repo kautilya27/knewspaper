@@ -56,3 +56,15 @@ export function faqFromBody(body) {
     mainEntity: qa.slice(0, 12).map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.slice(0, 1200) } })),
   };
 }
+
+/** <link rel="canonical">, created when missing. */
+export function setCanonical(url) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) { link = document.createElement("link"); link.rel = "canonical"; document.head.append(link); }
+  link.href = url;
+}
+
+/** Keep a page that has nothing to show (a missing article or topic) out of search results. */
+export function noindex() {
+  if (!document.querySelector('meta[name="robots"]')) document.head.insertAdjacentHTML("beforeend", '<meta name="robots" content="noindex">');
+}

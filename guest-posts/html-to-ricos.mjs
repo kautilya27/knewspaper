@@ -36,11 +36,11 @@ export function htmlToRicos(html) {
       if (tag === "a") {
         const link = parseLink(c.getAttribute("href"));
         if (!link) { if ((c.getAttribute("href") || "").trim()) doc.badLinks++; inline(c, decos, out); continue; }
-        const follow = !/\bnofollow\b/i.test(c.getAttribute("rel") || "");
-        doc.links.push({ href: link.href, internal: link.internal, follow });
+        doc.links.push({ href: link.href, internal: link.internal });
+        // Paid post: every outside link is rel="sponsored", whatever the writer chose.
         const linkData = link.internal
           ? { link: { url: link.href, target: "SELF" } }
-          : { link: { url: link.href, target: "BLANK", rel: { noreferrer: true, nofollow: !follow } } };
+          : { link: { url: link.href, target: "BLANK", rel: { noreferrer: true, sponsored: true } } };
         inline(c, [...decos.filter((d) => d.type !== "LINK"), { type: "LINK", linkData }], out);
         continue;
       }

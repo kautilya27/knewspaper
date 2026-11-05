@@ -182,8 +182,8 @@ $("[data-logout]").addEventListener("click", () => logout(PAGE + "#submit").catc
 // ----------------------------------------------------------------- editor
 const ALLOWED = { P: "p", DIV: "p", H1: "h2", H2: "h2", H3: "h3", H4: "h3", H5: "h3", H6: "h3", UL: "ul", OL: "ol", LI: "li", BLOCKQUOTE: "blockquote", STRONG: "strong", B: "strong", EM: "em", I: "em", A: "a", BR: "br" };
 const DROP = new Set(["SCRIPT", "STYLE", "IFRAME", "OBJECT", "EMBED", "NOSCRIPT", "TEMPLATE", "SVG", "IMG", "VIDEO", "AUDIO", "META", "LINK", "TITLE", "HEAD", "BUTTON", "INPUT", "SELECT", "TEXTAREA", "FORM"]);
-// Rebuild HTML keeping only the allowed tags. Links keep only href and the follow choice;
-// a link without a choice (pasted) becomes no-follow.
+// Rebuild HTML keeping only the allowed tags. Links keep only href (every outside
+// link is published as rel="sponsored").
 function cleanHtml(html) {
   const doc = new DOMParser().parseFromString(`<body>${html}</body>`, "text/html");
   const walk = (node) => {
@@ -198,8 +198,7 @@ function cleanHtml(html) {
       if (tag === "a") {
         const link = parseLink(c.getAttribute("href"));
         if (!link) { out += walk(c); continue; }
-        const rel = /\bdofollow\b/.test(c.dataset.follow || "") || c.getAttribute("rel") === "noopener" ? "noopener" : "nofollow noopener";
-        out += `<a href="${esc(link.href)}" rel="${link.internal ? "noopener" : rel}">${walk(c)}</a>`;
+        out += `<a href="${esc(link.href)}" rel="${link.internal ? "noopener" : "sponsored noopener"}">${walk(c)}</a>`;
         continue;
       }
       out += `<${tag}>${walk(c)}</${tag}>`;
@@ -212,7 +211,7 @@ function cleanHtml(html) {
 function docModel() {
   const links = $$("a[href]", editor).map((a) => {
     const l = parseLink(a.getAttribute("href"));
-    return l ? { href: l.href, internal: l.internal, follow: !/nofollow/.test(a.getAttribute("rel") || "") } : null;
+    return l ? { href: l.href, internal: l.internal } : null;
   });
   return {
     words: countWords(editor.innerText),
@@ -225,13 +224,12 @@ function docModel() {
 
 function updateMeter() {
   const d = docModel();
-  const { dofollow, nofollow } = linkCounts(d);
+  const { external } = linkCounts(d);
   const set = (key, text, bad) => { const el = $(`[data-meter=${key}]`); el.textContent = text; el.toggleAttribute("data-over", bad); };
   const started = d.words > 0;
   set("words", `${d.words} words`, started && (d.words < RULES.minWords || d.words > RULES.maxWords));
   set("headings", `${d.h2 + d.h3} subheading${d.h2 + d.h3 === 1 ? "" : "s"}`, started && (d.h2 < 1 || d.h2 + d.h3 < RULES.minHeadings));
-  set("dofollow", `Do-follow links ${dofollow}/${RULES.maxDofollow}`, dofollow > RULES.maxDofollow);
-  set("nofollow", `No-follow links ${nofollow}/${RULES.maxNofollow}`, nofollow > RULES.maxNofollow);
+  set("links", `Links to other sites ${external}/${RULES.maxLinks}`, external > RULES.maxLinks);
 }
 
 let savedRange = null;
@@ -259,17 +257,16 @@ toolbar.addEventListener("click", (e) => {
   changed();
 });
 
-// Link bar: add, edit or remove a link and choose do-follow / no-follow.
+// Link bar: add, edit or remove a link.
 // (A div, not a form: it sits inside the article form.)
 const linkBar = $("[data-linkbar]");
-const linkUrl = $("[data-link-url]", linkBar), linkFollow = $("[data-link-follow]", linkBar), linkStatus = $(".form-status", linkBar);
+const linkUrl = $("[data-link-url]", linkBar), linkStatus = $(".form-status", linkBar);
 let editingLink = null;
 function openLinkBar(a = null) {
   keepSelection();
   editingLink = a;
   linkBar.hidden = false;
   linkUrl.value = a ? a.getAttribute("href") : "https://";
-  linkFollow.value = a && !/nofollow/.test(a.getAttribute("rel") || "") ? "follow" : "nofollow";
   $("[data-unlink]", linkBar).hidden = !a;
   say(linkStatus, "");
   linkUrl.focus();
@@ -282,7 +279,7 @@ editor.addEventListener("click", (e) => {
 function applyLink() {
   const link = parseLink(linkUrl.value);
   if (!link) { say(linkStatus, "Enter a full address starting with https://", "error"); return; }
-  const rel = link.internal || linkFollow.value === "follow" ? "noopener" : "nofollow noopener";
+  const rel = link.internal ? "noopener" : "sponsored noopener";
   if (editingLink) {
     editingLink.setAttribute("href", link.href);
     editingLink.setAttribute("rel", rel);
