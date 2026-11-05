@@ -78,3 +78,17 @@ redirects, and linked in every footer. Every page's header has a "Log in" link
 to `/write-for-us.html#account`; a small inline script turns it into "My account" when a
 member session is stored. Its style is inline in each page because the CDN keeps the old
 `assets/styles.css` for a while.
+
+## Ads, schema and footer (5 Nov 2026)
+
+- Ads sit in fixed places: after an article's intro, mid-article (long articles),
+  after the article (`placeAds` in `assets/post.js`), between the Latest list and the
+  shelves on home, and above "Show more" on listings (static `.ad-slot` blocks in
+  `index.html`, `blog.html`, `category.html`). Unit: display ad 1425864328. In AdSense,
+  Auto ads keeps only the vignette (in-page, anchor and side-rail ads are off). An
+  unfilled slot is hidden.
+- `assets/seo.js` adds JSON-LD (BlogPosting, BreadcrumbList, FAQPage, CollectionPage);
+  `index.html`, `about.html` and `contact.html` carry static WebSite/Organization,
+  AboutPage and ContactPage JSON-LD. Every footer has a "Popular reads" column.
+- The live root `.html` files were edited in place on Wix for these changes and the
+  footer/policy work; `site/` here is not a full copy of them.

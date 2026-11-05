@@ -59,6 +59,24 @@ function alsoRead(related) {
   });
 }
 
+// Ads in fixed places (AdSense Auto ads only adds the between-page vignette):
+// after the intro, in the middle of a long article, and after the article.
+const AD = '<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6382255537358474" data-ad-slot="1425864328" data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
+function placeAds(body) {
+  const paras = [...body.querySelectorAll(":scope > p")];
+  const heads = [...body.querySelectorAll(":scope > h2")];
+  const spots = [];
+  if (paras.length >= 4) spots.push(["afterend", paras[1]]);
+  const mid = heads.length >= 5 ? heads[Math.floor(heads.length / 2)] : null;
+  if (mid && mid !== heads[1]) spots.push(["beforebegin", mid]);
+  spots.push(["afterend", root.querySelector(".article__layout")]);
+  for (const [where, el] of spots) {
+    if (!el) continue;
+    el.insertAdjacentHTML(where, AD);
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch {}
+  }
+}
+
 // Article structured data (BlogPosting, breadcrumbs, FAQ) and social tags.
 let schemaPost = null, schemaCat = null;
 function postSchema(p, cat, authorName) {
@@ -170,6 +188,7 @@ function mount(p, s) {
   if (s.categories.length) body.insertAdjacentHTML("beforeend", `<p class="article__topics">Filed under ${s.categories.map((c) => `<a href="${catHref(c.slug)}">${esc(c.label)}</a>`).join(", ")}</p>`);
 
   postSchema(p, cat, p.authorName);
+  placeAds(body);
   root.querySelector("[data-like]").addEventListener("click", () => store.toggleLike().catch(() => {}));
   if (p.commentingEnabled && p.referenceId) mountComments(p.referenceId);
 }
