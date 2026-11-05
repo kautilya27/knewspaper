@@ -332,8 +332,6 @@ async () => {
       .replace(/<meta property="og:description" content="[^"]*">/, () => `<meta property="og:description" content="${esc(seoDesc)}">`)
       .replace(/<meta property="og:image" content="[^"]*">/, (m) => (ogImage ? `<meta property="og:image" content="${esc(ogImage)}">` : m))
       .replace("</head>", () => head + "</head>");
-    // The stylesheet inline: one less request before the article can show.
-    if (text["assets/styles.css"]) html = html.replace('<link rel="stylesheet" href="/assets/styles.css">', () => `<style>${text["assets/styles.css"]}</style>`);
     return html;
   }
 
@@ -374,6 +372,7 @@ async () => {
   // Sitemap: main pages and topics as they were, articles at their new addresses.
   if (MODE === "all") {
     const keep = (text["sitemap-articles.xml"].match(/<url>[\s\S]*?<\/url>/g) || []).filter((u) => !/<loc>[^<]*\/post\//.test(u));
+    if (!keep.some((u) => u.includes("/editorial-team.html"))) keep.push(`<url><loc>${SITE}/editorial-team.html</loc></url>`);
     const urls = byDate.map((p) => `<url><loc>${SITE}${pagePath(p.slug)}</loc><lastmod>${isoOf(p.lastPublishedDate || p.firstPublishedDate).slice(0, 10)}</lastmod></url>`);
     out["sitemap-articles.xml"] = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...keep, ...urls].join("\n")}\n</urlset>\n`;
   }

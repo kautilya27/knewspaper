@@ -27,3 +27,7 @@ publishing new articles so they get their own page (until then they open at
 
 Redirect note: Wix's bulk create does not honour `forceReplace`; to change
 where existing redirects point, delete them and create them again.
+
+Size limit: Wix static hosting refuses a site over 20 MiB or 2,000 files. The
+351 article pages are about 12 MB, so the stylesheet is not inlined into each
+page (that alone added about 7 MB).
