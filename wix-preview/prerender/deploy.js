@@ -120,7 +120,9 @@ async () => {
       // Footer: the notice below says what the site is and gives the email; the brand line stays short.
       .replace('<p>Knewspaper publishes explainers, guides and opinion pieces on technology, health, education, culture, lifestyle and more. It is not a news website.</p><p><a href="mailto:knewspaper.in@gmail.com">knewspaper.in@gmail.com</a></p>', "<p>Explainers, guides and opinion pieces on technology, health, education, culture, lifestyle and more.</p>")
       // Home: no About/Contact band above the footer (the footer covers both).
-      .replace(/<section class="band" aria-label="About and contact">[\s\S]*?<\/div><\/div><\/section>/, "");
+      .replace(/<section class="band" aria-label="About and contact">[\s\S]*?<\/div><\/div><\/section>/, "")
+      // Wide screens: the sticky "In this article" list sits below the fixed header and scrolls if it is long.
+      .replace("html{scroll-padding-top:190px}", (m) => (text[p].includes(".toc{top:164px") ? m : m + "@media (min-width:1100px){.toc{top:164px;max-height:calc(100vh - 184px);overflow-y:auto;overscroll-behavior:contain}}"));
     if (h !== text[p]) { text[p] = h; changed.add(p); }
   }
 
