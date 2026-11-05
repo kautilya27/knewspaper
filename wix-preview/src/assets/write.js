@@ -3,8 +3,9 @@
 // owner then adds the plan to the writer's account in Wix Pricing Plans (an
 // offline order), which gives the article credits. The article is saved to the GuestSubmissions collection as the logged-in
 // member, and the GitHub publisher (guest-posts/publish.mjs) puts it live.
-import { subscribeMember, getMemberState, login, register, verifyEmail, logout } from "/js/wix/member-store.js";
-import { wixRequest } from "/js/wix/client.js";
+import { subscribeMember, getMemberState, login, register, verifyEmail, logout, refreshMember } from "/js/wix/member-store.js";
+import { wixRequest, mintTokens, setTokens } from "/js/wix/client.js";
+import { WIX_CLIENT_ID } from "/js/wix/config.js";
 import { categoriesReady, esc } from "/assets/site.js";
 import { RULES, PLAN_CREDITS, slugify, isValidSlug, countWords, parseLink, checkSubmission, linkCounts } from "/assets/guest-rules.js";
 
@@ -174,6 +175,12 @@ function showAuth(which) {
 $$("[data-auth-tab]").forEach((t) => t.addEventListener("click", () => showAuth(t.dataset.authTab === "signup" ? signupForm : loginForm)));
 function authResult(result, f) {
   if (result.state === "SUCCESS") { account.loaded = false; return; }
+  // Wix sometimes asks for a captcha, which only its own sign-in page can show.
+  if (/^-1997[01]$/.test(String(result.errorCode || "")) || /captcha/i.test(result.error || "")) {
+    say($(".form-status", f), "Opening Wix's secure sign-in page…", "ok");
+    wixSignIn(null, $(".form-status", f));
+    return;
+  }
   if (result.state === "EMAIL_VERIFICATION_REQUIRED") { showAuth(verifyForm); return; }
   if (result.state === "OWNER_APPROVAL_REQUIRED") { showAuth(approvalEl); return; }
   say($(".form-status", f), result.error || "That didn't work. Check the details and try again.", "error");
@@ -194,6 +201,55 @@ function bindAuth(f, action) {
 bindAuth(loginForm, (f) => login(f.email.value.trim(), f.password.value));
 bindAuth(signupForm, (f) => register(f.email.value.trim(), f.password.value, { firstName: f.firstName.value.trim(), lastName: f.lastName.value.trim() }));
 bindAuth(verifyForm, (f) => verifyEmail(f.code.value.trim()));
+
+// ------------------------------------------------- Google / Wix sign-in
+// "Continue with Google" sends the member straight to Google through Wix
+// (idp below); Wix's own sign-in page is the fallback when Wix asks for a
+// captcha, which a custom form can't show. Both come back to this page with a
+// code in the URL fragment, exchanged here for member tokens (PKCE).
+const GOOGLE_IDP = "0e6a50f5-b523-4e29-990d-f37fa2ffdd69";
+const CALLBACK = SITE + PAGE;
+const OAUTH_KEY = "knews.oauth";
+const b64url = (bytes) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const randomString = () => b64url(crypto.getRandomValues(new Uint8Array(32)));
+async function wixSignIn(idp, statusEl) {
+  try {
+    const verifier = randomString(), state = randomString();
+    const challenge = b64url(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier))));
+    try { localStorage.setItem(OAUTH_KEY, JSON.stringify({ verifier, state, at: Date.now() })); } catch {}
+    const authRequest = {
+      redirectUri: CALLBACK, clientId: WIX_CLIENT_ID, codeChallenge: challenge, codeChallengeMethod: "S256",
+      responseMode: "fragment", responseType: "code", scope: "offline_access", state, ...(idp ? { idp } : {}),
+    };
+    const res = await wixRequest("/headless/v1/redirect-session", { body: { auth: { authRequest } } });
+    const url = res && res.redirectSession && res.redirectSession.fullUrl;
+    if (!url) throw new Error("no sign-in address");
+    location.assign(url);
+  } catch (err) {
+    if (statusEl) say(statusEl, "Sign-in couldn't start. Reload the page and try again.", "error");
+  }
+}
+async function finishWixSignIn() {
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (!hash.has("code") && !hash.has("error")) return;
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(OAUTH_KEY) || "null"); localStorage.removeItem(OAUTH_KEY); } catch {}
+  history.replaceState(history.state, "", location.pathname + location.search + "#account");
+  const note = $(".form-status", loginForm);
+  if (hash.has("error")) { say(note, "Sign-in was cancelled or failed. Try again.", "error"); return; }
+  if (!saved || saved.state !== hash.get("state")) { say(note, "Sign-in expired. Please try again.", "error"); return; }
+  try {
+    const tokens = await mintTokens({ grantType: "authorization_code", code: hash.get("code"), codeVerifier: saved.verifier, redirectUri: CALLBACK }, "member");
+    setTokens(tokens);
+    account.loaded = false;
+    await refreshMember();
+    $("#account").scrollIntoView({ block: "center" });
+  } catch {
+    say(note, "Sign-in couldn't finish. Please try again.", "error");
+  }
+}
+$$("[data-google]").forEach((b) => b.addEventListener("click", () => { b.disabled = true; wixSignIn(GOOGLE_IDP, $(".form-status", loginForm)).finally(() => { b.disabled = false; }); }));
+finishWixSignIn();
 $("[data-logout]").addEventListener("click", () => logout(PAGE + "#submit").catch(() => location.reload()));
 
 // ----------------------------------------------------------------- editor

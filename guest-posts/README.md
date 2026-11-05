@@ -1,6 +1,7 @@
 # Paid guest posts
 
-Writers buy a plan on www.knewspaper.in/write-for-us, add their article (title, content
+Writers create an account on www.knewspaper.in/write-for-us (email or Google), buy a plan by
+email and pay the site owner directly, then add their article (title, content
 with subheadings, slug, SEO title, meta description, topic, featured image) and it goes
 live automatically, without editorial review.
 
@@ -14,8 +15,11 @@ live automatically, without editorial review.
 
 ## How it fits together
 
-- **Plans and checkout**: Wix Pricing Plans (one-time payment, ends after a year). Wix's
-  hosted checkout takes the payment through the site's payment provider (Razorpay).
+- **Plans**: Wix Pricing Plans (one-time, ends after a year). There is no online checkout
+  (Razorpay was disconnected on 5 Nov 2026): the writer emails knewspaper.in@gmail.com, pays
+  the owner directly, and the owner adds the plan to the writer's account as a paid offline
+  order (Wix dashboard → Pricing Plans, or `POST /pricing-plans/v2/checkout/orders/offline`
+  with `memberId`, `planId`, `paid: true`). The order gives the writer their credits.
 - **Accounts**: Wix Members. Writers log in on the page; their name is the post's author.
 - **Submissions**: the `GuestSubmissions` CMS collection. A logged-in member can add items
   and read only their own; nobody but the site owner can change them.
@@ -25,8 +29,8 @@ live automatically, without editorial review.
   page shows), finds a free credit on the writer's active plan, uploads the image, publishes
   the post, adds the `/post/<slug>` redirect and marks the submission live.
 
-Rules: 500–1,500 words; at least 2 subheadings, one of them an H2; at most 2 do-follow and
-3 no-follow external links; slug, SEO title, meta description, image and alt text required.
+Rules: 500–1,500 words; at least 2 subheadings, one of them an H2; at most 5 links to other
+websites, all published with rel="sponsored" under a "Sponsored guest post" note; slug, SEO title, meta description, image and alt text required.
 A submission that breaks a rule is marked "Needs changes" with the reasons and uses no credit.
 
 ## Removing an article
@@ -37,7 +41,7 @@ writer can publish one more article in its place.
 
 ## Setup (once)
 
-1. Wix dashboard → Settings → Accept payments: connect Razorpay.
+1. (No payment provider needed: plans are sold by email.)
 2. Wix → API Keys Manager (https://manage.wix.com/account/api-keys) → create a key with
    these permissions: Wix Blog, Wix Data (CMS), Wix Pricing Plans, Media Manager,
    SEO (redirects) and Members. Copy the key.
