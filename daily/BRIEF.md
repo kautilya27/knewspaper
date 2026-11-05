@@ -126,6 +126,13 @@ query (`primaryQuery`), the comparable page (`inspiredBy`) and the gap we can fi
   leading sites in other niches) publish and rank for, check the topics against the site's
   articles and `plan.csv`, and append 20 new rows in the same format.
 
+### 2d. Topics the owner asked for (Wednesdays, Saturdays and Sundays)
+On **Wednesday, Saturday and Sunday** (India time), if `daily/owner-topics.csv` has a row whose
+`order` is not in `state.usedOwner` or `state.skippedOwner` (add the fields if missing), replace the
+trending topic with the first such row. Follow its `angle`; it still has to pass every check
+(duplicate check, information gain, quality gate). Add its `order` to `state.usedOwner`.
+Record it in `state.published` with `"source": "owner #<order>"`.
+
 ### 3. Research and write each article
 For each topic:
 - Research with WebSearch/WebFetch. Check every fact that could be wrong or out of date (dates,
@@ -241,7 +248,7 @@ Run `daily/create-post-template.js` (`hasMutations: true`) with `files`:
 ```
 (`"cover": null` when there is no image.) It refuses duplicates, unknown topics, missing FAQs and
 short articles; fix the cause and retry. Record each published article in `state.published` as
-`{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>"|"niche #<order>","cover":true|false}`.
+`{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>"|"niche #<order>"|"owner #<order>","cover":true|false}`.
 
 ### 6. Missing images from earlier days
 If Chrome/ChatGPT worked today, also make images for up to 3 slugs in `state.pendingImages`
