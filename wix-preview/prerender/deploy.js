@@ -317,7 +317,6 @@ async () => {
     const bodyHtml = blocks.map((b, i) => (before.get(i) || "") + b.html + (after.get(i) || "")).join("");
     const heads = blocks.filter((b) => b.tag === "h2");
     const toc = heads.length >= 3 ? `<nav class="toc" aria-labelledby="toc-title"><h2 id="toc-title" class="toc__title">In this article</h2><ol data-toc>${heads.map((h) => `<li><a href="#${esc(h.id)}">${esc(h.text)}</a></li>`).join("")}</ol></nav>` : `<nav class="toc" aria-labelledby="toc-title" hidden><h2 id="toc-title" class="toc__title">In this article</h2><ol data-toc></ol></nav>`;
-    // FAQ structured data from an "FAQs" H2 followed by H3 questions.
     // FAQ structured data from the article's FAQ section: an "FAQs" heading (H2, H3 or
     // H4) followed by questions as smaller headings, or as paragraphs ending in "?"
     // (often "Q. ...?" with the answer in the next paragraph, "A. ...").
@@ -331,8 +330,19 @@ async () => {
       const flush = () => { const t = a.join(" ").replace(/\s+/g, " ").trim(); if (q && t) qa.push({ q, a: t }); };
       for (let i = fi + 1; i < blocks.length; i++) {
         const b = blocks[i], l = lvlOf(b), t = bText(b);
-        if (l && l <= top) break;
         if (!t || b.tag === "aside" || /article__topics/.test(b.html)) continue;
+        if (l && l <= top) break;
+        // Questions as list items: the item's first line is the question, the rest the answer.
+        if ((b.tag === "ul" || b.tag === "ol") && b.node && !q) {
+          for (const li of b.node.nodes || []) {
+            const parts = (li.nodes || []).map((c) => nodeText(c).trim()).filter(Boolean);
+            const lines = parts.length > 1 ? parts : String(parts[0] || "").split(/\n+/);
+            let qi = lines[0] || "", ai = lines.slice(1).join(" ").trim();
+            if (!ai && /\?\s*\S/.test(qi)) { const k = qi.indexOf("?") + 1; ai = qi.slice(k).trim(); qi = qi.slice(0, k); }
+            if (/\?\s*$/.test(qi) && ai) qa.push({ q: qi.replace(/^Q(?:uestion)?\s*\d*\s*[.:)\-–]\s*/i, "").trim(), a: ai.replace(/^A(?:ns(?:wer)?)?\s*[.:)\-–]\s*/i, "") });
+          }
+          continue;
+        }
         if (l || (b.tag === "p" && /\?\s*$/.test(t) && t.length <= 200)) { flush(); q = t.replace(/^Q(?:uestion)?\s*\d*\s*[.:)\-–]\s*/i, "").trim(); a = []; continue; }
         if (q) a.push(t.replace(/^A(?:ns(?:wer)?)?\s*[.:)\-–]\s*/i, ""));
       }

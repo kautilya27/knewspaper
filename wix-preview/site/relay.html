@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>Image upload</title>
+<style>body{font:16px system-ui,sans-serif;margin:40px;color:#1a1d29}</style></head>
+<body><p id="s">Waiting for an image…</p>
+<script>
+// Used by the daily article job: ChatGPT's page can't send data to other sites, so it
+// opens this page and passes the generated image here with postMessage; this page
+// uploads it to the Wix Media upload address it was given and reports the file id back.
+// Only accepts messages from chatgpt.com and only uploads to upload.wixmp.com.
+addEventListener("message", async (e) => {
+  if (e.origin !== "https://chatgpt.com") return;
+  const d = e.data || {};
+  if (typeof d.url !== "string" || !/^https:\/\/upload\.wixmp\.com\/upload\//.test(d.url) || !(d.blob instanceof Blob)) return;
+  const s = document.getElementById("s");
+  s.textContent = "Uploading…";
+  let res;
+  try {
+    const r = await fetch(d.url, { method: "PUT", headers: { "Content-Type": d.blob.type || "image/jpeg" }, body: d.blob });
+    const t = await r.text();
+    let j = null;
+    try { j = JSON.parse(t); } catch {}
+    const f = (Array.isArray(j) ? j[0] : j && (j.file || j)) || {};
+    res = { ok: r.ok, status: r.status, fileId: f.id || f.file_name || null, width: f.width || null, height: f.height || null, keys: Object.keys(f).slice(0, 12) };
+  } catch (err) {
+    res = { ok: false, error: String(err).slice(0, 200) };
+  }
+  s.textContent = res.ok ? "Uploaded." : "Upload failed.";
+  e.source.postMessage({ id: d.id, ...res }, e.origin);
+});
+if (window.opener) window.opener.postMessage({ relayReady: true }, "https://chatgpt.com");
+</script></body></html>

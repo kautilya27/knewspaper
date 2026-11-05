@@ -51,8 +51,19 @@ export function faqFromBody(body) {
   for (let el = head.nextElementSibling; el; el = el.nextElementSibling) {
     const l = /^H[2-6]$/.test(el.tagName) ? Number(el.tagName[1]) : 0;
     const t = el.textContent.trim();
-    if (l && l <= top) break;
     if (!t || el.matches("aside, .article__topics, .ad-slot, .also-read")) continue;
+    if (l && l <= top) break;
+    // Questions as list items: the item's first line is the question, the rest the answer.
+    if ((el.tagName === "UL" || el.tagName === "OL") && !q) {
+      for (const li of el.children) {
+        const parts = [...li.children].map((c) => c.textContent.trim()).filter(Boolean);
+        const lines = parts.length > 1 ? parts : li.textContent.trim().split(/\n+/);
+        let qi = lines[0] || "", ai = lines.slice(1).join(" ").trim();
+        if (!ai && /\?\s*\S/.test(qi)) { const k = qi.indexOf("?") + 1; ai = qi.slice(k).trim(); qi = qi.slice(0, k); }
+        if (/\?\s*$/.test(qi) && ai) qa.push({ q: qi.replace(/^Q(?:uestion)?\s*\d*\s*[.:)\-–]\s*/i, "").trim(), a: ai.replace(/^A(?:ns(?:wer)?)?\s*[.:)\-–]\s*/i, "") });
+      }
+      continue;
+    }
     if (l || (el.tagName === "P" && /\?\s*$/.test(t) && t.length <= 200)) { flush(); q = t.replace(/^Q(?:uestion)?\s*\d*\s*[.:)\-–]\s*/i, "").trim(); a = []; continue; }
     if (q) a.push(t.replace(/^A(?:ns(?:wer)?)?\s*[.:)\-–]\s*/i, ""));
   }
