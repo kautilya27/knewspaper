@@ -80,6 +80,34 @@ launches). Choose one where an **explainer** helps the reader ("What is…", "Ho
 celebrity gossip, elections and party politics, communal or divisive issues, rumours, anything you
 can't verify from official or major news sources.
 
+### 2b. Tuesdays and Fridays: one civics & economy article (instead of the trending one)
+On **Tuesday and Friday** (India time), replace the trending topic with the first row of
+`daily/civics.csv` (in `order`) whose `order` is not in `state.usedCivics` or `state.skippedCivics`
+(add the field if missing). Use the row's `angle` as the outline, its `categorySlug`, and add the
+`order` to `state.usedCivics`. When the list runs out, add 6 new rows in the same spirit (how the
+economy, government, democracy and rights work, explained for Indian readers, e.g. what the RTI Act
+gives you, how inflation is measured, what the Election Commission does, federalism and states'
+money), commit them, and take the first one.
+
+These pieces must be the most careful on the site:
+- **Facts only, with sources named in the text** (official data: MoSPI, RBI, World Bank, IMF,
+  Election Commission, court judgments; fact-checkers: Alt News, BOOM, AFP Fact Check, PIB Fact
+  Check; major outlets). Every claim about a real person must be documented by a reliable source;
+  if it isn't, leave it out. No insults, no nicknames used as fact, no guessing at motives.
+- **Name no political party** anywhere in these articles, neither positively nor negatively, and
+  don't criticise or praise any current officeholder by name. Where a source attributes something
+  to a party, write "a political party" or "organised online campaigns" and keep only what the
+  source documents.
+- **Fair:** give the main counter-view or the government's/critics' response in a sentence or two
+  wherever a point is contested. An `opinion` row is written as an opinion piece: say so in the
+  first lines ("This is an opinion piece…"), make the argument with facts, then answer the main
+  counter-arguments honestly.
+- No comparisons of present-day Indian leaders or parties to Hitler or other dictators.
+- The image prompt must not show any real person: use a symbolic scene (an empty podium with
+  microphones, a rupee coin and a dollar note, a parliament building silhouette).
+- The quality gate (3b) adds a 7th check for these: "Is every statement about a real person
+  sourced and fair, is no party named, and would a reader of any political view find it accurate?"
+
 ### 3. Research and write each article
 For each topic:
 - Research with WebSearch/WebFetch. Check every fact that could be wrong or out of date (dates,
@@ -194,7 +222,7 @@ Run `daily/create-post-template.js` (`hasMutations: true`) with `files`:
 ```
 (`"cover": null` when there is no image.) It refuses duplicates, unknown topics, missing FAQs and
 short articles; fix the cause and retry. Record each published article in `state.published` as
-`{"date","slug","title","source":"plan #<order>"|"trending","cover":true|false}`.
+`{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>","cover":true|false}`.
 
 ### 6. Missing images from earlier days
 If Chrome/ChatGPT worked today, also make images for up to 3 slugs in `state.pendingImages`
