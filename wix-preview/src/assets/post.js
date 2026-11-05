@@ -141,9 +141,19 @@ function sizeImages(body) {
   });
 }
 
+// Wix fills a missing excerpt with the article's opening words; don't show the same text twice.
+function dropRepeatedDek() {
+  const dek = root.querySelector(".article__dek"), body = root.querySelector("[data-body]");
+  if (!dek || !body) return;
+  const n = (s) => s.replace(/[^\w]+/g, " ").trim().toLowerCase();
+  const d = n(dek.textContent).slice(0, 80);
+  if (d && n([...body.querySelectorAll("p")].slice(0, 3).map((x) => x.textContent).join(" ")).startsWith(d)) dek.remove();
+}
+
 // A pre-rendered article that is still current: wire up what is live.
 function hydrate(p) {
   mounted = true;
+  dropRepeatedDek();
   showOldUrl(pagePath);
   schemaPost = p;
   placeAds(root.querySelector("[data-body]"));
@@ -216,6 +226,7 @@ function mount(p, s) {
   if (coverId && firstImg && mediaId(firstImg.src) === coverId) (firstImg.closest("figure") || firstImg).remove();
   body.querySelectorAll("img").forEach((img) => { img.loading = "lazy"; img.decoding = "async"; });
   sizeImages(body);
+  dropRepeatedDek();
   body.querySelectorAll("table").forEach((t) => { if (!t.parentElement.classList.contains("table-wrap")) { const w = document.createElement("div"); w.className = "table-wrap"; t.replaceWith(w); w.append(t); } });
 
   // Contents list from the article's own headings.

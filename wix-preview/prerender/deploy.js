@@ -114,7 +114,13 @@ async () => {
       .replace(/<nav aria-label="Popular articles">[\s\S]*?<\/nav>/, "")
       // The header links (prerender/header-nav.html): About us, Contact us, Log in, and a Submit article button at the right.
       .replace(/<nav class="utility" aria-label="Site">[\s\S]*?<\/nav>/, (m) => (given["prerender/header-nav.html"] ? given["prerender/header-nav.html"].trim() : m))
-      .replace("grid-template-columns:1.2fr 1.3fr .9fr .8fr", "grid-template-columns:1.3fr 1.6fr 1fr");
+      .replace("grid-template-columns:1.2fr 1.3fr .9fr .8fr", "grid-template-columns:1.3fr 1.6fr 1fr")
+      // Header: "Log in" becomes "My account" when signed in, also after signing in or out in another tab.
+      .replace('<script>try{var t=JSON.parse(localStorage.getItem("wix-visitor-7b943d44-d514-46a8-a183-8391ccde2fed")||"null");if(t&&t.role==="member"){var a=document.querySelector("[data-login-link]");a.textContent="My account";a.href="/my-account";}}catch(e){}</script>', '<script>(function(){var K="wix-visitor-7b943d44-d514-46a8-a183-8391ccde2fed";function f(){try{var t=JSON.parse(localStorage.getItem(K)||"null"),a=document.querySelector("[data-login-link]");if(a)a.textContent=t&&t.role==="member"?"My account":"Log in";}catch(e){}}f();addEventListener("storage",function(e){if(e.key===K)f();});addEventListener("pageshow",f);})();</script>')
+      // Footer: the notice below says what the site is and gives the email; the brand line stays short.
+      .replace('<p>Knewspaper publishes explainers, guides and opinion pieces on technology, health, education, culture, lifestyle and more. It is not a news website.</p><p><a href="mailto:knewspaper.in@gmail.com">knewspaper.in@gmail.com</a></p>', "<p>Explainers, guides and opinion pieces on technology, health, education, culture, lifestyle and more.</p>")
+      // Home: no About/Contact band above the footer (the footer covers both).
+      .replace(/<section class="band" aria-label="About and contact">[\s\S]*?<\/div><\/div><\/section>/, "");
     if (h !== text[p]) { text[p] = h; changed.add(p); }
   }
 
@@ -349,13 +355,17 @@ async () => {
       flush();
     }
     const share = encodeURIComponent(url), shareText = encodeURIComponent(p.title || "");
+    // Wix fills a missing excerpt with the article's opening words; don't show the same text twice.
+    const plain = (h) => h.replace(/<[^>]+>/g, " ").replace(/&[#\w]+;/g, " ").replace(/[^\w]+/g, " ").trim().toLowerCase();
+    const dekKey = plain(esc(p.excerpt || "")).slice(0, 80);
+    const dekHtml = p.excerpt && !(dekKey && plain(blocks.filter((b) => b.tag === "p").slice(0, 3).map((b) => b.html).join(" ")).startsWith(dekKey)) ? `<p class="article__dek">${esc(p.excerpt)}</p>` : "";
     const shortTitle = (p.title || "").length > 48 ? p.title.slice(0, 47) + "…" : p.title || "";
     const hero = s.cover ? `<figure class="wrap article__hero"><img src="${esc(fill(s.cover, 1280, 720))}" srcset="${esc(srcset(s.cover, [480, 640, 960, 1280, 1600], 0.5625))}" sizes="(min-width: 1240px) 1160px, 100vw" width="1280" height="720" alt="${esc(s.coverAlt)}" fetchpriority="high" decoding="async"></figure>` : "";
     const article = `<article class="article" data-article data-prerendered="${esc(p.slug)}" data-updated="${esc(s.updatedISO)}">
     <header class="wrap article__head">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${cat ? `<li><a href="${catHref(cat.slug)}">${esc(cat.label)}</a></li>` : ""}<li><span aria-current="page">${esc(shortTitle)}</span></li></ol></nav>
       <h1 class="article__title">${esc(p.title)}</h1>
-      ${p.excerpt ? `<p class="article__dek">${esc(p.excerpt)}</p>` : ""}
+      ${dekHtml}
       <div class="article__meta">
         ${metaLine(s, author)}
         <div class="share" aria-label="Share this article">

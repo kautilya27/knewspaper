@@ -97,6 +97,7 @@ function renderList() {
 }
 
 function renderMember(s) {
+  if (!s.loading) document.querySelectorAll("[data-login-link]").forEach((a) => { a.textContent = s.loggedIn ? "My account" : "Log in"; });
   const panes = { loading: $("[data-pane=loading]"), out: $("[data-pane=out]"), in: $("[data-pane=in]") };
   const show = (name) => Object.entries(panes).forEach(([k, el]) => { if (el) el.hidden = k !== name; });
   if (s.loading) { show("loading"); return; }
