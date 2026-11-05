@@ -108,6 +108,24 @@ These pieces must be the most careful on the site:
 - The quality gate (3b) adds a 7th check for these: "Is every statement about a real person
   sourced and fair, is no party named, and would a reader of any political view find it accurate?"
 
+### 2c. Mondays and Thursdays: one topic the big niche sites rank for (instead of the trending one)
+On **Monday and Thursday** (India time), replace the trending topic with the first row of
+`daily/niche-topics.csv` (in `order`) whose `order` is not in `state.usedNiche` or
+`state.skippedNiche` (add the fields if missing). These are evergreen queries that the biggest
+Indian sites in each niche (NoBroker and Housing.com for real estate, BYJU'S and Oswaal for
+education, ClearTax and Groww for finance, and so on) get traffic from. The row gives the main
+query (`primaryQuery`), the comparable page (`inspiredBy`) and the gap we can fill (`gap`).
+- Read the `inspiredBy` page and the other top results for `primaryQuery` first. Our article must
+  beat them on the `gap` (more current rules and figures from official sources, a clearer table, a
+  worked example, a state-by-state view). Never copy their text or structure. If you can't beat
+  them, skip the row (`{"order", "reason"}` in `skippedNiche`) and take the next one.
+- Use the row's `categorySlug`; add its `order` to `state.usedNiche`.
+- If `daily/niche-topics.csv` is missing or every row is used, do the research in the next point first;
+  if that isn't possible today, fall back to the trending topic.
+- When fewer than 5 rows are left, research again: look at what those niche sites (and the
+  leading sites in other niches) publish and rank for, check the topics against the site's
+  articles and `plan.csv`, and append 20 new rows in the same format.
+
 ### 3. Research and write each article
 For each topic:
 - Research with WebSearch/WebFetch. Check every fact that could be wrong or out of date (dates,
@@ -222,7 +240,7 @@ Run `daily/create-post-template.js` (`hasMutations: true`) with `files`:
 ```
 (`"cover": null` when there is no image.) It refuses duplicates, unknown topics, missing FAQs and
 short articles; fix the cause and retry. Record each published article in `state.published` as
-`{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>","cover":true|false}`.
+`{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>"|"niche #<order>","cover":true|false}`.
 
 ### 6. Missing images from earlier days
 If Chrome/ChatGPT worked today, also make images for up to 3 slugs in `state.pendingImages`
