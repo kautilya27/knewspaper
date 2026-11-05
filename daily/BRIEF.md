@@ -132,6 +132,10 @@ If `state.preparedImages` has an entry for the topic (lower-case title), use tha
    `len` must equal the `length` from step 4 (otherwise the URL was mis-copied: get a new one and
    retry once). Success is `res.ok: true` with `res.fileId` like `c0f544_…~mv2.jpg`: that is the
    cover id. Close the ChatGPT tab when done.
+6. If the image was made but the upload doesn't work after one retry, leave that ChatGPT chat as it
+   is (don't delete it; its title is the article's title), publish without a cover, add the slug to
+   `pendingImages` with the note "image ready in ChatGPT", and say so in the report: the owner will
+   download it and send it in chat.
 
 ### 5. Publish
 Run `daily/create-post-template.js` (`hasMutations: true`) with `files`:
