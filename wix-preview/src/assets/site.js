@@ -11,11 +11,12 @@ export const EDITORIAL = "Knewspaper Editorial Team";
 export function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
-// An article's address: its pre-rendered page when there is one, else the
-// page that reads it from Wix in the browser.
+// Links use the article's old address (/post/<slug>), which is its canonical
+// URL. A click opens the file behind it directly: the pre-rendered page
+// (/post/<slug>.html) when there is one, else the page that reads it from Wix.
 export const isPrerendered = (slug) => PRERENDERED.has(slug);
 export const postPath = (slug) => (PRERENDERED.has(slug) ? "/post/" + encodeURIComponent(slug) + ".html" : "/post.html?slug=" + encodeURIComponent(slug));
-export const postHref = postPath;
+export const postHref = (slug) => "/post/" + encodeURIComponent(slug);
 export const catHref = (slug) => "/blog/categories/" + encodeURIComponent(slug);
 
 // Categories with posts, in the blog's menu order. [] when the read fails.

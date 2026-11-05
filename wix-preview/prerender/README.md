@@ -31,3 +31,13 @@ where existing redirects point, delete them and create them again.
 Size limit: Wix static hosting refuses a site over 20 MiB or 2,000 files. The
 351 article pages are about 12 MB, so the stylesheet is not inlined into each
 page (that alone added about 7 MB).
+
+Addresses: every article's canonical URL, sitemap entry and link is its old
+address `/post/<slug>` (the owner's choice, to keep existing rankings). Wix
+static hosting can only serve files, so the page itself is `/post/<slug>.html`,
+reached through the `/post/<slug>` 301 redirect; an inline script and
+`post.js` put `/post/<slug>` back in the address bar. Serving the page at the
+bare address would need a server-rendered (Wix CLI / Astro) deploy.
+
+Each run gives the page bundles a new `?v=` in every page, because Wix's CDN
+keeps serving a replaced `assets/*.bundle.js` for several minutes.

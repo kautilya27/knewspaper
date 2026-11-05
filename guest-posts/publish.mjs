@@ -238,7 +238,7 @@ async function handle(sub, ledger) {
   if (!order) {
     console.log(`Waiting for payment: ${label}`);
     if (d.status !== "awaiting_payment")
-      await patchItem(SUBMISSIONS, sub.id, { status: "awaiting_payment", message: "Waiting for payment. Your article goes live a few minutes after it comes through." });
+      await patchItem(SUBMISSIONS, sub.id, { status: "awaiting_payment", message: "Waiting for your plan. Email us at knewspaper.in@gmail.com to buy it; your article goes live once we've added the plan to your account." });
     return;
   }
 

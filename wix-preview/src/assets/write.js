@@ -1,9 +1,9 @@
 // Write for us (write-for-us.html): plans, member login, the article form and
-// the writer's own articles. Payment is Wix's hosted Pricing Plans checkout;
-// the article is saved to the GuestSubmissions collection as the logged-in
+// the writer's own articles. Plans are bought by email and paid manually; the
+// owner then adds the plan to the writer's account in Wix Pricing Plans (an
+// offline order), which gives the article credits. The article is saved to the GuestSubmissions collection as the logged-in
 // member, and the GitHub publisher (guest-posts/publish.mjs) puts it live.
 import { subscribeMember, getMemberState, login, register, verifyEmail, logout } from "/js/wix/member-store.js";
-import { purchasePlan } from "/js/wix/purchase.js";
 import { wixRequest } from "/js/wix/client.js";
 import { categoriesReady, esc } from "/assets/site.js";
 import { RULES, PLAN_CREDITS, slugify, isValidSlug, countWords, parseLink, checkSubmission, linkCounts } from "/assets/guest-rules.js";
@@ -21,6 +21,24 @@ const PLANS = {
 };
 const planKeyById = Object.fromEntries(Object.entries(PLANS).map(([k, p]) => [p.id, k]));
 const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
+const MAIL = "knewspaper.in@gmail.com";
+// An email to buy a plan, with the plan, the writer's account email and the article filled in.
+function buyLink(key, articleTitle) {
+  const plan = PLANS[key] || PLANS.single;
+  let email = "";
+  try { const m = getMemberState().member || {}; email = m.loginEmail || (m.contact && m.contact.emails && m.contact.emails[0]) || ""; } catch {}
+  const subject = `Buy guest post plan: ${plan.label} (${inr(plan.price)})`;
+  const body = [
+    "Hi Knewspaper team,",
+    "",
+    `I'd like to buy: ${plan.label} (${inr(plan.price)}).`,
+    `My Knewspaper account email: ${email}`,
+    articleTitle ? `Article I've submitted: ${articleTitle}` : "",
+    "",
+    "Please send me the payment details.",
+  ].filter((l, i, a) => l || a[i - 1]).join("\n");
+  return `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -34,6 +52,7 @@ let planKey = "single";
 function setPlan(key, scroll) {
   if (!PLANS[key]) return;
   planKey = key;
+  $$("[data-buy-mail]").forEach((l) => { l.href = buyLink(key); l.textContent = `Email us to buy: ${PLANS[key].label} (${inr(PLANS[key].price)})`; });
   form.elements.plan.value = key;
   $$(".wfu-card").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.pick === key)));
   const single = $(".wfu-single");
@@ -97,7 +116,7 @@ async function loadAccount() {
 function renderCredits() {
   const el = $("[data-credits]");
   if (account.error) { el.textContent = "We couldn't load your credits just now. Reload the page to try again."; return; }
-  if (!account.total) { el.innerHTML = "You have no article credits yet. Add your article below and pay for a plan when you submit it."; return; }
+  if (!account.total) { el.innerHTML = `You have no article credits yet. <a href="#buy">Email us to buy a plan</a>; we add it to your account once you've paid.`; return; }
   const until = account.validUntil ? ` (valid until ${new Date(account.validUntil).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })})` : "";
   el.innerHTML = `<strong>${account.credits} of ${account.total}</strong> article credit${account.total === 1 ? "" : "s"} left${esc(until)}.`;
 }
@@ -105,7 +124,7 @@ function renderCredits() {
 const STATUS = {
   queued: ["In the queue", "Goes live within about 15 minutes."],
   publishing: ["Publishing", "Goes live in a moment."],
-  awaiting_payment: ["Waiting for payment", "Goes live a few minutes after your payment comes through."],
+  awaiting_payment: ["Waiting for your plan", "Email us to buy the plan. It goes live once we've added the plan to your account."],
   live: ["Live", ""],
   needs_changes: ["Needs changes", ""],
   removed: ["Removed", ""],
@@ -119,7 +138,7 @@ function renderList() {
     const plan = PLANS[planKeyById[x.planId]];
     const actions = [
       x.status === "live" && x.postUrl ? `<a class="btn btn--quiet" href="${esc(x.postUrl)}">View article</a>` : "",
-      x.status === "awaiting_payment" && plan ? `<button type="button" class="btn" data-pay="${esc(x.planId)}">Pay ${inr(plan.price)}</button>` : "",
+      x.status === "awaiting_payment" && plan ? `<a class="btn" href="${esc(buyLink(planKeyById[x.planId], x.title))}">Email to buy (${inr(plan.price)})</a>` : "",
       x.status === "needs_changes" ? `<button type="button" class="btn btn--quiet" data-fix="${esc(x.id)}">Fix and submit again</button>` : "",
     ].join("");
     return `<li class="wfu-item" data-status="${esc(x.status)}">
@@ -130,8 +149,6 @@ function renderList() {
   }).join("")}</ul>`;
 }
 listEl.addEventListener("click", async (e) => {
-  const pay = e.target.closest("[data-pay]");
-  if (pay) { pay.disabled = true; pay.textContent = "Opening checkout…"; return goToCheckout(pay.dataset.pay).catch((err) => { pay.disabled = false; pay.textContent = "Try again"; say(status, err.message, "error"); }); }
   const fix = e.target.closest("[data-fix]");
   if (fix) {
     fix.disabled = true;
@@ -469,17 +486,9 @@ function updatePay() {
   } else {
     planField.hidden = false;
     total.textContent = inr(plan.price);
-    note.textContent = plan.label;
-    btn.textContent = s.loggedIn ? "Continue to payment" : "Log in to continue";
+    note.textContent = `${plan.label} · paid by email after you submit`;
+    btn.textContent = s.loggedIn ? "Submit article" : "Log in to continue";
   }
-}
-
-async function goToCheckout(planId) {
-  const url = await purchasePlan(planId, {
-    thankYouPageUrl: location.origin + PAGE + "?paid=1#my-articles",
-    postFlowUrl: location.origin + PAGE + "#my-articles",
-  });
-  location.assign(url);
 }
 
 form.addEventListener("submit", async (e) => {
@@ -524,16 +533,21 @@ form.addEventListener("submit", async (e) => {
           data: {
             title: fields.title, slug: fields.slug, metaTitle: fields.metaTitle, metaDescription: fields.metaDescription,
             categoryId: F.categoryId.value, content, image: imageData, imageAlt: fields.imageAlt,
-            planId: PLANS[planKey].id, status: "queued",
+            planId: PLANS[planKey].id, status: useCredit ? "queued" : "awaiting_payment",
+            ...(useCredit ? {} : { message: "Waiting for your plan. Email us to buy it; your article goes live once we've added the plan to your account." }),
           },
         },
       },
     });
     try { localStorage.removeItem(DRAFT_KEY); } catch {}
-    if (useCredit) {
-      say(status, `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}`, "ok");
+    const title = fields.title;
+    say(status, useCredit
+      ? `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}`
+      : "Saved. Now email us to buy your plan (the button under “Your articles”). Your article goes live once we've added the plan to your account.", "ok");
+    {
+      const key = planKey;
       form.reset();
-      setPlan(planKey, false);
+      setPlan(key, false);
       slugEdited = false;
       editor.innerHTML = "";
       imageData = "";
@@ -541,9 +555,7 @@ form.addEventListener("submit", async (e) => {
       account.loaded = false;
       loadAccount();
       $("#my-articles").scrollIntoView({ behavior: "smooth" });
-    } else {
-      say(status, "Saved. Taking you to secure checkout…", "ok");
-      await goToCheckout(PLANS[planKey].id);
+      if (!useCredit) setTimeout(() => { location.href = buyLink(key, title); }, 600);
     }
   } catch (err) {
     const tooBig = /size|too large|413/i.test(err && err.message);
@@ -560,6 +572,3 @@ if (!form.elements.plan.value) setPlan("single", false);
 serp();
 updateMeter();
 updatePay();
-if (new URLSearchParams(location.search).get("paid")) {
-  say($("[data-paid]"), "Thank you! Your payment is being confirmed. Your article goes live within about 15 minutes; its status is below.", "ok");
-}

@@ -7,18 +7,20 @@ import { createPostStore } from "/js/wix/post-store.js";
 import { createCommentsStore } from "/js/wix/comments-store.js";
 import { imgSrc, imgSrcSet } from "/js/wix/media.js";
 import { learnAuthors, quickPost, savePost, savedPost, withKnownAuthors } from "/assets/fast.js";
-import { EDITORIAL, cachedCategories, categoriesReady, card, catHref, esc, isPrerendered, markActive, meta, postHref } from "/assets/site.js";
-import { PUBLISHER, SITE, breadcrumbs, faqFromBody, noindex, setCanonical, setJsonLd, setMetaTag } from "/assets/seo.js";
+import { EDITORIAL, cachedCategories, categoriesReady, card, catHref, esc, isPrerendered, markActive, meta, postHref, showOldUrl } from "/assets/site.js";
+import { PUBLISHER, SITE, breadcrumbs, faqFromBody, noindex, setJsonLd, setMetaTag } from "/assets/seo.js";
 
 const root = document.querySelector("[data-article]");
-const pathSlug = (location.pathname.match(/^\/post\/([^/]+)\.html$/) || [])[1];
+// /post/<slug>.html, or /post/<slug> once the page has put the old address back.
+const pathSlug = (location.pathname.match(/^\/post\/([^/]+?)(?:\.html)?$/) || [])[1];
 const slug = (pathSlug ? decodeURIComponent(pathSlug) : new URLSearchParams(location.search).get("slug") || "").replace(/^\/+|\/+$/g, "");
 // This page holds the article already (a pre-rendered page).
 let pre = !!slug && root.dataset.prerendered === slug;
-// The article's one address: its pre-rendered page, else post.html?slug=….
-const pagePath = isPrerendered(slug) ? `/post/${encodeURIComponent(slug)}.html` : `/post.html?slug=${encodeURIComponent(slug)}`;
-// An old post.html?slug=… link to an article that has its own page goes there.
-if (!pathSlug && slug && isPrerendered(slug)) location.replace(pagePath + location.hash);
+// The article's address is its old one, /post/<slug> (the canonical URL and
+// what the address bar shows); the file behind it is /post/<slug>.html.
+const pagePath = `/post/${encodeURIComponent(slug)}`;
+// A post.html?slug=… link to an article that has its own page opens that page.
+if (!pathSlug && slug && isPrerendered(slug)) location.replace(`/post/${encodeURIComponent(slug)}.html` + location.hash);
 const mediaId = (url) => (String(url).match(/\/media\/([^/?#]+)/) || [])[1] || "";
 let mounted = false;
 
@@ -142,6 +144,7 @@ function sizeImages(body) {
 // A pre-rendered article that is still current: wire up what is live.
 function hydrate(p) {
   mounted = true;
+  showOldUrl(pagePath);
   schemaPost = p;
   placeAds(root.querySelector("[data-body]"));
   root.querySelector("[data-like]")?.addEventListener("click", () => store.toggleLike().catch(() => {}));
@@ -153,7 +156,7 @@ function mount(p, s) {
   pre = false; // changed since it was rendered: draw it again from Wix
   alsoReadDone = false;
   mounted = true;
-  setCanonical(SITE + pagePath);
+  showOldUrl(pagePath);
   document.title = `${p.seoTitle || p.title} | Knewspaper`;
   const md = document.querySelector('meta[name="description"]');
   if (md && p.seoDescription) md.content = p.seoDescription;

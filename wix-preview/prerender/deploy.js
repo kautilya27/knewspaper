@@ -94,7 +94,11 @@ async () => {
   };
   const slugs = new Set(posts.map((p) => p.slug));
   const pre = MODE === "test" ? new Set(TEST) : slugs;
-  const pagePath = (slug) => (pre.has(slug) ? `/post/${encodeURIComponent(slug)}.html` : `/post.html?slug=${encodeURIComponent(slug)}`);
+  // Every article keeps its old address, /post/<slug>: canonical, sitemap, links and
+  // the address bar all use it. The page itself is the file /post/<slug>.html, which
+  // the /post/<slug> redirect (and a click on any link, via site.js) opens.
+  const pagePath = (slug) => `/post/${encodeURIComponent(slug)}`;
+  const filePath = (slug) => (pre.has(slug) ? `/post/${encodeURIComponent(slug)}.html` : `/post.html?slug=${encodeURIComponent(slug)}`);
   const catHref = (slug) => "/blog/categories/" + encodeURIComponent(slug);
   const INTERNAL = /^https?:\/\/(?:www\.)?knewspaper\.in\/post\/([^/?#]+)\/?(#.*)?$/i;
 
@@ -105,11 +109,7 @@ async () => {
     if (typeof link.url === "string" && /^https?:\/\//i.test(link.url)) {
       let url = link.url;
       const m = url.match(INTERNAL);
-      if (m) {
-        let s = m[1];
-        try { s = decodeURIComponent(s); } catch {}
-        if (pre.has(s)) url = SITE + pagePath(s) + (m[2] || "");
-      }
+      if (m) url = url.replace(/\.html(?=$|[#?])/, "");
       const rel = ["noopener", "noreferrer"];
       if (link.rel?.nofollow) rel.push("nofollow");
       if (link.rel?.sponsored) rel.push("sponsored");
@@ -324,6 +324,8 @@ async () => {
       `<meta name="twitter:description" content="${esc(seoDesc)}">`,
       s.cover ? `<link rel="preload" as="image" href="${esc(fill(s.cover, 1280, 720))}" imagesrcset="${esc(srcset(s.cover, [480, 640, 960, 1280, 1600], 0.5625))}" imagesizes="(min-width: 1240px) 1160px, 100vw" fetchpriority="high">` : "",
       `<script type="application/ld+json" id="ld-article">${ld}</script>`,
+      // Show the article's old address straight away.
+      `<script>try{history.replaceState(history.state,"",location.pathname.replace(/\\.html$/,"")+location.search+location.hash)}catch(e){}</script>`,
     ].join("");
     html = html
       .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(seoTitle)} | Knewspaper</title>`)
@@ -340,11 +342,8 @@ async () => {
   for (const p of posts) if (pre.has(p.slug)) out[`post/${p.slug}.html`] = render(p);
 
   // Every root page: article links go straight to the pre-rendered pages.
-  const fixLinks = (h) => h.replace(/href="\/post\/([^"#?\/]+)"/g, (m, s) => {
-    let d = s;
-    try { d = decodeURIComponent(s); } catch {}
-    return pre.has(d) && !/\.html$/.test(s) ? `href="/post/${s}.html"` : m;
-  });
+  // Links to articles use the old address (an earlier version linked the .html files).
+  const fixLinks = (h) => h.replace(/href="(?:https:\/\/www\.knewspaper\.in)?\/post\/([^"#?\/]+)\.html([#?][^"]*)?"/g, (m, s, rest) => `href="/post/${s}${rest || ""}"`);
   for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) { const h = fixLinks(text[p]); if (h !== text[p]) { text[p] = h; changed.add(p); } }
   for (const p of Object.keys(out)) out[p] = fixLinks(out[p]);
 
@@ -416,6 +415,11 @@ async () => {
       "const __r = (k) => { if (__m[k]) return __m[k]; const e = (__m[k] = {}); __d[k](e); return e; };", ...order.map(body), `__r(${JSON.stringify(entry)});`, "})();", ""].join("\n");
   }
   for (const name of ["home", "feed", "post", "search", "site", "write"]) out[`assets/${name}.bundle.js`] = bundle(`/assets/${name}.js`);
+  // New bundle names in every page, so the CDN's cached copies of the old ones aren't used.
+  const ver = Date.now().toString(36);
+  const bust = (h) => h.replace(/(src="\/assets\/[a-z]+\.bundle\.js)(\?v=[^"]*)?"/g, `$1?v=${ver}"`);
+  for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) { const h = bust(text[p]); if (h !== text[p]) { text[p] = h; changed.add(p); } }
+  for (const p of Object.keys(out)) if (/\.html$/.test(p)) out[p] = bust(out[p]);
   for (const p of changed) if (!out[p]) out[p] = text[p];
 
   // ---------------------------------------------------------------- upload
@@ -432,14 +436,14 @@ async () => {
     for (const r of all) {
       const from = r.from || "";
       let m = from.match(/^\/post\/([^/]+)$/), target = null;
-      if (m) { let s = m[1]; try { s = decodeURIComponent(s); } catch {} if (pre.has(s) && !/\.html$/.test(s)) target = pagePath(s); }
+      if (m) { let s = m[1]; try { s = decodeURIComponent(s); } catch {} if (pre.has(s) && !/\.html$/.test(s)) target = filePath(s); }
       const t = (r.to || "").match(/^\/post\.html\?slug=([^&#]+)$/);
-      if (!target && t) { let s = t[1]; try { s = decodeURIComponent(s); } catch {} if (pre.has(s)) target = pagePath(s); }
+      if (!target && t) { let s = t[1]; try { s = decodeURIComponent(s); } catch {} if (pre.has(s)) target = filePath(s); }
       if (target && r.to !== target) wanted.push({ from, to: target, options: { ...(r.options || {}), forceReplace: true } });
     }
     // Articles that never had a redirect get one too.
     const have = new Set(all.map((r) => r.from));
-    for (const s of pre) { const from = "/post/" + encodeURIComponent(s); if (!have.has(from) && slugs.has(s)) wanted.push({ from, to: pagePath(s), options: { forceReplace: true } }); }
+    for (const s of pre) { const from = "/post/" + encodeURIComponent(s); if (!have.has(from) && slugs.has(s)) wanted.push({ from, to: filePath(s), options: { forceReplace: true } }); }
     let ok = 0; const failed = [];
     for (let i = 0; i < wanted.length; i += 100) {
       const chunk = wanted.slice(i, i + 100);
