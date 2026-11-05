@@ -23,8 +23,10 @@ const PLANS = {
 const planKeyById = Object.fromEntries(Object.entries(PLANS).map(([k, p]) => [p.id, k]));
 const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
 const MAIL = "knewspaper.in@gmail.com";
-// An email to buy a plan, with the plan, the writer's account email and the article filled in.
-function buyLink(key, articleTitle) {
+// Buying a plan: an email with the plan, the writer's account email and the
+// article filled in. Not everyone has a mail app, so the buy box offers Gmail in
+// the browser, copying the address or the message, and the mail app.
+function buyMessage(key, articleTitle) {
   const plan = PLANS[key] || PLANS.single;
   let email = "";
   try { const m = getMemberState().member || {}; email = m.loginEmail || (m.contact && m.contact.emails && m.contact.emails[0]) || ""; } catch {}
@@ -38,8 +40,46 @@ function buyLink(key, articleTitle) {
     "",
     "Please send me the payment details.",
   ].filter((l, i, a) => l || a[i - 1]).join("\n");
+  return { plan, subject, body };
+}
+function buyLink(key, articleTitle) {
+  const { subject, body } = buyMessage(key, articleTitle);
   return `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+let buyDialog = null;
+function showBuy(key, articleTitle) {
+  const { plan, subject, body } = buyMessage(key, articleTitle);
+  const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(MAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (!buyDialog) {
+    buyDialog = document.createElement("dialog");
+    buyDialog.className = "wfu-buydlg";
+    document.body.append(buyDialog);
+    document.head.insertAdjacentHTML("beforeend", `<style>.wfu-buydlg{max-width:460px;width:calc(100% - 32px);border:0;border-radius:14px;padding:22px 22px 18px;box-shadow:0 18px 50px rgba(0,0,0,.25);font-family:var(--sans)}.wfu-buydlg::backdrop{background:rgba(15,23,42,.45)}.wfu-buydlg h3{margin:0 0 6px;font-size:1.15rem}.wfu-buydlg p{margin:.4em 0;color:#444}.wfu-buydlg .addr{display:flex;gap:8px;align-items:center;margin:12px 0;padding:10px 12px;border:1px solid #d5dbe8;border-radius:8px;background:#f6f8fc;font-weight:600;word-break:break-all}.wfu-buydlg .addr span{flex:1}.wfu-buydlg .opts{display:grid;gap:8px;margin-top:12px}.wfu-buydlg .opts .btn,.wfu-buydlg .opts button{width:100%;text-align:center;justify-content:center}.wfu-buydlg .close{position:absolute;top:10px;right:12px;border:0;background:none;font-size:1.4rem;cursor:pointer;color:#666}.wfu-buydlg .ok{color:#137333;font-size:.9rem;min-height:1.2em}</style>`);
+    buyDialog.addEventListener("click", (e) => { if (e.target === buyDialog) buyDialog.close(); });
+  }
+  buyDialog.innerHTML = `<button type="button" class="close" aria-label="Close" data-close>×</button>
+    <h3>Buy: ${esc(plan.label)} (${inr(plan.price)})</h3>
+    <p>Email us with the plan you want. We reply with the payment details, and add the plan to your account once you've paid.</p>
+    <div class="addr"><span>${MAIL}</span><button type="button" class="btn btn--quiet" data-copy-addr>Copy</button></div>
+    <div class="opts">
+      <a class="btn" href="${esc(gmail)}" target="_blank" rel="noopener">Write the email in Gmail</a>
+      <button type="button" class="btn btn--quiet" data-copy-msg>Copy the message</button>
+      <a class="btn btn--quiet" href="${esc(buyLink(plan === PLANS[key] ? key : "single", articleTitle))}">Open my mail app</a>
+    </div>
+    <p class="ok" role="status" aria-live="polite"></p>`;
+  const ok = $(".ok", buyDialog);
+  const copy = (text, msg) => (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => { ok.textContent = msg; }, () => { ok.textContent = "Couldn't copy. Select the text and copy it instead."; });
+  $("[data-copy-addr]", buyDialog).onclick = () => copy(MAIL, "Email address copied.");
+  $("[data-copy-msg]", buyDialog).onclick = () => copy(`To: ${MAIL}\nSubject: ${subject}\n\n${body}`, "Message copied. Paste it into any email to us.");
+  $("[data-close]", buyDialog).onclick = () => buyDialog.close();
+  if (buyDialog.showModal) buyDialog.showModal(); else buyDialog.setAttribute("open", "");
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-buy], [data-buy-mail]");
+  if (!b) return;
+  e.preventDefault();
+  showBuy(b.dataset.buy || planKey, b.dataset.title || "");
+});
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -53,7 +93,7 @@ let planKey = "single";
 function setPlan(key, scroll) {
   if (!PLANS[key]) return;
   planKey = key;
-  $$("[data-buy-mail]").forEach((l) => { l.href = buyLink(key); l.textContent = `Email us to buy: ${PLANS[key].label} (${inr(PLANS[key].price)})`; });
+  $$("[data-buy-mail]").forEach((l) => { l.href = buyLink(key); l.textContent = `Buy: ${PLANS[key].label} (${inr(PLANS[key].price)})`; });
   form.elements.plan.value = key;
   $$(".wfu-card").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.pick === key)));
   const single = $(".wfu-single");
@@ -125,7 +165,7 @@ function renderCredits() {
 const STATUS = {
   queued: ["In the queue", "Goes live within about 15 minutes."],
   publishing: ["Publishing", "Goes live in a moment."],
-  awaiting_payment: ["Waiting for your plan", "Email us to buy the plan. It goes live once we've added the plan to your account."],
+  awaiting_payment: ["Waiting for your plan", "Buy the plan by email. It goes live once we've added the plan to your account."],
   live: ["Live", ""],
   needs_changes: ["Needs changes", ""],
   removed: ["Removed", ""],
@@ -139,7 +179,7 @@ function renderList() {
     const plan = PLANS[planKeyById[x.planId]];
     const actions = [
       x.status === "live" && x.postUrl ? `<a class="btn btn--quiet" href="${esc(x.postUrl)}">View article</a>` : "",
-      x.status === "awaiting_payment" && plan ? `<a class="btn" href="${esc(buyLink(planKeyById[x.planId], x.title))}">Email to buy (${inr(plan.price)})</a>` : "",
+      x.status === "awaiting_payment" && plan ? `<button type="button" class="btn" data-buy="${esc(planKeyById[x.planId])}" data-title="${esc(x.title || "")}">Buy this plan (${inr(plan.price)})</button>` : "",
       x.status === "needs_changes" ? `<button type="button" class="btn btn--quiet" data-fix="${esc(x.id)}">Fix and submit again</button>` : "",
     ].join("");
     return `<li class="wfu-item" data-status="${esc(x.status)}">
@@ -599,7 +639,7 @@ form.addEventListener("submit", async (e) => {
     const title = fields.title;
     say(status, useCredit
       ? `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}`
-      : "Saved. Now email us to buy your plan (the button under “Your articles”). Your article goes live once we've added the plan to your account.", "ok");
+      : "Saved. Now buy your plan by email (the button under “Your articles”). Your article goes live once we've added the plan to your account.", "ok");
     {
       const key = planKey;
       form.reset();
@@ -611,7 +651,7 @@ form.addEventListener("submit", async (e) => {
       account.loaded = false;
       loadAccount();
       $("#my-articles").scrollIntoView({ behavior: "smooth" });
-      if (!useCredit) setTimeout(() => { location.href = buyLink(key, title); }, 600);
+      if (!useCredit) setTimeout(() => showBuy(key, title), 600);
     }
   } catch (err) {
     const tooBig = /size|too large|413/i.test(err && err.message);
