@@ -8,7 +8,10 @@ export const RULES = {
   minHeadings: 2, // H2 or H3, at least one of them an H2
   // Paid posts: every outside link is marked rel="sponsored" (Google's rule
   // for paid links), so there is one limit instead of do-follow/no-follow.
-  maxLinks: 5,
+  // At most 3 links to other websites, and at most 2 of them to any one site
+  // (so there's room for a source). Links to Knewspaper don't count.
+  maxLinks: 3,
+  maxPerSite: 2,
   titleMin: 10,
   titleMax: 120,
   metaTitleMin: 10,
@@ -92,12 +95,27 @@ export function checkSubmission(fields, doc) {
 
   const external = doc.links.filter((l) => !l.internal).length;
   if (external > R.maxLinks) out.push(`The article has ${external} links to other websites. The limit is ${R.maxLinks}.`);
+  const [site, count] = busiestSite(doc);
+  if (count > R.maxPerSite) out.push(`The article has ${count} links to ${site}. The limit is ${R.maxPerSite} links to any one website.`);
   if (doc.badLinks) out.push("Every link must be a full web address starting with https:// or http://.");
   return out;
 }
 
+// The other website the article links to most, and how many times: [host, count].
+function busiestSite(doc) {
+  const per = {};
+  for (const l of doc.links) {
+    if (l.internal) continue;
+    let host = "";
+    try { host = new URL(l.href).hostname.replace(/^www\./, ""); } catch {}
+    per[host] = (per[host] || 0) + 1;
+  }
+  return Object.entries(per).sort((a, b) => b[1] - a[1])[0] || ["", 0];
+}
+
 export function linkCounts(doc) {
-  return { external: doc.links.filter((l) => !l.internal).length };
+  const [site, perSite] = busiestSite(doc);
+  return { external: doc.links.filter((l) => !l.internal).length, site, perSite };
 }
 
 // The note at the top of every published guest post.

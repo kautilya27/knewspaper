@@ -95,12 +95,13 @@ function docModel() {
 
 function updateMeter() {
   const d = docModel();
-  const { external } = linkCounts(d);
+  const { external, site, perSite } = linkCounts(d);
   const set = (key, text, bad) => { const el = $(`[data-meter=${key}]`); el.textContent = text; el.toggleAttribute("data-over", bad); };
   const started = d.words > 0;
   set("words", `${d.words} words`, started && (d.words < RULES.minWords || d.words > RULES.maxWords));
   set("headings", `${d.h2 + d.h3} subheading${d.h2 + d.h3 === 1 ? "" : "s"}`, started && (d.h2 < 1 || d.h2 + d.h3 < RULES.minHeadings));
-  set("links", `Links to other sites ${external}/${RULES.maxLinks}`, external > RULES.maxLinks);
+  const sameSite = perSite > RULES.maxPerSite;
+  set("links", `Links to other sites ${external}/${RULES.maxLinks}` + (sameSite ? ` · ${perSite} to ${site} (max ${RULES.maxPerSite})` : ""), external > RULES.maxLinks || sameSite);
 }
 
 let savedRange = null;

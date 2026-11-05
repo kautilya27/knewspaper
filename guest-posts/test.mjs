@@ -26,9 +26,14 @@ assert.ok(r.doc.words > 520 && r.doc.words < 600, "words " + r.doc.words);
 
 const fields = { title: "A good title here", slug: "a-good-title", metaTitle: "A good SEO title", metaDescription: "x".repeat(120), imageAlt: "A photo of a thing", hasImage: true };
 assert.deepEqual(checkSubmission(fields, { ...r.doc, badLinks: 0 }), []);
-const many = { ...r.doc, badLinks: 0, links: [1, 2, 3, 4, 5, 6].map(() => ({ internal: false })).concat([{ internal: true }]) };
-assert.equal(checkSubmission(fields, many).length, 1, "6 outside links flagged");
-assert.equal(checkSubmission(fields, { ...many, links: many.links.slice(1) }).length, 0, "5 outside links pass");
+const site = (n) => ({ href: `https://site${n}.example/page`, internal: false });
+const many = { ...r.doc, badLinks: 0, links: [1, 2, 3, 4].map(site).concat([{ href: "https://www.knewspaper.in/post/x", internal: true }]) };
+assert.equal(checkSubmission(fields, many).length, 1, "4 outside links flagged");
+assert.equal(checkSubmission(fields, { ...many, links: many.links.slice(1) }).length, 0, "3 outside links on different sites pass");
+const same = { ...many, links: [site(1), { href: "https://www.site1.example/other", internal: false }, site(2)] };
+assert.equal(checkSubmission(fields, same).length, 0, "2 links to one site pass");
+const tooMany = { ...many, links: [site(1), site(1), { href: "https://site1.example/x", internal: false }] };
+assert.equal(checkSubmission(fields, tooMany).length, 1, "3 links to one site flagged");
 assert.equal(checkSubmission(fields, { ...r.doc, badLinks: 0, h2: 0, h3: 3 }).length, 1, "needs an H2");
 assert.equal(checkSubmission({ ...fields, slug: "Bad Slug" }, { ...r.doc, badLinks: 0 }).length, 1);
 assert.equal(slugify("  Héllo, World!  10 Tips — 2026 "), "hello-world-10-tips-2026");
