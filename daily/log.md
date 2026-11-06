@@ -17,3 +17,6 @@ Pre-render deploy: published true, pages 351 → 353, 2 redirects added.
 Yesterday's articles: none recorded in `state.published` (first daily run), so nothing to recheck.
 
 Unsure / to check: IBPS PO interview rules were confirmed via coaching-site copies of the notification (ibps.in PDFs couldn't be fetched); the create script reported `cover: true` although no cover was sent (probably a Wix default, worth a glance). Suggestion: link Q1 of interview-questions-and-answers to the new tell-me-about-yourself article.
+
+
+2026-11-06 image run: no images made. Claude in Chrome was not reachable (scheduled cloud run had no link to the owner's computer). belly-fat and tell-me-about-yourself stay in pendingImages.
