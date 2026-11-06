@@ -20,3 +20,9 @@ Unsure / to check: IBPS PO interview rules were confirmed via coaching-site copi
 
 
 2026-11-06 image run: no images made. Claude in Chrome was not reachable (scheduled cloud run had no link to the owner's computer). belly-fat and tell-me-about-yourself stay in pendingImages.
+
+### 2026-11-06 (later): covers added
+The owner sent images for both new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- belly-fat → c0f544_871dcdc6081d43e9b673d4a20225ca33~mv2.webp
+- tell-me-about-yourself → c0f544_3ad340e482a54e239895b6380e790d51~mv2.webp
+Removed both from `pendingImages`; pre-render rebuilt (353 pages, published true).

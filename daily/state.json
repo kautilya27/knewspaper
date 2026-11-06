@@ -9,14 +9,14 @@
    "slug": "belly-fat",
    "title": "Belly Fat: Causes, Safe Waist Size for Indians and How to Reduce It",
    "source": "plan #20",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-06",
    "slug": "tell-me-about-yourself",
    "title": "Tell Me About Yourself: How to Answer, With Examples for Freshers and Experienced",
    "source": "plan #19",
-   "cover": false
+   "cover": true
   }
  ],
  "skippedPlan": [
@@ -93,10 +93,7 @@
    "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
   }
  ],
- "pendingImages": [
-  "belly-fat",
-  "tell-me-about-yourself"
- ],
+ "pendingImages": [],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
