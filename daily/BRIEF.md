@@ -129,7 +129,7 @@ query (`primaryQuery`), the comparable page (`inspiredBy`) and the gap we can fi
 ### 2d. Topics the owner asked for (Wednesdays, Saturdays and Sundays)
 On **Wednesday, Saturday and Sunday** (India time), if `daily/owner-topics.csv` has a row whose
 `order` is not in `state.usedOwner` or `state.skippedOwner` (add the fields if missing), replace the
-trending topic with the first such row. Follow its `angle`; it still has to pass every check
+trending topic with the first such row whose `notBefore` date (if set) is today or earlier in India time. Follow its `angle`; it still has to pass every check
 (duplicate check, information gain, quality gate). Add its `order` to `state.usedOwner`.
 Record it in `state.published` with `"source": "owner #<order>"`.
 
