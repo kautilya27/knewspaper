@@ -1,8 +1,102 @@
 {
- "usedPlan": [],
- "published": [],
- "skippedPlan": [],
- "pendingImages": [],
+ "usedPlan": [
+  19,
+  20
+ ],
+ "published": [
+  {
+   "date": "2026-11-06",
+   "slug": "belly-fat",
+   "title": "Belly Fat: Causes, Safe Waist Size for Indians and How to Reduce It",
+   "source": "plan #20",
+   "cover": false
+  },
+  {
+   "date": "2026-11-06",
+   "slug": "tell-me-about-yourself",
+   "title": "Tell Me About Yourself: How to Answer, With Examples for Freshers and Experienced",
+   "source": "plan #19",
+   "cover": false
+  }
+ ],
+ "skippedPlan": [
+  {
+   "order": 1,
+   "reason": "duplicate of add-vs-adhd"
+  },
+  {
+   "order": 2,
+   "reason": "duplicate of translation-maths"
+  },
+  {
+   "order": 3,
+   "reason": "duplicate of how-to-stop-procrastinating"
+  },
+  {
+   "order": 4,
+   "reason": "duplicate of interview-questions-and-answers"
+  },
+  {
+   "order": 5,
+   "reason": "duplicate of how-to-initiate-intimacy"
+  },
+  {
+   "order": 6,
+   "reason": "duplicate of anxiety-symptoms-and-causes"
+  },
+  {
+   "order": 7,
+   "reason": "duplicate of trigonometry-table"
+  },
+  {
+   "order": 8,
+   "reason": "duplicate of goals-vs-systems"
+  },
+  {
+   "order": 9,
+   "reason": "duplicate of resume-action-verbs"
+  },
+  {
+   "order": 10,
+   "reason": "duplicate of diabetes-diagnosis-and-treatment"
+  },
+  {
+   "order": 11,
+   "reason": "duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
+  },
+  {
+   "order": 12,
+   "reason": "duplicate of what-is-a-prime-number"
+  },
+  {
+   "order": 13,
+   "reason": "duplicate of morningmantras"
+  },
+  {
+   "order": 14,
+   "reason": "duplicate of biodata-format"
+  },
+  {
+   "order": 15,
+   "reason": "duplicate of kidney-stones-symptoms-causes"
+  },
+  {
+   "order": 16,
+   "reason": "duplicate of schizophrenia-symptoms-causes"
+  },
+  {
+   "order": 17,
+   "reason": "duplicate of surface-area-of-a-cylinder"
+  },
+  {
+   "order": 18,
+   "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
+  }
+ ],
+ "pendingImages": [
+  "belly-fat",
+  "tell-me-about-yourself"
+ ],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
