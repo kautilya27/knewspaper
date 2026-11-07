@@ -527,8 +527,8 @@ async () => {
     const meta = [s.dateISO ? `<time datetime="${esc(s.dateISO)}">${esc(dateLabel(s.dateISO))}</time>` : "", s.minutes ? `<span>${s.minutes} min read</span>` : ""].filter(Boolean).join("");
     return `<article class="story story--row${s.cover ? "" : " story--text"}"><div class="story__body">${kick}<h2 class="story__title "><a href="${pagePath(p.slug)}">${esc(p.title)}</a></h2>${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta ? `<p class="meta">${meta}</p>` : ""}</div>${img}</article>`;
   };
-  const staticRows = (list) => `<div class="rows" data-rows data-static>${list.map(rowHtml).join("")}</div>`;
-  const setRows = (h, list) => h.replace(/<p class="feed-status"[^>]*data-status>[^<]*<\/p>/, '<p class="feed-status" role="status" aria-live="polite" data-status></p>').replace(/<div class="rows" data-rows[^>]*>[\s\S]*?<\/div>(?=<button type="button" class="btn btn--quiet load-more")/, () => staticRows(list));
+  const staticRows = (list) => `<div class="rows" data-rows data-static>${list.map(rowHtml).join("")}</div><!--/rows-->`;
+  const setRows = (h, list) => h.replace(/<p class="feed-status"[^>]*data-status>[^<]*<\/p>/, '<p class="feed-status" role="status" aria-live="polite" data-status></p>').replace(/<div class="rows" data-rows data-static>[\s\S]*?<!--\/rows-->|<div class="rows" data-rows><\/div>/, () => staticRows(list));
   const catShell = text["category.html"];
   for (const c of catsUsed) {
     const list = livePosts.filter((p) => (p.categoryIds || []).includes(c.id));
@@ -662,7 +662,8 @@ async () => {
     let ok = 0; const failed = [];
     for (let i = 0; i < wanted.length; i += 100) {
       const chunk = wanted.slice(i, i + 100);
-      const r = await wix.request({ method: "POST", url: API + "/seo-redirects-service/v1/bulk/redirects/create", body: { redirects: chunk } });
+      // forceReplace is a request option: it replaces a redirect that already starts from the same path.
+      const r = await wix.request({ method: "POST", url: API + "/seo-redirects-service/v1/bulk/redirects/create", body: { redirects: chunk.map(({ from, to, options }) => ({ from, to, options: { groupRedirect: !!options?.groupRedirect } })), options: { forceReplace: true } } });
       ok += r.bulkActionMetadata?.totalSuccesses || 0;
       for (const x of r.results || []) if (x.itemMetadata?.error) failed.push(chunk[x.itemMetadata.originalIndex]?.from + ": " + (x.itemMetadata.error.code || x.itemMetadata.error.description || "").toString().slice(0, 60));
     }
