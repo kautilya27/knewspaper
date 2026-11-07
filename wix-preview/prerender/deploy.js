@@ -143,7 +143,6 @@ async () => {
   const members = memberIds.length ? (await wix.request({ method: "POST", url: API + "/members/v1/members/query", body: mq })).members || [] : [];
   const authorName = new Map(members.map((m) => [m.id, (m.profile?.nickname || "").replace(/\s+/g, " ").trim()]));
 
-
   // ---------------------------------------------------------------- helpers
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const STATIC = "https://static.wixstatic.com/media";
@@ -320,7 +319,9 @@ async () => {
         .replace(/<ul data-footer-topics>[\s\S]*?<\/ul>/, () => `<ul data-footer-topics>${footItems}</ul>`);
       if (h !== text[p]) { text[p] = h; changed.add(p); }
     }
-  }  const shell = text["post.html"];
+  }
+
+  const shell = text["post.html"];
   if (!/<article class="article" data-article>[\s\S]*?<\/article>/.test(shell)) throw Error("post.html shell changed");
 
   function render(p) {
