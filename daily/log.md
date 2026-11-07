@@ -50,3 +50,10 @@ Image prompts for 2026-11-07 (owner asked for these daily from now on):
 - Depression: Symptoms, Causes and Where to Get Help in India: create image for this article topic without any text
 - Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes: create image for this article topic without any text
 - How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026): create image for this article topic without any text
+
+### 2026-11-07 (later): covers added
+The owner sent images for all three new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- depression-symptoms-causes → c0f544_87b455e9ea2d4c19921f76d1086a386d~mv2.webp
+- volume-of-a-sphere → c0f544_1b5a986db7554b50852fe275948c54c0~mv2.webp
+- how-to-use-claude-for-free → c0f544_9a011800bb1d463596c31dd0759f28cb~mv2.webp
+Removed all three from `pendingImages`; pre-render rebuilt (356 pages, published true).

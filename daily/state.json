@@ -25,21 +25,21 @@
    "slug": "depression-symptoms-causes",
    "title": "Depression: Symptoms, Causes and Where to Get Help in India",
    "source": "plan #21",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-07",
    "slug": "volume-of-a-sphere",
    "title": "Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes",
    "source": "plan #22",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-07",
    "slug": "how-to-use-claude-for-free",
    "title": "How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026)",
    "source": "owner #2",
-   "cover": false
+   "cover": true
   }
  ],
  "skippedPlan": [
@@ -116,11 +116,7 @@
    "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
   }
  ],
- "pendingImages": [
-  "depression-symptoms-causes",
-  "volume-of-a-sphere",
-  "how-to-use-claude-for-free"
- ],
+ "pendingImages": [],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
