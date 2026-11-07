@@ -250,6 +250,15 @@ Run `daily/create-post-template.js` (`hasMutations: true`) with `files`:
 short articles; fix the cause and retry. Record each published article in `state.published` as
 `{"date","slug","title","source":"plan #<order>"|"trending"|"civics #<order>"|"niche #<order>"|"owner #<order>","cover":true|false}`.
 
+### 5b. Link to each new article from older ones
+A new article that no other article links to is hard for Google to find. After publishing, find
+1–2 published articles on the same subject whose text already mentions the new article's topic
+(read them with `daily/read-post-template.js`), and turn that existing phrase into a link: put
+`[{"source": "<older slug>", "find": "<exact phrase, 2–7 words>", "target": "<new slug>"}]` in
+`files` as `=== FILE: links.json ===` … `§END` and run `daily/add-links-template.js` verbatim
+(hasMutations true). Only where a reader of that sentence would really want the new article; no
+new sentences, no headings, no generic one-word anchors. Skip this step if nothing fits.
+
 ### 6. Missing images from earlier days
 If Chrome/ChatGPT worked today, also make images for up to 3 slugs in `state.pendingImages`
 (same step 4, using the article's title) and set them with `daily/set-cover-template.js`
