@@ -26,3 +26,22 @@ The owner sent images for both new articles. Converted to WebP (1536×1024, q80;
 - belly-fat → c0f544_871dcdc6081d43e9b673d4a20225ca33~mv2.webp
 - tell-me-about-yourself → c0f544_3ad340e482a54e239895b6380e790d51~mv2.webp
 Removed both from `pendingImages`; pre-render rebuilt (353 pages, published true).
+
+## 2026-11-07 (Saturday: owner-topic day)
+
+Published (no cover images: Claude in Chrome was not available in this cloud run; all three slugs added to `pendingImages`):
+- [Depression: Symptoms, Causes and Where to Get Help in India](https://www.knewspaper.in/post/depression-symptoms-causes) (plan #21, health-fitness). Gate: fail 1 (85.2% treatment gap disputed: BMJ Open 2019 NMHS analysis gives 79.1%; symptom grouping is NHS's, not WHO's) → now cites both figures (summary report 85.2%, BMJ Open 79.1%) → pass 2.
+- [Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes](https://www.knewspaper.in/post/volume-of-a-sphere) (plan #22, education). Gate: pass 1 (all maths rechecked; added note that a new Class 10 NCERT book is due for 2027-28).
+- [How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026)](https://www.knewspaper.in/post/how-to-use-claude-for-free) (owner #2, technology). Gate: fail 1 (pricing page lists "Up to 5" Projects on Free; Research is Pro-only; Enterprise price) → fixed → pass 2 (softened "unlimited Projects", added Max/Ultra API credits, exact Team prices).
+
+Owner topic #1 (best sample papers) not used: notBefore 2026-11-09.
+
+Pre-render deploy: published true, pages 353 → 356, 3 redirects added.
+
+Yesterday's articles (belly-fat, tell-me-about-yourself) reread on the live site: no errors found, no changes.
+
+Unsure / to check:
+- Depression: Tele-MANAS "53 cells, ~20 languages" is from PIB (Dec 2025 / Feb 2026 releases); NMHS-2 results not yet published.
+- Sphere: Class 9 Ganita Manjari Part 2 chapter 14 title confirmed via Teachoo/Extramarks, not the NCERT PDF itself (ncert.nic.in blocks fetches).
+- Claude: no INR price on an official Anthropic page (press reports from July 2026 mention rupee pricing, e.g. Pro about ₹2,000/month incl. GST, but figures differ), so the article only says to check checkout. Plans change often; recheck in a month.
+- The create script again reported `cover: true` with no cover sent (Wix default media); state records cover false.
