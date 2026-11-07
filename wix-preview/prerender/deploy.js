@@ -350,7 +350,9 @@ async () => {
     // words, same topic), favouring articles that few others link to so every article gets links.
     const picks = [];
     const add = (q) => { if (q && q.slug !== p.slug && !picks.some((x) => x.slug === q.slug) && picks.length < 4) picks.push(q); };
-    for (const id of (p.relatedPostIds || []).slice(0, 2)) add(posts.find((x) => x.id === id));
+    // The related posts saved in Wix are kept only when they share a topic or a title word.
+    const related_ = (q) => q && ((q.categoryIds || []).some((id) => (p.categoryIds || []).includes(id)) || [...wordsOf.get(q.slug)].some((w) => wordsOf.get(p.slug).has(w)));
+    for (const id of (p.relatedPostIds || []).slice(0, 2)) { const q = posts.find((x) => x.id === id); if (related_(q)) add(q); }
     for (const q of similarTo(p)) add(q);
     if (cat) for (const q of byDate) if ((q.categoryIds || []).includes(cat.id)) add(q);
     for (const q of byDate) add(q);
