@@ -45,3 +45,8 @@ Unsure / to check:
 - Sphere: Class 9 Ganita Manjari Part 2 chapter 14 title confirmed via Teachoo/Extramarks, not the NCERT PDF itself (ncert.nic.in blocks fetches).
 - Claude: no INR price on an official Anthropic page (press reports from July 2026 mention rupee pricing, e.g. Pro about ₹2,000/month incl. GST, but figures differ), so the article only says to check checkout. Plans change often; recheck in a month.
 - The create script again reported `cover: true` with no cover sent (Wix default media); state records cover false.
+
+Image prompts for 2026-11-07 (owner asked for these daily from now on):
+- Depression: Symptoms, Causes and Where to Get Help in India: create image for this article topic without any text
+- Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes: create image for this article topic without any text
+- How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026): create image for this article topic without any text

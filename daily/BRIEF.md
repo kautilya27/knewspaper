@@ -269,3 +269,10 @@ URLs, image yes/no, skipped plan rows, anything unsure). Commit and push to `mai
 ### 9. Report
 Short summary: the 3 article titles with links, which have images, anything skipped and why,
 and any fact you weren't sure about.
+
+**Image prompts (every day, owner's request of 7 Nov 2026):** for every article published today,
+include its ChatGPT image prompt in the report AND in the push notification, ready to copy, one
+per line, in exactly this form (the owner pastes it into ChatGPT if no cover was set):
+`<Article title>: create image for this article topic without any text`
+For civics articles, use the symbolic-scene rule in 2b (no real people). Also list these prompts
+under the day's entry in `daily/log.md`.
