@@ -84,8 +84,10 @@ categoriesReady.then((cats) => {
   const active = document.body.dataset.activeCat || "";
   const nav = document.querySelector("[data-catnav]");
   if (nav) {
-    nav.insertAdjacentHTML("beforeend", cats.map((c) =>
+    // Pages built by the pre-render step already list the topics.
+    if (!nav.hasAttribute("data-static")) nav.insertAdjacentHTML("beforeend", cats.map((c) =>
       `<li><a href="${catHref(c.slug)}"${c.slug === active ? ' aria-current="page"' : ""}>${esc(c.label)}</a></li>`).join(""));
+    else if (active) nav.querySelector(`a[href="${catHref(active)}"]`)?.setAttribute("aria-current", "page");
     const cur = nav.querySelector('[aria-current="page"]');
     if (cur) cur.scrollIntoView({ block: "nearest", inline: "center" });
     const wrap = nav.parentElement;

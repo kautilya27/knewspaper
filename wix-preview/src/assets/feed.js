@@ -15,6 +15,13 @@ const introEl = document.querySelector("[data-intro]");
 const isCategory = document.body.dataset.page === "category";
 
 async function main() {
+  // Pre-rendered pages already list every article: just mark the topic in the menu.
+  if (list && list.hasAttribute("data-static")) {
+    if (document.body.dataset.cat) markActive(document.body.dataset.cat);
+    status.textContent = "";
+    moreBtn.hidden = true;
+    if (isCategory) return;
+  }
   let category = null;
   if (isCategory) {
     const slug = new URLSearchParams(location.search).get("slug") || "";
@@ -46,6 +53,7 @@ async function main() {
     breadcrumbs([["Home", SITE + "/"], ...(category ? [["Articles", SITE + "/blog"]] : []), [pageName, pageUrl]]),
   ] });
 
+  if (list && list.hasAttribute("data-static")) return;
   const categoryId = category ? category.id : null;
   const feedKey = "feed." + (category ? category.slug : "all");
   const savedRows = cacheGet(feedKey, 6 * 60 * 60 * 1000);

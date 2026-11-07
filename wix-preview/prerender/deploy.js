@@ -143,6 +143,7 @@ async () => {
   const members = memberIds.length ? (await wix.request({ method: "POST", url: API + "/members/v1/members/query", body: mq })).members || [] : [];
   const authorName = new Map(members.map((m) => [m.id, (m.profile?.nickname || "").replace(/\s+/g, " ").trim()]));
 
+
   // ---------------------------------------------------------------- helpers
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const STATIC = "https://static.wixstatic.com/media";
@@ -275,7 +276,51 @@ async () => {
     return id;
   };
 
-  const shell = text["post.html"];
+  // ---------------------------------------------------------------- internal links
+  // Words that say what an article is about (title and slug, without filler words).
+  const STOP = new Set("the and for with your you are what how why who which when where best top from into this that its vs not can does did should will about after before more most than then them they their there these those have has had was were been being also only just over under between per our out all any each other some such very guide tips list ways things india indian 2023 2024 2025 2026 2027".split(" "));
+  const words = (p) => new Set(`${p.title || ""} ${p.slug}`.toLowerCase().replace(/[^a-z0-9]+/g, " ").split(" ").filter((w) => w.length > 2 && !STOP.has(w)).map((w) => w.replace(/(ies)$/, "y").replace(/s$/, "")));
+  const wordsOf = new Map(posts.map((p) => [p.slug, words(p)]));
+  // How many articles already link to each article from their text.
+  const bodyInbound = new Map(posts.map((p) => [p.slug, 0]));
+  for (const p of posts) {
+    const seen = new Set();
+    for (const m of JSON.stringify(p.richContent || {}).matchAll(/knewspaper\.in\/post\/([^"#?\/]+)/g)) {
+      let t = m[1].replace(/\.html$/, "");
+      try { t = decodeURIComponent(t); } catch {}
+      if (t !== p.slug && bodyInbound.has(t) && !seen.has(t)) { seen.add(t); bodyInbound.set(t, bodyInbound.get(t) + 1); }
+    }
+  }
+  const linkedTo = new Map(); // template links handed out so far, to spread them
+  function similarTo(p) {
+    const mine = wordsOf.get(p.slug), myCats = new Set(p.categoryIds || []), first = (p.categoryIds || [])[0];
+    const scored = [];
+    for (const q of posts) {
+      if (q.slug === p.slug) continue;
+      let shared = 0;
+      for (const w of wordsOf.get(q.slug)) if (mine.has(w)) shared++;
+      const sameFirst = first && (q.categoryIds || [])[0] === first;
+      const sameAny = (q.categoryIds || []).some((id) => myCats.has(id));
+      if (!shared && !sameAny) continue;
+      const inb = bodyInbound.get(q.slug) + (linkedTo.get(q.slug) || 0);
+      const score = shared * 3 + (sameFirst ? 2 : sameAny ? 1 : 0) + (inb === 0 ? 1.5 : inb < 3 ? 0.75 : 0) - Math.min(2, (linkedTo.get(q.slug) || 0) * 0.25);
+      scored.push([score, q]);
+    }
+    return scored.sort((a, b) => b[0] - a[0]).slice(0, 6).map(([, q]) => q);
+  }
+
+  // Topic menu and footer topics in every page's HTML (the scripts only add what is missing).
+  {
+    const withPosts = cats.filter((c) => posts.some((p) => (p.categoryIds || []).includes(c.id)));
+    const navItems = `<li><a href="/blog">Latest</a></li>` + withPosts.map((c) => `<li><a href="${catHref(c.slug)}">${esc(c.label)}</a></li>`).join("");
+    const footItems = withPosts.map((c) => `<li><a href="${catHref(c.slug)}">${esc(c.label)}</a></li>`).join("");
+    for (const p of Object.keys(text)) if (/^[^/]+\.html$/.test(p)) {
+      const h = text[p]
+        .replace(/<ul class="catnav__list" data-catnav[^>]*>[\s\S]*?<\/ul>/, () => `<ul class="catnav__list" data-catnav data-static>${navItems}</ul>`)
+        .replace(/<ul data-footer-topics>[\s\S]*?<\/ul>/, () => `<ul data-footer-topics>${footItems}</ul>`);
+      if (h !== text[p]) { text[p] = h; changed.add(p); }
+    }
+  }  const shell = text["post.html"];
   if (!/<article class="article" data-article>[\s\S]*?<\/article>/.test(shell)) throw Error("post.html shell changed");
 
   function render(p) {
@@ -300,12 +345,15 @@ async () => {
     const isHealth = allCats.some((c) => /health|medical|fitness/i.test(c.slug));
     if (isHealth) blocks.push({ tag: "aside", html: '<aside class="note" role="note"><p>This article is for general information only and is not medical advice. Please consult a qualified doctor about your health.</p></aside>' });
     if (allCats.length) blocks.push({ tag: "p", html: `<p class="article__topics">Filed under ${allCats.map((c) => `<a href="${catHref(c.slug)}">${esc(c.label)}</a>`).join(", ")}</p>` });
-    // Related: the author's picks, then the newest in the same topic, then the newest.
+    // Related: up to two of the author's picks, then the most similar articles (shared title
+    // words, same topic), favouring articles that few others link to so every article gets links.
     const picks = [];
     const add = (q) => { if (q && q.slug !== p.slug && !picks.some((x) => x.slug === q.slug) && picks.length < 4) picks.push(q); };
-    for (const id of p.relatedPostIds || []) add(posts.find((x) => x.id === id));
+    for (const id of (p.relatedPostIds || []).slice(0, 2)) add(posts.find((x) => x.id === id));
+    for (const q of similarTo(p)) add(q);
     if (cat) for (const q of byDate) if ((q.categoryIds || []).includes(cat.id)) add(q);
     for (const q of byDate) add(q);
+    for (const q of picks) linkedTo.set(q.slug, (linkedTo.get(q.slug) || 0) + 1);
     const related = picks.map(summary);
     // Ads and "Also read" boxes where the live page would put them.
     const before = new Map(), after = new Map();
@@ -465,6 +513,49 @@ async () => {
     out["editorial-team.html"] = h;
   }
 
+  // Topic pages (/blog/categories/<slug>, served from category/<slug>.html) and the
+  // Latest articles page list every article in the HTML itself, so search engines and
+  // readers reach every article from the topic menu without waiting for scripts.
+  const livePosts = byDate;
+  const catsUsed = cats.filter((c) => livePosts.some((p) => (p.categoryIds || []).includes(c.id)));
+  const rowHtml = (p) => {
+    const s = summary(p);
+    const c = (p.categoryIds || []).map((id) => catById.get(id)).find(Boolean);
+    const kick = c ? `<a class="kicker" href="${catHref(c.slug)}">${esc(c.label)}</a>` : "";
+    const img = s.cover ? `<div class="story__media"><img class="cover" src="${esc(fill(s.cover, 440, 293))}" srcset="${esc(srcset(s.cover, [240, 360, 480], 0.667))}" sizes="(min-width: 640px) 220px, 34vw" width="440" height="293" alt="${esc(s.coverAlt)}" loading="lazy" decoding="async"></div>` : "";
+    const meta = [s.dateISO ? `<time datetime="${esc(s.dateISO)}">${esc(dateLabel(s.dateISO))}</time>` : "", s.minutes ? `<span>${s.minutes} min read</span>` : ""].filter(Boolean).join("");
+    return `<article class="story story--row${s.cover ? "" : " story--text"}"><div class="story__body">${kick}<h2 class="story__title "><a href="${pagePath(p.slug)}">${esc(p.title)}</a></h2>${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta ? `<p class="meta">${meta}</p>` : ""}</div>${img}</article>`;
+  };
+  const staticRows = (list) => `<div class="rows" data-rows data-static>${list.map(rowHtml).join("")}</div>`;
+  const setRows = (h, list) => h.replace(/<p class="feed-status"[^>]*data-status>[^<]*<\/p>/, '<p class="feed-status" role="status" aria-live="polite" data-status></p>').replace(/<div class="rows" data-rows[^>]*>[\s\S]*?<\/div>(?=<button type="button" class="btn btn--quiet load-more")/, () => staticRows(list));
+  const catShell = text["category.html"];
+  for (const c of catsUsed) {
+    const list = livePosts.filter((p) => (p.categoryIds || []).includes(c.id));
+    const url = SITE + catHref(c.slug);
+    const intro = (c.description || "").trim() || `${c.label} articles on Knewspaper: explainers, guides and opinion pieces, newest first.`;
+    const title = `${c.label}: Articles, Guides and Explainers | Knewspaper`;
+    const ld = { "@context": "https://schema.org", "@graph": [
+      { "@type": "CollectionPage", "@id": url, url, name: c.label, description: intro, isPartOf: { "@id": SITE + "/#website" }, publisher: { "@id": SITE + "/#organization" },
+        mainEntity: { "@type": "ItemList", numberOfItems: list.length, itemListElement: list.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: SITE + pagePath(p.slug), name: p.title })) } },
+      { "@type": "BreadcrumbList", itemListElement: [["Home", SITE + "/"], ["Articles", SITE + "/blog"], [c.label, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
+    ] };
+    let h = setRows(catShell, list)
+      .replace(`<li><a href="${catHref(c.slug)}">`, () => `<li><a href="${catHref(c.slug)}" aria-current="page">`)
+      .replace("<body data-page=\"category\"", `<body data-page="category" data-cat="${esc(c.slug)}"`)
+      .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
+      .replace(/<meta name="description" content="[^"]*">/, () => `<meta name="description" content="${esc(intro.slice(0, 300))}">`)
+      .replace(/<meta property="og:title" content="[^"]*">/, () => `<meta property="og:title" content="${esc(title)}">`)
+      .replace(/<meta property="og:description" content="[^"]*">/, () => `<meta property="og:description" content="${esc(intro.slice(0, 300))}">`)
+      .replace(/<link rel="canonical"[^>]*>/g, "").replace(/<meta property="og:url"[^>]*>/g, "")
+      .replace(/<span aria-current="page" data-crumb>[^<]*<\/span>/, () => `<span aria-current="page" data-crumb>${esc(c.label)}</span>`)
+      .replace(/<h1 class="listing__title" data-title>[^<]*<\/h1>/, () => `<h1 class="listing__title" data-title>${esc(c.label)}</h1>`)
+      .replace(/<p class="listing__intro" data-intro>[^<]*<\/p>/, () => `<p class="listing__intro" data-intro>${esc(intro)}</p>`)
+      .replace("</head>", () => `<link rel="canonical" href="${esc(url)}"><meta property="og:url" content="${esc(url)}"><script type="application/ld+json" id="ld-listing">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script><script>try{history.replaceState(history.state,"",${JSON.stringify(catHref(c.slug))}+location.hash)}catch(e){}</script></head>`);
+    out[`category/${c.slug}.html`] = h;
+  }
+  // Latest articles (/blog): every article, newest first.
+  if (text["blog.html"]) { const h = setRows(text["blog.html"], livePosts); if (h !== text["blog.html"]) { text["blog.html"] = h; changed.add("blog.html"); } }
+
   // Which articles have their own page, for the scripts' links.
   const preList = [...pre].filter((s) => slugs.has(s));
   text["assets/prerendered.js"] = `// Articles that have a pre-rendered page at /post/<slug>.html. Written by the pre-render step.\nexport const PRERENDERED = new Set(${JSON.stringify(preList.join(" "))}.split(" ").filter(Boolean));\n`;
@@ -556,6 +647,17 @@ async () => {
       report.submitRedirect = r.bulkActionMetadata;
     }
     for (const s of pre) { const from = "/post/" + encodeURIComponent(s); if (!have.has(from) && slugs.has(s)) wanted.push({ from, to: filePath(s), options: { forceReplace: true } }); }
+    // Topic addresses open the pre-rendered topic pages.
+    const topicSlugs = new Set(catsUsed.map((c) => c.slug));
+    for (const r of all) {
+      const m = (r.from || "").match(/^\/blog\/categories\/([^/?#]+)$/);
+      if (!m) continue;
+      const t = (r.to || "").match(/^\/category\.html\?slug=([^&#]+)$/) || (r.to || "").match(/^\/category\/([^/.]+)\.html$/);
+      let s = t ? t[1] : m[1];
+      try { s = decodeURIComponent(s); } catch {}
+      if (topicSlugs.has(s) && r.to !== `/category/${s}.html`) wanted.push({ from: r.from, to: `/category/${s}.html`, options: { ...(r.options || {}), forceReplace: true } });
+    }
+    for (const c of catsUsed) { const from = catHref(c.slug); if (!have.has(from)) wanted.push({ from, to: `/category/${c.slug}.html`, options: { forceReplace: true } }); }
     let ok = 0; const failed = [];
     for (let i = 0; i < wanted.length; i += 100) {
       const chunk = wanted.slice(i, i + 100);
