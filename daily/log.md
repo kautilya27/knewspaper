@@ -86,3 +86,9 @@ Unsure / to check:
 Image prompts for 2026-11-08:
 - How to Make a Resume in India: Format, Personal Details and Worked Examples: create image for this article topic without any text
 - Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026): create image for this article topic without any text
+
+### 2026-11-08 (later): covers added
+The owner sent images for both new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- how-to-make-a-resume → c0f544_4998a8482d16416d99f18e40728979f7~mv2.webp
+- types-of-covid-vaccines → c0f544_2bdf4077380d4bad8bce6fa4a302d252~mv2.webp
+Removed both from `pendingImages`; pre-render rebuilt (358 pages, published true).

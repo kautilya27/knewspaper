@@ -48,14 +48,14 @@
    "slug": "how-to-make-a-resume",
    "title": "How to Make a Resume in India: Format, Personal Details and Worked Examples",
    "source": "plan #24",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-08",
    "slug": "types-of-covid-vaccines",
    "title": "Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)",
    "source": "plan #25",
-   "cover": false
+   "cover": true
   }
  ],
  "skippedPlan": [
@@ -136,10 +136,7 @@
    "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
   }
  ],
- "pendingImages": [
-  "how-to-make-a-resume",
-  "types-of-covid-vaccines"
- ],
+ "pendingImages": [],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
