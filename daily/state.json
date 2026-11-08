@@ -3,7 +3,9 @@
   19,
   20,
   21,
-  22
+  22,
+  24,
+  25
  ],
  "published": [
   {
@@ -40,6 +42,20 @@
    "title": "How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026)",
    "source": "owner #2",
    "cover": true
+  },
+  {
+   "date": "2026-11-08",
+   "slug": "how-to-make-a-resume",
+   "title": "How to Make a Resume in India: Format, Personal Details and Worked Examples",
+   "source": "plan #24",
+   "cover": false
+  },
+  {
+   "date": "2026-11-08",
+   "slug": "types-of-covid-vaccines",
+   "title": "Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)",
+   "source": "plan #25",
+   "cover": false
   }
  ],
  "skippedPlan": [
@@ -114,9 +130,16 @@
   {
    "order": 18,
    "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
+  },
+  {
+   "order": 23,
+   "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
   }
  ],
- "pendingImages": [],
+ "pendingImages": [
+  "how-to-make-a-resume",
+  "types-of-covid-vaccines"
+ ],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

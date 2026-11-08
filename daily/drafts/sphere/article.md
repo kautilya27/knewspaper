@@ -55,6 +55,7 @@ V = (4/3) × (22/7) × 3.5³ = (4/3) × (22/7) × 42.875 = (4/3) × 134.75 ≈ *
 A ball has a diameter of 42 cm. Find its volume.
 
 Radius = 42 ÷ 2 = 21 cm.
+
 V = (4/3) × (22/7) × 21 × 21 × 21 = 4 × 22 × 21 × 21 = **38,808 cm³**
 
 ### Example 3: Radius from the volume (reverse question)
@@ -62,7 +63,9 @@ V = (4/3) × (22/7) × 21 × 21 × 21 = 4 × 22 × 21 × 21 = **38,808 cm³**
 A sphere has a volume of 38,808 cm³. Find its radius.
 
 (4/3) × (22/7) × r³ = 38,808
+
 r³ = 38,808 × 3 × 7 ÷ (4 × 22) = 9,261
+
 r = ∛9,261 = **21 cm**
 
 Learn the cubes up to 21³ (at least 7³ = 343, 14³ = 2,744, 21³ = 9,261); they turn up again and again in these questions.
@@ -72,6 +75,7 @@ Learn the cubes up to 21³ (at least 7³ = 343, 14³ = 2,744, 21³ = 9,261); the
 How much water can a hemispherical bowl of inner radius 10.5 cm hold?
 
 V = (2/3) × (22/7) × 10.5³ = (2/3) × (22/7) × 1,157.625 = 2,425.5 cm³
+
 Since 1,000 cm³ = 1 litre, the bowl holds about **2.43 litres**.
 
 ### Example 5: Hollow sphere

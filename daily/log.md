@@ -57,3 +57,32 @@ The owner sent images for all three new articles. Converted to WebP (1536×1024,
 - volume-of-a-sphere → c0f544_1b5a986db7554b50852fe275948c54c0~mv2.webp
 - how-to-use-claude-for-free → c0f544_9a011800bb1d463596c31dd0759f28cb~mv2.webp
 Removed all three from `pendingImages`; pre-render rebuilt (356 pages, published true).
+
+## 2026-11-08 (Sunday: owner-topic day)
+
+Published (no cover images: Claude in Chrome was not available in this cloud run; both slugs added to `pendingImages`):
+- [How to Make a Resume in India: Format, Personal Details and Worked Examples](https://www.knewspaper.in/post/how-to-make-a-resume) (plan #24, career). Gate: pass 1 (applied 3 optional wording fixes: "Many" not "Most" resumes screened by software, SSC instructions linked, Naukri sentence tightened).
+- [Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)](https://www.knewspaper.in/post/types-of-covid-vaccines) (plan #25, health-fitness). Gate: pass 1 (applied recommended fixes: added the Dec 2025 AIIMS autopsy study in IJMR; removed an unverified "WHO: 4–30 days" TTS window, now "first few weeks").
+
+Not published:
+- Owner #3 "How Wix Headless Works": failed the gate twice. Run 1: Astro login options overstated, missing migration condition (custom components from an app project). Run 2: my fix understated Astro login (Wix's newer Astro guide allows custom login forms and Google/Facebook links; only bring-your-own-provider is unsupported; Wix's own docs contradict each other). All fixes are applied in `daily/drafts/wix-headless/`; it is NOT in usedOwner/skippedOwner, so the next owner-topic day (Wed) should re-check and run a fresh gate.
+- Owner #1 (best sample papers): notBefore 2026-11-09, not yet eligible.
+
+Skipped plan rows: 23 Atomic Habits Chapter 1 (no information gain).
+
+Internal links (5b): biodata-format "a resume" → how-to-make-a-resume. Tried resume-action-verbs ("your resume") and science-backed-ways-boost-immunity ("COVID-19 vaccines"): phrases not found, skipped.
+
+Pre-render deploy: published true, pages 356 → 358, 2 redirects added.
+
+Yesterday's articles reread on the live site:
+- volume-of-a-sphere: calculation steps in Examples 2–4 ran together on one line (e.g. "= 38,808 r³ = …"); split into separate lines and republished.
+- how-to-use-claude-for-free: "Artifacts … available on every plan including Free since September 2026" was wrong (Artifacts opened to Free in Aug 2024); date removed and republished. Weekly limit for Free confirmed on claude.com/pricing ("Limited usage every 5 hours and every week"), kept.
+- depression-symptoms-causes: no errors found (the 85.2% NMHS treatment-gap figure couldn't be re-confirmed from the summary report; the BMJ Open 79.1% figure is confirmed).
+
+Unsure / to check:
+- COVID: the April 2026 CDSCO approved-vaccine list was read via Medical Dialogues' copy (cdsco.gov.in blocks fetches). Current availability of any COVID vaccine in India in Nov 2026 couldn't be confirmed; the article says so. The 2021 WHO myocarditis statement rests on news reports.
+- Resume: SSC registration instructions cited are the 2023 CGL version (the article doesn't state a year).
+
+Image prompts for 2026-11-08:
+- How to Make a Resume in India: Format, Personal Details and Worked Examples: create image for this article topic without any text
+- Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026): create image for this article topic without any text

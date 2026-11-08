@@ -20,7 +20,7 @@ According to Anthropic's pricing page, the Free plan includes:
 - **Web search**, so answers can draw on current pages
 - **Code execution and file creation**, for example turning a table into a spreadsheet or running a quick calculation
 - **Memory**, which Anthropic opened to all users, including free users, in March 2026
-- **Artifacts**, the side panel for documents, code and small apps, available on every plan including Free since September 2026
+- **Artifacts**, the side panel for documents, code and small apps, available on every plan including Free
 - **App connectors**, which link Claude to some other services you use
 - **Projects:** up to five, for keeping files and instructions for one task together
 - **Claude Design, Slides and Docs**, for making designs, decks and documents inside a chat
