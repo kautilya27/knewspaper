@@ -125,3 +125,10 @@ Owner rule: no year in any post URL, so the same page is reused every year. BRIE
 Renamed (batch 1, deploy done, old pages removed): guru-nanak-jayanti-2026 → guru-nanak-jayanti, rangoli-designs-for-diwali-2026 → rangoli-designs-for-diwali, halloween-2026 → halloween, pongal-2027-first-day-bhogi → pongal-first-day-bhogi, maha-shivaratri-2027-1 → maha-shivaratri, akshaya-tritiya-2027 → akshaya-tritiya, chaitra-navratri-2027 → chaitra-navratri. Internal links updated in 6 articles.
 Still to do (batch 2 was blocked by a permission check; waiting for the owner): ram-navami-2027-date-rituals-and-how-india-celebrates, navratri-colours-2026, durga-puja-2026, happy-new-year-2027-wishes, csk-probable-playing-11-ipl-2024, rcb-probable-playing-xi-ipl-2024, how-to-cover-rbi-grade-a-syllabus-2025-in-less-time, renting-vs-buying-flats-in-2025-what-is-right-for-young-professionals-in-gurgaon, average-rent-for-2-bhk-apartments-in-mumbai-2025-guide, average-cost-of-apartments-in-delhi-in-2025, average-rent-in-pune-in-2025, cost-of-living-in-hyderabad-2025, jeans-vs-cargos-which-streetwear-staple-should-men-rock-in-2025, 6-must-have-oversized-streetwear-clothes-in-2025.
 Kept on purpose (one-off events): union-budget-2024, ipl-2025-full-schedule, probable-ipl-2025-retentions, harry-brook-pulls-out-of-ipl-2024-due-to-personal-reasons, deadpool-wolverine-2024-movie-review.
+
+### 2026-11-09 (later): covers added
+The owner sent images for all three new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- guru-nanak-jayanti → c0f544_71e9ad53b85f4149aae28d85c26ef684~mv2.webp
+- 12-hour-and-24-hour-clock → c0f544_9f59d2d9442347da942f832991825b4d~mv2.webp
+- ptsd-symptoms-causes → c0f544_ee89ed41b8bf4fe5bc6b2ef3a60071e7~mv2.webp
+Removed all three from `pendingImages`; pre-render rebuilt (361 pages, published true).

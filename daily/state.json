@@ -64,21 +64,21 @@
    "slug": "ptsd-symptoms-causes",
    "title": "PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India",
    "source": "plan #26",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-09",
    "slug": "12-hour-and-24-hour-clock",
    "title": "12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets",
    "source": "plan #27",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-09",
    "slug": "guru-nanak-jayanti",
    "title": "Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year",
    "source": "niche #1",
-   "cover": false
+   "cover": true
   }
  ],
  "skippedPlan": [
@@ -159,11 +159,7 @@
    "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
   }
  ],
- "pendingImages": [
-  "ptsd-symptoms-causes",
-  "12-hour-and-24-hour-clock",
-  "guru-nanak-jayanti"
- ],
+ "pendingImages": [],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
