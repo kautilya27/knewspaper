@@ -157,7 +157,7 @@ For each topic:
   authoritative sources where useful. No affiliate, shop or other-blog links.
 - Markdown the publisher understands (nothing else): `## H2`, `### H3`, paragraphs, `**bold**`,
   `*italic*`, `[text](https://...)`, `- bullet`, `1. numbered`, pipe tables, `> quote`, `---`.
-- Meta: slug (lowercase-hyphenated, short, main keyword, never one that exists), title (≤ 100 chars),
+- Meta: slug (lowercase-hyphenated, short, main keyword, never one that exists, and **never a year**: use `guru-nanak-jayanti`, not `guru-nanak-jayanti-2026`, so the same URL is updated every year; the year can go in the title and seoTitle), title (≤ 100 chars),
   seoTitle (≤ 60 chars, main query first), seoDescription (130–155 chars, answers the query),
   excerpt (140–230 chars: a fresh one- or two-sentence summary of what the reader gets; it is shown
   under the title, so it must not repeat or paraphrase the article's first sentence), categorySlug (one of the site's topics from step 1; plan categories map as:

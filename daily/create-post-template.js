@@ -96,6 +96,7 @@ async () => {
   const md = files.find((f) => f.path === "article.md").content.replace(/§END\s*$/, "");
   for (const k of ["slug", "title", "seoTitle", "seoDescription", "excerpt", "categorySlug"]) if (!meta[k]) return { error: "meta." + k + " missing" };
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(meta.slug) || meta.slug.length > 80) return { error: "slug must be lowercase words joined by hyphens, max 80 chars" };
+  if (/(^|-)(19|20)\d\d(-|$)/.test(meta.slug)) return { error: "no year in the slug (owner's rule): the same URL is reused every year; put the year in the title instead" };
   if (meta.seoTitle.length > 65 || meta.seoDescription.length > 165 || meta.title.length > 110 || meta.excerpt.length > 300) return { error: "a field is too long (seoTitle<=65, seoDescription<=165, title<=110, excerpt<=300)" };
   if (/\[\[IMAGE/.test(md)) return { error: "new articles have no body images; remove [[IMAGE n]]" };
   if (!/^## Frequently asked questions\s*$/m.test(md)) return { error: "add a '## Frequently asked questions' section with ### questions" };
