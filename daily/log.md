@@ -92,3 +92,30 @@ The owner sent images for both new articles. Converted to WebP (1536×1024, q80;
 - how-to-make-a-resume → c0f544_4998a8482d16416d99f18e40728979f7~mv2.webp
 - types-of-covid-vaccines → c0f544_2bdf4077380d4bad8bce6fa4a302d252~mv2.webp
 Removed both from `pendingImages`; pre-render rebuilt (358 pages, published true).
+
+## 2026-11-09 (Monday: niche-topic day)
+
+Published (no cover images: Claude in Chrome was not available in this cloud run; all three slugs added to `pendingImages`):
+- [PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India](https://www.knewspaper.in/post/ptsd-symptoms-causes) (plan #26, health-fitness). Gate: pass 1 with one required fix applied (NHS physical-symptom list was misquoted: now "repeated headaches, stomach problems or pain anywhere in the body that has no physical cause"); Tele-MANAS "around 20 languages" added.
+- [12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets](https://www.knewspaper.in/post/12-hour-and-24-hour-clock) (plan #27, education). Gate: fail 1 (NIST FAQ misquoted as recommending "12 noon/12 midnight"; weekday logic unclear; two FAQs repeated the body) → fixed (exact NIST quote, weekday example generalised, new FAQs, phones bullet cut, boarding-station date note added) → pass 2 (applied: "Wednesday the 15th" → "a Wednesday", since 15 Dec 2026 is a Tuesday; "railway" dropped from the no-colon note; 24:00 FAQ replaced).
+- [Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year](https://www.knewspaper.in/post/guru-nanak-jayanti-2026) (niche #1, devotional). Gate: fail 1 (said the calendar dispute doesn't affect this Gurpurab; the Mool Nanakshahi calendar, per a 2017 Chicago conference, fixes it on 14 April) → fixed → pass 2 (applied: "many" not "most" states/banks; "a date many historians favour" for Vaisakh; "in India it doesn't change the date").
+
+Skipped plan/niche rows: none.
+
+Internal links (5b): anxiety-symptoms-and-causes "Trauma or significant adversity" → ptsd-symptoms-causes; depression-symptoms-causes "abuse or trauma" → ptsd-symptoms-causes. Nothing natural found for the clock or Guru Nanak articles.
+
+Pre-render deploy: published true, pages 358 → 361, 3 redirects added.
+
+Yesterday's articles (how-to-make-a-resume, types-of-covid-vaccines) reread on the live site by a review agent: no errors found, no changes.
+
+Unsure / to check:
+- Guru Nanak Jayanti: 2027 date (14 Nov, Sunday) is marked "expected" (publicholidays.in, dekhopanchang); confirm when DoPT's 2027 list is checked. State/bank holiday lists vary; the article says "many" and names examples from Angel One's November 2026 bank-holiday list.
+- Clock: IRCTC "start date can refer to the origin station" is hedged; no official IRCTC page confirmed it.
+- PTSD: official telemanas.mohfw.gov.in page could not be fetched; numbers confirmed via IIT Kanpur's page and earlier PIB releases.
+- COVID (yesterday): WHO fact sheet "updated November 2025" date not re-confirmed (page fetch blocked). Resume (yesterday): Naukri's "PDF, RTF, DOC or DOCX under 2 MB" not re-confirmed.
+- Note for future runs: when passing add-links-template.js, keep its NBSP character in the `NB` regex (today's call had a plain space there; harmless, both phrases were found).
+
+Image prompts for 2026-11-09:
+- PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India: create image for this article topic without any text
+- 12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets: create image for this article topic without any text
+- Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year: create image for this article topic without any text

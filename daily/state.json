@@ -5,7 +5,9 @@
   21,
   22,
   24,
-  25
+  25,
+  26,
+  27
  ],
  "published": [
   {
@@ -56,6 +58,27 @@
    "title": "Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)",
    "source": "plan #25",
    "cover": true
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "ptsd-symptoms-causes",
+   "title": "PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India",
+   "source": "plan #26",
+   "cover": false
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "12-hour-and-24-hour-clock",
+   "title": "12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets",
+   "source": "plan #27",
+   "cover": false
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "guru-nanak-jayanti-2026",
+   "title": "Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year",
+   "source": "niche #1",
+   "cover": false
   }
  ],
  "skippedPlan": [
@@ -136,7 +159,11 @@
    "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
   }
  ],
- "pendingImages": [],
+ "pendingImages": [
+  "ptsd-symptoms-causes",
+  "12-hour-and-24-hour-clock",
+  "guru-nanak-jayanti-2026"
+ ],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -147,7 +174,9 @@
  },
  "usedCivics": [],
  "skippedCivics": [],
- "usedNiche": [],
+ "usedNiche": [
+  1
+ ],
  "skippedNiche": [],
  "usedOwner": [
   2
