@@ -86,14 +86,14 @@
    "slug": "what-if-1-dollar-equals-1-rupee",
    "title": "What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained",
    "source": "civics #1",
-   "cover": false
+   "cover": true
   },
   {
    "date": "2026-11-10",
    "slug": "vertices-faces-edges",
    "title": "What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids",
    "source": "plan #32",
-   "cover": false
+   "cover": true
   }
  ],
  "skippedPlan": [
@@ -182,10 +182,7 @@
    "reason": "What is a CV: near-duplicate of how-to-make-a-resume, whose 'Resume, CV or biodata' section and FAQ already answer it for Indian readers"
   }
  ],
- "pendingImages": [
-  "what-if-1-dollar-equals-1-rupee",
-  "vertices-faces-edges"
- ],
+ "pendingImages": [],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

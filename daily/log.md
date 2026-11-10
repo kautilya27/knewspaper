@@ -157,3 +157,9 @@ Unsure / to check:
 Image prompts for 2026-11-10:
 - What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained: create image for this article topic without any text (symbolic scene only, e.g. a rupee coin and a dollar note on a balance scale; no real people)
 - What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids: create image for this article topic without any text
+
+### 2026-11-10 (later): covers added
+The owner sent images for both new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- vertices-faces-edges → c0f544_f60a95fe5a2640728696b9500d9f52f4~mv2.webp
+- what-if-1-dollar-equals-1-rupee → c0f544_d6860ed39827469687819e66f99d3730~mv2.webp (the dollar coin shows a George Washington-style portrait and the rupee coin shows "1 ₹", against the civics no-real-people rule and the no-text prompt; the owner approved using it anyway)
+Removed both from `pendingImages`; pre-render rebuilt (363 pages, published true).
