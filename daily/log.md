@@ -163,3 +163,22 @@ The owner sent images for both new articles. Converted to WebP (1536×1024, q80;
 - vertices-faces-edges → c0f544_f60a95fe5a2640728696b9500d9f52f4~mv2.webp
 - what-if-1-dollar-equals-1-rupee → c0f544_d6860ed39827469687819e66f99d3730~mv2.webp (the dollar coin shows a George Washington-style portrait and the rupee coin shows "1 ₹", against the civics no-real-people rule and the no-text prompt; the owner approved using it anyway)
 Removed both from `pendingImages`; pre-render rebuilt (363 pages, published true).
+
+### 2026-11-10 (later): 5 real-estate articles moved from allinsightz.com (owner's request)
+The 5 latest allinsightz.com posts were republished on knewspaper.in in the Real Estate topic, under the Knewspaper Editorial Team, with the same slug, text, featured image and SEO title/description:
+- [Modern Homebuying Trends: The Growing Demand for Spacious Homes and Lifestyle Amenities in Mumbai](https://www.knewspaper.in/post/modern-homebuying-trends-the-growing-demand-for-spacious-homes-and-lifestyle-amenities-in-mumbai)
+- [Why Emerging Residential Locations Like Mohan Parkland Kalyan Are Attracting First-Time Homebuyers](https://www.knewspaper.in/post/why-emerging-residential-locations-like-mohan-parkland-kalyan-are-attracting-first-time-homebuyers)
+- [Top Benefits of Investing in Luxury Villas Near Mumbai](https://www.knewspaper.in/post/top-benefits-of-investing-in-luxury-villas-near-mumbai)
+- [How Infrastructure Development Can Influence Plot Values](https://www.knewspaper.in/post/how-infrastructure-development-can-influence-plot-values)
+- [Top Factors to Consider Before Buying a Residential Plot](https://www.knewspaper.in/post/top-factors-to-consider-before-buying-a-residential-plot)
+
+How: read from the All InsightZ Wix site (40575a7c-e3f7-4ace-81ef-21a7df2d507b) with the read-post-template.js converter and published with the create-post-template.js code, adapted for a move (owner: keep the text as it is): bold links kept bold; the daily-article checks that would change the text were not applied (FAQ section, written excerpt so Wix makes one as on the source, custom SEO title, 80-character slug limit: two slugs are 98/99 characters); the body copy of the cover image after the first paragraph was dropped (the pre-render drops it anyway). A text check after publishing found every article's text identical to the source. Link colour/underline styling was not carried over.
+- Covers imported into knewspaper's Media Manager from the allinsightz files; the body image's alt text became the cover alt text.
+- SEO: the 3 posts without a custom SEO title use the post title (as on allinsightz); the other 2 keep theirs minus "| All InsightZ". SEO descriptions unchanged. The AI-generated HowTo schema on the infrastructure post was not carried over.
+- Builder project details, builder-site links and phone numbers kept as they are (owner's choice; not marked sponsored).
+- Duplicate check: none of the 5 duplicates a knewspaper article. Closest is best-places-for-land-investment (location guide with a short "Legal checks before you buy land" section) vs the residential-plot checklist.
+- Not added to state.published, so the daily "reread yesterday's articles" step won't rewrite them.
+
+Pre-render deploy: published true, pages 363 → 368, 5 redirects added.
+
+allinsightz.com: 301 redirects /post/<slug> → https://www.knewspaper.in/post/<slug> for all 5 (no conflicts with its 3 existing redirects), then the 5 posts deleted from the allinsightz blog (moved to the blog trash, restorable from the Wix dashboard; not permanently deleted).
