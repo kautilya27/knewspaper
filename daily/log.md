@@ -132,3 +132,28 @@ The owner sent images for all three new articles. Converted to WebP (1536×1024,
 - 12-hour-and-24-hour-clock → c0f544_9f59d2d9442347da942f832991825b4d~mv2.webp
 - ptsd-symptoms-causes → c0f544_ee89ed41b8bf4fe5bc6b2ef3a60071e7~mv2.webp
 Removed all three from `pendingImages`; pre-render rebuilt (361 pages, published true).
+
+## 2026-11-10 (Tuesday: civics day)
+
+Published (no cover images: Claude in Chrome was not available in this cloud run; both slugs added to `pendingImages`):
+- [What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained](https://www.knewspaper.in/post/what-if-1-dollar-equals-1-rupee) (civics #1, finance; the draft held since 6 Nov). Figures re-checked before the gate: rupee ~₹94 (PTI, early Nov), reserves $717.06 bn on 30 Oct (RBI via PTI); multiples changed from 95 to 94. Gate: fail 1 (remittance figure stale: now net private transfers record $144.8 bn in 2025-26, per RBI BoP data cited in Parliament) → fixed, plus redenomination wording, imports $776 bn/$204 bn, "about 20%" for 2006–08 dropped, Japan ~155 yen, RBI link added → pass 2 (applied: crude import dependence now "record 88.7% in 2025–26 (provisional), government data in Parliament, July 2026" instead of PPAC 88%). Check 7 (no party named, fair): pass both times.
+- [What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids](https://www.knewspaper.in/post/vertices-faces-edges) (plan #32, education). Gate: pass 1 (verified Ganita Prakash Class 8 Part 2 Ch 4 §4.2 "Visualising Solids" definitions and that it does not name Euler's formula; all counts and the photo-frame example 16/16/32 recounted). Applied optional fixes (existence example wording; mistake 4 replaced).
+
+Not published:
+- Plan #30 UTI symptoms and causes (health): failed the gate twice, both times only on attribution: run 1 the NHS cranberry wording and an unsourced NHS "borrow antibiotics" quote; run 2 "children under 2, fever may be the only sign" attributed to the NHS UTI page (it's not there) and "sanitary pads" not in the NHS list. All fixes are applied in `daily/drafts/uti/`; it is NOT in usedPlan/skippedPlan, so the next run should take it as its health topic, run a fresh gate and publish if it passes. (Cleveland Clinic "not contagious" FAQ line wasn't re-verified by gate 2: fetch blocked.)
+
+Skipped plan rows: #28 Atomic Habits Summary (no information gain, same reason as #18); #29 What is a CV (near-duplicate of how-to-make-a-resume, which already has the resume/CV/biodata section and FAQ).
+
+Internal links (5b): why-is-the-rupee-falling-against-the-dollar "not to defend a fixed number" → what-if-1-dollar-equals-1-rupee. Nothing natural found for vertices-faces-edges.
+
+Pre-render deploy: published true, pages 361 → 363, 2 redirects added.
+
+Yesterday's articles (ptsd-symptoms-causes, 12-hour-and-24-hour-clock, guru-nanak-jayanti) reread on the live site by a review agent: no errors found, no changes. Guru Nanak 2026 date (Tue 24 Nov) matches the central gazetted holiday list; 2027 (14 Nov) stays "expected".
+
+Unsure / to check:
+- Civics #1: the IMF April 2026 WEO figures ($2,813 nominal, $12,801 PPP) were read via statisticstimes/Scroll, not the IMF datamapper; the October 2026 WEO is out and could update them. The Business Standard 1947 history piece and the Wharton 2008 piece are cited by name, not linked.
+- Vertices: the Ganita Prakash chapter text was read from third-party PDF copies (evidyarthi, cbsetamil), not ncert.nic.in.
+
+Image prompts for 2026-11-10:
+- What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained: create image for this article topic without any text (symbolic scene only, e.g. a rupee coin and a dollar note on a balance scale; no real people)
+- What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids: create image for this article topic without any text

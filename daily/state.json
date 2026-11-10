@@ -7,7 +7,8 @@
   24,
   25,
   26,
-  27
+  27,
+  32
  ],
  "published": [
   {
@@ -79,6 +80,20 @@
    "title": "Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year",
    "source": "niche #1",
    "cover": true
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "what-if-1-dollar-equals-1-rupee",
+   "title": "What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained",
+   "source": "civics #1",
+   "cover": false
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "vertices-faces-edges",
+   "title": "What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids",
+   "source": "plan #32",
+   "cover": false
   }
  ],
  "skippedPlan": [
@@ -157,9 +172,20 @@
   {
    "order": 23,
    "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
+  },
+  {
+   "order": 28,
+   "reason": "Atomic Habits summary: no information gain (same as #18; covered by small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems; web saturated with summaries)"
+  },
+  {
+   "order": 29,
+   "reason": "What is a CV: near-duplicate of how-to-make-a-resume, whose 'Resume, CV or biodata' section and FAQ already answer it for Indian readers"
   }
  ],
- "pendingImages": [],
+ "pendingImages": [
+  "what-if-1-dollar-equals-1-rupee",
+  "vertices-faces-edges"
+ ],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -168,7 +194,9 @@
    "note": "made during setup on 2026-11-05; use as the cover if this topic is written"
   }
  },
- "usedCivics": [],
+ "usedCivics": [
+  1
+ ],
  "skippedCivics": [],
  "usedNiche": [
   1

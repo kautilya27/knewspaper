@@ -1,6 +1,6 @@
-**Quick answer:** If 1 US dollar suddenly equalled 1 rupee, imported things like petrol, phones and foreign education would become much cheaper in rupees, but Indian exports would become about 95 times more expensive for foreign buyers overnight. Export industries, IT services and the families who depend on money sent from abroad would be hit hard, and jobs in export industries would be at risk. This assumes the exchange rate jumps while rupee prices and wages stay the same. If India simply knocked zeros off the currency, as Turkey did, 1:1 would change nothing real. An exchange rate is a price, not a scorecard. A "strong" rupee is not automatically a sign of a strong economy.
+**Quick answer:** If 1 US dollar suddenly equalled 1 rupee, imported things like petrol, phones and foreign education would become much cheaper in rupees, but Indian exports would become about 94 times more expensive for foreign buyers overnight. Export industries, IT services and the families who depend on money sent from abroad would be hit hard. This assumes the exchange rate jumps while rupee prices and wages stay the same. If India simply redenominated the rupee, dividing every price, wage and debt by about 94 (as Turkey did when it removed six zeros), 1:1 would change nothing real. An exchange rate is a price, not a scorecard. A "strong" rupee is not automatically a sign of a strong economy.
 
-In early November 2026, one dollar cost about ₹94–95, according to Reuters reports carried by Business Standard. That has led many people to ask why the rupee can't simply be ₹1 to the dollar, and some believe it once was. This explainer covers what the number means, what a 1:1 rate would actually do, and how the Reserve Bank of India (RBI) manages the rupee.
+In early November 2026, one dollar cost about ₹94, according to PTI's daily market reports. That has led many people to ask why the rupee can't simply be ₹1 to the dollar, and some believe it once was. This explainer covers what the number means, what a 1:1 rate would actually do, and how the Reserve Bank of India (RBI) manages the rupee.
 
 ## Was the rupee ever equal to the dollar?
 
@@ -12,7 +12,7 @@ Fact-checkers such as Newschecker have also debunked viral claims that ₹1 equa
 
 A currency's value against the dollar depends on many things: inflation, trade, interest rates, investor flows and history. The headline number is partly an accident of where a currency started.
 
-| Country | Approx. value (late 2026) | What it shows |
+| Country | Key fact | What it shows |
 |---|---|---|
 | Japan | Roughly ¥150–165 per dollar in 2026 | A rich economy with a "big number" currency |
 | Kuwait | 1 dinar ≈ $3.2 | The world's highest-valued unit, in a small oil-rich economy |
@@ -22,22 +22,22 @@ Japan's yen shows that a high number of units per dollar doesn't make a country 
 
 ## What a 1:1 rate would do: winners and losers
 
-To see the effect, look at the money India earns and spends in dollars. According to Ministry of Commerce data for 2025–26, India exported about **$863 billion** of goods and services (goods $441.8 billion, services $421.3 billion, as revised in May 2026). It imported about $775 billion of goods and roughly $200 billion of services.
+To see the effect, look at the money India earns and spends in dollars. According to Ministry of Commerce data for 2025–26, India exported about **$863 billion** of goods and services (goods $441.8 billion, services $421.3 billion, as revised in May 2026). It imported about $776 billion of goods and $204 billion of services.
 
 ### Who would lose
 
-- **Exporters.** A shirt from Tiruppur priced at ₹950 sells abroad for about $10 today. At ₹1 per dollar, the same shirt would need to sell for $950 for the maker to earn the same rupees. No foreign buyer would pay that, so orders would go to Bangladesh, Vietnam or others.
+- **Exporters.** A shirt from Tiruppur priced at ₹940 sells abroad for about $10 today. At ₹1 per dollar, the same shirt would need to sell for $940 for the maker to earn the same rupees. No foreign buyer would pay that, so orders would go to Bangladesh, Vietnam or others.
 - **IT and services.** Software and business services companies earn mostly in dollars and pay salaries in rupees. A $1 billion contract would bring in ₹100 crore instead of about ₹9,400 crore. Salaries and hiring could not survive that.
-- **Families relying on remittances.** Indians working abroad sent home a record **$135.5 billion** in 2024–25, according to RBI data. Money sent home would buy about 95 times less in rupees. Kerala, Maharashtra and several other states receive a large share of this money.
-- **Jobs.** When the rupee rose about 20% against the dollar in 2006–08 (from around ₹47 to ₹39), textile exporters reported thin margins and factory closures, according to Knowledge at Wharton reporting at the time. Moving to ₹1 would make the rupee roughly 95 times more valuable, far beyond anything India has seen.
+- **Families relying on remittances.** Money sent home by Indians abroad (net private transfers) reached a record **$144.8 billion** in 2025–26, according to RBI balance-of-payments data cited by the government in Parliament. Each dollar sent home would fetch ₹1 instead of about ₹94. Kerala, Maharashtra and several other states receive a large share of this money.
+- **Jobs.** When the rupee rose sharply against the dollar in 2006–08 (from around ₹47 to ₹39), textile exporters reported thin margins and factory closures, according to Knowledge at Wharton reporting at the time. Moving to ₹1 would make the rupee roughly 94 times more valuable, far beyond anything India has seen.
 
 ### Who would gain
 
-- **Fuel and imports.** India imports about 88% of the crude oil it uses, according to the Petroleum Planning and Analysis Cell (PPAC). In rupee terms, crude would become far cheaper, and so would electronics, gold and imported machinery.
+- **Fuel and imports.** India imported a record 88.7% of the crude oil it used in 2025–26 (provisional), according to government data given in Parliament in July 2026. In rupee terms, crude would become far cheaper, and so would electronics, gold and imported machinery.
 - **Foreign education and travel.** Fees and living costs abroad would fall sharply in rupees.
-- **Dollar debt.** India's external debt was $762.8 billion at the end of March 2026, and 55.5% of it was in US dollars, according to the RBI. Repaying it would cost fewer rupees.
+- **Dollar debt.** India's external debt was $762.8 billion at the end of March 2026, and 55.5% of it was in US dollars, according to the [RBI](https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63041). Repaying it would cost fewer rupees.
 
-The losses would still outweigh the gains for most people. Cheaper imports would push out Indian-made goods, and the jobs that depend on exports and remittances would shrink. With far fewer rupees coming in from abroad, a sudden fall in prices could also hit businesses and wages.
+The losses would still outweigh the gains for most people. Cheaper imports would push out Indian-made goods, and the jobs that depend on exports and remittances would shrink. Over time, as cheap imports pushed prices down and far fewer rupees came in from abroad, falling prices could also hit businesses and wages.
 
 ## Why the RBI can't force a 1:1 rate
 
@@ -49,7 +49,7 @@ Economists also compare currencies by what they buy at home, called purchasing p
 
 ## How the RBI manages the rupee
 
-India's exchange rate is officially market-determined. The RBI says it steps in to calm *excessive volatility* by buying or selling dollars, not to defend any particular level. Its foreign exchange reserves stood at about **$720 billion** in late October 2026.
+India's exchange rate is officially market-determined. The RBI says it steps in to calm *excessive volatility* by buying or selling dollars, not to defend any particular level. Its foreign exchange reserves stood at about **$717 billion** on 30 October 2026, according to RBI data.
 
 The International Monetary Fund describes it slightly differently. In November 2025, it reclassified India's de facto arrangement from "stabilised" to "crawl-like", meaning the rupee has followed a gradual trend within a narrow band. Indian authorities have said the interventions aim only to smooth sharp swings. Both descriptions agree on one point: the RBI does not try to make the rupee "strong" for its own sake.
 
@@ -71,7 +71,7 @@ The crude oil India imports would cost far less in rupees. But petrol prices als
 
 ### Does a weak rupee mean India's economy is weak?
 
-Not on its own. The exchange rate reflects inflation, trade and investment flows. Japan has around 150 yen per dollar and is a rich economy.
+Not on its own. The exchange rate reflects inflation, trade and investment flows. Japan has around 155 yen per dollar and is a rich economy.
 
 ### Can the RBI fix the rupee at any rate it wants?
 
