@@ -38,7 +38,7 @@ The NHS page on [kidney infection](https://www.nhs.uk/conditions/kidney-infectio
 
 ### Children
 
-The NHS says a urine infection in a child may show up as a high fever, being generally unwell, irritability, not feeding or drinking properly, bedwetting or wetting themselves, or vomiting. Any child with a suspected UTI should be seen by a doctor.
+The NHS says a urine infection in a child may show up as a high fever, being generally unwell, bedwetting or wetting themselves, or vomiting. Babies and young children may be irritable and not feed, eat or drink properly. Any child with a suspected UTI should be seen by a doctor.
 
 ### Older people
 
@@ -54,7 +54,7 @@ The NHS advises pregnant women to get urgent medical advice for UTI symptoms, an
 
 ### People with diabetes
 
-India has a very large number of people living with diabetes, and they need to take UTIs more seriously. The US National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) explains that diabetes can damage the nerves of the bladder, so it may not empty fully. Urine that stays in the bladder too long can lead to infection, which can then spread to the kidneys. The NIDDK adds that meeting blood sugar targets lowers the risk of UTIs. Our guide to [diabetes diagnosis and treatment](https://www.knewspaper.in/post/diabetes-diagnosis-and-treatment) covers how blood sugar is checked and managed.
+India has a very large number of people living with diabetes, and they need to take UTIs more seriously. The US National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) explains that diabetes can damage the nerves of the bladder, so it may not empty fully. Urine that stays in the bladder too long can lead to infection, which can then spread to the kidneys. The NIDDK adds that managing your blood sugar helps prevent bladder infections. Our guide to [diabetes diagnosis and treatment](https://www.knewspaper.in/post/diabetes-diagnosis-and-treatment) covers how blood sugar is checked and managed.
 
 ## What causes UTIs and who is at risk
 
@@ -67,16 +67,16 @@ Women get UTIs far more often than men because the urethra is shorter, so bacter
 - A weakened immune system, for example from poorly controlled diabetes or chemotherapy
 - Menopause
 - Pregnancy
-- Using spermicide with condoms, a diaphragm or a cap
+- Using spermicide with contraception
 - Not drinking enough fluids
 
 ## Why you should not self-treat with leftover antibiotics
 
 Buying a strip of antibiotics from the chemist, or finishing an old prescription at home, at the first sign of burning is common in India. It is risky for two reasons.
 
-First, the wrong antibiotic may simply not work. The ICMR's surveillance reports show *E. coli* in Indian hospitals becoming resistant to many commonly used antibiotics year after year. In the 2024 report, for *E. coli* from samples other than urine, fewer than 1 in 5 were still susceptible to several widely used antibiotics. A urine test, and a urine culture where needed, helps the doctor choose a medicine that will actually work.
+First, the wrong antibiotic may simply not work. The ICMR's surveillance reports show *E. coli* in Indian hospitals becoming resistant to many commonly used antibiotics year after year. In the 2024 report, only about 1 in 4 *E. coli* from urine samples were still susceptible to cefotaxime (25.8%) or ciprofloxacin (22.4%), two widely used antibiotics. A urine test, and a urine culture where needed, helps the doctor choose a medicine that will actually work.
 
-Second, every unnecessary course adds to the problem. The World Health Organization says misuse and overuse of antimicrobials are the main drivers of drug-resistant infections. Never take antibiotics prescribed for someone else, or leftovers from an old course.
+Second, every unnecessary course adds to the problem. The [World Health Organization](https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance) says the misuse and overuse of antimicrobials are driving the development and spread of drug-resistant infections. Never take antibiotics prescribed for someone else, or leftovers from an old course.
 
 A doctor may also find that your symptoms come from something other than a UTI, which would need different care. And according to the NHS, antibiotics are not always needed for a UTI at all; sometimes a doctor will suggest waiting 48 hours to see if mild symptoms settle.
 
@@ -102,7 +102,7 @@ The NHS says there is some evidence that cranberry products may help prevent bla
 
 See a doctor promptly if:
 
-- You are pregnant, a man, 65 or older, or have diabetes or a weak immune system
+- You are pregnant, a man, 65 or older, use a urinary catheter, or have diabetes or a weak immune system
 - A child has symptoms
 - You have fever, shivering, back or side pain, vomiting or blood in the urine
 - Symptoms get worse quickly or do not improve within 48 hours
@@ -118,7 +118,7 @@ Sometimes mild symptoms do settle, which is why a doctor may suggest waiting a c
 
 ### Is a UTI contagious?
 
-Cleveland Clinic says a bladder infection is not contagious and cannot be passed on through close contact or sex. Sex can, however, push your own bacteria towards the urethra, which is why passing urine afterwards is advised.
+[Cleveland Clinic](https://my.clevelandclinic.org/health/diseases/24450-acute-cystitis) says a bladder infection is not contagious and cannot be passed on through close contact or sex. Sex can, however, push your own bacteria towards the urethra, which is why passing urine afterwards is advised.
 
 ### Can drinking more water cure a UTI?
 

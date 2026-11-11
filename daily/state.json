@@ -8,7 +8,8 @@
   25,
   26,
   27,
-  32
+  32,
+  30
  ],
  "published": [
   {
@@ -94,6 +95,20 @@
    "title": "What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids",
    "source": "plan #32",
    "cover": true
+  },
+  {
+   "date": "2026-11-11",
+   "slug": "uti-symptoms-causes",
+   "title": "Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency",
+   "source": "plan #30",
+   "cover": false
+  },
+  {
+   "date": "2026-11-11",
+   "slug": "how-wix-headless-works",
+   "title": "How Wix Headless Works: A Plain-English Guide for Website Owners",
+   "source": "owner #3",
+   "cover": false
   }
  ],
  "skippedPlan": [
@@ -180,9 +195,16 @@
   {
    "order": 29,
    "reason": "What is a CV: near-duplicate of how-to-make-a-resume, whose 'Resume, CV or biodata' section and FAQ already answer it for Indian readers"
+  },
+  {
+   "order": 33,
+   "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
   }
  ],
- "pendingImages": [],
+ "pendingImages": [
+  "uti-symptoms-causes",
+  "how-wix-headless-works"
+ ],
  "preparedImages": {
   "how to stop procrastinating": {
    "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -200,7 +222,8 @@
  ],
  "skippedNiche": [],
  "usedOwner": [
-  2
+  2,
+  3
  ],
  "skippedOwner": []
 }

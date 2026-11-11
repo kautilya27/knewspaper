@@ -1,6 +1,6 @@
 **Quick answer:** Wix Headless keeps the business side of a Wix site (products, bookings, blog posts, CMS content, members, orders) in the normal Wix dashboard, but lets the website or app your visitors see be built in code, by you, a developer or an AI coding tool. That custom front end talks to Wix through Wix's APIs and JavaScript SDK. Either Wix hosts it for you, or you host it anywhere you like.
 
-"Headless" simply means the head (the design visitors see) is separated from the body (the business engine). Wix says it is free to start, but payments, a custom domain and in-depth analytics need a premium plan. If you like building visually in the Wix Editor or Wix Studio and have no developer or AI coding workflow, Wix's own Help Center says you don't need it.
+"Headless" simply means the head (the design visitors see) is separated from the body (the business engine). Wix says it is free to start, but payments, a custom domain and in-depth analytics need a premium plan. If you like building visually in the Wix Editor or Wix Studio and have no developer or AI coding workflow, Wix's own Help Center advises against moving to headless, because it assumes you bring your own front-end code.
 
 ## What "headless" actually means
 
@@ -28,7 +28,7 @@ The backend can include eCommerce, bookings, events, memberships, the CMS and th
 
 ## How visitors and members log in
 
-Most guides skip this. Here are the four credentials Wix's authentication docs describe:
+Here are the four credentials Wix's authentication docs describe:
 
 | Credential | What it is | Safe in the browser? | Used for |
 |---|---|---|---|
@@ -43,7 +43,7 @@ A few rules from the docs worth knowing:
 - **Members are visitors who signed in.** After login, Wix replaces the visitor token with a member token, so the person sees their own profile or orders.
 - **Login needs only the client ID.** The client secret is for admin work only, and it and any API key must stay on the server, never in the website's visible code.
 
-For the login screen, you can use a **Wix-hosted login page** (email and password, plus Google or Facebook if enabled), build **your own branded page** while Wix still checks the password, add **Google or Facebook buttons** to your design, or **bring your own provider** such as GitHub, which needs an API key on your server. If your site uses Wix's recommended Astro setup, login is handled for you: you can use Wix's login page, or your own branded login and signup forms (plus Google or Facebook links) that plug into the setup's built-in login routes. Bringing your own provider, such as GitHub, isn't currently supported there.
+For the login screen, you can use a **Wix-hosted login page** (email and password, plus Google or Facebook if enabled), build **your own branded page** while Wix still checks the password, add **Google or Facebook buttons** to your design (outside Astro), or **bring your own provider** such as GitHub, which needs an API key on your server. If your site uses Wix's recommended Astro setup, login is handled for you: you can use Wix's login page, or your own branded login and signup forms (plus Google or Facebook links) that plug into the setup's built-in login routes. Bringing your own provider, such as GitHub, isn't currently supported there. Some older Wix pages still say the Wix login page is the only Astro option, so check the current Astro login guide before you build.
 
 ## Hosting: Wix-managed or self-managed
 

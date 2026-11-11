@@ -182,3 +182,30 @@ How: read from the All InsightZ Wix site (40575a7c-e3f7-4ace-81ef-21a7df2d507b) 
 Pre-render deploy: published true, pages 363 → 368, 5 redirects added.
 
 allinsightz.com: 301 redirects /post/<slug> → https://www.knewspaper.in/post/<slug> for all 5 (no conflicts with its 3 existing redirects), then the 5 posts deleted from the allinsightz blog (moved to the blog trash, restorable from the Wix dashboard; not permanently deleted).
+
+## 2026-11-11 (Wednesday: owner-topic day)
+
+Published (no cover images: Claude in Chrome was not available in this cloud run; both slugs added to `pendingImages`):
+- [Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency](https://www.knewspaper.in/post/uti-symptoms-causes) (plan #30, health-fitness; the draft held since 10 Nov). Gate: fail 1 (attribution only: "spermicide with condoms, a diaphragm or a cap" → NHS "spermicide with contraception"; WHO "main drivers" → "driving the development and spread") → fixed, plus NHS children wording, Cleveland Clinic/WHO links, NIDDK "managing blood sugar", catheter in when-to-see-a-doctor → pass 2 (all NHS/NIDDK/ICMR/WHO/Cleveland claims checked on the pages). Applied its suggestion to use the ICMR urine-sample figures: cefotaxime 25.8%, ciprofloxacin 22.4% susceptible (AMRSN 2024, Table 2.14).
+- [How Wix Headless Works: A Plain-English Guide for Website Owners](https://www.knewspaper.in/post/how-wix-headless-works) (owner #3, technology; the draft held since 8 Nov). Gate: fail 1 (Help Center wording narrower than "you don't need it"; Astro login needed a hedge because Wix's own pages contradict each other) → fixed → pass 2. Added "(outside Astro)" to the Google/Facebook buttons option.
+
+Not published:
+- Plan #34 Job Titles → "Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government" (career). Failed the gate twice: run 1 Tata Motors 2017 sequence wrong (levels cut 14→5 and designations dropped, then five level-wise titles brought back a month later, per HRKatha); run 2 Pay Level 13 entry pay wrong (₹1,23,100, not ₹1,18,500) and the Lenin Kumar Ray outcome misdescribed (held not a workman because duties were mainly administrative/supervisory and pay above the then wage limit). All fixes are applied in `daily/drafts/job-titles/`; it is NOT in usedPlan/skippedPlan, so the next run should take it as its education/career topic, run a fresh gate and publish if it passes.
+- Owner #1 Best Sample Papers (Future Topper as #1): futuretopper.in could not be reached from this cloud run (proxy denied, and no indexed pages for the site in search), so nothing about its sample papers could be verified. Per the row's instructions it was not written. Left out of usedOwner/skippedOwner so a run that can reach the site retries it; the owner may want to check the site is live and indexed. Research notes for the rest of the article (CBSE SQP 2026-27 released 21 Sep 2026; CBSE 2027 date sheet: Class 10 phase 1 16 Feb–9 Mar, Class 12 16 Feb–9 Apr; CISCE 2027 specimen papers 16 Oct 2026; Oswaal/Arihant 2027 editions and prices) were gathered via third-party pages.
+- Owner #3 was taken instead as today's owner topic.
+
+Skipped plan rows: #33 Self Improvement (no information gain: hub topic already covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems, how-to-stop-procrastinating).
+
+Internal links (5b): kidney-stones-symptoms-causes "Repeated urinary tract infections" → uti-symptoms-causes. Nothing natural found for how-wix-headless-works.
+
+Pre-render deploy: published true, pages 368 → 370, 2 redirects added.
+
+Yesterday's articles (what-if-1-dollar-equals-1-rupee, vertices-faces-edges) rechecked by a review agent from the repo copies (the live pages couldn't be fetched): no errors, no changes. Every count and NCERT claim in vertices-faces-edges confirmed.
+
+Unsure / to check:
+- Civics #1: the October 2026 IMF WEO may have revised India's GDP per head (a third-party site shows ~$2,750 nominal / ~$12,998 PPP, edition not named; IMF DataMapper not reachable). Remittance figure "$144.8 bn" not re-confirmed (one source gives net transfers $144.07 bn); worth checking against the RBI BoP table.
+- UTI: the ICMR AMRSN 2024 PDF was read by the gate agent via WebFetch; figures not re-read by me.
+
+Image prompts for 2026-11-11:
+- Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency: create image for this article topic without any text
+- How Wix Headless Works: A Plain-English Guide for Website Owners: create image for this article topic without any text
