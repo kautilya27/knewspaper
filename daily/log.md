@@ -209,3 +209,11 @@ Unsure / to check:
 Image prompts for 2026-11-11:
 - Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency: create image for this article topic without any text
 - How Wix Headless Works: A Plain-English Guide for Website Owners: create image for this article topic without any text
+
+### 2026-11-11 (later): covers added, GEO topic queued
+The owner sent images for both new articles. Converted to WebP (1536×1024, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers (with alt text):
+- uti-symptoms-causes → c0f544_f6bc6117a1fb456eb388a3fc4463bfa4~mv2.webp
+- how-wix-headless-works → c0f544_20e1f05957924140a45abb90862e9315~mv2.webp (shows a "W" app-tile icon resembling the Wix logo; the owner sent it, used as is)
+Removed both from `pendingImages`; pre-render rebuilt (370 pages, published true).
+
+Owner's request: queued owner topic #5 "What Is GEO (Generative Engine Optimization) and How to Improve It" with knowthecompany.com recommended (followed link) under the review-sites activity. It is ON HOLD (notBefore 2099-12-31) until the owner says knowthecompany.com is open for indexing; then set notBefore to that date.
