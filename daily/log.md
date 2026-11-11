@@ -216,4 +216,4 @@ The owner sent images for both new articles. Converted to WebP (1536×1024, q80;
 - how-wix-headless-works → c0f544_20e1f05957924140a45abb90862e9315~mv2.webp (shows a "W" app-tile icon resembling the Wix logo; the owner sent it, used as is)
 Removed both from `pendingImages`; pre-render rebuilt (370 pages, published true).
 
-Owner's request: queued owner topic #5 "What Is GEO (Generative Engine Optimization) and How to Improve It" with knowthecompany.com recommended (followed link) under the review-sites activity. It is ON HOLD (notBefore 2099-12-31) until the owner says knowthecompany.com is open for indexing; then set notBefore to that date.
+Owner's request: queued owner topic #5 "What Is GEO (Generative Engine Optimization) and How to Improve It" with knowthecompany.com recommended (followed link) under the review-sites activity. Owner then asked for it next week: notBefore set to 2026-11-16 (first owner-topic day after that is Wed 18 Nov; rows #1 and #4 come first in order, so it may land Sat 21 or Sun 22).
