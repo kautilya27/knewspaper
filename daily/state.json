@@ -124,7 +124,7 @@
       "slug": "panic-attacks-symptoms-causes",
       "title": "Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do",
       "source": "plan #31",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-12",
@@ -225,7 +225,6 @@
     }
   ],
   "pendingImages": [
-    "panic-attacks-symptoms-causes",
     "hornbill-festival"
   ],
   "preparedImages": {

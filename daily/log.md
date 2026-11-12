@@ -257,3 +257,6 @@ To check on the next niche/travel run: whether the Centre announces a 2026 festi
 Image prompts:
 - Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do: create image for this article topic without any text
 - Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay: create image for this article topic without any text
+
+### 2026-11-12 (later): cover for panic-attacks-symptoms-causes
+Owner's image converted to WebP (1536×1024, q80; `daily/images/panic-attacks-symptoms-causes.webp`), imported into Wix Media and set as the cover: c0f544_c1cc4da205584cc2b102a735d546aa30~mv2.webp (a distressed woman, symptom icons, a man clutching his chest, a woman meditating; no text). Removed from `pendingImages`. Pre-render not yet rebuilt: waiting for the Hornbill image so both go out in one rebuild.
