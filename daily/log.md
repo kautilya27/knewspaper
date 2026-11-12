@@ -247,3 +247,13 @@ Image prompts for 2026-11-12:
 The owner sent the image for job-titles. Converted to WebP (1536×1024, q80; saved as `daily/images/job-titles.webp`), imported into Wix Media from the repo's raw URL, and set as the cover:
 - job-titles → c0f544_b67c5838e2de464498cc5477da3d8515~mv2.webp (faceless org-chart figures, laptop, bank and Parliament-style building; no text)
 Removed from `pendingImages`; pre-render rebuilt (371 pages, published true).
+
+### 2026-11-12 (later): 2 more articles at the owner's request
+- [Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do](https://www.knewspaper.in/post/panic-attacks-symptoms-causes) (plan #31, health-fitness). Fresh gate (3rd round): PASS, every attribution checked (NHS, NHS inform, Merck, Mayo x3, AHA 2022, Cleveland Clinic x2, NIMH, MedlinePlus, IJP 2023 NMHS analysis, PIB Tele MANAS; heart disease 5–10 years earlier per a Vascular Health and Risk Management review). Applied its minor suggestions (wording of the Indian heart-disease line, ECG attribution, table trimmed, Mayo "improve within months").
+- [Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay](https://www.knewspaper.in/post/hornbill-festival) (niche #2, travel). Fresh gate round 3: FAIL (2024 Kisama fares credited to ANTA instead of the Kohima DC's office; "up from ₹50" overstated) → fixed → round 4: FAIL on one point only (the statewide ₹3/km taxi-fare notification is dated February 24, year not given, not "November 2025") → date removed, PR Hill reserved fare (₹500) separated. Published with the owner's explicit approval despite the brief's two-fails rule, since the only remaining issue was the removed date. All PAP/ILP/FRO facts confirmed in both rounds; PAP still in force with no 2026 relaxation as of 12 Nov.
+Both without covers (added to `pendingImages`). Pre-render deploy: published true, pages 371 → 373, 2 redirects added.
+To check on the next niche/travel run: whether the Centre announces a 2026 festival PAP relaxation (likely late November) and the 2026 ticket price; update hornbill-festival if so.
+
+Image prompts:
+- Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do: create image for this article topic without any text
+- Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay: create image for this article topic without any text

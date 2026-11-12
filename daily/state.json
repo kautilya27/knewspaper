@@ -10,7 +10,8 @@
     27,
     32,
     30,
-    34
+    34,
+    31
   ],
   "published": [
     {
@@ -117,6 +118,20 @@
       "title": "Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government",
       "source": "plan #34",
       "cover": true
+    },
+    {
+      "date": "2026-11-12",
+      "slug": "panic-attacks-symptoms-causes",
+      "title": "Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do",
+      "source": "plan #31",
+      "cover": false
+    },
+    {
+      "date": "2026-11-12",
+      "slug": "hornbill-festival",
+      "title": "Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay",
+      "source": "niche #2",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -209,7 +224,10 @@
       "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "panic-attacks-symptoms-causes",
+    "hornbill-festival"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -223,7 +241,8 @@
   ],
   "skippedCivics": [],
   "usedNiche": [
-    1
+    1,
+    2
   ],
   "skippedNiche": [],
   "usedOwner": [

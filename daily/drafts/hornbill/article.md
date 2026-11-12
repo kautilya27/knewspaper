@@ -54,7 +54,7 @@ Some older travel blogs still quote ₹50 for 15 days. That is out of date; go b
 4. Pay the fee online and download the permit.
 5. Carry a printout and the original ID. Each traveller applies separately.
 
-Applicants from Karbi Anglong, Dima Hasao, Karimganj and Hailakandi districts of Assam must also upload an NRC document, as the portal's checklist says.
+Applicants from Karbi Anglong, Dima Hasao, Karimganj (now Sribhumi) and Hailakandi districts of Assam must also upload an NRC document, as the portal's checklist says.
 
 ### Protected Area Permit for foreign tourists
 
@@ -68,7 +68,7 @@ What this means for foreign visitors, according to advisories from the Dimapur p
 - Every foreigner must **register with the Foreigners Registration Officer (FRO)** of the district they visit within **24 hours of arrival**, whatever their age and including OCI cardholders.
 - Nationals of **Afghanistan, China and Pakistan** (and foreigners of those origins), and citizens of **Myanmar**, need **prior approval from the Ministry of Home Affairs**. Myanmar is listed in the February 2026 advisory but not the May 2025 one.
 
-Applications go through the Ministry of Home Affairs' e-FRRO portal. Permits can also be issued by Indian missions abroad, FRROs, the Home Commissioner in Kohima, the Resident Commissioner of Nagaland in New Delhi and the Secretary (Tourism), Nagaland. If you are bringing foreign friends, apply well before December and keep copies of the passport, visa and permit with you.
+Applications go through the Ministry of Home Affairs' e-FRRO portal. Permits can be issued by the Ministry of Home Affairs, Indian missions abroad, FRROs, the Home Commissioner in Kohima, the Resident Commissioner of Nagaland in New Delhi and the Secretary (Tourism), Nagaland. If you are bringing foreign friends, apply well before December and keep copies of the passport, visa and permit with you.
 
 ## How to reach Kisama
 
@@ -76,12 +76,12 @@ There are no regular flights or trains into Kohima itself. Almost everyone comes
 
 | Leg | Option | Typical time | Typical cost |
 |---|---|---|---|
-| Dimapur → Kohima (about 74 km, NH-29) | Shared taxi from near the railway station | 3–4 hours | Notified cap about ₹220 a seat; travellers report ₹400–500 in festival season |
+| Dimapur → Kohima (about 74 km, NH-29) | Shared taxi from near the railway station | 3–4 hours | Notified rate works out to about ₹220 a seat; travellers report ₹400–500 in festival season |
 | Dimapur → Kohima | Private taxi | 2.5–3.5 hours | About ₹2,800–4,000 per car |
 | Dimapur → Kohima | State bus | Slower; one or two a day | About ₹200–250 |
-| Kohima → Kisama (about 12 km) | Shared festival taxi from PR Hill, or reserved taxi | Short drive, but slow in festival traffic | ₹120 a head shared; about ₹317–700 reserved (2024 official festival fares) |
+| Kohima → Kisama (about 12 km) | Shared festival taxi from PR Hill, or reserved taxi | Short drive, but slow in festival traffic | ₹120 a head shared from PR Hill; ₹500 reserved from PR Hill (₹317–700 from other points); 2024 notified festival fares |
 
-Nagaland's transport authority notified statewide taxi fares in November 2025 (₹3 per km per passenger on trips under 100 km), and in 2024 the All Nagaland Taxi Association published fixed Kisama fares for the festival period. The private-taxi, bus and time figures come from one travel operator's 2025 guide, so treat them as indicative and agree the fare before you get in. Shared taxis mostly leave between early morning and mid-afternoon, so if your train or flight reaches Dimapur late, plan a night there and drive up the next morning. The road to Kohima climbs through hills and can slow sharply in festival traffic, so don't book anything in Kohima for the same evening you land.
+Nagaland's State Transport Authority has notified maximum statewide taxi fares (₹3 per km per passenger on trips under 100 km), and in 2024 the Kohima Deputy Commissioner's office notified fixed fares for ANTA taxis to Kisama for the festival period. The private-taxi, bus and time figures come from one travel operator's 2025 guide, so treat them as indicative and agree the fare before you get in. Shared taxis mostly leave between early morning and mid-afternoon, so if your train or flight reaches Dimapur late, plan a night there and drive up the next morning. The road to Kohima climbs through hills and can slow sharply in festival traffic, so don't book anything in Kohima for the same evening you land.
 
 ## Where to stay
 
@@ -118,7 +118,7 @@ Planning another winter trip? December is also peak season in the Thar: see our 
 
 ### When is the Hornbill Festival in 2026?
 
-It runs from 1 to 10 December 2026, the 27th edition, at the Naga Heritage Village in Kisama near Kohima. It has run on 1–10 December each year since the mid-2000s (the 2020 edition was held online).
+It runs from 1 to 10 December 2026, the 27th edition, at the Naga Heritage Village in Kisama near Kohima. It has run on 1–10 December for many years (the 2020 edition was held online).
 
 ### Do Indians need a permit to attend the Hornbill Festival?
 
@@ -130,4 +130,4 @@ Yes, but they currently need a Protected Area Permit (applied for through the e-
 
 ### How much is the Hornbill Festival entry ticket?
 
-In 2025 the entry ticket at Kisama was ₹150 per head for all visitors, up from ₹50 the year before. The 2026 price had not been announced at the time of writing, and in past editions music events were ticketed separately.
+In 2025 the entry ticket at Kisama was ₹150 per head for all visitors (in 2024, local visitors paid ₹50). The 2026 price had not been announced at the time of writing, and in past editions music events were ticketed separately.

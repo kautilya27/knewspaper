@@ -21,7 +21,7 @@ Doctors usually describe a panic attack when at least four such symptoms arrive 
 
 ## Panic attack or heart attack?
 
-This is the question that sends many people to an emergency department, and that is a sensible place to go the first time. Studies of people of Indian origin have found that heart disease tends to appear 5–10 years earlier than in Western populations, so being young is not a reason to assume chest pain is "just anxiety".
+This is the question that sends many people to an emergency department, and that is a sensible place to go the first time. Research on people of Indian origin suggests heart disease tends to appear 5–10 years earlier than in other populations, so being young is not a reason to assume chest pain is "just anxiety".
 
 Guidance from Mayo Clinic, the American Heart Association and Cleveland Clinic points to these general differences:
 
@@ -30,7 +30,7 @@ Guidance from Mayo Clinic, the American Heart Association and Cleveland Clinic p
 | Chest pain | Sharp or stabbing, stays in the middle of the chest | Pressure, squeezing or heaviness that may spread to the arm, jaw, neck or back |
 | How it starts | Suddenly, often with a surge of fear; can follow stress | Can be sudden or gradual; may come on during exertion |
 | How it changes | Peaks within about 10 minutes, then eases | Tends to persist or worsen |
-| How long | Usually settles within about half an hour (often 5–20 minutes) | Tends to persist, or comes and goes in waves; easing does not rule it out |
+| How long | Usually settles within about half an hour | Tends to persist, or comes and goes in waves; easing does not rule it out |
 | Other signs | Tingling, trembling, feeling unreal | Cold sweat, light-headedness |
 
 **These are tendencies, not a test.** Symptoms overlap: dread, nausea and breathlessness can occur in both, and the American Heart Association notes that women are somewhat more likely to have symptoms such as breathlessness, nausea, or back or jaw pain. All three sources give the same rule: if in doubt, don't wait to see whether it passes; seek urgent care straight away. That matters most if you have had heart problems before, have risk factors such as diabetes, high blood pressure or smoking, or have never had a panic attack.
@@ -50,7 +50,7 @@ The exact cause isn't fully understood, according to both the NHS and Mayo Clini
 Some physical problems and substances can cause the same symptoms. Before diagnosing panic, doctors typically check:
 
 - **Thyroid function** with a blood test (Mayo Clinic).
-- **The heart**, usually with an ECG, for heart disease or an abnormal heart rhythm.
+- **The heart**, usually with an ECG (Mayo Clinic), for heart disease or an abnormal heart rhythm.
 - **Breathing (respiratory) problems** (Cleveland Clinic).
 - **Substances:** doctors also consider substance use or withdrawal (Merck Manual); MedlinePlus names caffeine, cocaine and other stimulants as triggers to avoid.
 
@@ -126,7 +126,7 @@ Yes. Some people wake from sleep in the middle of an attack. If night-time chest
 
 ### Is panic disorder curable?
 
-Panic disorder is treatable. Mayo Clinic describes psychotherapy as an effective first choice, and the NHS lists talking therapy and medicine as the main treatments; many people reduce or stop their attacks.
+Panic disorder is treatable. Mayo Clinic describes psychotherapy as an effective first choice, and the NHS lists talking therapy and medicine as the main treatments. Mayo Clinic says symptoms often improve significantly within months of starting treatment.
 
 ---
 
