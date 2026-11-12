@@ -116,7 +116,7 @@
       "slug": "job-titles",
       "title": "Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government",
       "source": "plan #34",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -209,9 +209,7 @@
       "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
     }
   ],
-  "pendingImages": [
-    "job-titles"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

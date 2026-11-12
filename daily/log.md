@@ -242,3 +242,8 @@ Unsure / to check:
 
 Image prompts for 2026-11-12:
 - Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government: create image for this article topic without any text
+
+### 2026-11-12 (later): cover added
+The owner sent the image for job-titles. Converted to WebP (1536×1024, q80; saved as `daily/images/job-titles.webp`), imported into Wix Media from the repo's raw URL, and set as the cover:
+- job-titles → c0f544_b67c5838e2de464498cc5477da3d8515~mv2.webp (faceless org-chart figures, laptop, bank and Parliament-style building; no text)
+Removed from `pendingImages`; pre-render rebuilt (371 pages, published true).
