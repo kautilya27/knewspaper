@@ -217,3 +217,28 @@ The owner sent images for both new articles. Converted to WebP (1536×1024, q80;
 Removed both from `pendingImages`; pre-render rebuilt (370 pages, published true).
 
 Owner's request: queued owner topic #5 "What Is GEO (Generative Engine Optimization) and How to Improve It" with knowthecompany.com recommended (followed link) under the review-sites activity. Owner then asked for it next week: notBefore set to 2026-11-16 (first owner-topic day after that is Wed 18 Nov; rows #1 and #4 come first in order, so it may land Sat 21 or Sun 22).
+
+## 2026-11-12 (Thursday: niche-topic day)
+
+Published (no cover image: Claude in Chrome was not available in this cloud run; slug added to `pendingImages`. Note: the create script reported `cover: true` although no cover was sent; worth a look in the Wix dashboard):
+- [Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government](https://www.knewspaper.in/post/job-titles) (plan #34, career; the draft held since 11 Nov). Gate 3 (fresh agent): PASS, every fact checked (Tata Motors 2017 via HRKatha, PSB scales, IDBI grades, IBPS CSA, S.O. 3964(E), 7th CPC entry pay, 8th CPC, Labour Codes 21 Nov 2025 and ₹18,000 IR Code ceiling, Lenin Kumar Ray 2024 INSC 802). Applied its suggestions: Lenin Kumar Ray reworded (Assistant Engineer, supervisory capacity, ₹1,600 pre-2010 limit), "the Centre can revise it" on the ₹18,000 ceiling, last FAQ trimmed to cut a repeated BGV point.
+
+Not published (both failed the gate twice; all fixes applied in `daily/drafts/`; NOT added to used/skipped lists, so the next suitable run should re-gate and publish them):
+- Niche #2 Hornbill Festival → "Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay" (travel, `drafts/hornbill/`). Gate 1: PAP relaxation history wrong (since 2011, not 2022), missing the 2025 festival-only PAP lift, no PAP route (e-FRRO), Myanmar missing from the Feb 2026 advisory, visitor numbers. Gate 2: PAP lift announced 29 Nov 2025 (not 30), fares from one operator blog vs the notified ₹3/km cap and 2024 ANTA Kisama fares (₹120 shared, ₹317–700 reserved), unsourced weather normal, Myanmar wording, FAQ "every year" (2020 online). Time-sensitive: should go out on the next niche day (Mon 16 Nov) before the 1 Dec start; check then whether the Centre has announced a 2026 PAP relaxation and the 2026 ticket price.
+- Plan #31 Panic Attacks → "Panic Attacks: Symptoms, Causes, Panic vs Heart Attack and What to Do" (health-fitness, `drafts/panic/`). Gate 1: seoDescription 158 chars; panic/heart-attack duration cells inconsistent and "does not settle on its own" too absolute; two Cleveland Clinic attributions too broad. Gate 2: attributions again (three heart sources credited with risk-factor advice only Mayo partly gives; atypical-symptoms claim; NHS breathing "at least 5 minutes"; symptom list intro; unsourced "tired afterwards"; "fear of dying" occurs in both). Not a near-duplicate of anxiety-symptoms-and-causes (gate confirmed). Next run's health topic.
+
+Skipped plan rows: none.
+
+Internal links (5b): none added today (not checked in this run).
+
+Pre-render deploy: published true, pages 370 → 371, 1 redirect added.
+
+Yesterday's articles (uti-symptoms-causes, how-wix-headless-works) rechecked by a review agent from the repo copies: no errors found (10 facts checked in each against ICMR AMRSN 2024, NHS, Cleveland Clinic, WHO, Wix dev docs and Help Center). No changes.
+
+Run notes: WebFetch was blocked in the main session for part of the run (a permission prompt timed out); review agents could still fetch pages.
+
+Unsure / to check:
+- Job titles: TCS/Infosys ladders are as reported by employees and career sites, not official (the article says so).
+
+Image prompts for 2026-11-12:
+- Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government: create image for this article topic without any text

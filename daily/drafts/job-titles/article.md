@@ -80,9 +80,9 @@ These are starting points of each level; dearness allowance and other allowances
 
 ## Your title doesn't decide your legal rights
 
-Many people assume a "Manager" title means labour-law protections don't apply. Indian courts look at the work, not the label. In *Lenin Kumar Ray v. Express Publications* (2024), the Supreme Court held that whether someone is a "workman" under the Industrial Disputes Act depends on the duties they actually perform, not merely on their designation. The test works both ways: in that case the employee, an engineer, was held *not* to be a workman because his duties were mainly administrative and supervisory and his pay was above the wage limit then in force.
+Many people assume a "Manager" title means labour-law protections don't apply. Indian courts look at the work, not the label. In *Lenin Kumar Ray v. Express Publications* (2024), the Supreme Court held that whether someone is a "workman" under the Industrial Disputes Act depends on the duties they actually perform, not merely on their designation. The test works both ways: in that case the employee, an Assistant Engineer, was held *not* to be a workman because he was working in a supervisory capacity (he supervised two junior engineers) and his pay was above the wage limit then in force (₹1,600 a month under the pre-2010 law).
 
-The four Labour Codes, which came into force on 21 November 2025, keep that approach. Under the Industrial Relations Code, people in mainly managerial or administrative jobs are excluded from the definition of "worker", and so are supervisors earning above a wage ceiling (₹18,000 a month, up from ₹10,000 under the old law). A grand title on a modest supervisory salary does not by itself take you out of the worker definition.
+The four Labour Codes, which came into force on 21 November 2025, keep that approach. Under the Industrial Relations Code, people in mainly managerial or administrative jobs are excluded from the definition of "worker", and so are supervisors earning above a wage ceiling (₹18,000 a month, up from ₹10,000 under the old law; the Centre can revise it). A grand title on a modest supervisory salary does not by itself take you out of the worker definition.
 
 ## How to write your job title on a resume
 
@@ -111,4 +111,4 @@ In public sector banks, Assistant Manager is the Scale I entry post for probatio
 
 ### Can I write a different job title on my resume than my official one?
 
-You can add a plain-English description in brackets, but the title itself should match your official designation. Background checks compare it with your employer's records, and a mismatch can delay or cancel an offer.
+Keep the official designation as the title; you can add a plain-English description in brackets, such as "Associate Consultant (backend developer, Java)".

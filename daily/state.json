@@ -1,226 +1,236 @@
 {
- "usedPlan": [
-  19,
-  20,
-  21,
-  22,
-  24,
-  25,
-  26,
-  27,
-  32,
-  30
- ],
- "published": [
-  {
-   "date": "2026-11-06",
-   "slug": "belly-fat",
-   "title": "Belly Fat: Causes, Safe Waist Size for Indians and How to Reduce It",
-   "source": "plan #20",
-   "cover": true
+  "usedPlan": [
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    32,
+    30,
+    34
+  ],
+  "published": [
+    {
+      "date": "2026-11-06",
+      "slug": "belly-fat",
+      "title": "Belly Fat: Causes, Safe Waist Size for Indians and How to Reduce It",
+      "source": "plan #20",
+      "cover": true
+    },
+    {
+      "date": "2026-11-06",
+      "slug": "tell-me-about-yourself",
+      "title": "Tell Me About Yourself: How to Answer, With Examples for Freshers and Experienced",
+      "source": "plan #19",
+      "cover": true
+    },
+    {
+      "date": "2026-11-07",
+      "slug": "depression-symptoms-causes",
+      "title": "Depression: Symptoms, Causes and Where to Get Help in India",
+      "source": "plan #21",
+      "cover": true
+    },
+    {
+      "date": "2026-11-07",
+      "slug": "volume-of-a-sphere",
+      "title": "Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes",
+      "source": "plan #22",
+      "cover": true
+    },
+    {
+      "date": "2026-11-07",
+      "slug": "how-to-use-claude-for-free",
+      "title": "How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026)",
+      "source": "owner #2",
+      "cover": true
+    },
+    {
+      "date": "2026-11-08",
+      "slug": "how-to-make-a-resume",
+      "title": "How to Make a Resume in India: Format, Personal Details and Worked Examples",
+      "source": "plan #24",
+      "cover": true
+    },
+    {
+      "date": "2026-11-08",
+      "slug": "types-of-covid-vaccines",
+      "title": "Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)",
+      "source": "plan #25",
+      "cover": true
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "ptsd-symptoms-causes",
+      "title": "PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India",
+      "source": "plan #26",
+      "cover": true
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "12-hour-and-24-hour-clock",
+      "title": "12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets",
+      "source": "plan #27",
+      "cover": true
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "guru-nanak-jayanti",
+      "title": "Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year",
+      "source": "niche #1",
+      "cover": true
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "what-if-1-dollar-equals-1-rupee",
+      "title": "What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained",
+      "source": "civics #1",
+      "cover": true
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "vertices-faces-edges",
+      "title": "What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids",
+      "source": "plan #32",
+      "cover": true
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "uti-symptoms-causes",
+      "title": "Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency",
+      "source": "plan #30",
+      "cover": true
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "how-wix-headless-works",
+      "title": "How Wix Headless Works: A Plain-English Guide for Website Owners",
+      "source": "owner #3",
+      "cover": true
+    },
+    {
+      "date": "2026-11-12",
+      "slug": "job-titles",
+      "title": "Job Titles in India: Designation Hierarchy in Companies, IT, Banks and Government",
+      "source": "plan #34",
+      "cover": false
+    }
+  ],
+  "skippedPlan": [
+    {
+      "order": 1,
+      "reason": "duplicate of add-vs-adhd"
+    },
+    {
+      "order": 2,
+      "reason": "duplicate of translation-maths"
+    },
+    {
+      "order": 3,
+      "reason": "duplicate of how-to-stop-procrastinating"
+    },
+    {
+      "order": 4,
+      "reason": "duplicate of interview-questions-and-answers"
+    },
+    {
+      "order": 5,
+      "reason": "duplicate of how-to-initiate-intimacy"
+    },
+    {
+      "order": 6,
+      "reason": "duplicate of anxiety-symptoms-and-causes"
+    },
+    {
+      "order": 7,
+      "reason": "duplicate of trigonometry-table"
+    },
+    {
+      "order": 8,
+      "reason": "duplicate of goals-vs-systems"
+    },
+    {
+      "order": 9,
+      "reason": "duplicate of resume-action-verbs"
+    },
+    {
+      "order": 10,
+      "reason": "duplicate of diabetes-diagnosis-and-treatment"
+    },
+    {
+      "order": 11,
+      "reason": "duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
+    },
+    {
+      "order": 12,
+      "reason": "duplicate of what-is-a-prime-number"
+    },
+    {
+      "order": 13,
+      "reason": "duplicate of morningmantras"
+    },
+    {
+      "order": 14,
+      "reason": "duplicate of biodata-format"
+    },
+    {
+      "order": 15,
+      "reason": "duplicate of kidney-stones-symptoms-causes"
+    },
+    {
+      "order": 16,
+      "reason": "duplicate of schizophrenia-symptoms-causes"
+    },
+    {
+      "order": 17,
+      "reason": "duplicate of surface-area-of-a-cylinder"
+    },
+    {
+      "order": 18,
+      "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
+    },
+    {
+      "order": 23,
+      "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
+    },
+    {
+      "order": 28,
+      "reason": "Atomic Habits summary: no information gain (same as #18; covered by small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems; web saturated with summaries)"
+    },
+    {
+      "order": 29,
+      "reason": "What is a CV: near-duplicate of how-to-make-a-resume, whose 'Resume, CV or biodata' section and FAQ already answer it for Indian readers"
+    },
+    {
+      "order": 33,
+      "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
+    }
+  ],
+  "pendingImages": [
+    "job-titles"
+  ],
+  "preparedImages": {
+    "how to stop procrastinating": {
+      "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
+      "width": 1600,
+      "height": 900,
+      "note": "made during setup on 2026-11-05; use as the cover if this topic is written"
+    }
   },
-  {
-   "date": "2026-11-06",
-   "slug": "tell-me-about-yourself",
-   "title": "Tell Me About Yourself: How to Answer, With Examples for Freshers and Experienced",
-   "source": "plan #19",
-   "cover": true
-  },
-  {
-   "date": "2026-11-07",
-   "slug": "depression-symptoms-causes",
-   "title": "Depression: Symptoms, Causes and Where to Get Help in India",
-   "source": "plan #21",
-   "cover": true
-  },
-  {
-   "date": "2026-11-07",
-   "slug": "volume-of-a-sphere",
-   "title": "Volume of a Sphere: Formula, Derivation, Worked Examples and Common Mistakes",
-   "source": "plan #22",
-   "cover": true
-  },
-  {
-   "date": "2026-11-07",
-   "slug": "how-to-use-claude-for-free",
-   "title": "How to Use Claude for Free: What the Free Plan Includes and Its Limits (2026)",
-   "source": "owner #2",
-   "cover": true
-  },
-  {
-   "date": "2026-11-08",
-   "slug": "how-to-make-a-resume",
-   "title": "How to Make a Resume in India: Format, Personal Details and Worked Examples",
-   "source": "plan #24",
-   "cover": true
-  },
-  {
-   "date": "2026-11-08",
-   "slug": "types-of-covid-vaccines",
-   "title": "Types of COVID-19 Vaccines: How Each Works and Which Ones India Approved (2026)",
-   "source": "plan #25",
-   "cover": true
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "ptsd-symptoms-causes",
-   "title": "PTSD: Symptoms, Causes, Complex PTSD and Where to Get Help in India",
-   "source": "plan #26",
-   "cover": true
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "12-hour-and-24-hour-clock",
-   "title": "12-Hour and 24-Hour Clock: Conversion Table, Rules and the Midnight Trap on Train Tickets",
-   "source": "plan #27",
-   "cover": true
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "guru-nanak-jayanti",
-   "title": "Guru Nanak Jayanti 2026: Date, Gurpurab Rituals and Why the Date Moves Each Year",
-   "source": "niche #1",
-   "cover": true
-  },
-  {
-   "date": "2026-11-10",
-   "slug": "what-if-1-dollar-equals-1-rupee",
-   "title": "What Would Happen If 1 US Dollar Were Equal to 1 Rupee? Explained",
-   "source": "civics #1",
-   "cover": true
-  },
-  {
-   "date": "2026-11-10",
-   "slug": "vertices-faces-edges",
-   "title": "What Are Vertices, Faces and Edges? Full Table, Euler's Formula and Curved Solids",
-   "source": "plan #32",
-   "cover": true
-  },
-  {
-   "date": "2026-11-11",
-   "slug": "uti-symptoms-causes",
-   "title": "Urinary Tract Infection (UTI): Symptoms, Causes and When It's an Emergency",
-   "source": "plan #30",
-   "cover": true
-  },
-  {
-   "date": "2026-11-11",
-   "slug": "how-wix-headless-works",
-   "title": "How Wix Headless Works: A Plain-English Guide for Website Owners",
-   "source": "owner #3",
-   "cover": true
-  }
- ],
- "skippedPlan": [
-  {
-   "order": 1,
-   "reason": "duplicate of add-vs-adhd"
-  },
-  {
-   "order": 2,
-   "reason": "duplicate of translation-maths"
-  },
-  {
-   "order": 3,
-   "reason": "duplicate of how-to-stop-procrastinating"
-  },
-  {
-   "order": 4,
-   "reason": "duplicate of interview-questions-and-answers"
-  },
-  {
-   "order": 5,
-   "reason": "duplicate of how-to-initiate-intimacy"
-  },
-  {
-   "order": 6,
-   "reason": "duplicate of anxiety-symptoms-and-causes"
-  },
-  {
-   "order": 7,
-   "reason": "duplicate of trigonometry-table"
-  },
-  {
-   "order": 8,
-   "reason": "duplicate of goals-vs-systems"
-  },
-  {
-   "order": 9,
-   "reason": "duplicate of resume-action-verbs"
-  },
-  {
-   "order": 10,
-   "reason": "duplicate of diabetes-diagnosis-and-treatment"
-  },
-  {
-   "order": 11,
-   "reason": "duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
-  },
-  {
-   "order": 12,
-   "reason": "duplicate of what-is-a-prime-number"
-  },
-  {
-   "order": 13,
-   "reason": "duplicate of morningmantras"
-  },
-  {
-   "order": 14,
-   "reason": "duplicate of biodata-format"
-  },
-  {
-   "order": 15,
-   "reason": "duplicate of kidney-stones-symptoms-causes"
-  },
-  {
-   "order": 16,
-   "reason": "duplicate of schizophrenia-symptoms-causes"
-  },
-  {
-   "order": 17,
-   "reason": "duplicate of surface-area-of-a-cylinder"
-  },
-  {
-   "order": 18,
-   "reason": "Atomic Habits book summary: no information gain over existing small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems, and the web is saturated with summaries"
-  },
-  {
-   "order": 23,
-   "reason": "Atomic Habits Chapter 1: no information gain (a chapter summary of a copyrighted book; ideas already covered by small-habits-big-changes-... and goals-vs-systems)"
-  },
-  {
-   "order": 28,
-   "reason": "Atomic Habits summary: no information gain (same as #18; covered by small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals and goals-vs-systems; web saturated with summaries)"
-  },
-  {
-   "order": 29,
-   "reason": "What is a CV: near-duplicate of how-to-make-a-resume, whose 'Resume, CV or biodata' section and FAQ already answer it for Indian readers"
-  },
-  {
-   "order": 33,
-   "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
-  }
- ],
- "pendingImages": [],
- "preparedImages": {
-  "how to stop procrastinating": {
-   "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
-   "width": 1600,
-   "height": 900,
-   "note": "made during setup on 2026-11-05; use as the cover if this topic is written"
-  }
- },
- "usedCivics": [
-  1
- ],
- "skippedCivics": [],
- "usedNiche": [
-  1
- ],
- "skippedNiche": [],
- "usedOwner": [
-  2,
-  3
- ],
- "skippedOwner": []
+  "usedCivics": [
+    1
+  ],
+  "skippedCivics": [],
+  "usedNiche": [
+    1
+  ],
+  "skippedNiche": [],
+  "usedOwner": [
+    2,
+    3
+  ],
+  "skippedOwner": []
 }
