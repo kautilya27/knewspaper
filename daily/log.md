@@ -260,3 +260,6 @@ Image prompts:
 
 ### 2026-11-12 (later): cover for panic-attacks-symptoms-causes
 Owner's image converted to WebP (1536×1024, q80; `daily/images/panic-attacks-symptoms-causes.webp`), imported into Wix Media and set as the cover: c0f544_c1cc4da205584cc2b102a735d546aa30~mv2.webp (a distressed woman, symptom icons, a man clutching his chest, a woman meditating; no text). Removed from `pendingImages`. Pre-render not yet rebuilt: waiting for the Hornbill image so both go out in one rebuild.
+
+### 2026-11-12 (later): cover for hornbill-festival
+Owner's image converted to WebP (1672×941, q80; `daily/images/hornbill-festival.webp`), imported into Wix Media and set as the cover: c0f544_aa24e29b88aa417bbe2db31739306960~mv2.webp (Naga dancers in front of a morung, with inset circles of a hornbill, a permit card and passport, a hill road and a guesthouse; the passport carries small unreadable lettering, used as sent). Removed from `pendingImages`. Pre-render rebuilt for both new covers (373 pages, published true).

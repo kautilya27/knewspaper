@@ -131,7 +131,7 @@
       "slug": "hornbill-festival",
       "title": "Hornbill Festival 2026: Dates, Entry Permit, How to Reach Kisama and Where to Stay",
       "source": "niche #2",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -224,9 +224,7 @@
       "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
     }
   ],
-  "pendingImages": [
-    "hornbill-festival"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
