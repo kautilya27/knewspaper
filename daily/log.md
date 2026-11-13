@@ -290,3 +290,10 @@ Image prompts for 2026-11-13:
 - Migraine: Symptoms, Causes, Triggers and When a Headache Is an Emergency: create image for this article topic without any text
 - Area of a Triangle Using Trigonometry (½ab sin C): Proof, Worked Examples and Syllabus: create image for this article topic without any text
 - What Is Per Capita Income? India's Latest Figures, State Gaps and the K-Shaped Economy Explained: create image for this article topic without any text (symbolic scene, no real people: e.g. a rupee coin stack beside a crowd silhouette and a rising/falling arrow)
+
+### 2026-11-13 (later): covers added
+The owner sent images for all three new articles. Converted to WebP (1672×941, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- migraine-symptoms-causes → c0f544_a95c24c494614833aa3d9ded5fb0fb27~mv2.webp (a woman holding her temples, brain illustration, trigger icons for sun, coffee, stress and sleep, an emergency inset; no text)
+- area-of-triangle-trigonometry → c0f544_7a1dc75767f4452d808144c078bfb4ac~mv2.webp (a student at a desk, a triangle with the included angle marked and one with its height; no text)
+- per-capita-income-india → c0f544_41770e00030942feb83079a1e0f6d899~mv2.webp (India map, figures on rising coin stacks, a K-shaped arrow, monument models; no real people; the monument models carry tiny unreadable lettering, used as sent)
+Removed all three from `pendingImages`; pre-render rebuilt (376 pages, published true).

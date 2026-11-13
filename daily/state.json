@@ -140,21 +140,21 @@
       "slug": "migraine-symptoms-causes",
       "title": "Migraine: Symptoms, Causes, Triggers and When a Headache Is an Emergency",
       "source": "plan #35",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-13",
       "slug": "area-of-triangle-trigonometry",
       "title": "Area of a Triangle Using Trigonometry (½ab sin C): Proof, Worked Examples and Syllabus",
       "source": "plan #37",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-13",
       "slug": "per-capita-income-india",
       "title": "What Is Per Capita Income? India's Latest Figures, State Gaps and the K-Shaped Economy Explained",
       "source": "civics #3",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -247,11 +247,7 @@
       "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
     }
   ],
-  "pendingImages": [
-    "migraine-symptoms-causes",
-    "area-of-triangle-trigonometry",
-    "per-capita-income-india"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
