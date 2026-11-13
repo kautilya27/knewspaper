@@ -1,4 +1,4 @@
-**Quick answer:** The 27th Hornbill Festival will be held from **1 to 10 December 2026** at the Naga Heritage Village in **Kisama**, about 12 km south of Kohima on NH-29. Indian visitors from outside Nagaland need an **Inner Line Permit (ILP)**, which costs **₹200 and is valid for 30 days** when applied for online at the state's ILP portal. Foreign visitors currently need a **Protected Area Permit (PAP)** and must register with the district Foreigners Registration Officer within 24 hours of arrival.
+**Quick answer:** The 27th Hornbill Festival will be held from **1 to 10 December 2026** at the Naga Heritage Village in **Kisama**, about 12 km south of Kohima on NH-29. Indian visitors from outside Nagaland need an **Inner Line Permit (ILP)**, which costs **₹200 and is valid for 30 days** when applied for online at the state's ILP portal. Foreign visitors normally need a **Protected Area Permit (PAP)**, but the Union Home Ministry has relaxed it for **1 to 10 December every year**, the festival days; foreigners must still register with the district Foreigners Registration Officer within 24 hours of arrival.
 
 The festival is run by the Government of Nagaland through its Tourism and Art & Culture departments. It was first held in December 2000, and its opening day, 1 December, is also Nagaland's Statehood Day (the state was inaugurated on 1 December 1963). The 2025 edition drew over two lakh visitors, so permits, transport and rooms need sorting out early.
 
@@ -13,7 +13,7 @@ The festival is run by the Government of Nagaland through its Tourism and Art & 
 | Nearest airport and railhead | Dimapur |
 | Entry ticket | ₹150 per head at Kisama in 2025 (2026 price not yet announced) |
 | Permit for Indians | ILP: ₹200, valid 30 days (online) |
-| Permit for foreigners | PAP plus FRO registration within 24 hours |
+| Permit for foreigners | PAP relaxed 1–10 Dec; PAP needed outside those days; FRO registration within 24 hours |
 | December weather in Kohima | Roughly 16–18°C by day and 5–9°C at night; colder spells later in the month |
 
 ## What happens at the festival
@@ -58,11 +58,11 @@ Applicants from Karbi Anglong, Dima Hasao, Karimganj (now Sribhumi) and Hailakan
 
 ### Protected Area Permit for foreign tourists
 
-The Union Home Ministry reimposed the Protected Area Regime in Nagaland, Manipur and Mizoram in December 2024, ending a relaxation that had been in place, with extensions, since 2011. As of 12 November 2026 it was still in force: the Nagaland government has asked the Centre to withdraw it before the festival, but no change had been announced.
+The Union Home Ministry reimposed the Protected Area Regime in Nagaland, Manipur and Mizoram in December 2024, ending a relaxation that had been in place, with extensions, since 2011. In 2025 the Centre lifted the PAP for the ten festival days only (1–10 December), announced on 29 November, with nationals of Afghanistan, China and Pakistan excluded.
 
-In 2025 the Centre lifted the PAP for the ten festival days only (1–10 December), announced on 29 November, with nationals of Afghanistan, China and Pakistan excluded. A similar step may come for 2026, but plan as if the PAP applies and check the news closer to the date.
+For 2026 and later years, the Home Ministry has gone further: in a letter dated 4 November 2026, it relaxed the Protected Area Regime in Nagaland from **1 to 10 December every year**, to coincide with the festival, as reported by The Morung Express and PTI on 12 November. The reports do not say whether the 2025 exclusions still apply, so nationals of the countries listed below should check with the FRRO or the Home Commissioner's office before travelling. Chief Minister Neiphiu Rio has asked the Centre to widen the window to 15 November–15 December for 2026 and to exempt foreign tourists year-round; as of 13 November those requests had not been granted. If you arrive before 1 December or stay after 10 December, you still need a PAP.
 
-What this means for foreign visitors, according to advisories from the Dimapur police (May 2025, repeated in February 2026):
+Outside the relaxation window, this is what applies to foreign visitors, according to advisories from the Dimapur police (May 2025, repeated in February 2026):
 
 - A **PAP** is needed to visit Nagaland, including Dimapur, Chümoukedima and Niuland.
 - Every foreigner must **register with the Foreigners Registration Officer (FRO)** of the district they visit within **24 hours of arrival**, whatever their age and including OCI cardholders.
@@ -126,7 +126,7 @@ Yes, Indian citizens from outside Nagaland need an Inner Line Permit. The online
 
 ### Can foreigners attend the Hornbill Festival?
 
-Yes, but they currently need a Protected Area Permit (applied for through the e-FRRO portal) and must register with the district Foreigners Registration Officer within 24 hours of arrival. In 2025 the PAP was lifted for the festival days only; nothing had been announced for 2026 by 12 November.
+Yes. The Home Ministry has relaxed the Protected Area Permit in Nagaland for 1–10 December every year, so foreigners can attend on the festival days without a PAP (nationals of countries that need prior approval should check first), but they must still register with the district Foreigners Registration Officer within 24 hours of arrival. Outside those dates a PAP (through the e-FRRO portal) is needed.
 
 ### How much is the Hornbill Festival entry ticket?
 

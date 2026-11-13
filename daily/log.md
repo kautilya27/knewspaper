@@ -263,3 +263,30 @@ Owner's image converted to WebP (1536×1024, q80; `daily/images/panic-attacks-sy
 
 ### 2026-11-12 (later): cover for hornbill-festival
 Owner's image converted to WebP (1672×941, q80; `daily/images/hornbill-festival.webp`), imported into Wix Media and set as the cover: c0f544_aa24e29b88aa417bbe2db31739306960~mv2.webp (Naga dancers in front of a morung, with inset circles of a hornbill, a permit card and passport, a hill road and a guesthouse; the passport carries small unreadable lettering, used as sent). Removed from `pendingImages`. Pre-render rebuilt for both new covers (373 pages, published true).
+
+## 2026-11-13 (Friday: civics day)
+
+Published (all three without a cover: Claude in Chrome was not available in this cloud run; slugs added to `pendingImages`; the create script again reported `cover: true` although no cover was sent):
+- [Migraine: Symptoms, Causes, Triggers and When a Headache Is an Emergency](https://www.knewspaper.in/post/migraine-symptoms-causes) (plan #35, health-fitness). Gate 1: FAIL (WHO DALY rank is among neurological conditions, not all diseases; Karnataka study sex ratio; AMF "nearly 2 in 3" not "up to 60%"; cluster headache durations) → fixed → gate 2 (fresh agent): PASS; applied its points (aura vs one-sided weakness urgency split, dropped "stopping caffeine" and "vomiting" red flag, Karnataka sex difference given as odds about twice as high).
+- [Area of a Triangle Using Trigonometry (½ab sin C): Proof, Worked Examples and Syllabus](https://www.knewspaper.in/post/area-of-triangle-trigonometry) (plan #37, education). Gate 1: FAIL on one line only (JEE Main "properties of triangles dropped in 2024" overstated) → reworded → gate 2: PASS; all worked examples recomputed by both agents.
+- [What Is Per Capita Income? India's Latest Figures, State Gaps and the K-Shaped Economy Explained](https://www.knewspaper.in/post/per-capita-income-india) (civics #3, finance). Gate 1: FAIL (IMF per capita rank 140–150 → ~150–155 of ~195 on the Oct 2026 WEO; SIAM figures are dispatches not sales; unsourced carmaker claim; NAS 2026 revision not mentioned) → fixed → gate 2: PASS including civics check 7 (no party or officeholder named; both sides on inequality and K-shape).
+
+Skipped: civics #2 ("Who is Rahul Gandhi? … 'Pappu' label explained") added to `skippedCivics`: a biography of a sitting Leader of Opposition built around a mocking nickname can't be written under the brief's civics rules (no party named, no officeholder praised or criticised by name, no nicknames as fact) without reading as partisan one way or the other. The owner may want to reword or drop that row.
+
+Fix to an earlier article: hornbill-festival (published 12 Nov). The Home Ministry, in a letter dated 4 Nov 2026 (reported by The Morung Express and PTI on 12 Nov), relaxed the Protected Area Regime in Nagaland for 1–10 December every year. Updated the quick answer, at-a-glance table, PAP section, FAQ and excerpt (republished with update-post-template; cover kept). The CM's requests for 15 Nov–15 Dec and a year-round exemption were noted as not granted as of 13 Nov. The reports don't say whether the 2025 nationality exclusions still apply; the article tells those nationals to check.
+Other articles from yesterday rechecked by a review agent: job-titles and panic-attacks-symptoms-causes, no errors (the Tele MANAS "20 languages, 24×7" PIB release could not be re-opened).
+
+Internal links (5b): none added; no older article text mentions migraine, per capita income or triangle area in a way where a link fits (headache mentions in depression/ptsd are about those conditions).
+
+Pre-render deploy: published true, pages 373 → 376, 3 redirects added.
+
+Unsure / to check:
+- Per capita income: MoSPI's NAS 2026 (31 Aug) trimmed 2025-26 nominal GDP but its press release restates no per capita figure; the article uses the 5 June PE figure (₹2,08,090) and says it may be revised. Update when MoSPI publishes revised per capita NNI (likely with the First Revised Estimates).
+- Per capita income: IMF Oct 2026 nominal per capita and the "Bangladesh slightly ahead" point come from news/compilation sites (Scroll, statisticstimes), not the IMF DataMapper directly; World Bank Atlas GNI per capita for India (~$2,760) not stated in the article.
+- Migraine: "the odds were about twice as high" (OR 2.1) from the Kulkarni 2015 abstract; the full text could not be opened by the second reviewer.
+- Triangle: JEE Main syllabus wording checked via coaching sites, not the NTA bulletin itself.
+
+Image prompts for 2026-11-13:
+- Migraine: Symptoms, Causes, Triggers and When a Headache Is an Emergency: create image for this article topic without any text
+- Area of a Triangle Using Trigonometry (½ab sin C): Proof, Worked Examples and Syllabus: create image for this article topic without any text
+- What Is Per Capita Income? India's Latest Figures, State Gaps and the K-Shaped Economy Explained: create image for this article topic without any text (symbolic scene, no real people: e.g. a rupee coin stack beside a crowd silhouette and a rising/falling arrow)
