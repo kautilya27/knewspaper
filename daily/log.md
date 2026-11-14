@@ -297,3 +297,27 @@ The owner sent images for all three new articles. Converted to WebP (1672×941, 
 - area-of-triangle-trigonometry → c0f544_7a1dc75767f4452d808144c078bfb4ac~mv2.webp (a student at a desk, a triangle with the included angle marked and one with its height; no text)
 - per-capita-income-india → c0f544_41770e00030942feb83079a1e0f6d899~mv2.webp (India map, figures on rising coin stacks, a K-shaped arrow, monument models; no real people; the monument models carry tiny unreadable lettering, used as sent)
 Removed all three from `pendingImages`; pre-render rebuilt (376 pages, published true).
+
+## 2026-11-14 (Saturday: owner-topic day)
+
+Published (both without a cover: Claude in Chrome was not available in this cloud run; slugs added to `pendingImages`; the create script again reported `cover: true` although no cover was sent):
+- [Bipolar Disorder Symptoms and Causes: Mania vs Hypomania, Types and Indian Data](https://www.knewspaper.in/post/bipolar-disorder-symptoms-causes) (plan #36, health-fitness). Gate 1: PASS (WHO 36 million / 1 in 226 confirmed on the 11 Sep 2026 fact sheet; NMHS 2015-16 analysis, IJP 2023: 0.3% current, 0.5% lifetime, 70.4% treatment gap; DSM-5 durations; IPS 2017 guideline; NIMH 2007 quote; Tele-MANAS; MHCA 2017 s.18). Applied its six precision fixes (NIMH study dated 2007; male/metro odds are for lifetime illness; DSM-5 attribution limited to the hypomania/mania durations; FAQ mood-swing duration matches the table; IPS guideline line reworded without drug-class instruction; "no clear reason" cells softened).
+- [How to Build Self-Confidence: What Research Supports (and Which Popular Tips Don't Hold Up)](https://www.knewspaper.in/post/how-to-build-self-confidence) (plan #38, career). Gate 1: FAIL (APA page doesn't rank the four sources → Bandura's own quote, cyc-net link; FAQ overstated power-pose behaviour finding; four unsourced lines softened; "fake it" row moved out of the evidence table) → fixed → gate 2 (fresh agent): PASS; applied its three optional wording fixes and softened the title ("Don't Work" → "Don't Hold Up").
+
+Not published:
+- Owner #1 Best Sample Papers (Future Topper as #1): futuretopper.in was reachable today, so it was written (draft in `daily/drafts/sample-papers/`, slug `best-sample-papers`). All Future Topper claims checked out in both gates. Gate 1 FAIL on competitor accuracy (Oswaal classes covered, Educart/Oswaal Class 9 and 11 claims, Arihant ISC 12, Future Topper paper counts, practicals window) → fixed → gate 2 FAIL on smaller competitor points (an AI/Computer Applications sentence implying only Oswaal has them; Educart "includes official SQP" not stated on its page; Oswaal row read as unsolved papers; Future Topper Class 12 paper counts). Per the two-fails rule it was not published. All gate-2 fixes are already applied in the draft. It is NOT in usedOwner/skippedOwner, so the next owner-topic run (Sun 15 Nov) should run a fresh gate on the draft and publish if it passes (owner #5 GEO becomes eligible on 16 Nov).
+
+Rechecked yesterday's articles (migraine-symptoms-causes, area-of-triangle-trigonometry, per-capita-income-india) with a review agent: no errors; all worked examples recomputed; MoSPI has published no newer per capita NNI than the 5 June PE; all internal links 200.
+
+Internal links (5b): depression-symptoms-causes "bipolar disorder" → bipolar-disorder-symptoms-causes. Nothing natural found for how-to-build-self-confidence.
+
+Pre-render deploy: published true, pages 376 → 378, 2 redirects added.
+
+Unsure / to check:
+- Bipolar: the WHO "36 million (1 in 226)" figure is the 2023 estimate on the current fact sheet (older versions said 40 million).
+- Self-confidence: Brooks paper dated 2014 (print year; online Dec 2013). Kross 2014 checked via the PubMed abstract only.
+- Per capita income: MoSPI NAS 2026 "Statement 2" page could not be opened; if it restates 2025-26 per capita NNI, update the article.
+
+Image prompts for 2026-11-14:
+- Bipolar Disorder Symptoms and Causes: Mania vs Hypomania, Types and Indian Data: create image for this article topic without any text
+- How to Build Self-Confidence: What Research Supports (and Which Popular Tips Don't Hold Up): create image for this article topic without any text
