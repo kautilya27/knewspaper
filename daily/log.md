@@ -321,3 +321,9 @@ Unsure / to check:
 Image prompts for 2026-11-14:
 - Bipolar Disorder Symptoms and Causes: Mania vs Hypomania, Types and Indian Data: create image for this article topic without any text
 - How to Build Self-Confidence: What Research Supports (and Which Popular Tips Don't Hold Up): create image for this article topic without any text
+
+### 2026-11-14 (later): covers added
+The owner sent images for both new articles. Converted to WebP (1672×941, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- how-to-build-self-confidence → c0f544_b5f3e0e538ce45618fb56827a6e2d2a0~mv2.webp (a young woman going from self-doubt to confidence, a brain, a checklist, steps to a trophy, a mirror; no text)
+- bipolar-disorder-symptoms-causes → c0f544_9d6512f32e714b0b9fe0f03a87ced6e3~mv2.webp (a split portrait of a low and a high mood under a blue/orange brain, symptom insets, an India map and a row of figures; no text)
+Removed both from `pendingImages`; pre-render rebuilt (378 pages, published true).

@@ -163,14 +163,14 @@
       "slug": "bipolar-disorder-symptoms-causes",
       "title": "Bipolar Disorder Symptoms and Causes: Mania vs Hypomania, Types and Indian Data",
       "source": "plan #36",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-14",
       "slug": "how-to-build-self-confidence",
       "title": "How to Build Self-Confidence: What Research Supports (and Which Popular Tips Don't Hold Up)",
       "source": "plan #38",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -263,10 +263,7 @@
       "reason": "Self Improvement (hub topic): no information gain; covered by books-for-self-development, small-habits-big-changes-..., goals-vs-systems and how-to-stop-procrastinating"
     }
   ],
-  "pendingImages": [
-    "bipolar-disorder-symptoms-causes",
-    "how-to-build-self-confidence"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
