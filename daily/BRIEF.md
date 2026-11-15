@@ -25,6 +25,7 @@ After 15 Dec, go back to the normal rules.
   4. Plan rows (`plan.csv`, in order, any category): **up to 2 per run**. The one-health-topic limit
      is lifted, but take at most 2 health/psychology topics per run and keep the health safety rules.
   5. Trending India topics: **up to 2 per run**.
+- **Held drafts first:** if `state.heldDrafts` has entries, start each run by giving each one a fresh quality gate (new review agent, full 3b checklist). Publish those that pass (they count towards the run's 5), fix and gate once more those that fail, and drop any that fail twice in that run (log the reasons, remove from `heldDrafts`). Remove published ones from `heldDrafts`. Time-sensitive ones go first.
 - **Daily cap:** count the entries in `state.published` dated today (India time); never let the day's total go above 10, whatever the per-run limit.
 - **Morning run only:** recheck yesterday's articles (all of them, with one review agent per 3–4
   articles) and do step 6 (missing images).

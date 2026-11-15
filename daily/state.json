@@ -16,7 +16,9 @@
     37,
     36,
     38,
-    40
+    40,
+    42,
+    41
   ],
   "published": [
     {
@@ -179,6 +181,13 @@
       "title": "Parkinson's Disease: Early Symptoms, Causes, Young-Onset Cases in India and Look-Alike Conditions",
       "source": "plan #40",
       "cover": true
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "area-of-a-trapezium",
+      "title": "Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9)",
+      "source": "plan #42",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -275,7 +284,9 @@
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "area-of-a-trapezium"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -296,12 +307,40 @@
   ],
   "usedNiche": [
     1,
-    2
+    2,
+    3,
+    4
   ],
   "skippedNiche": [],
   "usedOwner": [
     2,
     3
   ],
-  "skippedOwner": []
+  "skippedOwner": [],
+  "heldDrafts": [
+    {
+      "dir": "daily/drafts/huid",
+      "slug": "how-to-check-huid-number",
+      "source": "niche #3",
+      "note": "gate-2 fixes applied 15 Nov"
+    },
+    {
+      "dir": "daily/drafts/december-travel",
+      "slug": "best-places-to-visit-in-december-in-india",
+      "source": "niche #4",
+      "note": "gate-2 fixes applied 15 Nov; time-sensitive (December)"
+    },
+    {
+      "dir": "daily/drafts/autism",
+      "slug": "autism-spectrum-disorder-symptoms-causes",
+      "source": "plan #41",
+      "note": "gate-2 fix applied 15 Nov"
+    },
+    {
+      "dir": "daily/drafts/trending-1115",
+      "slug": "how-to-submit-life-certificate-for-pension",
+      "source": "trending",
+      "note": "gate-2 fixes applied 15 Nov; time-sensitive (30 Nov deadline)"
+    }
+  ]
 }

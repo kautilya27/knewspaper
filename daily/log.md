@@ -353,3 +353,23 @@ Image prompts for 2026-11-15:
 
 ### 2026-11-15 (later): cover added
 The owner sent the image for parkinsons-disease-symptoms-causes. Converted to WebP (1671×941, q80; `daily/images/parkinsons-disease-symptoms-causes.webp`), imported into Wix Media from the repo's raw URL, and set as the cover: c0f544_d1bbf40622234e0187a3a5c8d0d1406b~mv2.webp (a blue brain profile with the deep brain highlighted, a trembling hand, insets of a resting tremor, shuffling steps, a masked face and stooped posture, a neuron under a magnifier, brain scans on a clipboard; no readable text, the scan labels are tiny and unreadable, used as sent). Removed from `pendingImages`; pre-render rebuilt (379 pages, published true).
+
+### 2026-11-15 (midday): first run under the new volume rule (owner asked for up to 10 a day; this run was started early at the owner's request and counts as the afternoon run)
+
+Five drafts written in parallel by separate writer agents, each checked by a separate gate agent.
+
+Published (no cover; slug added to `pendingImages`):
+- [Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9)](https://www.knewspaper.in/post/area-of-a-trapezium) (plan #42, education). Gate 1: FAIL (one line: Merriam-Webster still uses "trapezium" for no parallel sides, not "older American usage") → fixed → gate 2: PASS; all examples recomputed by both agents. NCERT chapter facts (Ganita Prakash II ch. 7, Ganita Manjari I ch. 6) checked via secondary sources only (ncert.nic.in not fetchable).
+
+Held for the next run (failed gate 1 and gate 2 on small points; all gate-2 fixes applied; listed in `state.heldDrafts` for a fresh gate):
+- how-to-check-huid-number (niche #3): gate 1 — hallmarking fee now ₹75 (BIS Amendment Regulations, Sep 2026), app hides jeweller while "Available at Jeweller", app now shows gross weight; gate 2 — consumer testing fee is a 2022 figure for un-hallmarked items, Rule 49 attribution.
+- best-places-to-visit-in-december-in-india (niche #4): gate 1 — Nagaland ILP online-only since Jan 2025, Jaisalmer/Port Blair normals are WMO not IMD, unverified foreigner 24-hour registration; gate 2 — Pakyong airport has had no scheduled flights since June 2024.
+- autism-spectrum-disorder-symptoms-causes (plan #41): gate 1 — DEIC age range, IAP regression wording, girls sentence; gate 2 — DEICs mainly serve children up to 6 (RBSK 2.0 claim couldn't be verified).
+- how-to-submit-life-certificate-for-pension (trending: DoPPW Digital Life Certificate Campaign 5.0, deadline 30 Nov): gate 1 — "free" stated as fact, unsupported ill-pensioner line; gate 2 — campaign "priority groups" not in the release, family-pensioner October window unsourced.
+
+Brief: added a hard cap of 10 per India day and a "held drafts first" rule.
+
+Pre-render deploy: published true, pages 379 → 380, 1 redirect added.
+
+Image prompts:
+- Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9): create image for this article topic without any text
