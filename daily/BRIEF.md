@@ -9,7 +9,7 @@ Every day this job publishes **up to 3 new articles** (only ones that pass the q
 Each gets a featured image made with the owner's ChatGPT (in their Chrome), when Chrome is reachable.
 Never publish a duplicate of an article already on the site.
 
-## Temporary: up to 10 a day, 16 Nov to 15 Dec 2026 (owner's decision of 15 Nov 2026)
+## Temporary: up to 10 a day, 15 Nov (afternoon run) to 15 Dec 2026 (owner's decision of 15 Nov 2026)
 
 Until 15 Dec 2026 (India time) this replaces the "up to 3" limit and the 2+1 topic mix below.
 After 15 Dec, go back to the normal rules.
