@@ -9,6 +9,29 @@ Every day this job publishes **up to 3 new articles** (only ones that pass the q
 Each gets a featured image made with the owner's ChatGPT (in their Chrome), when Chrome is reachable.
 Never publish a duplicate of an article already on the site.
 
+## Temporary: up to 10 a day, 16 Nov to 15 Dec 2026 (owner's decision of 15 Nov 2026)
+
+Until 15 Dec 2026 (India time) this replaces the "up to 3" limit and the 2+1 topic mix below.
+After 15 Dec, go back to the normal rules.
+
+- **Two runs a day** (about 09:36 and 15:36 IST), **up to 5 articles each**, so at most 10 a day.
+  The maximum is still not a target: every article must pass the quality gate (3b). The owner chose
+  "up to 10, keep the gate" knowing some days will publish fewer.
+- **Topic sources each run** (in this order of priority, skipping any that fail the duplicate or
+  information-gain checks):
+  1. Owner topics (2d) on their days, as before (morning run only).
+  2. Civics & economy (2b): **1 per day, every day** (morning run), not only Tue/Fri.
+  3. Niche-site topics (2c): **up to 2 per run, every day**. Add 20 rows when fewer than 10 are left.
+  4. Plan rows (`plan.csv`, in order, any category): **up to 2 per run**. The one-health-topic limit
+     is lifted, but take at most 2 health/psychology topics per run and keep the health safety rules.
+  5. Trending India topics: **up to 2 per run**.
+- **Morning run only:** recheck yesterday's articles (all of them, with one review agent per 3–4
+  articles) and do step 6 (missing images).
+- Rebuild the site (step 7) once at the end of each run. Each run starts by pulling `main`, so it
+  sees the other run's `state.json`; commit and push at the end of each run.
+- If a run is running long, publish what has passed the gate, save state and stop; the next run
+  carries on. Never skip the gate to save time.
+
 ## Quality comes before the number (read this first)
 
 Google demotes whole sites for "scaled content abuse": many AI-written pages that add nothing new.
