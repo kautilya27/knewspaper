@@ -435,3 +435,16 @@ Image prompts:
 - Best Places to Visit in December in India (2026): Weather, Crowds and Permits at a Glance: create image for this article topic without any text
 - How to Check Gold Purity With HUID: BIS Hallmark Marks and the BIS Care App: create image for this article topic without any text
 - Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India: create image for this article topic without any text
+
+### 2026-11-15 (evening): covers for the four afternoon articles
+The owner sent all four images. Converted them to WebP (q80, saved in `daily/images/`), imported them into Wix Media from the repo's raw URL, and set them as covers:
+- how-to-submit-life-certificate-for-pension → c0f544_206b89846cec4014a62fbca16555ea2e~mv2.webp (an older couple at a laptop, a face-scan screen, a calendar with a circled date, a ticked form, coins; the calendar has small numbers, used as sent)
+- best-places-to-visit-in-december-in-india → c0f544_c0a3113c0b22475f97a9738a80d1e300~mv2.webp (a collage of snowy hills, a beach, tea gardens and a lakeside fort around a backpack, woolly cap and binoculars; no text)
+- how-to-check-huid-number → c0f544_82e838a4c5de42048a85e652c028c3e3~mv2.webp (a gold bangle under a magnifier showing a BIS-style mark, "22K" and a QR-like code, a phone with a BIS-style logo, scales; the hallmark is stylised: a real HUID is a 6-character code, not a QR code; used as sent)
+- autism-spectrum-disorder-symptoms-causes → c0f544_d1d50c83d2bd4aa3a3ab5ee495e1f97f~mv2.webp (a smiling boy at a table with blocks and puzzles, a rainbow infinity sign, a puzzle-piece head on a clipboard; no text)
+
+Removed all four from `pendingImages`.
+
+**The pre-render rebuild FAILED with HTTP 413.** The static site is 19.88 MiB, and Wix static hosting refuses anything over 20 MiB (see `wix-preview/prerender/README.md`). The covers are set in Wix, but the pre-rendered article, topic and blog pages still show the versions without them. Any future publish will hit the same wall.
+- Largest removable item: `seo-backups/` (3.43 MB of JSON backups from 4–5 Nov) is served as part of the site but isn't in the repo.
+- Asked the owner whether to move those backups out of the hosted site.

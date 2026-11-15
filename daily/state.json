@@ -194,28 +194,28 @@
       "slug": "how-to-submit-life-certificate-for-pension",
       "title": "Life Certificate for Pensioners 2026: Last Date, How to Submit Online and What If You Miss It",
       "source": "trending",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-15",
       "slug": "best-places-to-visit-in-december-in-india",
       "title": "Best Places to Visit in December in India (2026): Weather, Crowds and Permits at a Glance",
       "source": "niche #4",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-15",
       "slug": "how-to-check-huid-number",
       "title": "How to Check Gold Purity With HUID: BIS Hallmark Marks and the BIS Care App",
       "source": "niche #3",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-15",
       "slug": "autism-spectrum-disorder-symptoms-causes",
       "title": "Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India",
       "source": "plan #41",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -312,12 +312,7 @@
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
     }
   ],
-  "pendingImages": [
-    "how-to-submit-life-certificate-for-pension",
-    "best-places-to-visit-in-december-in-india",
-    "how-to-check-huid-number",
-    "autism-spectrum-disorder-symptoms-causes"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
