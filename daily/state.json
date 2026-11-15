@@ -187,7 +187,7 @@
       "slug": "area-of-a-trapezium",
       "title": "Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9)",
       "source": "plan #42",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -284,9 +284,7 @@
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
     }
   ],
-  "pendingImages": [
-    "area-of-a-trapezium"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

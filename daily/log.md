@@ -373,3 +373,6 @@ Pre-render deploy: published true, pages 379 → 380, 1 redirect added.
 
 Image prompts:
 - Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9): create image for this article topic without any text
+
+### 2026-11-15 (afternoon): trapezium cover added
+Owner's image converted to WebP (1671×941, q80; `daily/images/area-of-a-trapezium.webp`), imported into Wix Media and set as the cover: c0f544_89bdcf9ac12d4a42a58b71756ed703cd~mv2.webp (a shaded trapezium with its height marked on a whiteboard, small diagrams splitting it into triangles and a rectangle, a desk with books, a calculator, a compass and a set square; no text). Removed from `pendingImages`; pre-render rebuilt (380 pages, published true).
