@@ -188,6 +188,34 @@
       "title": "Area of a Trapezium: Formula, Derivation and Worked Examples (NCERT Class 8 and 9)",
       "source": "plan #42",
       "cover": true
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "how-to-submit-life-certificate-for-pension",
+      "title": "Life Certificate for Pensioners 2026: Last Date, How to Submit Online and What If You Miss It",
+      "source": "trending",
+      "cover": false
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "best-places-to-visit-in-december-in-india",
+      "title": "Best Places to Visit in December in India (2026): Weather, Crowds and Permits at a Glance",
+      "source": "niche #4",
+      "cover": false
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "how-to-check-huid-number",
+      "title": "How to Check Gold Purity With HUID: BIS Hallmark Marks and the BIS Care App",
+      "source": "niche #3",
+      "cover": false
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "autism-spectrum-disorder-symptoms-causes",
+      "title": "Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India",
+      "source": "plan #41",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -284,7 +312,12 @@
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "how-to-submit-life-certificate-for-pension",
+    "best-places-to-visit-in-december-in-india",
+    "how-to-check-huid-number",
+    "autism-spectrum-disorder-symptoms-causes"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -307,7 +340,8 @@
     1,
     2,
     3,
-    4
+    4,
+    6
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -317,28 +351,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/huid",
-      "slug": "how-to-check-huid-number",
-      "source": "niche #3",
-      "note": "gate-2 fixes applied 15 Nov"
-    },
-    {
-      "dir": "daily/drafts/december-travel",
-      "slug": "best-places-to-visit-in-december-in-india",
-      "source": "niche #4",
-      "note": "gate-2 fixes applied 15 Nov; time-sensitive (December)"
-    },
-    {
-      "dir": "daily/drafts/autism",
-      "slug": "autism-spectrum-disorder-symptoms-causes",
-      "source": "plan #41",
-      "note": "gate-2 fix applied 15 Nov"
-    },
-    {
-      "dir": "daily/drafts/trending-1115",
-      "slug": "how-to-submit-life-certificate-for-pension",
-      "source": "trending",
-      "note": "gate-2 fixes applied 15 Nov; time-sensitive (30 Nov deadline)"
+      "dir": "daily/drafts/rann-utsav",
+      "slug": "rann-utsav",
+      "source": "niche #6",
+      "note": "written 15 Nov afternoon; gate 1 FAIL (rannpermit.com now redirects to an unrelated site) and gate 2 FAIL (official permit portal not named: rannpermit.gujarat.gov.in per two Oct 2026 sources, but no agent could open it). Fixes applied except the portal URL; owner to confirm the portal, then give a fresh gate. Time-sensitive (season to 7 Mar 2027)."
     }
   ]
 }

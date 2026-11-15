@@ -376,3 +376,62 @@ Image prompts:
 
 ### 2026-11-15 (afternoon): trapezium cover added
 Owner's image converted to WebP (1671×941, q80; `daily/images/area-of-a-trapezium.webp`), imported into Wix Media and set as the cover: c0f544_89bdcf9ac12d4a42a58b71756ed703cd~mv2.webp (a shaded trapezium with its height marked on a whiteboard, small diagrams splitting it into triangles and a rectangle, a desk with books, a calculator, a compass and a set square; no text). Removed from `pendingImages`; pre-render rebuilt (380 pages, published true).
+
+### 2026-11-15 (15:36 scheduled afternoon run)
+The midday run had been logged as counting for the afternoon, but this scheduled run still fired. The day's total stays under the cap of 10 (6 published today), so this run worked through the held drafts first, as the brief says.
+
+Published (no covers; Claude in Chrome isn't available in this cloud run, so all four slugs went to `pendingImages`. The create script again reported `cover: true` although no cover was sent):
+- [Life Certificate for Pensioners 2026: Last Date, How to Submit Online and What If You Miss It](https://www.knewspaper.in/post/how-to-submit-life-certificate-for-pension) (trending, finance). Fresh gate: PASS. Applied its fixes:
+  - bank doorstep fee is "₹75 plus GST, check with your bank";
+  - re-employed or remarried pensioners can't use any DLC mode (face, fingerprint or iris);
+  - phone requirements now quoted from the Jeevan Pramaan FAQ (Android 7+, 4 GB RAM, 5 MP);
+  - softened the shorter-gap restoration line.
+- [Best Places to Visit in December in India (2026): Weather, Crowds and Permits at a Glance](https://www.knewspaper.in/post/best-places-to-visit-in-december-in-india) (niche #4, travel). Fresh gate: PASS. Applied its fixes:
+  - the meta no longer says every temperature normal is IMD's;
+  - the Tsomgo snow example is now the Feb 2026 rescue (2,700+ tourists);
+  - removed a stray blank line.
+  - Checked that MHA hadn't yet answered the CM's request for 15 Nov–15 Dec.
+- [How to Check Gold Purity With HUID: BIS Hallmark Marks and the BIS Care App](https://www.knewspaper.in/post/how-to-check-huid-number) (niche #3, fashion). Gate 1 FAIL: the district count was out of date. The Fourth Amendment Order (in force 3 Nov 2026) makes it 398 districts, not 392. Fixed that, dropped the phase count, and made these changes:
+  - the HUID-only sales rule now says it applies in mandatory districts;
+  - softened the registration step;
+  - complaint channels as PIB lists them (BIS Care app, manakonline.in, complaints@bis.gov.in);
+  - "old hallmark remains valid" is now attributed to PIB (2023);
+  - trimmed the rupee detour.
+  - Gate 2 (fresh agent): PASS. Applied one wording fix: the app labels the recorded weight as gross weight.
+- [Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India](https://www.knewspaper.in/post/autism-spectrum-disorder-symptoms-causes) (plan #41, health-fitness). Gate 1 FAIL: the DEIC description was pre-RBSK 2.0. Under the May 2026 RBSK 2.0 guidelines, DEICs serve 0–18 years, the team includes an audiologist and a special educator, and DEICs refer on to tertiary hospitals. Fixed that and made these changes:
+  - the 4 Ds are named in full, with autism under developmental delays;
+  - added RBSK 2.0's mental-health screening;
+  - "low birth weight" per WHO (NIMH says "very low");
+  - new seoTitle.
+  - Gate 2: PASS. Applied: anxiety, depression and eating disorders are more common in autistic people generally (NHS), not in girls specifically.
+
+Not published (held):
+- Rann Utsav 2026-27 (niche #6, new draft `daily/drafts/rann-utsav/`).
+  - Gate 1 FAIL: the draft sent readers to rannpermit.com, which now redirects to an unrelated domain. Fixed:
+    - added a warning against look-alike sites;
+    - dropped the 2018 vehicle fees;
+    - listed only upcoming new moons;
+    - distance now 80–85 km;
+    - softened the tent-facilities line.
+  - Gate 2 FAIL: the official portal still isn't named. Two Oct 2026 sources give rannpermit.gujarat.gov.in, but no agent could open it to confirm.
+  - Kept in `heldDrafts`. **Owner: please open rannpermit.gujarat.gov.in once. If it is the Kutch/Gujarat permit portal, the next run can add it and gate again.** Niche #6 added to `usedNiche`.
+
+No new topics beyond these: this run hit the gate-and-fix budget with the four held drafts and one new draft.
+
+Internal links (5b): hornbill-festival, "Inner Line Permit" → best-places-to-visit-in-december-in-india. Not found, so no link added:
+- add-vs-adhd → autism (neither "autism" nor "autism spectrum disorder" appears in it);
+- how-to-file-itr-online → life certificate ("pension income" doesn't appear in it).
+
+Pre-render deploy: published true, pages 380 → 384, 4 redirects added.
+
+Unsure / to check:
+- Life certificate: the UIDAI DLC FAQ PDF couldn't be fetched. "UIDAI says a certificate is not generated if wrong details are entered" rests on it.
+- December guide: the Kohima, Shillong, Varanasi and Kochi December normals weren't re-verified against IMD's tables (pages blocked).
+- HUID: the AHC consumer testing fee (₹200 for up to 4 articles) is a 2022 figure. The article says to ask for the current rate.
+- HUID is filed under "fashion", following the niche row; finance might fit better.
+
+Image prompts:
+- Life Certificate for Pensioners 2026: Last Date, How to Submit Online and What If You Miss It: create image for this article topic without any text
+- Best Places to Visit in December in India (2026): Weather, Crowds and Permits at a Glance: create image for this article topic without any text
+- How to Check Gold Purity With HUID: BIS Hallmark Marks and the BIS Care App: create image for this article topic without any text
+- Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India: create image for this article topic without any text

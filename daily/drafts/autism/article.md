@@ -37,7 +37,7 @@ The IAP's 2017 consensus statement notes that a quarter to a third of autistic c
 
 ### Autism in girls
 
-The NHS says autism can be harder to spot in girls, who may copy how other children play and seem to cope socially. Autistic girls may also be more likely to have anxiety, depression or an eating disorder.
+The NHS says autism can be harder to spot in girls, who may copy how other children play and seem to cope socially. The NHS adds that autistic people in general are more likely to have anxiety, depression or an eating disorder.
 
 ### Conditions that often occur with autism
 
@@ -53,7 +53,7 @@ Research points to genes and to some factors before or around birth. These raise
 | Parents' age | Older parents are linked to a higher likelihood (WHO, NIMH) |
 | Pregnancy | Diabetes in the mother, and exposure to some air pollutants or heavy metals before birth (WHO) |
 | Certain medicines in pregnancy | Valproate and carbamazepine, used for epilepsy and other conditions (WHO). Don't stop any prescribed medicine on your own; talk to your doctor |
-| Birth | Being born premature, very low birth weight, or severe birth complications (WHO, NIMH) |
+| Birth | Being born premature, low birth weight, or severe birth complications (WHO; NIMH notes very low birth weight) |
 
 ### What does not cause autism
 
@@ -65,7 +65,7 @@ Research points to genes and to some factors before or around birth. These raise
 Don't wait for a child to "outgrow" a delay. WHO says timely, evidence-based psychosocial support can improve communication and social skills.
 
 1. **Talk to a paediatrician.** The IAP recommends that all children be screened with a standard autism screening tool at **18 and 24 months**. Tools it names include the M-CHAT and the Trivandrum Autism Behavior Checklist.
-2. **Use RBSK and the DEIC.** Under the Rashtriya Bal Swasthya Karyakram (RBSK), health teams screen children from birth to 18 years for the "4 Ds", one of which is developmental delays including disabilities. Children can be referred to the DEIC at the district hospital. DEICs focus mainly on children up to 6 years and have a team that can include a paediatrician, psychologist, and speech, occupational and physiotherapists, with family support for autism; older children are treated through other government health facilities, with the DEIC as a referral link.
+2. **Use RBSK and the DEIC.** Under the Rashtriya Bal Swasthya Karyakram (RBSK), health teams screen children from birth to 18 years for the "4 Ds": defects at birth, diseases, deficiencies and developmental delays (autism is listed under developmental delays). Under the RBSK 2.0 guidelines released by the Health Ministry in May 2026, screening also covers mental health and behavioural concerns. Children can be referred to the DEIC at the district hospital, which, under RBSK 2.0, assesses and supports children from birth to 18 years. Its team can include a paediatrician, psychologist, audiologist, speech, occupational and physiotherapists and a special educator, and it can refer a child on to a tertiary hospital for further tests.
 3. **Get a full evaluation.** Diagnosis is usually made by a team: a developmental paediatrician, child psychiatrist or clinical psychologist, with speech and occupational therapists. A hearing test is often part of it.
 4. **Adults can be assessed too.** NIMH notes autism can be diagnosed at any age. Ask the psychiatry department of a government medical college or a large hospital.
 

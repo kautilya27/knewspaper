@@ -78,13 +78,12 @@ Shillong needs no ILP and is lively at Christmas. Most travellers reach Guwahati
 
 ### Gangtok
 
-Gangtok itself needs no permit for Indians. Day trips to Tsomgo Lake and Nathu La, and trips to North Sikkim (Lachung, Lachen), need permits. A registered tour operator usually arranges them, and Sikkim has been moving the process online with QR-coded passes. Foreign nationals need a Restricted Area Permit for Sikkim. Snow can close the road beyond Tsomgo at short notice. India Today NE reported exactly that in April 2026, and it happens more often in winter. Plan these excursions as "if open".
+Gangtok itself needs no permit for Indians. Day trips to Tsomgo Lake and Nathu La, and trips to North Sikkim (Lachung, Lachen), need permits. A registered tour operator usually arranges them, and Sikkim has been moving the process online with QR-coded passes. Foreign nationals need a Restricted Area Permit for Sikkim. Snow can close the road beyond Tsomgo at short notice. In February 2026, heavy snow stranded more than 2,700 tourists near Tsomgo Lake before they were rescued, India Today NE reported. Plan these excursions as "if open".
 
 ## What to skip in December
 
 - **High-altitude Ladakh and Spiti by road:** high passes are snowbound. Around Manali, the local administration usually stops tourist vehicles beyond Gulaba towards Rohtang once black ice forms. The Tribune reported this happening in late November 2023.
 - **Char Dham:** Kedarnath, Badrinath, Gangotri and Yamunotri close for winter in October–November every year.
-
 
 ## Frequently asked questions
 

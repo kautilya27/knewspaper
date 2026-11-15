@@ -23,7 +23,7 @@ State Government pensioners follow their own state's rules, so check with your t
 
 ### 1. Face authentication from home (the quickest)
 
-This uses your phone's camera and Aadhaar, so you need no fingerprint scanner or bank visit. DoPPW says it works on both Android and iPhone. UIDAI's FAQ recommends Android 9 or above, a camera of at least 13 MP, about 500 MB of free space and a working internet connection, though the official Jeevan Pramaan app guide lists a 5 MP camera as the minimum.
+This uses your phone's camera and Aadhaar, so you need no fingerprint scanner or bank visit. DoPPW says it works on both Android and iPhone. The Jeevan Pramaan portal's FAQ lists Android 7.0 or above, 4 GB RAM, 500 MB of free space and at least a 5 MP camera, plus a working internet connection.
 
 Step by step, based on the official Jeevan Pramaan Face App guide:
 
@@ -56,7 +56,7 @@ Visit the branch that pays your pension and either sign the life certificate for
 For pensioners who can't travel, two doorstep options are listed in UIDAI's FAQ:
 
 - **India Post Payments Bank (IPPB):** a postman or Gramin Dak Sevak comes home with a biometric device. Book through the Postinfo app or at your post office. Nominal fee: ₹70.
-- **Doorstep Banking by public sector banks:** book through the Doorstep Banking app, website or toll-free number. Nominal fee: ₹75.
+- **Doorstep Banking by public sector banks:** book through the Doorstep Banking app, website or toll-free number. Fee: ₹75 plus GST per request at banks such as Union Bank of India; check with your bank.
 
 During the November 2026 campaign, DoPPW says doorstep services will also be provided wherever required.
 
@@ -72,19 +72,19 @@ If you can't appear in person at all, a life certificate signed by a designated 
 | Fingerprint or iris | Bank, post office or CSC | Aadhaar, PPO details | No fee listed for banks; ask the CSC about any service charge |
 | In person | Pension-paying branch | Aadhaar, PPO number, passbook | No fee listed |
 | IPPB doorstep | Home | Aadhaar, PPO details | ₹70 |
-| Bank doorstep service | Home | Aadhaar, PPO details | ₹75 |
+| Bank doorstep service | Home | Aadhaar, PPO details | ₹75 plus GST (check with your bank) |
 
 ## Before you start: a short checklist
 
 - **Aadhaar linked to your pension account.** UIDAI says you must link Aadhaar to the bank account where your pension comes before you can use Jeevan Pramaan.
 - **PPO number handy.** It is on your Pension Payment Order and often in your passbook.
-- **Re-employed or remarried?** UIDAI says re-employed and remarried pensioners cannot use face authentication. They have to submit the conventional way, at the bank or through an authorised official.
+- **Re-employed or remarried?** The Jeevan Pramaan FAQ says re-employed and remarried pensioners cannot use a Digital Life Certificate at all (face, fingerprint or iris). They have to submit the conventional way, at the bank or through an authorised official.
 
 ## What happens if you miss 30 November
 
 According to UIDAI's FAQ, if the life certificate isn't submitted in November, **pension stops from December**. It is not cancelled. Once you submit the certificate and the bank updates its records, the pension restarts and the arrears are paid.
 
-One limit matters: if the gap is **three years or more**, the bank cannot simply restart the pension. It has to be sanctioned again by the competent authority through the Central Pension Accounting Office (CPAO). For shorter gaps, the bank can pay the arrears after orders from the bank manager or officer in charge.
+One limit matters: if the gap is **three years or more**, the bank cannot simply restart the pension. It has to be sanctioned again by the competent authority through the Central Pension Accounting Office (CPAO). For shorter gaps, the bank can usually restore it directly once the certificate is accepted.
 
 ## How to check that your certificate was accepted
 

@@ -16,11 +16,11 @@ This is printed together, for example **22K916**. "22K" is the carat. "916" is t
 
 ### 3. The HUID (Hallmark Unique Identification)
 
-This is a 6-character alphanumeric code (letters and numbers) given to each hallmarked article. It is the only mark you can look up. From 1 April 2023, jewellers have not been allowed to sell gold jewellery or artefacts without a HUID.
+This is a 6-character alphanumeric code (letters and numbers) given to each hallmarked article. It is the only mark you can look up. From 1 April 2023, in districts covered by mandatory hallmarking, jewellers have not been allowed to sell hallmarked gold jewellery or artefacts without a HUID.
 
 ## Karat to fineness: what the purity number means
 
-BIS's brief on the hallmarking scheme lists these grades under IS 1417 (the Indian standard for gold jewellery). According to PIB (March 2026), 14K, 18K, 20K, 22K, 23K and 24KS are the grades covered by mandatory hallmarking. 9K can also be hallmarked; PIB (March 2026) describes it as a voluntary grade.
+BIS's brief on the hallmarking scheme lists these grades under IS 1417 (the Indian standard for gold jewellery). According to PIB (March 2026), 14K, 18K, 20K, 22K, 23K and 24KS are the grades covered by mandatory hallmarking, while 9K can also be hallmarked as a voluntary grade.
 
 | Carat on the mark | Fineness on the mark | Minimum gold content | Status |
 |---|---|---|---|
@@ -37,7 +37,7 @@ The carat and fineness must sit in the same row ("22K750" would be a red flag), 
 ## How to check a HUID number in the BIS Care app
 
 1. Install **BIS Care** from the Google Play Store or Apple App Store. The publisher is Bureau of Indian Standards, and it is free.
-2. Register once with your name and mobile number. You get an OTP to confirm it.
+2. If the app asks you to register, enter your name and mobile number and confirm with the OTP.
 3. Tap **Verify HUID** and enter the 6-character code exactly as stamped. Watch for look-alikes such as 0/O and 1/I.
 4. Compare the result with the piece and the bill:
    - **Purity:** it should match the stamped mark, for example 22K916.
@@ -45,7 +45,7 @@ The carat and fineness must sit in the same row ("22K750" would be a red flag), 
    - **Jeweller and status:** the app also shows the article's status. While a piece is still listed as 'Available at Jeweller', it may hide the jeweller's name and address. Where a name is shown, it should match the shop, or the shop should be able to explain why it doesn't.
 5. If the app shows no record, or the details don't match, don't pay yet. Ask the jeweller, and if it stays unresolved, complain (see below).
 
-According to its App Store listing, 2026 versions of the app add HUID and article photos, article status and a recorded gross weight to HUID results, and silver HUID checks were added in November 2025. If a photo appears, compare it with your piece too.
+According to its App Store listing, 2026 versions of the app add HUID and article photos and article status to HUID results and label the recorded weight as gross weight. Silver HUID checks were added in November 2025. If a photo appears, compare it with your piece too.
 
 ## What a HUID check proves, and what it doesn't
 
@@ -89,17 +89,17 @@ Here is a simplified illustration with an assumed price. Real disputes may value
 - At an assumed ₹10,000 per gram of pure gold, the shortfall is worth ₹1,600.
 - Compensation would be twice that, ₹3,200, plus what you paid for the test.
 
-Gold prices move every day, and in India they also move with the rupee-dollar rate, because gold is priced internationally in dollars. That's one reason [a weaker rupee can push up jewellery prices](https://www.knewspaper.in/post/why-is-the-rupee-falling-against-the-dollar). The value of any shortfall depends on the rate used.
+The value of any shortfall depends on the gold rate used, which moves daily and with the rupee ([a weaker rupee pushes up gold prices](https://www.knewspaper.in/post/why-is-the-rupee-falling-against-the-dollar)).
 
 ### How to complain
 
-BIS records hallmarking complaints centrally. You can file one through the BIS Care app or the complaint portal on bis.gov.in, by email to complaints@bis.gov.in, or in writing to the Public Grievance Officer at the nearest BIS regional or branch office. Keep the bill, test report and photos of the hallmark.
+BIS records hallmarking complaints centrally. You can file one through the BIS Care app or the eBIS portal (manakonline.in), or by email to complaints@bis.gov.in, according to PIB (March 2026). Keep the bill, test report and photos of the hallmark.
 
 ## Where hallmarking is compulsory, and what's left out
 
-- **Coverage:** Mandatory hallmarking began on 23 June 2021 in 256 districts. Seven more phases followed. BIS's district list shows **392 districts** covered after the eighth phase (3 August 2026).
+- **Coverage:** Mandatory hallmarking began on 23 June 2021 in 256 districts. It has been widened several times since; the latest order (Fourth Amendment Order, 2026, in force from 3 November 2026) brings the total to **398 districts**. Check the BIS list for your district.
 - **Exemptions:** BIS's scheme brief lists gold articles **below 2 grams**, **kundan, polki and jadau** jewellery, gold bullion and gold thread, and certain export and exhibition cases. When the scheme started, PIB also listed watches and fountain pens, and exempted jewellers with an annual turnover up to ₹40 lakh.
-- **Old jewellery:** Pieces with the older four-mark hallmark remain valid. BIS says a hallmark stays valid for the life of the article. You can still sell old jewellery to jewellers, hallmarked or not.
+- **Old jewellery:** Pieces with the older four-mark hallmark remain valid, PIB said in March 2023. You can still sell old jewellery to jewellers, hallmarked or not.
 - **Silver:** Silver hallmarking is voluntary. Since 1 September 2025, any silver piece that is hallmarked must carry a HUID, according to PIB.
 
 ## Frequently asked questions
