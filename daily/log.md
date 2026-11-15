@@ -327,3 +327,26 @@ The owner sent images for both new articles. Converted to WebP (1672×941, q80; 
 - how-to-build-self-confidence → c0f544_b5f3e0e538ce45618fb56827a6e2d2a0~mv2.webp (a young woman going from self-doubt to confidence, a brain, a checklist, steps to a trophy, a mirror; no text)
 - bipolar-disorder-symptoms-causes → c0f544_9d6512f32e714b0b9fe0f03a87ced6e3~mv2.webp (a split portrait of a low and a high mood under a blue/orange brain, symptom insets, an India map and a row of figures; no text)
 Removed both from `pendingImages`; pre-render rebuilt (378 pages, published true).
+
+## 2026-11-15 (Sunday: owner-topic day)
+
+Published (without a cover: Claude in Chrome was not available in this cloud run; slug added to `pendingImages`; the create script again reported `cover: true` although no cover was sent):
+- [Parkinson's Disease: Early Symptoms, Causes, Young-Onset Cases in India and Look-Alike Conditions](https://www.knewspaper.in/post/parkinsons-disease-symptoms-causes) (plan #40, health-fitness). Gate 1: FAIL (seoDescription 157 chars; "WHO describes levodopa/carbidopa as the most effective" not on the WHO fact sheet → reworded to "most commonly used … on WHO's Model List of Essential Medicines") → fixed → gate 2 (fresh agent): PASS; applied its optional wording (WHO rehab wording, NHS "evidence not conclusive" on environment, DBS Tier 1 cities, GAP-India = 18 hospitals). Information gain: Indian burden (7.71 lakh, ICMR-PHFI-IHME 2019), younger onset in Indian cohorts (GAP-India mean 53.5 y), flunarizine/cinnarizine as a common Indian cause of drug-induced parkinsonism, DBS cost in ₹ (ICMR HTAIn), 108/112 stroke warning.
+
+Not published:
+- Owner #1 Best Sample Papers (draft `daily/drafts/sample-papers/`): two fresh gates today. Gate 1 FAIL (Future Topper "papers get harder" true only for Class 10; Educart bundle now ₹1,526) → fixed → gate 2 FAIL on competitor coverage (Oswaal also has Class 11 and 10-paper Class 9 books; Arihant Class 9/11 2026 editions; which publisher has Maths Basic/Hindi/Sanskrit/Computer Applications; CISCE answer keys only for selected subjects; Future Topper free page wording). All gate-2 fixes are applied in the draft. This is the fourth gate failure over two days, always on fine-grained competitor details rather than Future Topper. Still not in usedOwner/skippedOwner. Suggest the owner decides: either let the next owner-day run do one more fresh gate, or trim the competitor table to fewer, easier-to-verify columns.
+- Plan #39 Fun Facts About Me (draft `daily/drafts/fun-facts/`): gate 1 FAIL (vague examples, Rubik's cube repeated) → fixed → gate 2 FAIL (core advice too close in structure to resume.io's article; information gain too thin). Added to `skippedPlan`.
+
+Rechecked yesterday's articles (bipolar-disorder-symptoms-causes, how-to-build-self-confidence) with a review agent: no errors; internal links fine.
+
+Internal links (5b): is-it-bad-to-drink-coffee-everyday "Parkinson's disease" → parkinsons-disease-symptoms-causes.
+
+Pre-render deploy: published true, pages 378 → 379, 1 redirect added.
+
+Process note: two review agents fetched pages with curl when WebFetch permission prompts timed out; later agents were told to use only WebSearch/WebFetch.
+
+Unsure / to check:
+- Parkinson's: GAP-India figures are from a 2022 congress abstract (interim, crude odds ratios), not a full paper. Indian prevalence range (7 to 328 per lakh) from a 2025 review. PDMDS mentioned without a link or phone number (its site showed injected spam links).
+
+Image prompts for 2026-11-15:
+- Parkinson's Disease: Early Symptoms, Causes, Young-Onset Cases in India and Look-Alike Conditions: create image for this article topic without any text

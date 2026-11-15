@@ -10,32 +10,32 @@ According to the date sheet CBSE released on 6 November 2026, Class 10 papers ru
 
 ## The best sample papers for Class 10 and 12, compared
 
-Prices are as listed on each publisher's website on 14 November 2026; sale prices change often.
+Prices are as listed on each publisher's website on 15 November 2026; sale prices change often.
 
 | Option | Classes (sample papers) | Solutions | 2026-27 pattern | Format | Class 10 price |
 |---|---|---|---|---|---|
 | **Future Topper** | CBSE 10 and 12, ICSE 10, ISC 12 (Class 9 and 11: question banks only) | Worked solutions for every paper | Yes, 2026-27 editions | eBook (download) | ₹59 per subject; ₹179 for Maths, Science, SST and English |
 | CBSE official SQP + marking scheme | 10 and 12 | Official marking scheme | Yes, released September 2026 | Free PDF | Free |
-| CISCE specimen papers | ICSE 9 and 10, ISC 11 and 12 | Answer keys | Yes, released October 2026 | Free PDF | Free |
-| Oswaal (15 Sample Question Papers) | CBSE 9 (5-paper books), 10 and 12; ICSE 10; ISC 12 | Solved CBSE SQP and 2026 board paper; examiner-marked answer sheet (product page doesn't say whether all 15 papers are solved) | Yes, based on 21 Sep 2026 SQP | Printed book | ₹449 (Maths Standard or Science); ₹1,620 for a 4-book set |
-| Educart | 9, 10, 11, 12; ICSE 10 | Topper-style solutions; solved and unsolved papers; sealed pre-board sets | Yes, 2026-27 editions | Printed book | ₹404 (Maths Standard or Science); ₹1,436 for a 4-book bundle |
-| Arihant (i-Succeed 15 SQPs) | CBSE 10 and 12; ICSE 10; ISC 12 | Detailed answers as per marking scheme | Yes, based on 21 Sep 2026 SQP | Printed book | ₹255 (Maths Standard or Science); ₹970 for a 4-book set |
+| CISCE specimen papers | ICSE 9 and 10, ISC 11 and 12 | Answer keys for selected subjects | Yes, released October 2026 | Free PDF | Free |
+| Oswaal (15 Sample Question Papers) | CBSE 9 (10-paper books), 10, 11 and 12; ICSE 10; ISC 12 | Marking-scheme-based solutions (per Oswaal's sample papers page); solved CBSE SQP and 2026 board paper; examiner-marked answer sheet | Yes, based on 21 Sep 2026 SQP | Printed book | ₹449 (Maths Standard or Science); ₹1,620 for a 4-book set |
+| Educart | 9, 10, 11, 12; ICSE 10 | Topper-style solutions; solved and unsolved papers; sealed pre-board sets | Yes, 2026-27 editions | Printed book | ₹404 (Maths Standard or Science); ₹1,526 for a 4-book bundle |
+| Arihant (i-Succeed 15 SQPs) | CBSE 10 and 12, ICSE 10, ISC 12 (Class 9 and 11: 2026 editions) | Detailed answers as per marking scheme | Yes, based on 21 Sep 2026 SQP | Printed book | ₹255 (Maths Standard or Science); ₹970 for a 4-book set |
 
-Among the printed books, Arihant is the cheapest. Educart is the only one with CBSE Class 11 sample papers (₹249 a subject), and Educart and Oswaal both have Class 9 books. All three cover Class 10 languages and skill subjects such as Computer Applications. For how they differ in style, see our comparisons of [Arihant vs Oswaal](https://www.knewspaper.in/post/arihant-vs-oswaal-books), [Educart vs Oswaal](https://www.knewspaper.in/post/educart-vs-oswaal) and [Arihant vs Educart](https://www.knewspaper.in/post/arihant-vs-educart).
+Among the printed books, Arihant is the cheapest. Educart and Oswaal both have 2026-27 Class 9 and Class 11 sample papers. For Class 10 subjects beyond the main four, Educart has the widest range (Maths Basic, Hindi A and B, Sanskrit and Computer Applications as single books); Oswaal lists Maths Basic and Hindi A and B; Arihant includes Maths Basic and Hindi A only inside its combo sets. For how they differ in style, see our comparisons of [Arihant vs Oswaal](https://www.knewspaper.in/post/arihant-vs-oswaal-books), [Educart vs Oswaal](https://www.knewspaper.in/post/educart-vs-oswaal) and [Arihant vs Educart](https://www.knewspaper.in/post/arihant-vs-educart).
 
 ## 1. Future Topper (our first pick)
 
-[Future Topper](https://www.futuretopper.in) sells sample papers as eBooks, and this is the main thing to know before buying: nothing is shipped. You download the file after paying, can re-download it from your account, and must print it to write on paper.
+[Future Topper](https://www.futuretopper.in) sells sample papers as eBooks, and this is the main thing to know before buying: nothing is shipped. You download the file after paying, can re-download it from your account, and must print it to write on paper. The papers are Future Topper's own practice papers, not official CBSE or CISCE papers.
 
 What the site offers today:
 
 - **CBSE Class 10:** Mathematics Standard, Science, Social Science and English, 15 full papers each, graded from easier to harder, at ₹59 a subject or ₹179 for all four (60 papers). The Maths book has step-marked solutions, a mistake tracker and a formula handbook. There is no Mathematics Basic, Hindi or Sanskrit sample paper book.
-- **CBSE Class 12:** single subjects at ₹49 in Physics, Chemistry, Mathematics, Biology, English, Accountancy, Business Studies, Economics, Computer Science and Physical Education (most have 20 papers; Business Studies and Computer Science 15, Physical Education 10). Science and Commerce bundles of four subjects cost ₹149 each.
+- **CBSE Class 12:** single subjects at ₹49 in Physics, Chemistry, Mathematics, Biology, English, Accountancy, Business Studies, Economics, Computer Science and Physical Education (most have 20 papers; Business Studies and Computer Science 15, Physical Education 10). Science and Commerce bundles of four subjects cost ₹149 each (the Science bundle is Physics, Chemistry, Maths and English, so Biology students add the ₹49 Biology book).
 - **ICSE Class 10 and ISC Class 12:** specimen-style practice papers from ₹49 a subject, and an ISC Science bundle for ₹179.
 - **UP Board:** Class 10 and 12 model papers, from ₹79.
-- **Free:** a Class 10 page linking CBSE's official 2026-27 SQPs and marking schemes, plus 16 free Future Topper practice papers as PDFs, with no sign-up.
+- **Free:** 16 free Future Topper practice papers for Class 10 as PDFs, with no sign-up, on subject pages, some of which also link CBSE's official 2026-27 SQPs and marking schemes.
 
-Why it is our first pick: it costs a fraction of the printed books, covers the main subjects with full solutions on the 2026-27 pattern, and its papers get harder as you go. Its limits: digital only, no Class 9 or 11 sample papers, and a narrower Class 10 range than the big publishers.
+Why it is our first pick: it costs a fraction of the printed books, covers the main subjects with full solutions on the 2026-27 pattern, and its Class 10 papers are graded from easier to harder (Class 12 books label each paper Easy, Medium or Hard). Its limits: digital only, no Class 9 or 11 sample papers, and a narrower Class 10 range than the big publishers.
 
 ## 2. CBSE's official sample papers: free, and not optional
 
@@ -57,10 +57,10 @@ For CBSE Class 10 and 12, take the first full paper in early December, once the 
 
 ## Class-by-class picks
 
-- **Class 9:** no board exam and no CBSE sample paper. Chapter-wise questions and school papers matter most; for full papers, Educart has 2026-27 Class 9 sample papers (₹189 to ₹299 a subject) and Oswaal has 5-paper Class 9 books (₹188 to ₹206).
-- **Class 10 (CBSE):** the official SQP and marking scheme in every subject, then Future Topper's ₹179 four-subject bundle. For Maths Basic, Hindi or Sanskrit, pick Oswaal, Educart or Arihant.
-- **Class 10 (ICSE):** the CISCE specimen papers, then Future Topper's ICSE practice papers or Educart's ICSE volumes.
-- **Class 11:** school papers and chapter-wise practice; Educart has Class 11 sample papers (₹249 a subject) if your school tests on the full pattern.
+- **Class 9:** no board exam and no CBSE sample paper. Chapter-wise questions and school papers matter most; for full papers, Educart has 2026-27 Class 9 sample papers (₹189 to ₹299 a subject) and Oswaal has 10-paper Class 9 books.
+- **Class 10 (CBSE):** the official SQP and marking scheme in every subject, then Future Topper's ₹179 four-subject bundle. For Maths Basic or Hindi, pick Educart or Oswaal; for Sanskrit, Educart.
+- **Class 10 (ICSE):** the CISCE specimen papers, then Future Topper's ICSE practice papers, or Educart's, Arihant's or Oswaal's ICSE sample paper books.
+- **Class 11:** school papers and chapter-wise practice; Educart (₹224 a subject on sale) and Oswaal have Class 11 sample papers if your school tests on the full pattern.
 - **Class 12 (CBSE):** the official SQPs, then Future Topper's ₹149 Science or Commerce bundle. For History, Geography or Political Science, use Oswaal, Educart or Arihant.
 - **Class 12 (ISC):** the CISCE specimen papers, then Future Topper's ISC Science (₹179) or Commerce (₹149) bundle.
 
