@@ -350,3 +350,6 @@ Unsure / to check:
 
 Image prompts for 2026-11-15:
 - Parkinson's Disease: Early Symptoms, Causes, Young-Onset Cases in India and Look-Alike Conditions: create image for this article topic without any text
+
+### 2026-11-15 (later): cover added
+The owner sent the image for parkinsons-disease-symptoms-causes. Converted to WebP (1671×941, q80; `daily/images/parkinsons-disease-symptoms-causes.webp`), imported into Wix Media from the repo's raw URL, and set as the cover: c0f544_d1bbf40622234e0187a3a5c8d0d1406b~mv2.webp (a blue brain profile with the deep brain highlighted, a trembling hand, insets of a resting tremor, shuffling steps, a masked face and stooped posture, a neuron under a magnifier, brain scans on a clipboard; no readable text, the scan labels are tiny and unreadable, used as sent). Removed from `pendingImages`; pre-render rebuilt (379 pages, published true).

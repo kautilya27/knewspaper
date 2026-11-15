@@ -178,7 +178,7 @@
       "slug": "parkinsons-disease-symptoms-causes",
       "title": "Parkinson's Disease: Early Symptoms, Causes, Young-Onset Cases in India and Look-Alike Conditions",
       "source": "plan #40",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -275,9 +275,7 @@
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
     }
   ],
-  "pendingImages": [
-    "parkinsons-disease-symptoms-causes"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
