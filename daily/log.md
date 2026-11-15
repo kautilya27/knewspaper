@@ -447,4 +447,6 @@ Removed all four from `pendingImages`.
 
 **The pre-render rebuild FAILED with HTTP 413.** The static site is 19.88 MiB, and Wix static hosting refuses anything over 20 MiB (see `wix-preview/prerender/README.md`). The covers are set in Wix, but the pre-rendered article, topic and blog pages still show the versions without them. Any future publish will hit the same wall.
 - Largest removable item: `seo-backups/` (3.43 MB of JSON backups from 4–5 Nov) is served as part of the site but isn't in the repo.
-- Asked the owner whether to move those backups out of the hosted site.
+- Owner approved backing up the folder and then removing it from hosting. Downloaded all 115 files from the live site (sizes checked against the Wix listing, every file parses as JSON) into `seo-backups/` in the repo. Then deleted them from hosting: the site went from 19.88 to 16.45 MiB.
+- Pre-render rebuilt: published true, 384 pages, covers now on the static pages.
+- Headroom is about 3.5 MiB. Each article adds roughly 35–40 KB, so there's room for about 90 more articles before this limit comes back.
