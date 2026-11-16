@@ -20,7 +20,8 @@
     42,
     41,
     44,
-    45
+    45,
+    47
   ],
   "published": [
     {
@@ -260,6 +261,20 @@
       "title": "Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition",
       "source": "civics #2",
       "cover": true
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "anemia-symptoms-causes",
+      "title": "Anaemia (Anemia): Symptoms, Causes, Haemoglobin Levels and India's NFHS-5 Data",
+      "source": "plan #45",
+      "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "carpet-area-vs-built-up-area",
+      "title": "Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example",
+      "source": "niche #8",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -360,7 +375,10 @@
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "anemia-symptoms-causes",
+    "carpet-area-vs-built-up-area"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -383,7 +401,9 @@
     4,
     6,
     5,
-    7
+    7,
+    8,
+    9
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -393,10 +413,16 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/anaemia",
-      "slug": "anemia-symptoms-causes",
-      "source": "plan #45",
-      "note": "written 16 Nov morning; gate 1 FAIL (AMB 6x6x6 outdated: 7x7x7 since 29 Jun 2026; NFHS-6 has no anaemia data; WHO 2024 altitude adjustment starts at 500 m) - fixed; gate 2 FAIL only because two recent PIB links (PRID 2297512, 2294277) could not be confirmed - both links removed and claims kept as text (confirmed by ThePrint, Drishti, Business Standard). Needs a fresh gate, then publish. Not time-sensitive."
+      "dir": "daily/drafts/circle",
+      "slug": "area-of-a-circle",
+      "source": "plan #47",
+      "note": "written 16 Nov afternoon; gate 1 FAIL (Archimedes polygons are around, not inside, the circle; Class 7 Ganita Prakash has no area chapter) - fixed; gate 2 FAIL only on 'Pizza sizes in India are quoted by diameter in inches' (unverified) - reworded to 'Pizzas are often described by their diameter'. All arithmetic and NCERT mapping confirmed by both gates. Needs a fresh gate, then publish. Not time-sensitive."
+    },
+    {
+      "dir": "daily/drafts/jee-main-vs-advanced",
+      "slug": "jee-main-vs-jee-advanced",
+      "source": "niche #9",
+      "note": "written 16 Nov afternoon; gate 1 FAIL (JEE Advanced 2027 already announced: IIT Delhi, 23 May 2027; IIT seats 18,826 + IISc 125, not 18,951 IITs) - fixed; gate 2 FAIL because IIT Delhi published 2027 eligibility on jeeadv.ac.in/eligibility.html on 13 Nov 2026 (born on/after 1 Oct 2002, 1997 for SC/ST/PwD; Class 12 first in 2026 or 2027; IIT or IISc prior-admission bar) - article updated to the 2027 rules. Gate should confirm those on jeeadv.ac.in. Optional: add the 2027 on-screen calculator and 56,880 qualified in 2026. Time-sensitive-ish (JEE season): gate first next run."
     }
   ]
 }

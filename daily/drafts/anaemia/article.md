@@ -120,7 +120,7 @@ Based on your CBC, the doctor may order more tests, such as ferritin (iron store
 
 ### Is it spelt anaemia or anemia?
 
-Both are correct. "Anaemia" is the British spelling used by WHO and most Indian government documents, while "anemia" is the American spelling. They mean the same condition.
+Both are correct. "Anaemia" is the British spelling used by WHO and many Indian government documents, while "anemia" is the American spelling. They mean the same condition.
 
 ### What haemoglobin level counts as anaemia in women?
 

@@ -557,3 +557,20 @@ Not set: how-did-hitler-come-to-power. The image shows a large realistic portrai
 Owner's answer: make a new Hitler-article image. Their image was discarded, and the slug stays in `pendingImages`. Prompt to use: "What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline: create image for this article topic without any text, without any real people and without Nazi symbols — a symbolic scene such as an empty 1930s parliament chamber with a torn constitution on the podium"
 
 New image from the owner for how-did-hitler-come-to-power, converted to WebP (1670×942, q80) and set as the cover: c0f544_bb10f6aa9562450da6363f347d74f78e~mv2.webp. It shows an empty, sunlit parliament chamber, a podium with two microphones and a torn charter, a gavel, old books and a chain. It has no real people and no Nazi symbols. The charter has small unreadable pseudo-text, used as sent. Removed from `pendingImages`, which is now empty. The pre-render rebuild is left to the 15:36 run.
+
+### 2026-11-16 (afternoon run, 15:36 IST)
+Day total before this run: 6 of 10, so at most 4 this run. Chrome/ChatGPT tools were not available in this cloud run, so no images were made.
+- Held draft first: [Anaemia (Anemia): Symptoms, Causes, Haemoglobin Levels and India's NFHS-5 Data](https://www.knewspaper.in/post/anemia-symptoms-causes) (plan #45, health-fitness). Fresh gate: PASS (WHO 2024 cut-offs, NFHS-5/NFHS-6 gap, AMB 7x7x7, NHS signs all re-checked). One wording fix: "most" → "many Indian government documents". Published, no cover.
+- [Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example](https://www.knewspaper.in/post/carpet-area-vs-built-up-area) (niche #8, real-estate). Gate 1: PASS (RERA 2(k), 4(2)(h), 11(2), 13(1) checked against India Code; MahaRERA Order 38/2022; Gurugram 2021 regulations; Anarock loading figures; arithmetic). Applied two optional wording fixes (Bihar "agreement format"; "Haryana Real Estate Regulatory Authority, Gurugram"). Published, no cover.
+- Held for the next run (failed the gate twice, fixed both times; now in `heldDrafts`):
+  - Area of a Circle (plan #47): gate 1 FAIL (Archimedes polygons around, not inside; Class 7 Ganita Prakash has no area chapter), gate 2 FAIL (unverified "pizza sizes in India are quoted in inches"). Both fixed.
+  - JEE Main vs JEE Advanced (niche #9): gate 1 FAIL (JEE Advanced 2027 already announced: IIT Delhi, 23 May 2027; IIT seats 18,826 + IISc 125), gate 2 FAIL (2027 eligibility published on jeeadv.ac.in on 13 Nov 2026). Article updated to 2027 rules.
+- No trending topic this run (stopped at the gate results rather than add a fifth draft).
+- Step 5b (links from older articles) not done this run.
+- Site rebuild: published true, 392 article pages (390 + 2), redirects 3 changed/3 ok (includes this morning's who-is-rahul-gandhi).
+- Both new slugs added to `pendingImages`. Note: the create script returned `cover: true` for both although no cover was sent; recorded as cover false.
+- Unsure: Anarock's loading % is read as a share of super area (Business Standard doesn't say so explicitly); the Haryana 5%/90-day clause is from a document on the Haryana RERA portal; NFHS-4 non-pregnant women 53.2% was matched from memory of the fact sheet by the reviewer.
+
+Image prompts:
+- Anaemia (Anemia): Symptoms, Causes, Haemoglobin Levels and India's NFHS-5 Data: create image for this article topic without any text
+- Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example: create image for this article topic without any text
