@@ -553,3 +553,5 @@ Not set: how-did-hitler-come-to-power. The image shows a large realistic portrai
 - This breaks the civics image rule (2b): symbolic scene only, no real person.
 - Large Nazi symbols also risk ad-network policy problems on an AdSense site.
 - Converted to `daily/images/how-did-hitler-come-to-power.webp` but not committed or uploaded. Asked the owner whether to use it anyway or make a new image.
+
+Owner's answer: make a new Hitler-article image. Their image was discarded, and the slug stays in `pendingImages`. Prompt to use: "What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline: create image for this article topic without any text, without any real people and without Nazi symbols — a symbolic scene such as an empty 1930s parliament chamber with a torn constitution on the podium"
