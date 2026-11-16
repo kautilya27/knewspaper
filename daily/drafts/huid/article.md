@@ -20,7 +20,7 @@ This is a 6-character alphanumeric code (letters and numbers) given to each hall
 
 ## Karat to fineness: what the purity number means
 
-BIS's brief on the hallmarking scheme lists these grades under IS 1417 (the Indian standard for gold jewellery). According to PIB (March 2026), 14K, 18K, 20K, 22K, 23K and 24KS are the grades covered by mandatory hallmarking, while 9K can also be hallmarked as a voluntary grade.
+BIS's brief on the hallmarking scheme lists these grades under IS 1417 (the Indian standard for gold jewellery). Mandatory hallmarking now covers seven gold grades: 9K, 14K, 18K, 20K, 22K, 23K and 24KS. 9K was added to the mandatory list in July 2025, and a November 2026 government update on the scheme counts all seven.
 
 | Carat on the mark | Fineness on the mark | Minimum gold content | Status |
 |---|---|---|---|
@@ -30,7 +30,7 @@ BIS's brief on the hallmarking scheme lists these grades under IS 1417 (the Indi
 | 20K | 833 | 83.3% | Mandatory grade |
 | 18K | 750 | 75.0% | Mandatory grade |
 | 14K | 585 | 58.5% | Mandatory grade |
-| 9K | 375 | 37.5% | Voluntary |
+| 9K | 375 | 37.5% | Mandatory grade (since July 2025) |
 
 The carat and fineness must sit in the same row ("22K750" would be a red flag), and the bill must show the same carat as the piece.
 

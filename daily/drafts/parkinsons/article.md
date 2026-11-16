@@ -87,7 +87,7 @@ There is no cure yet, but treatment can control symptoms for many years:
 
 - **Medicines** that replace or mimic dopamine. The most commonly used is levodopa/carbidopa, which WHO includes on its Model List of Essential Medicines. A neurologist decides which medicine and dose suit each person, and adjusts it over time.
 - **Physiotherapy, exercise and speech therapy**, which can help movement, balance, voice and swallowing (WHO notes that rehabilitation, including physiotherapy, can offer relief).
-- **Deep brain stimulation (DBS)**, a surgery that places electrodes in the brain, for some people whose symptoms are no longer well controlled by medicines. An ICMR health technology assessment brief puts its cost in India at roughly ₹6 to ₹26 lakh, and notes it is available mainly in the largest (Tier 1) cities. Ask the hospital about government schemes that may help with costs.
+- **Deep brain stimulation (DBS)**, a surgery that places electrodes in the brain, for some people whose symptoms are no longer well controlled by medicines. An ICMR health technology assessment brief puts its cost in India at roughly ₹6 to ₹26 lakh, and notes it is available only in Tier 1 cities. Ask the hospital about government schemes that may help with costs.
 
 Living with Parkinson's often brings low mood and anxiety too; these are part of the illness and treatable (see our guides to [depression](https://www.knewspaper.in/post/depression-symptoms-causes) and [anxiety](https://www.knewspaper.in/post/anxiety-symptoms-and-causes)). Support groups, such as those run by the Parkinson's Disease and Movement Disorder Society (PDMDS) in several Indian cities, help patients and carers.
 

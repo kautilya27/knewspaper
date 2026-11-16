@@ -8,7 +8,7 @@ Gujarat Tourism lists the season as 1 November 2026 to 7 March 2027. The tent ci
 
 ## Rann Utsav full moon dates 2026-27
 
-Full-moon nights are the busiest, priciest part of the season. Here are exact times from [Drik Panchang](https://www.drikpanchang.com/vrats/purnimasidates.html?year=2027) (Purnima tithi, New Delhi time) and timeanddate.com (astronomical full moon, India time).
+Full-moon nights are the busiest, priciest part of the season. Here are exact times from [Drik Panchang](https://www.drikpanchang.com/vrats/purnimasidates.html?year=2027) and other panchangs (Purnima tithi, New Delhi time) and timeanddate.com (astronomical full moon, India time).
 
 | Purnima | Purnima tithi (Drik Panchang) | Exact full moon (IST) | Best nights on the salt |
 |---|---|---|---|
@@ -20,7 +20,7 @@ Full-moon nights are the busiest, priciest part of the season. Here are exact ti
 When the full moon falls in the early morning (24 December, 21 February), the evening before is the brightest night. Phalguna Purnima on 22 March 2027 falls after the festival closes.
 
 - **December is the crunch.** The 23-24 December full moon is right before Christmas, so tents and flights fill up fastest then.
-- **For stargazing, go on new-moon nights.** The next new moons fall on 9 December 2026, 7 January 2027 and 6 February 2027.
+- **For stargazing, go on new-moon nights.** The darkest nights fall around 8-9 December 2026, 7-8 January 2027 and 6 February 2027.
 - **Expect to pay more.** The official tariff page says a "peak season surcharge applies from one day prior to the full moon dates". It does not give the amount.
 
 ## White Rann permit: who issues it, fee and online process
@@ -37,11 +37,11 @@ The White Rann and Kalo Dungar lie close to the India-Pakistan border. Entry is 
 | Child (6-12 years) | ₹50 |
 | Child up to 5 years | Free |
 
-These fees come from the district's 2018 announcement, as reported by DeshGujarat. [Esquire India's 2026-27 guide](https://www.esquireindia.co.in/lifestyle/travel/the-only-rann-utsav-guide-you-need-luxury-stays-full-moon-nights-and-kutchs-best-experiences) also gives ₹100 per adult. The child rate may have been revised since then, and the 2018 vehicle charges (₹25 for a two-wheeler, ₹50 for a car) are no longer reliably reported, so check the current amounts on the portal.
+These fees come from the district's 2018 announcement, as reported by DeshGujarat. [Esquire India's 2026-27 guide](https://www.esquireindia.co.in/lifestyle/travel/the-only-rann-utsav-guide-you-need-luxury-stays-full-moon-nights-and-kutchs-best-experiences) also gives ₹100 per adult. The child rate may have been revised since then. Recent guides list vehicle entry as free, against ₹25 to ₹50 in 2018, and the portal may add a small service charge, so check the final amount before paying.
 
 ### How to get it online or at the checkpost
 
-1. **Online:** Apply on the official Gujarat government permit portal (a gujarat.gov.in address; Esquire India describes it as Gujarat Tourism's portal). The main traveller uploads an ID proof and pays the fee. **Be careful with look-alike sites:** the old address rannpermit.com, which DeshGujarat reported in 2018, no longer belongs to the government and redirects elsewhere, so never upload ID or pay there.
+1. **Online:** Apply on the official permit portal, [rannpermit.gujarat.gov.in](https://rannpermit.gujarat.gov.in/). The main traveller uploads an ID proof and pays the fee. **Be careful with look-alike sites:** the 2018 address rannpermit.com is no longer the official portal, so don't upload ID or pay anywhere except rannpermit.gujarat.gov.in.
 2. **On the spot:** Buy it at the checkpost in **Bhirandiyara village**, on the way from Bhuj to Dhordo. Carry original photo ID for everyone in the group.
 3. **If you're staying at the tent city:** Esquire India says many official packages include the permit. Ask Evoke before you queue for one separately.
 
@@ -59,11 +59,11 @@ Bhuj station is on the Western Railway network. Overnight trains such as the Kut
 
 ### By road from Bhuj
 
-Dhordo is about 80 to 85 km from Bhuj, according to the Ministry of Tourism's rural tourism portal and rannutsav.net. Expect a drive of roughly 1.5 to 2 hours. The tent city's packages include shared transfers from Bhuj airport and railway station at fixed times: 8:15 am, 10 am, 1:30 pm, 3:30 pm and 5:30 pm. Transfers at any other time cost extra.
+Dhordo is about 80 to 85 km from Bhuj, according to the Ministry of Tourism's rural tourism portal and rannutsav.net. Expect about 2 hours of driving, closer to 3 with the checkpost stop and holiday traffic. The tent city's packages include shared transfers from Bhuj railway station and airport at fixed times: 8:15 am, 10 am, 1:30 pm, 3:30 pm and 5:30 pm, with return transfers at 4:30 am and 9:30 am, according to [rannutsav.net](https://rannutsav.net/rann-utsav-packages/). Seats are first come, first served, and transfers at other times cost extra. Confirm the schedule when you book.
 
 ## Tent city vs Bhuj stays: what fits your budget
 
-Below are the tent city's published 2026-27 base tariffs from [rannutsav.net](https://rannutsav.net/rann-utsav-packages/). Prices are **per person, per night, before GST**. They change, and the busier "Season 2" and "Season 3" dates cost more; check the booking calendar to see which season your nights fall in.
+Below are the tent city's published 2026-27 base tariffs from [rannutsav.net](https://rannutsav.net/rann-utsav-packages/). Prices are **per person, per night, before GST**. On busier "Season 2" and "Season 3" dates, add ₹2,000 or ₹4,000 per person for a one-night stay; check the booking calendar to see which season your nights fall in.
 
 | Stay | Price (as published) | Good for |
 |---|---|---|
@@ -71,11 +71,11 @@ Below are the tent city's published 2026-27 base tariffs from [rannutsav.net](ht
 | Deluxe AC Swiss Cottage | ₹8,300 per person | Mid-range |
 | Premium Tent | ₹9,300 per person | Couples |
 | Super Premium Tent | ₹10,300 per person | More space |
-| Rajwadi Suite (2 guests) | ₹35,000 a night (page doesn't say if per person or per suite) | Splurge |
+| Rajwadi Suite (2 guests) | ₹35,000 a night for the suite | Splurge |
 | Hotels in Bhuj | Varies | Tighter budgets, odd flight times |
 | Village resorts, Hodka/Dhordo | Varies | Bhunga stays nearer the salt |
 
-Tariffs include meals, cultural programmes and some sightseeing. A couple in a non-AC cottage pays ₹12,600 a night before GST, so two nights cross ₹25,000.
+The top-tier Darbari Suite is listed at ₹70,000 a night for four guests. Tariffs include meals, cultural programmes and some sightseeing. A couple in a non-AC cottage pays ₹12,600 a night before GST, so two nights cross ₹25,000.
 
 ### Staying in Bhuj instead
 
@@ -85,7 +85,7 @@ The catch: a sunset visit is a round trip of about 160 to 170 km, a moonlit walk
 
 ### Village resorts near the Rann
 
-Hodka and Dhordo have village-run resorts with *bhungas*, the round mud houses of Banni. Outlook Traveller describes Shaam-e-Sarhad in Hodka, 63 km from Bhuj, as run by local villagers. You'll still need the White Rann permit if you stay at one of these.
+Hodka and Dhordo have village-run resorts with *bhungas*, the round mud houses of Banni. Shaam-e-Sarhad in Hodka, about 60 km from Bhuj, is one such community-run resort. You'll still need the White Rann permit if you stay at one of these.
 
 Comparing with Rajasthan? See our guide to the [best desert camps in Jaisalmer](https://www.knewspaper.in/post/best-desert-camp-jaisalmer).
 
@@ -104,7 +104,7 @@ If Kutch is one of several winter trips you're planning, see our list of the [be
 
 ### When is the best full moon for Rann Utsav 2026-27?
 
-The full moon falls on 24 November, 24 December (6:58 am), 22 January and 21 February (4:52 am). Outlook Traveller flags Christmas and New Year as peak demand, so the November and January full moons are easier to book.
+The full moon falls on 24 November, 24 December (6:58 am), 22 January and 21 February (4:52 am). Outlook Traveller flags Diwali week, Christmas and New Year as peak demand, so the November and January full moons are easier to book.
 
 ### Do tent city guests need the White Rann permit?
 

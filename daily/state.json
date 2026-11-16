@@ -18,7 +18,9 @@
     38,
     40,
     42,
-    41
+    41,
+    44,
+    45
   ],
   "published": [
     {
@@ -216,6 +218,41 @@
       "title": "Autism Spectrum Disorder: Symptoms, Causes and Getting Assessed in India",
       "source": "plan #41",
       "cover": true
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "rann-utsav",
+      "title": "Rann Utsav 2026-27: Dates, Tent City, White Rann Permit and How to Reach Dhordo",
+      "source": "niche #6",
+      "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "how-did-hitler-come-to-power",
+      "title": "What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline",
+      "source": "civics #4",
+      "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "old-vs-new-tax-regime",
+      "title": "Old vs New Tax Regime FY 2026-27: Which Is Better at Your Salary? (Break-Even Table)",
+      "source": "niche #5",
+      "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "central-government-holiday-list",
+      "title": "Central Government Holiday List 2027: Gazetted, Restricted Holidays and Long Weekends",
+      "source": "niche #7",
+      "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "hobbies-and-interests-for-resume",
+      "title": "Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It",
+      "source": "plan #44",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -310,9 +347,19 @@
     {
       "order": 39,
       "reason": "Fun Facts About Me: failed the quality gate twice on 2026-11-15 (gate 2: advice too close in structure to resume.io's article; information gain too thin). Draft kept in daily/drafts/fun-facts/."
+    },
+    {
+      "order": 43,
+      "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "rann-utsav",
+    "how-did-hitler-come-to-power",
+    "old-vs-new-tax-regime",
+    "central-government-holiday-list",
+    "hobbies-and-interests-for-resume"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -323,7 +370,8 @@
   },
   "usedCivics": [
     1,
-    3
+    3,
+    4
   ],
   "skippedCivics": [
     {
@@ -336,7 +384,9 @@
     2,
     3,
     4,
-    6
+    6,
+    5,
+    7
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -346,10 +396,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/rann-utsav",
-      "slug": "rann-utsav",
-      "source": "niche #6",
-      "note": "written 15 Nov afternoon; gate 1 FAIL (rannpermit.com now redirects to an unrelated site) and gate 2 FAIL (official permit portal not named: rannpermit.gujarat.gov.in per two Oct 2026 sources, but no agent could open it). Fixes applied except the portal URL; owner to confirm the portal, then give a fresh gate. Time-sensitive (season to 7 Mar 2027)."
+      "dir": "daily/drafts/anaemia",
+      "slug": "anemia-symptoms-causes",
+      "source": "plan #45",
+      "note": "written 16 Nov morning; gate 1 FAIL (AMB 6x6x6 outdated: 7x7x7 since 29 Jun 2026; NFHS-6 has no anaemia data; WHO 2024 altitude adjustment starts at 500 m) - fixed; gate 2 FAIL only because two recent PIB links (PRID 2297512, 2294277) could not be confirmed - both links removed and claims kept as text (confirmed by ThePrint, Drishti, Business Standard). Needs a fresh gate, then publish. Not time-sensitive."
     }
   ]
 }

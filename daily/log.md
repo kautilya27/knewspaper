@@ -450,3 +450,59 @@ Removed all four from `pendingImages`.
 - Owner approved backing up the folder and then removing it from hosting. Downloaded all 115 files from the live site (sizes checked against the Wix listing, every file parses as JSON) into `seo-backups/` in the repo. Then deleted them from hosting: the site went from 19.88 to 16.45 MiB.
 - Pre-render rebuilt: published true, 384 pages, covers now on the static pages.
 - Headroom is about 3.5 MiB. Each article adds roughly 35–40 KB, so there's room for about 90 more articles before this limit comes back.
+
+### 2026-11-16 (09:36 scheduled morning run)
+Monday. No owner-topic day. Daily total so far: 5 of the 10 cap. Claude in Chrome isn't available in this cloud run, so none of the articles has a cover; all five slugs went to `pendingImages`. (The create script again reported `cover: true` although no cover was sent.)
+
+Published:
+- [Rann Utsav 2026-27: Dates, Tent City, White Rann Permit and How to Reach Dhordo](https://www.knewspaper.in/post/rann-utsav) (held draft, niche #6, travel).
+  - Fresh gate 1: FAIL. Fixes: a vague vehicle-fee line; the unverified "rannpermit.com redirects" claim; the drive time; the Rajwadi Suite basis; the Shaam-e-Sarhad attribution; Diwali week added as a peak period.
+  - Gate 2: PASS with fixes. Transfer times now follow the official rannutsav.net packages page (8:15, 10:00, 13:30, 15:30 and 17:30, returns at 4:30 and 9:30). The reviewer found **rannpermit.gujarat.gov.in** in a government-domain search, titled "Online permit for Rann of Kutch". The article now names it (only the government can register a gujarat.gov.in subdomain). Also added: the season surcharges (₹2,000 or ₹4,000), the Darbari Suite (₹70,000 for 4) and new-moon "darkest nights" wording.
+- [What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline](https://www.knewspaper.in/post/how-did-hitler-come-to-power) (civics #4, history).
+  - Gate 1: PASS. Minor fixes applied: the Competitive authoritarianism label; the Arthashastra wording; unemployment figure "about six million by the winter of 1932"; dropped two Britannica credits it couldn't confirm.
+  - No Indian party named; the 1975–77 Emergency appears only as the reason for the 44th Amendment.
+- [Old vs New Tax Regime FY 2026-27: Which Is Better at Your Salary? (Break-Even Table)](https://www.knewspaper.in/post/old-vs-new-tax-regime) (niche #5, finance).
+  - Gate 1: PASS. The reviewer recomputed every figure independently.
+  - Fixed the marginal-relief comparison (₹63,750 / ₹66,300 with cess) and rewrote the seoDescription to drop an imprecise range.
+- [Central Government Holiday List 2027: Gazetted, Restricted Holidays and Long Weekends](https://www.knewspaper.in/post/central-government-holiday-list) (niche #7, fesrival).
+  - Source: DoPT OM 12/2/2023-JCA of 16 July 2026, via the Department of Posts' official copy.
+  - Gate 1: PASS. All 49 rows and weekdays were checked against the OM.
+  - Excerpt now says "49 holidays" (there are 47 distinct dates). Added the National and Festival Holidays Act note to the private-companies FAQ.
+- [Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It](https://www.knewspaper.in/post/hobbies-and-interests-for-resume) (plan #44, career).
+  - Gate 1: PASS. Information gain: NCC incentive marks (SSC GD 2022 corrigendum), NSS 120 hours plus camp, DoPT sports-quota Forms 1–5, and a by-situation table.
+  - Dated the DoPT OM (4 Mar 2024). Removed the "grade" from the NCC line.
+
+Held, not published:
+- Anaemia (plan #45, `daily/drafts/anaemia/`).
+  - Gate 1 FAIL. Fixed: Anaemia Mukt Bharat is now "Anemia Mukt Bharat Abhiyaan" with a 7x7x7 strategy (guidelines of 29 June 2026, confirmed via ThePrint and Drishti). Also added: NFHS-6 (May 2026) has no anaemia data, and an ICMR venous-blood survey is pending. The WHO 2024 altitude adjustment now starts at 500 m, plus smokers. The sickle cell mission wording, the NHS symptom wording and the FAQ heading were fixed too.
+  - Gate 2 FAIL only because two recent PIB links couldn't be confirmed to open the right releases. Both links were removed and the claims kept as plain text.
+  - Not published today (it would have been the 6th article this run). Added to `heldDrafts` for the afternoon run's fresh gate.
+
+Skipped: plan #43 ("Nothing Will Work If You Don't Believe in It"). It is a James Clear essay title, with no information gain over how-to-build-self-confidence and goals-vs-systems.
+
+Yesterday's articles rechecked (2 review agents):
+- parkinsons-disease-symptoms-causes: the ICMR DBS brief says "available only in Tier 1 cities". Republished with that wording.
+- how-to-check-huid-number: 9K is now a mandatory hallmarking grade (added July 2025; a November 2026 government update counts seven grades). Republished the grade sentence and table row. The reviewer also saw the www.pib.gov.in link for PRID=1904262 open a different release, while the version without www. was correct. The link was kept as is, because the update script requires existing external links to stay unchanged.
+- area-of-a-trapezium, how-to-submit-life-certificate-for-pension, best-places-to-visit-in-december-in-india, autism-spectrum-disorder-symptoms-causes: OK.
+
+Internal links (5b), all 5 added:
+- best-places-to-visit-in-december-in-india, "The Rann Utsav tent city" → rann-utsav
+- guru-nanak-jayanti, "list of gazetted holidays" → central-government-holiday-list
+- how-to-file-itr-online, "new tax regime" → old-vs-new-tax-regime
+- union-budget-2024, "new tax regime" → old-vs-new-tax-regime
+- how-to-make-a-resume, "NCC" → hobbies-and-interests-for-resume (a short anchor; change it if it reads oddly)
+
+Pre-render deploy: published true, pages 384 → 389, 5 redirects added. The patch payload was 17.16 MB (content bytes, not the hosted-size figure).
+
+Unsure / to check:
+- Rann Utsav: no agent could open rannpermit.gujarat.gov.in itself. It is named from a government-domain search result and 2026 guides. The child permit rate is still the 2018 figure.
+- Tax regime: the section 124 (NPS) and 126 (health insurance) numbers rest on Business Today and taxheal. The HRA exemption's new section number isn't given.
+- Holidays: the bank-holiday line (Negotiable Instruments Act, RBI state lists) is general knowledge and wasn't checked against an RBI page.
+- Hobbies: NCC incentive marks were checked against the 2022 SSC GD corrigendum, not the 2026 notice. The article tells readers to check the current notice.
+
+Image prompts:
+- Rann Utsav 2026-27: Dates, Tent City, White Rann Permit and How to Reach Dhordo: create image for this article topic without any text
+- What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline: create image for this article topic without any text (symbolic scene only, no real person: an empty, dim parliament chamber with an empty podium and a half-closed old constitution)
+- Old vs New Tax Regime FY 2026-27: Which Is Better at Your Salary? (Break-Even Table): create image for this article topic without any text
+- Central Government Holiday List 2027: Gazetted, Restricted Holidays and Long Weekends: create image for this article topic without any text
+- Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It: create image for this article topic without any text
