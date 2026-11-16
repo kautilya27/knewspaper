@@ -224,7 +224,7 @@
       "slug": "rann-utsav",
       "title": "Rann Utsav 2026-27: Dates, Tent City, White Rann Permit and How to Reach Dhordo",
       "source": "niche #6",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
@@ -238,28 +238,28 @@
       "slug": "old-vs-new-tax-regime",
       "title": "Old vs New Tax Regime FY 2026-27: Which Is Better at Your Salary? (Break-Even Table)",
       "source": "niche #5",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
       "slug": "central-government-holiday-list",
       "title": "Central Government Holiday List 2027: Gazetted, Restricted Holidays and Long Weekends",
       "source": "niche #7",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
       "slug": "hobbies-and-interests-for-resume",
       "title": "Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It",
       "source": "plan #44",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
       "slug": "who-is-rahul-gandhi",
       "title": "Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition",
       "source": "civics #2",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -361,12 +361,7 @@
     }
   ],
   "pendingImages": [
-    "rann-utsav",
-    "how-did-hitler-come-to-power",
-    "old-vs-new-tax-regime",
-    "central-government-holiday-list",
-    "hobbies-and-interests-for-resume",
-    "who-is-rahul-gandhi"
+    "how-did-hitler-come-to-power"
   ],
   "preparedImages": {
     "how to stop procrastinating": {

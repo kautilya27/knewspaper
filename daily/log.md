@@ -528,3 +528,28 @@ Owner asked in chat to publish civics #2 "in a positive way for Rahul Gandhi". T
 
 Image prompt:
 - Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition: create image for this article topic without any text (symbolic scene, no real person: a dusty rural road at dawn with footprints, a small tricolour on a bamboo pole, a faint Parliament outline; no party symbols)
+
+### 2026-11-16 (midday): covers from the owner
+The owner sent six images. Five were converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- who-is-rahul-gandhi → c0f544_80655794a9c84fb19ce9b4773dd70cf6~mv2.webp
+  - Shows: a university building, a road lined with tricolours, a crowd with flags, Parliament, a podium, a graduation cap with books, and a chair bearing the Lion Capital emblem.
+  - No identifiable person, and the crowd is generic.
+- hobbies-and-interests-for-resume → c0f544_2cd7a7611a1b4f8bbe567e83f92d76ba~mv2.webp
+  - Shows: a laptop with a CV and hobby icons, tick and cross flip-charts, a camera, a trophy, a medal and a certificate.
+  - No readable text.
+- central-government-holiday-list → c0f544_86f6559fd8f44dc3bf9f9ef664d8561c~mv2.webp
+  - Shows: a desk calendar with circled dates, a Lion Capital statue, Rashtrapati Bhavan-style buildings, holiday photos and a suitcase.
+  - The calendar header has small garbled pseudo-letters. Used as sent.
+- rann-utsav → c0f544_c23c6226348a421ba1d61694f894a9e3~mv2.webp
+  - Shows: a tent city on the white salt at sunset, lanterns, a decorated camel and an illuminated arch.
+  - No text.
+- old-vs-new-tax-regime → c0f544_8cc558a783ca4cc4bca3d9a5718f1af8~mv2.webp
+  - Shows: a balance scale with a calculator and checklist on one side and a % sign with a document on the other, coins, a piggy bank and a rising chart.
+  - No text.
+
+Removed all five from `pendingImages`. The pre-render rebuild is left to the 15:36 run.
+
+Not set: how-did-hitler-come-to-power. The image shows a large realistic portrait of Hitler, a Nazi salute and several swastika banners.
+- This breaks the civics image rule (2b): symbolic scene only, no real person.
+- Large Nazi symbols also risk ad-network policy problems on an AdSense site.
+- Converted to `daily/images/how-did-hitler-come-to-power.webp` but not committed or uploaded. Asked the owner whether to use it anyway or make a new image.
