@@ -267,14 +267,14 @@
       "slug": "anemia-symptoms-causes",
       "title": "Anaemia (Anemia): Symptoms, Causes, Haemoglobin Levels and India's NFHS-5 Data",
       "source": "plan #45",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
       "slug": "carpet-area-vs-built-up-area",
       "title": "Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example",
       "source": "niche #8",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -375,10 +375,7 @@
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [
-    "anemia-symptoms-causes",
-    "carpet-area-vs-built-up-area"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

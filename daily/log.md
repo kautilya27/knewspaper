@@ -574,3 +574,9 @@ Day total before this run: 6 of 10, so at most 4 this run. Chrome/ChatGPT tools 
 Image prompts:
 - Anaemia (Anemia): Symptoms, Causes, Haemoglobin Levels and India's NFHS-5 Data: create image for this article topic without any text
 - Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example: create image for this article topic without any text
+
+### 2026-11-16 (evening): covers from the owner
+The owner sent both images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- carpet-area-vs-built-up-area → c0f544_adafa638c87b4bca9643b0f4a3528158~mv2.webp (three 3D floor-plan models with blue, yellow and purple outlines for carpet, built-up and super built-up area, scales of justice, a gavel, a model house, a calculator, apartment towers behind; no readable text).
+- anemia-symptoms-causes → c0f544_b767a6a3b83c4700b03e11b8e7a64a96~mv2.webp (a blood drop with red cells magnified, spinach, pomegranate, lentils, chana, jaggery and beetroot, a clipboard gauge, blood tubes, a stethoscope, a stylised map of India and charts; no text).
+Both removed from `pendingImages` (now empty). The pre-render rebuild is left to the next run (17 Nov morning), so the pre-rendered pages show the covers from then.
