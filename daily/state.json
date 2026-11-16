@@ -253,6 +253,13 @@
       "title": "Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It",
       "source": "plan #44",
       "cover": false
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "who-is-rahul-gandhi",
+      "title": "Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition",
+      "source": "civics #2",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -358,7 +365,8 @@
     "how-did-hitler-come-to-power",
     "old-vs-new-tax-regime",
     "central-government-holiday-list",
-    "hobbies-and-interests-for-resume"
+    "hobbies-and-interests-for-resume",
+    "who-is-rahul-gandhi"
   ],
   "preparedImages": {
     "how to stop procrastinating": {
@@ -371,14 +379,10 @@
   "usedCivics": [
     1,
     3,
-    4
+    4,
+    2
   ],
-  "skippedCivics": [
-    {
-      "order": 2,
-      "reason": "Biography of a sitting Leader of Opposition built around a mocking nickname: can't be written under the civics rules (no party named, no officeholder praised or criticised by name, no nicknames as fact) without becoming partisan either way. Owner may want to rework or drop this row."
-    }
-  ],
+  "skippedCivics": [],
   "usedNiche": [
     1,
     2,

@@ -506,3 +506,25 @@ Image prompts:
 - Old vs New Tax Regime FY 2026-27: Which Is Better at Your Salary? (Break-Even Table): create image for this article topic without any text
 - Central Government Holiday List 2027: Gazetted, Restricted Holidays and Long Weekends: create image for this article topic without any text
 - Hobbies and Interests for Your Resume: What to Write, What to Skip and How to Prove It: create image for this article topic without any text
+
+### 2026-11-16 (late morning, owner request): Rahul Gandhi profile
+Owner asked in chat to publish civics #2 "in a positive way for Rahul Gandhi". This is an owner exception to the 2b rules: the piece names his own party (Indian National Congress) and gives him an appreciative emphasis. No other party or politician is named, and a short, sourced criticism section is kept for fairness.
+- Published [Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition](https://www.knewspaper.in/post/who-is-rahul-gandhi) (civics #2, sociology-and-society). No cover; slug added to `pendingImages`.
+- What it covers:
+  - his education, checked against sources (Rollins 1994; Cambridge M.Phil 1995, confirmed by the Vice-Chancellor in 2009);
+  - a dated career table;
+  - the two yatras;
+  - what supporters credit him with;
+  - a table of four clips that fact-checkers found to be cut or misattributed (Alt News ×3, BOOM);
+  - a brief criticism section.
+- Gate 1: PASS, with 4 small fixes applied:
+  - the AIR budget-speech wording;
+  - The Diplomat's framing;
+  - the exact quote "I met lakhs of people, talked to them";
+  - the source for the "Vinci" surname.
+- Also added "apart from a disqualification of about four months in 2023" to the Quick answer.
+- Removed #2 from `skippedCivics` and added it to `usedCivics`. Today's total is 6 of 10.
+- The pre-render rebuild was not run for this one article; the afternoon run's rebuild will add it.
+
+Image prompt:
+- Who Is Rahul Gandhi? Education, Career, Yatras and Role as Leader of Opposition: create image for this article topic without any text (symbolic scene, no real person: a dusty rural road at dawn with footprints, a small tricolour on a bamboo pole, a faint Parliament outline; no party symbols)
