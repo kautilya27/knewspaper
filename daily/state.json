@@ -231,7 +231,7 @@
       "slug": "how-did-hitler-come-to-power",
       "title": "What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline",
       "source": "civics #4",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-16",
@@ -360,9 +360,7 @@
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [
-    "how-did-hitler-come-to-power"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

@@ -555,3 +555,5 @@ Not set: how-did-hitler-come-to-power. The image shows a large realistic portrai
 - Converted to `daily/images/how-did-hitler-come-to-power.webp` but not committed or uploaded. Asked the owner whether to use it anyway or make a new image.
 
 Owner's answer: make a new Hitler-article image. Their image was discarded, and the slug stays in `pendingImages`. Prompt to use: "What Is a Dictatorship and How Did Hitler Come to Power? A Dated Timeline: create image for this article topic without any text, without any real people and without Nazi symbols — a symbolic scene such as an empty 1930s parliament chamber with a torn constitution on the podium"
+
+New image from the owner for how-did-hitler-come-to-power, converted to WebP (1670×942, q80) and set as the cover: c0f544_bb10f6aa9562450da6363f347d74f78e~mv2.webp. It shows an empty, sunlit parliament chamber, a podium with two microphones and a torn charter, a gavel, old books and a chain. It has no real people and no Nazi symbols. The charter has small unreadable pseudo-text, used as sent. Removed from `pendingImages`, which is now empty. The pre-render rebuild is left to the 15:36 run.
