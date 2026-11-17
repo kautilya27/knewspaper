@@ -281,21 +281,21 @@
       "slug": "area-of-a-circle",
       "title": "Area of a Circle: Formula, Why It Is πr², 22/7 vs 3.14 and Worked Examples",
       "source": "plan #47",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "jee-main-vs-jee-advanced",
       "title": "JEE Main vs JEE Advanced: Differences in Eligibility, Pattern, Colleges and Ranks (2027)",
       "source": "niche #9",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "media-control-and-dictatorship",
       "title": "Is Controlling the News Media a Sign of Dictatorship? Press Freedom and India's Constitution",
       "source": "civics #5",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -396,11 +396,7 @@
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [
-    "area-of-a-circle",
-    "jee-main-vs-jee-advanced",
-    "media-control-and-dictatorship"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

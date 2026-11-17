@@ -602,3 +602,10 @@ Image prompts:
 - Area of a Circle: Formula, Why It Is πr², 22/7 vs 3.14 and Worked Examples: create image for this article topic without any text
 - JEE Main vs JEE Advanced: Differences in Eligibility, Pattern, Colleges and Ranks (2027): create image for this article topic without any text
 - Is Controlling the News Media a Sign of Dictatorship? Press Freedom and India's Constitution: create image for this article topic without any text (symbolic scene, no real person: e.g. a newspaper press with a padlock and an open constitution, an empty podium with microphones; no flags of parties or countries' leaders)
+
+### 2026-11-17 (late morning): covers from the owner
+The owner sent all three images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- area-of-a-circle → c0f544_c166614ce1dc471dae0d159183d08f24~mv2.webp (a shaded circle with its radius in red on paper, a compass, protractor, books, a calculator and two π sticky notes; the calculator keys have small garbled labels, used as sent).
+- jee-main-vs-jee-advanced → c0f544_5954758132d44f569529f891357aa587~mv2.webp (two campuses split down the middle, an OMR sheet and a physics/chemistry worksheet, a signpost and a balance, four icons below; the papers and one building sign carry small pseudo-text, used as sent).
+- media-control-and-dictatorship → c0f544_5145a168aaa644e6b0b8b2735bf07dee~mv2.webp (a camera, microphone and newspapers wrapped in chains with a padlock; a constitution-style book with the Lion Capital emblem and Parliament outline, scales of justice and a tricolour; a faceless silhouette behind bars in the background). No real or identifiable person, no party symbols. Note: it uses the State Emblem, as the Rahul Gandhi cover did.
+All three removed from `pendingImages` (now empty). The pre-render rebuild is left to the 15:36 run, so the pre-rendered pages show these covers from then.
