@@ -630,3 +630,12 @@ Image prompts:
 - Early Symptoms of Pregnancy: Signs, Timeline, When to Test and What to Do Next in India: create image for this article topic without any text
 - CTC vs In-Hand Salary: How to Calculate Take-Home Pay Under the New Labour Codes: create image for this article topic without any text
 - Indian Spices Names in English, Hindi and Regional Languages (With Commonly Confused Pairs): create image for this article topic without any text
+
+### 2026-11-17 (evening): covers from the owner
+The owner sent all five images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- block-lost-phone-ceir → c0f544_bf7a89045de8458aab1d5bd826e7fc3a~mv2.webp (a locked phone, a laptop showing block → trace → police icons under an orange-and-green logo-like mark, a phone map with a pin, a police beacon and a station building; no readable text, used as sent).
+- what-is-bodmas → c0f544_4ff7bf41a94147898b92b270b9965ae5~mv2.webp (a notebook with ( ), a², ×÷ and +− tiles pointing at (8 + 4) × 3² ÷ 6 − 5; the only text is the maths, which is correct notation; calculator keys have small garbled labels, used as sent).
+- early-symptoms-of-pregnancy → c0f544_6251c514056d4a06b00a82eaa79025fd~mv2.webp (a calendar with a circled day, a positive test, an ultrasound print, knitted booties; tiny unreadable calendar labels).
+- ctc-to-in-hand-salary → c0f544_0fcc967627cb4bc2a81824974e2aac18~mv2.webp (two clipboards with ticks and minus signs either side of a calculator, a money bag and rupee notes, scales and a gavel; garbled calculator keys and note print, used as sent).
+- spices-names-in-english-and-hindi → c0f544_5b432f4af9b9465788d58c7a6ecb153d~mv2.webp (a wooden masala dabba with whole and ground spices, cinnamon, cardamom, cloves, star anise, nutmeg, bay leaves, ginger and garlic; no text).
+All five removed from `pendingImages` (now empty). The pre-render rebuild is left to the 18 Nov morning run, so the pre-rendered pages show these covers from then.

@@ -304,35 +304,35 @@
       "slug": "block-lost-phone-ceir",
       "title": "Lost or Stolen Phone? How to Block It on Sanchar Saathi (CEIR) and Help Police Trace It",
       "source": "niche #10",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "what-is-bodmas",
       "title": "What is BODMAS? Full Form, Rule, Left-to-Right Trap, 'Of' and Worked Examples",
       "source": "plan #52",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "early-symptoms-of-pregnancy",
       "title": "Early Symptoms of Pregnancy: Signs, Timeline, When to Test and What to Do Next in India",
       "source": "plan #50",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "ctc-to-in-hand-salary",
       "title": "CTC vs In-Hand Salary: How to Calculate Take-Home Pay Under the New Labour Codes",
       "source": "niche #11",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-17",
       "slug": "spices-names-in-english-and-hindi",
       "title": "Indian Spices Names in English, Hindi and Regional Languages (With Commonly Confused Pairs)",
       "source": "niche #12",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -437,13 +437,7 @@
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [
-    "block-lost-phone-ceir",
-    "what-is-bodmas",
-    "early-symptoms-of-pregnancy",
-    "ctc-to-in-hand-salary",
-    "spices-names-in-english-and-hindi"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
