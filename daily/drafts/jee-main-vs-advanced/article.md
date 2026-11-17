@@ -4,7 +4,7 @@ So JEE Main decides two things: your NIT-level seat, and whether you may sit JEE
 
 ## Which year these figures are from
 
-NTA released the JEE Main 2027 notice on 24 October 2026, so the JEE Main details below are for 2027. IIT Delhi will organise JEE Advanced 2027, and the exam is on 23 May 2027 (announced on 13 November 2026, along with the 2027 eligibility rules on jeeadv.ac.in). Registration dates and fees are not out yet. The cut-offs, rank-list minimums and seat counts below are from the 2026 cycle, when IIT Roorkee held the exam on 17 May 2026.
+NTA released the JEE Main 2027 notice on 24 October 2026, so the JEE Main details below are for 2027. IIT Delhi will organise JEE Advanced 2027, and the exam is on 23 May 2027 (announced in November 2026; the 2027 eligibility rules are on jeeadv.ac.in). Registration dates and fees are not out yet. The cut-offs, rank-list minimums and seat counts below are from the 2026 cycle, when IIT Roorkee held the exam on 17 May 2026.
 
 ## JEE Main vs JEE Advanced: side-by-side comparison
 
@@ -75,7 +75,7 @@ The Joint Seat Allocation Authority (JoSAA) fills both sets of seats on one port
 - **IITs:** your JEE Advanced rank (common or category rank).
 - **NITs, IIITs and GFTIs:** your JEE Main Paper 1 rank. You do not need to have taken Advanced.
 
-A student who sat both exams can therefore be eligible for an NIT seat on their Main rank and an IIT seat on their Advanced rank in the same round. JoSAA allots the one higher on their choice list. Most NITs also reserve 50% of seats for students from their home state, so a middling Main rank can still win a seat at your state's NIT.
+A student who sat both exams can therefore be eligible for an NIT seat on their Main rank and an IIT seat on their Advanced rank in the same round. JoSAA allots the one higher on their choice list. NITs reserve 50% of their seats for students from their home state (with a few exceptions in the North-East and J&K), so a middling Main rank can still win a seat at your state's NIT.
 
 According to JoSAA's 2026 seat matrix, as reported by Careers360, there were 67,323 seats in total:
 

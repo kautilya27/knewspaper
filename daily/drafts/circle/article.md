@@ -24,7 +24,7 @@ Cut a circle into many equal slices, like a cake. Lay them in a row, pointing al
 
 The thinner the slices, the straighter the edges get, and the shape becomes a rectangle. Its area is base × height = πr × r = **πr²**.
 
-The new Class 9 NCERT book presents this slicing-and-rearranging argument and credits it to the Kerala mathematician Nīlakaṇṭha Somayājī (around 1500 CE). It also explains Archimedes' method, which fits regular polygons with more and more sides around the circle. If you have worked out the [area of a trapezium](https://www.knewspaper.in/post/area-of-a-trapezium) by rearranging pieces into a parallelogram, this is the same idea taken to the limit.
+The new Class 9 NCERT book presents this slicing-and-rearranging argument and credits it to the Kerala mathematician Nīlakaṇṭha Somayājī (around 1500 CE). It also explains Archimedes' method, which uses regular polygons with more and more sides, whose area is half the perimeter × the radius, and lets the number of sides grow without limit. If you have worked out the [area of a trapezium](https://www.knewspaper.in/post/area-of-a-trapezium) by rearranging pieces into a parallelogram, this is the same idea taken to the limit.
 
 ## 22/7 or 3.14: which value of π should you use?
 
@@ -41,7 +41,7 @@ How big is the error?
 | 3.14 | 153.86 cm² | 1,256 cm² | About 0.05% too low |
 | Actual π | 153.94 cm² | 1,256.64 cm² | None |
 
-Both are within roughly 1 part in 2,000 of the true value, far finer than you can measure a rangoli or a plot with a tape. Neither is "more correct"; the marking scheme expects the value the question asked for. The idea itself is old: Aryabhata's *Aryabhatiya* (499 CE) gives the circumference of a circle 20,000 units across as about 62,832 units, which puts π at 3.1416.
+Both are within roughly 1 part in 2,000 of the true value, far finer than you can measure a rangoli or a plot with a tape. Neither is "more correct"; the marking scheme expects the value the question asked for. Approximating π this closely is old: Aryabhata's *Aryabhatiya* (499 CE) gives the circumference of a circle 20,000 units across as about 62,832 units, which puts π at 3.1416.
 
 ## Worked examples
 

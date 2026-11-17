@@ -1,6 +1,6 @@
 **Quick answer:** Rahul Gandhi (born 19 June 1970, New Delhi) is an Indian politician of the Indian National Congress and, since June 2024, the Leader of the Opposition in the Lok Sabha. He has been an MP since 2004, apart from a disqualification of about four months in 2023, first from Amethi, then Wayanad, and now Rae Bareli in Uttar Pradesh. He studied at Rollins College in Florida and Trinity College, Cambridge, and led two long cross-country marches, the Bharat Jodo Yatra (2022–23) and the Bharat Jodo Nyay Yatra (2024).
 
-This profile looks at his career and at what supporters and observers credit him with. Every fact comes from official records, his reported statements, fact-checkers or major news outlets, and disputed points carry the other view.
+This profile looks at his career, what supporters credit him with and what critics say. Every fact comes from official records, his reported statements, fact-checkers or major news outlets, and disputed points carry the other view.
 
 ## Family background
 
@@ -79,6 +79,8 @@ After the first yatra, a Press Trust of India report quoted branding experts who
 ## Criticism, in brief
 
 Critics point to the Congress's two heavy defeats while he was a top leader: 44 seats in 2014 and 52 in 2019, Al Jazeera reported. He resigned as party president after the second. Critics also see his rise as an example of dynasty politics. He addressed this at the University of California, Berkeley, in 2017, saying "most parties in India have that problem" and that the real question is whether a person is capable and sensitive (PTI via Business Standard).
+
+He also faces a money-laundering case filed by the Enforcement Directorate (ED) in the National Herald matter, along with Sonia Gandhi and others. In December 2025 a Delhi trial court declined to take cognisance of the ED's chargesheet; the ED appealed, and the Delhi High Court gave the Gandhis time to respond in July 2026, with the appeal still pending (All India Radio News).
 
 ---
 

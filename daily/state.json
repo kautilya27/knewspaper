@@ -275,6 +275,27 @@
       "title": "Carpet Area vs Built-Up Area vs Super Built-Up Area: RERA Rules and a Worked Example",
       "source": "niche #8",
       "cover": true
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "area-of-a-circle",
+      "title": "Area of a Circle: Formula, Why It Is πr², 22/7 vs 3.14 and Worked Examples",
+      "source": "plan #47",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "jee-main-vs-jee-advanced",
+      "title": "JEE Main vs JEE Advanced: Differences in Eligibility, Pattern, Colleges and Ranks (2027)",
+      "source": "niche #9",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "media-control-and-dictatorship",
+      "title": "Is Controlling the News Media a Sign of Dictatorship? Press Freedom and India's Constitution",
+      "source": "civics #5",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -375,7 +396,11 @@
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "area-of-a-circle",
+    "jee-main-vs-jee-advanced",
+    "media-control-and-dictatorship"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -388,7 +413,8 @@
     1,
     3,
     4,
-    2
+    2,
+    5
   ],
   "skippedCivics": [],
   "usedNiche": [
@@ -400,7 +426,8 @@
     5,
     7,
     8,
-    9
+    9,
+    10
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -410,16 +437,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/circle",
-      "slug": "area-of-a-circle",
-      "source": "plan #47",
-      "note": "written 16 Nov afternoon; gate 1 FAIL (Archimedes polygons are around, not inside, the circle; Class 7 Ganita Prakash has no area chapter) - fixed; gate 2 FAIL only on 'Pizza sizes in India are quoted by diameter in inches' (unverified) - reworded to 'Pizzas are often described by their diameter'. All arithmetic and NCERT mapping confirmed by both gates. Needs a fresh gate, then publish. Not time-sensitive."
-    },
-    {
-      "dir": "daily/drafts/jee-main-vs-advanced",
-      "slug": "jee-main-vs-jee-advanced",
-      "source": "niche #9",
-      "note": "written 16 Nov afternoon; gate 1 FAIL (JEE Advanced 2027 already announced: IIT Delhi, 23 May 2027; IIT seats 18,826 + IISc 125, not 18,951 IITs) - fixed; gate 2 FAIL because IIT Delhi published 2027 eligibility on jeeadv.ac.in/eligibility.html on 13 Nov 2026 (born on/after 1 Oct 2002, 1997 for SC/ST/PwD; Class 12 first in 2026 or 2027; IIT or IISc prior-admission bar) - article updated to the 2027 rules. Gate should confirm those on jeeadv.ac.in. Optional: add the 2027 on-screen calculator and 56,880 qualified in 2026. Time-sensitive-ish (JEE season): gate first next run."
+      "dir": "daily/drafts/ceir",
+      "slug": "block-lost-phone-ceir",
+      "source": "niche #10",
+      "note": "written 17 Nov morning; gate 1 FAIL (Aadhaar must be masked; CEIR launch date is per State/UT; unverified 'status page shows police station'; table/paragraph markdown; 'wipe first' vs Apple advice; unblock-by-police; IMEI in complaint) - all fixed; gate 2 FAIL only on 'can't locate after erasing' (true for Android, not iPhone on iOS 15+) - fixed, plus Find Hub lock/erase conditions wording. Needs a fresh gate, then publish. Not time-sensitive."
     }
   ]
 }

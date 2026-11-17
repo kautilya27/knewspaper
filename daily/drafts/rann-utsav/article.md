@@ -41,7 +41,7 @@ These fees come from the district's 2018 announcement, as reported by DeshGujara
 
 ### How to get it online or at the checkpost
 
-1. **Online:** Apply on the official permit portal, [rannpermit.gujarat.gov.in](https://rannpermit.gujarat.gov.in/). The main traveller uploads an ID proof and pays the fee. **Be careful with look-alike sites:** the 2018 address rannpermit.com is no longer the official portal, so don't upload ID or pay anywhere except rannpermit.gujarat.gov.in.
+1. **Online:** Apply on the official permit portal, [rannpermit.gujarat.gov.in](https://rannpermit.gujarat.gov.in/). The main traveller uploads an ID proof and pays the fee. **Be careful with look-alike sites:** the 2018 address rannpermit.com is no longer the official portal, so check that the address ends in gujarat.gov.in before you upload ID or pay. If the portal doesn't open, ask your tent operator or buy the permit at the Bhirandiyara checkpoint.
 2. **On the spot:** Buy it at the checkpost in **Bhirandiyara village**, on the way from Bhuj to Dhordo. Carry original photo ID for everyone in the group.
 3. **If you're staying at the tent city:** Esquire India says many official packages include the permit. Ask Evoke before you queue for one separately.
 
