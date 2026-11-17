@@ -21,7 +21,9 @@
     41,
     44,
     45,
-    47
+    47,
+    52,
+    50
   ],
   "published": [
     {
@@ -296,6 +298,41 @@
       "title": "Is Controlling the News Media a Sign of Dictatorship? Press Freedom and India's Constitution",
       "source": "civics #5",
       "cover": true
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "block-lost-phone-ceir",
+      "title": "Lost or Stolen Phone? How to Block It on Sanchar Saathi (CEIR) and Help Police Trace It",
+      "source": "niche #10",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "what-is-bodmas",
+      "title": "What is BODMAS? Full Form, Rule, Left-to-Right Trap, 'Of' and Worked Examples",
+      "source": "plan #52",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "early-symptoms-of-pregnancy",
+      "title": "Early Symptoms of Pregnancy: Signs, Timeline, When to Test and What to Do Next in India",
+      "source": "plan #50",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "ctc-to-in-hand-salary",
+      "title": "CTC vs In-Hand Salary: How to Calculate Take-Home Pay Under the New Labour Codes",
+      "source": "niche #11",
+      "cover": false
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "spices-names-in-english-and-hindi",
+      "title": "Indian Spices Names in English, Hindi and Regional Languages (With Commonly Confused Pairs)",
+      "source": "niche #12",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -394,9 +431,19 @@
     {
       "order": 43,
       "reason": "Nothing Will Work If You Don't Believe in It: a James Clear essay title on belief/self-efficacy; no information gain over how-to-build-self-confidence and goals-vs-systems (judged on 2026-11-16 without drafting)"
+    },
+    {
+      "order": 46,
+      "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "block-lost-phone-ceir",
+    "what-is-bodmas",
+    "early-symptoms-of-pregnancy",
+    "ctc-to-in-hand-salary",
+    "spices-names-in-english-and-hindi"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -423,7 +470,9 @@
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -431,12 +480,5 @@
     3
   ],
   "skippedOwner": [],
-  "heldDrafts": [
-    {
-      "dir": "daily/drafts/ceir",
-      "slug": "block-lost-phone-ceir",
-      "source": "niche #10",
-      "note": "written 17 Nov morning; gate 1 FAIL (Aadhaar must be masked; CEIR launch date is per State/UT; unverified 'status page shows police station'; table/paragraph markdown; 'wipe first' vs Apple advice; unblock-by-police; IMEI in complaint) - all fixed; gate 2 FAIL only on 'can't locate after erasing' (true for Android, not iPhone on iOS 15+) - fixed, plus Find Hub lock/erase conditions wording. Needs a fresh gate, then publish. Not time-sensitive."
-    }
-  ]
+  "heldDrafts": []
 }

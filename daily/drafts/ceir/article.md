@@ -7,9 +7,9 @@ CEIR (Central Equipment Identity Register) is the Department of Telecommunicatio
 The block form on Sanchar Saathi lists these prerequisites:
 
 - **Police complaint copy:** an FIR or a lost report ("FIR/LR" in the manual). The complaint number and an upload of the complaint are both mandatory. Many state police forces, such as Delhi Police, let you file a lost report online. The process varies by state.
-- **A re-issued (duplicate) SIM for the lost number.** The OTP is sent to this number, and the form warns that SMS must be working on the new SIM. Ask your operator to block the old SIM and issue a replacement first; this also stops misuse of your number for OTPs. Comparing operators? See our guide to the [best SIM network in India](https://www.knewspaper.in/post/what-is-the-best-sim-network-in-india).
-- **Identity proof:** Aadhaar (it must be masked, showing only the last four digits), PAN, Voter ID, driving licence or another ID, uploaded as a file.
-- **IMEI number(s), if available.** Dual-SIM phones have two IMEIs, and the form has fields for IMEI 1 and IMEI 2. Enter both so that both slots are blocked. You will find them on the phone box, on the purchase invoice, or (for your next phone) by dialling `*#06#`.
+- **A re-issued (duplicate) SIM for the lost number.** The OTP is sent to this number, and the form warns that SMS must be working on the new SIM. Under TRAI rules, SMS on a re-issued SIM starts only 24 hours after activation, so the OTP may not arrive before then. Ask your operator to block the old SIM and issue a replacement first; this also stops misuse of your number for OTPs. Comparing operators? See our guide to the [best SIM network in India](https://www.knewspaper.in/post/what-is-the-best-sim-network-in-india).
+- **Identity proof:** Aadhaar (the form currently asks for a masked copy that shows only the last four digits), PAN, Voter ID, driving licence or another ID, uploaded as a file.
+- **IMEI number(s), if available.** Dual-SIM phones have two IMEIs, and the form has fields for IMEI 1 and IMEI 2. Enter both so that both slots are blocked. You will find them on the phone box, on the purchase invoice, or (for your next phone) by dialling *#06#.
 - **Purchase invoice:** optional, but upload it if you have it.
 
 The form also asks for the brand, model, approximate price, and the place, date, state, district and police station where you lost the phone.
@@ -41,7 +41,7 @@ Lost your request ID? Use "Forgot Request ID", enter the mobile number you used 
 | Block the phone's IMEI(s) on all Indian telecom networks | Show you the phone's live location on a map |
 | Record the details of anyone who puts a SIM in the blocked phone and share them with the police for tracing | Recover the phone for you. The police do the tracing and recovery |
 | Tell a buyer that a phone is blocked when they check its IMEI | Protect data already on the phone. An IMEI block acts on mobile networks, not on the device itself |
-| Let you unblock the phone with your request ID after recovery | Block a phone lost before CEIR launched in your state. The form accepts only losses on or after your State/UT's launch date, which it lists |
+| Let you unblock the phone with your request ID after recovery | Block a phone lost before CEIR launched in your state. The form currently accepts only losses on or after your State/UT's launch date, which it lists |
 
 A blocked phone still holds your photos, chats and logins, so change key passwords and alert your bank. Our guide on [protecting your data from cyberattacks](https://www.knewspaper.in/post/how-to-protect-your-data-from-cyberattacks) covers the basics.
 
@@ -60,17 +60,17 @@ The request then goes to the operators, and the phone works again once they remo
 
 Before you pay for a used phone, check that it is not blocked:
 
-- **SMS:** send `KYM <15-digit IMEI>` to **14422**.
+- **SMS:** send **KYM** followed by the 15-digit IMEI, with no space (for example, KYM123456789012345), to **14422**.
 - **App or website:** use "Know Genuineness of Your Mobile Handset" (Know Your Mobile) in the Sanchar Saathi app or on the portal.
 
-A valid phone shows its brand and model; a blocked or invalid one says so. Dial `*#06#` on the phone and make sure the IMEI matches the box. A blocked handset will not work on Indian networks, and only the person who blocked it (using the request ID) or the police can get it unblocked.
+A valid phone shows its brand and model; a blocked or invalid one says so. Dial *#06# on the phone and make sure the IMEI matches the box. A blocked handset will not work on Indian networks, and only the person who blocked it (using the request ID) or the police can get it unblocked.
 
 ## Other Sanchar Saathi tools worth using
 
 - **Know mobile connections in your name (TAFCOP):** see every SIM registered against your ID, and report ones that aren't yours.
 - **Chakshu:** report suspected fraud calls, SMS or WhatsApp messages, such as fake KYC-update scams.
 
-According to a Press Information Bureau release of 5 October 2026, Sanchar Saathi has blocked 60.96 lakh lost or stolen handsets, traced 37.85 lakh and helped recover over 14 lakh.
+According to a communications ministry release of 5 October 2026 (reported by DD News), Sanchar Saathi has blocked 60.96 lakh lost or stolen handsets, traced 37.85 lakh and helped recover over 14 lakh.
 
 ## Google Find Hub and Apple Find My: use them alongside CEIR
 
