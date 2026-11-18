@@ -94,7 +94,7 @@ A 50% basic here is exactly ₹25,000 a month, the new PF ceiling, so the last t
 | Income tax | 0 | 0 | 0 |
 | **Monthly in-hand** | **73,522** | **71,122** | **75,122** |
 
-The PF method now decides the result. With PF on the full basic, take-home falls by about ₹2,400 a month. If your employer moves from PF on the full basic to PF on the ₹25,000 ceiling, take-home rises, because less of the CTC goes to PF. If PF is on the ₹25,000 ceiling in both cases, the higher basic trims take-home by only about ₹400 a month, through the bigger gratuity provision. Separately, the ceiling's rise from ₹15,000 lifts a capped employee's own PF from ₹1,800 to ₹3,000 a month, so take-home falls by up to ₹1,200 a month whatever the basic. Tax stays nil.
+The PF method now decides the result. With PF on the full basic, take-home falls by about ₹2,400 a month. If your employer moves from PF on the full basic to PF on the ₹25,000 ceiling, take-home rises, because less of the CTC goes to PF. If PF is on the ₹25,000 ceiling in both cases, the higher basic trims take-home by only about ₹400 a month, through the bigger gratuity provision. Separately, the ceiling's rise from ₹15,000 lifts a capped employee's own PF from ₹1,800 to ₹3,000 a month, so take-home falls by ₹1,200 a month whatever the basic, or by up to ₹2,400 if your CTC is fixed and the employer's matching ₹1,200 rise also comes out of it. Tax stays nil.
 
 ### 15 LPA (₹15,00,000 CTC)
 

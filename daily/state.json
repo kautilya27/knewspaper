@@ -23,7 +23,8 @@
     45,
     47,
     52,
-    50
+    50,
+    48
   ],
   "published": [
     {
@@ -333,6 +334,27 @@
       "title": "Indian Spices Names in English, Hindi and Regional Languages (With Commonly Confused Pairs)",
       "source": "niche #12",
       "cover": true
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "press-conferences-and-accountability",
+      "title": "Does a Leader Who Gives No Press Conferences Avoid Accountability? An Opinion",
+      "source": "civics #6",
+      "cover": false
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "how-to-identify-pure-silk-saree",
+      "title": "How to Identify a Pure Silk Saree: Silk Mark Label, Zari Checks and Tests That Actually Work",
+      "source": "niche #14",
+      "cover": false
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "swot-analysis",
+      "title": "SWOT Analysis Explained: Indian Examples, the TOWS Action Step and Interview Answers",
+      "source": "plan #48",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -437,7 +459,11 @@
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "press-conferences-and-accountability",
+    "how-to-identify-pure-silk-saree",
+    "swot-analysis"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -451,7 +477,8 @@
     3,
     4,
     2,
-    5
+    5,
+    6
   ],
   "skippedCivics": [],
   "usedNiche": [
@@ -466,7 +493,9 @@
     9,
     10,
     11,
-    12
+    12,
+    14,
+    13
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -474,5 +503,12 @@
     3
   ],
   "skippedOwner": [],
-  "heldDrafts": []
+  "heldDrafts": [
+    {
+      "dir": "daily/drafts/makar-sankranti",
+      "slug": "makar-sankranti",
+      "source": "niche #13",
+      "note": "gate 1 FAIL (Kashmir row), gate 2 FAIL (Wikipedia/TOI/Mercier attributions); both fixed 18 Nov; time-sensitive (14-15 Jan 2027)"
+    }
+  ]
 }
