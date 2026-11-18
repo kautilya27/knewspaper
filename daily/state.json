@@ -340,21 +340,21 @@
       "slug": "press-conferences-and-accountability",
       "title": "Does a Leader Who Gives No Press Conferences Avoid Accountability? An Opinion",
       "source": "civics #6",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-18",
       "slug": "how-to-identify-pure-silk-saree",
       "title": "How to Identify a Pure Silk Saree: Silk Mark Label, Zari Checks and Tests That Actually Work",
       "source": "niche #14",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-18",
       "slug": "swot-analysis",
       "title": "SWOT Analysis Explained: Indian Examples, the TOWS Action Step and Interview Answers",
       "source": "plan #48",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -459,11 +459,7 @@
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [
-    "press-conferences-and-accountability",
-    "how-to-identify-pure-silk-saree",
-    "swot-analysis"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

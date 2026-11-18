@@ -662,3 +662,10 @@ Image prompts:
 - Does a Leader Who Gives No Press Conferences Avoid Accountability? An Opinion: create image for this article topic without any text (symbolic scene, no real person: e.g. an empty podium with many microphones facing rows of empty press chairs; no flags, party symbols or leaders)
 - How to Identify a Pure Silk Saree: Silk Mark Label, Zari Checks and Tests That Actually Work: create image for this article topic without any text
 - SWOT Analysis Explained: Indian Examples, the TOWS Action Step and Interview Answers: create image for this article topic without any text
+
+### 2026-11-18 (late morning): covers from the owner
+The owner sent all three images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- swot-analysis → c0f544_0c817153a3984fadb3c042a9e3911722~mv2.webp (a clipboard with green/yellow/blue/red quadrant icons, an arrow to a target-and-checklist clipboard, a Mumbai skyline with the Gateway of India). Note: the laptop screen shows real brand logos (Flipkart, Airtel, Tata) and the BSE building; used as sent.
+- how-to-identify-pure-silk-saree → c0f544_3182dda478154abf811dcd6aad65db3a~mv2.webp (a magenta silk saree with gold zari, a magnifier, and four insets: a butterfly-logo tag, zari threads, a burn test, a water-drop test; no text). The tag's logo is generic, not the real Silk Mark.
+- press-conferences-and-accountability → c0f544_5042b0a13acf40a99b16ff8e9bd811d2~mv2.webp (an empty podium with microphones and cameras, an empty chair, a domed government building, and a faceless male silhouette shadow on a wall). No identifiable person or party symbol; mic flags carry small garbled pseudo-text.
+All three removed from `pendingImages` (now empty). The pre-render rebuild is left to the 15:36 run, so the pre-rendered pages show these covers from then.
