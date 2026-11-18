@@ -363,28 +363,28 @@
       "slug": "makar-sankranti",
       "title": "Makar Sankranti 2027: Date, Punya Kaal and What It Is Called in Every State",
       "source": "niche #13",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-18",
       "slug": "new-income-tax-act-section-mapping",
       "title": "Income-tax Act 2025 Explained: Old Section Numbers vs New (80C, 80D, 24(b), HRA and More)",
       "source": "niche #15",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-18",
       "slug": "stamp-duty-and-registration-charges",
       "title": "Stamp Duty and Registration Charges in India 2026: State-Wise Table With Women's Concession",
       "source": "niche #16",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-18",
       "slug": "stress-management",
       "title": "Stress Management: WHO's 5 Skills, Daily Habits and When to See a Doctor",
       "source": "plan #51",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -489,12 +489,7 @@
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [
-    "makar-sankranti",
-    "new-income-tax-act-section-mapping",
-    "stamp-duty-and-registration-charges",
-    "stress-management"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

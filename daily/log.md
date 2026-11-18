@@ -688,3 +688,11 @@ Image prompts:
 - Income-tax Act 2025 Explained: Old Section Numbers vs New (80C, 80D, 24(b), HRA and More): create image for this article topic without any text
 - Stamp Duty and Registration Charges in India 2026: State-Wise Table With Women's Concession: create image for this article topic without any text
 - Stress Management: WHO's 5 Skills, Daily Habits and When to See a Doctor: create image for this article topic without any text
+
+### 2026-11-18 (evening): covers from the owner
+The owner sent all four images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- makar-sankranti → c0f544_59dc4747f43347b08aaed565f38cd9d9~mv2.webp (kites at sunrise, a clay pongal pot, til laddoo and chikki on a brass thali, sugarcane, marigolds, a brass lamp and a temple shikhara; no text).
+- new-income-tax-act-section-mapping → c0f544_35d315414d114126b9720221f3d931b0~mv2.webp (a blue and a maroon law book on a balance with an arrow from old to new, piggy bank, coins, a toy house, stethoscope, checklist, calculator; a domed government building and the Indian flag behind). Note: both books carry the Lion Capital (State Emblem of India); calculator keys have small garbled labels. Used as sent.
+- stamp-duty-and-registration-charges → c0f544_4891e07ce02e41758a361380e0401395~mv2.webp (a model house, stamp paper with a rubber stamp, coins, scales, a pink house cut-out with a woman's silhouette, a wooden India map, calculator; a domed building and flag behind). Note: the stamp paper carries a State Emblem-style mark; calculator keys garbled. Used as sent.
+- stress-management → c0f544_4cce1289687b41a2ae831e953930ddb5~mv2.webp (a woman meditating on a mat on a terrace, a stormy-head icon with an arrow to her, icons for mindfulness, exercise, food, sleep and people, a medical clipboard; only "zZZ" as text).
+All four removed from `pendingImages` (now empty). The pre-render rebuild is left to the 19 Nov morning run, so the pre-rendered pages show these covers from then.
