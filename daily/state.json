@@ -24,7 +24,9 @@
     47,
     52,
     50,
-    48
+    48,
+    51,
+    49
   ],
   "published": [
     {
@@ -355,6 +357,34 @@
       "title": "SWOT Analysis Explained: Indian Examples, the TOWS Action Step and Interview Answers",
       "source": "plan #48",
       "cover": true
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "makar-sankranti",
+      "title": "Makar Sankranti 2027: Date, Punya Kaal and What It Is Called in Every State",
+      "source": "niche #13",
+      "cover": false
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "new-income-tax-act-section-mapping",
+      "title": "Income-tax Act 2025 Explained: Old Section Numbers vs New (80C, 80D, 24(b), HRA and More)",
+      "source": "niche #15",
+      "cover": false
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "stamp-duty-and-registration-charges",
+      "title": "Stamp Duty and Registration Charges in India 2026: State-Wise Table With Women's Concession",
+      "source": "niche #16",
+      "cover": false
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "stress-management",
+      "title": "Stress Management: WHO's 5 Skills, Daily Habits and When to See a Doctor",
+      "source": "plan #51",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -459,7 +489,12 @@
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "makar-sankranti",
+    "new-income-tax-act-section-mapping",
+    "stamp-duty-and-registration-charges",
+    "stress-management"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -491,7 +526,9 @@
     11,
     12,
     14,
-    13
+    13,
+    15,
+    16
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -501,10 +538,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/makar-sankranti",
-      "slug": "makar-sankranti",
-      "source": "niche #13",
-      "note": "gate 1 FAIL (Kashmir row), gate 2 FAIL (Wikipedia/TOI/Mercier attributions); both fixed 18 Nov; time-sensitive (14-15 Jan 2027)"
+      "dir": "daily/drafts/student-resume",
+      "slug": "student-resume",
+      "source": "plan #49",
+      "note": "gate 1 FAIL (SIH comma typo; 'Article assistant' title), gate 2 FAIL (IMA NCC seats 32 -> 13 of 100 per UPSC CDS II 2026); all fixed 18 Nov afternoon; needs a fresh gate"
     }
   ]
 }

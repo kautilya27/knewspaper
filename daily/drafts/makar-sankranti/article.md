@@ -9,7 +9,7 @@ For New Delhi, Drik Panchang's figures put the **punya kaal at 7:15 am to 5:46 p
 | Sun enters Makara (sankranti moment) | Thu, 14 Jan, 9:14 pm IST | Drik Panchang |
 | Makar Sankranti festival day | Fri, 15 Jan | Drik Panchang |
 | Punya kaal | Fri, 15 Jan, 7:15 am to 5:46 pm | Drik Panchang |
-| Maha punya kaal | Fri, 15 Jan, 7:15 am to about 9:00 am | Drik Panchang, as quoted by panchang sites |
+| Maha punya kaal | Fri, 15 Jan, 7:15 am to about 9:00 am | Drik Panchang (New Delhi) |
 | Lohri | Thu, 14 Jan (evening) | Drik Panchang |
 | Bhogi | Thu, 14 Jan | Drik Panchang |
 | Thai Pongal, Magh Bihu, Uttarayan | Fri, 15 Jan (Gujarat usually flies kites on both 14 and 15 Jan) | Drik Panchang |
@@ -34,7 +34,7 @@ Indian calendars measure the zodiac against the fixed stars (sidereal). Makar Sa
 
 ### 2. The sankranti moment moves about 6 hours later each year
 
-According to Wikipedia, one Makar Sankranti follows the last after about a year plus 6 hours 10 minutes. So the moment slides later each year, and the leap day pulls it back by a day every fourth year. You can see this in the recent times listed on Wikipedia:
+According to Wikipedia, the time difference between two consecutive Makar Sankrantis is about 6 hours 10 minutes beyond a calendar year. So the moment slides later each year, and the leap day pulls it back by a day every fourth year. You can see this in the recent times listed on Wikipedia:
 
 | Year | Sun enters Makara (IST) | Festival day |
 |---|---|---|
@@ -49,7 +49,7 @@ The rituals of Sankranti (snan, Surya puja, daan) are done in daylight. Drik Pan
 
 ### The slow drift
 
-The extra 10 minutes or so each year do not fully cancel out, so the festival creeps later over the long run. That is why it now falls on 14 or 15 January and will keep moving later. Wikipedia notes that Makar Sankranti will fall on 16 January for the first time in 2102, because 2100 is not a leap year.
+The leap-day correction doesn't fully cancel the extra minutes each year, so the festival creeps later over the long run. That is why it now falls on 14 or 15 January and will keep moving later. Wikipedia notes that Makar Sankranti will fall on 16 January for the first time in 2102, because 2100 is not a leap year.
 
 ## What Makar Sankranti is called in every state
 
@@ -60,7 +60,7 @@ The festival is the same, but the name, food and main ritual change from region 
 | Punjab, Haryana, Delhi | Lohri (the eve) | Rewri, gajak, peanuts, popcorn | Bonfire at night; til and rewri offered to the fire |
 | Punjab | Maghi, Maghi Sangrand | Kheer made with sugarcane juice | Maghi mela at Sri Muktsar Sahib for the Chali Mukte (40 martyrs) |
 | Gujarat | Uttarayan | Undhiyu, chikki | Kite flying from rooftops over two days (Uttarayan and Vasi Uttarayan) |
-| Rajasthan | Sakrat | Til-patti, gajak, pheeni, ghevar, til laddoo | Kite contests in Jaipur; gifts for married daughters |
+| Rajasthan | Sakraat | Til-patti, gajak, pheeni, ghevar, til laddoo | Kite contests in Jaipur; gifts for married daughters |
 | Uttar Pradesh | Khichdi, Khichdi Sankranti | Khichdi of new rice and urad dal | Dip at Prayagraj and Varanasi; khichdi offered at Gorakhnath temple |
 | Bihar, Jharkhand | Dahi-Chura, Til Sakraat (Mithila), Khichdi | Chura (flattened rice) with dahi and gur, tilkut | Holy dip; til given as daan |
 | Uttarakhand | Ghughuti, Uttarayani | Ghughuti (fried sweet dough) | Children feed ghughuti to crows; Uttarayani fair at Bageshwar |
@@ -74,7 +74,6 @@ The festival is the same, but the name, food and main ritual change from region 
 | Andhra Pradesh, Telangana | Sankranthi, Pedda Panduga | Festive new-rice dishes | Bhogi bonfire, muggulu (rangoli), Kanuma for cattle |
 | Tamil Nadu | Pongal, Thai Pongal | Sakkarai pongal | Pot boiled until it spills over; Mattu Pongal for cattle |
 | Kerala | Makaravilakku | — | Devotees watch the Makara Jyothi at Sabarimala |
-
 
 The four days of Pongal in Tamil Nadu are explained in our post on [Bhogi, the first day of Pongal 2027](https://www.knewspaper.in/post/pongal-first-day-bhogi). In Gujarat, the Uttarayan kites fly in the middle of the [Rann Utsav](https://www.knewspaper.in/post/rann-utsav) season.
 
