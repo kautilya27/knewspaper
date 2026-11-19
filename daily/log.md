@@ -720,3 +720,11 @@ Image prompts:
 - RTI Act Explained: What You Can Ask, How to File RTI Online and What to Do If There's No Reply: create image for this article topic without any text (symbolic scene, no real person: e.g. a stack of government files with a magnifying glass and an envelope; no flags, party symbols or leaders)
 - Notice Period Rules in India: Can Your Employer Force You to Serve It, and How Buyout Works: create image for this article topic without any text
 - High Fibre Foods in India: Fibre per 100 g in Dals, Millets, Fruits and Vegetables (ICMR-NIN Data): create image for this article topic without any text
+
+### 2026-11-19 (morning, after the run): covers from the owner
+The owner sent all four images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- high-fibre-foods → c0f544_29504cefb3344a09b9f87fde670493ee~mv2.webp (wooden bowls of dals, millets, chana and moong, with guava, papaya, apple, bananas, broccoli, oats, chia, flaxseed, carrots, beans, cabbage, cauliflower and spinach; no text).
+- notice-period-rules → c0f544_9f2ff46a3b62405bb2bdc2b64f13d84e~mv2.webp (a briefcase, a clipboard contract with a handshake icon and signature, a desk calendar with a pinned date range, circular arrows to a money bag and coins, and scales of justice). Note: the calendar has small garbled numbers; used as sent.
+- how-to-file-rti-online → c0f544_5239ac48557a42678f41d8b44191148c~mv2.webp (a laptop with an upload form, a document with an "i" magnifier, files, a magnifying glass, calendar, hourglass, gavel, checklist and scales, a question → laptop → calendar → scales flow, and a domed government building with the Indian flag). No people or party symbols.
+- student-resume → c0f544_34c8b5cf202443baaa2282331f4ea245~mv2.webp (a resume with icon sections on a laptop, a graduation cap on books, notebooks, pens and a plant, a campus building behind; only placeholder lines, no text).
+All four set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 15:36 run, so the pre-rendered pages show these covers from then.

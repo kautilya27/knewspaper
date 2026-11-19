@@ -392,28 +392,28 @@
       "slug": "student-resume",
       "title": "Student Resume in India: What to Write When You Have No Work Experience",
       "source": "plan #49",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "how-to-file-rti-online",
       "title": "RTI Act Explained: What You Can Ask, How to File RTI Online and What to Do If There's No Reply",
       "source": "civics #7",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "notice-period-rules",
       "title": "Notice Period Rules in India: Can Your Employer Force You to Serve It, and How Buyout Works",
       "source": "niche #19",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "high-fibre-foods",
       "title": "High Fibre Foods in India: Fibre per 100 g in Dals, Millets, Fruits and Vegetables (ICMR-NIN Data)",
       "source": "plan #55",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -526,12 +526,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "student-resume",
-    "how-to-file-rti-online",
-    "notice-period-rules",
-    "high-fibre-foods"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
