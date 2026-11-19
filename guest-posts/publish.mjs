@@ -18,7 +18,7 @@
 //
 // Environment: WIX_API_KEY (required), WIX_SITE_ID, DRY_RUN=1 (check and log only).
 import { htmlToRicos } from "./html-to-ricos.mjs";
-import { PLAN_CREDITS, SPONSORED_NOTE, checkSubmission, isValidSlug } from "../wix-preview/src/assets/guest-rules.js";
+import { PLAN_CREDITS, checkSubmission, isValidSlug } from "../wix-preview/src/assets/guest-rules.js";
 
 const SITE_ID = process.env.WIX_SITE_ID || "fc7a03c1-28fe-4510-90ba-025a62b06835";
 const API_KEY = process.env.WIX_API_KEY;
@@ -158,13 +158,6 @@ async function slugTaken(slug) {
   }
 }
 
-function sponsoredNote() {
-  return {
-    type: "PARAGRAPH", id: "sponsored-note", nodes: [{ type: "TEXT", id: "", nodes: [], textData: { text: SPONSORED_NOTE, decorations: [{ type: "ITALIC", italicData: true }] } }],
-    paragraphData: { textStyle: { textAlignment: "AUTO" } },
-  };
-}
-
 async function publish(sub, ricos, order) {
   const d = sub.data;
   const slug = d.slug;
@@ -173,8 +166,8 @@ async function publish(sub, ricos, order) {
     title: d.title.trim(),
     memberId: owner(sub),
     excerpt: d.metaDescription.trim(),
-    // Disclosure first: the post is paid, and its outside links are rel="sponsored".
-    richContent: { nodes: [sponsoredNote(), ...ricos.nodes] },
+    // No sponsored label and do-follow outside links (owner's decision, 19 Nov 2026).
+    richContent: { nodes: ricos.nodes },
     seoSlug: slug,
     commentingEnabled: true,
     language: "en",

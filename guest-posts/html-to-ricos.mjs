@@ -37,10 +37,10 @@ export function htmlToRicos(html) {
         const link = parseLink(c.getAttribute("href"));
         if (!link) { if ((c.getAttribute("href") || "").trim()) doc.badLinks++; inline(c, decos, out); continue; }
         doc.links.push({ href: link.href, internal: link.internal });
-        // Paid post: every outside link is rel="sponsored", whatever the writer chose.
+        // Every outside link is published as a do-follow link (owner's decision, 19 Nov 2026).
         const linkData = link.internal
           ? { link: { url: link.href, target: "SELF" } }
-          : { link: { url: link.href, target: "BLANK", rel: { noreferrer: true, sponsored: true } } };
+          : { link: { url: link.href, target: "BLANK", rel: { noreferrer: true } } };
         inline(c, [...decos.filter((d) => d.type !== "LINK"), { type: "LINK", linkData }], out);
         continue;
       }

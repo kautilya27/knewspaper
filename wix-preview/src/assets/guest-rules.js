@@ -6,8 +6,8 @@ export const RULES = {
   minWords: 500,
   maxWords: 1500,
   minHeadings: 2, // H2 or H3, at least one of them an H2
-  // Paid posts: every outside link is marked rel="sponsored" (Google's rule
-  // for paid links), so there is one limit instead of do-follow/no-follow.
+  // Every outside link is published as a do-follow link (no rel="sponsored"),
+  // so there is one limit instead of do-follow/no-follow.
   // At most 3 links to other websites, and at most 2 of them to any one site
   // (so there's room for a source). Links to Knewspaper don't count.
   maxLinks: 3,
@@ -118,5 +118,5 @@ export function linkCounts(doc) {
   return { external: doc.links.filter((l) => !l.internal).length, site, perSite };
 }
 
-// The note at the top of every published guest post.
+// No longer added to guest posts (owner's decision, 19 Nov 2026); kept for reference.
 export const SPONSORED_NOTE = "Sponsored guest post. Links to other websites in this article are paid placements.";

@@ -54,7 +54,7 @@ onAccount(() => updatePay());
 const ALLOWED = { P: "p", DIV: "p", H1: "h2", H2: "h2", H3: "h3", H4: "h3", H5: "h3", H6: "h3", UL: "ul", OL: "ol", LI: "li", BLOCKQUOTE: "blockquote", STRONG: "strong", B: "strong", EM: "em", I: "em", A: "a", BR: "br" };
 const DROP = new Set(["SCRIPT", "STYLE", "IFRAME", "OBJECT", "EMBED", "NOSCRIPT", "TEMPLATE", "SVG", "IMG", "VIDEO", "AUDIO", "META", "LINK", "TITLE", "HEAD", "BUTTON", "INPUT", "SELECT", "TEXTAREA", "FORM"]);
 // Rebuild HTML keeping only the allowed tags. Links keep only href (every outside
-// link is published as rel="sponsored").
+// link is published as a do-follow link).
 function cleanHtml(html) {
   const doc = new DOMParser().parseFromString(`<body>${html}</body>`, "text/html");
   const walk = (node) => {
@@ -69,7 +69,7 @@ function cleanHtml(html) {
       if (tag === "a") {
         const link = parseLink(c.getAttribute("href"));
         if (!link) { out += walk(c); continue; }
-        out += `<a href="${esc(link.href)}" rel="${link.internal ? "noopener" : "sponsored noopener"}">${walk(c)}</a>`;
+        out += `<a href="${esc(link.href)}" rel="${link.internal ? "noopener" : "noopener"}">${walk(c)}</a>`;
         continue;
       }
       out += `<${tag}>${walk(c)}</${tag}>`;
@@ -151,7 +151,7 @@ editor.addEventListener("click", (e) => {
 function applyLink() {
   const link = parseLink(linkUrl.value);
   if (!link) { say(linkStatus, "Enter a full address starting with https://", "error"); return; }
-  const rel = link.internal ? "noopener" : "sponsored noopener";
+  const rel = link.internal ? "noopener" : "noopener";
   if (editingLink) {
     editingLink.setAttribute("href", link.href);
     editingLink.setAttribute("rel", rel);

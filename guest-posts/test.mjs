@@ -19,7 +19,7 @@ assert.equal(r.doc.h2, 2); assert.equal(r.doc.h3, 1);
 assert.equal(r.doc.badLinks, 1);
 assert.deepEqual(r.doc.links.map((l) => l.internal), [false, false, true]);
 const links = r.nodes[1].nodes.filter((t) => t.textData.decorations.some((d) => d.type === "LINK")).map((t) => t.textData.decorations.find((d) => d.type === "LINK").linkData.link);
-assert.equal(links[0].rel.sponsored, true); assert.equal(links[1].rel.sponsored, true); assert.ok(!links[1].rel.nofollow); assert.equal(links[2].target, "SELF");
+assert.ok(!links[0].rel.sponsored); assert.ok(!links[1].rel.sponsored); assert.ok(!links[0].rel.nofollow); assert.ok(!links[1].rel.nofollow); assert.equal(links[2].target, "SELF");
 assert.ok(!JSON.stringify(r.nodes).includes("alert"), "script content dropped");
 assert.ok(r.nodes[1].nodes.some((t) => t.textData.text.includes("& ")), "entities decoded");
 assert.ok(r.doc.words > 520 && r.doc.words < 600, "words " + r.doc.words);
