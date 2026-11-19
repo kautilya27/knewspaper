@@ -747,3 +747,11 @@ Image prompts:
 - Famous Food of Every Indian State and Union Territory: A Complete Table: create image for this article topic without any text
 - Positive Thinking: What the Research Really Shows and How to Practise It: create image for this article topic without any text
 - Area of Equilateral Triangle: Formula (√3/4)a², Proofs, Table and Solved Examples: create image for this article topic without any text
+
+### 2026-11-19 (afternoon, after the run): covers from the owner
+The owner sent all four images. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- area-of-equilateral-triangle → c0f544_a3ed252a057f4f338c2e283fcfc12ed6~mv2.webp (a spiral notepad with a yellow equilateral triangle showing its dashed altitude, right-angle mark and equal-side ticks; compass, set square, calculator, books, plant and pen holder). Note: calculator keys carry small garbled labels; used as sent.
+- positive-thinking → c0f544_48de3458098d496881d7b6ce4af2a6c5~mv2.webp (a smiling cartoon brain on a wooden block with icons for goals, exercise, meditation, sleep and people; checklist notebook, smiley ball, hourglass, mug). Only "zZZ" as text.
+- famous-food-of-indian-states → c0f544_c0753a950b6440bea005a15a405ab0f6~mv2.webp (a gold cut-out map of India with state lines, surrounded by a thali, dosa, vada pav, litti, fish curry, momos, dhokla, idli, chole bhature, biryani, jalebi and more). Note: the map is stylised; its northern boundary should be checked against India's official map before the image is used anywhere else.
+- neet-eligibility → c0f544_1b4999efd24940608d2f3cfe7b6cf7f1~mv2.webp (stethoscope on books, anatomy torso and heart models, a checklist clipboard, calendar with a red pin, hourglass, alarm clock, notebook, a white coat with a caduceus). Note: the calendar has small garbled text; used as sent.
+All four set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 20 Nov morning run, so the pre-rendered pages show these covers from then.

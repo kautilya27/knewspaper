@@ -422,28 +422,28 @@
       "slug": "neet-eligibility",
       "title": "NEET UG 2027 Eligibility: Age Limit, Number of Attempts, Subjects and Open-School Rules",
       "source": "niche #17",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "famous-food-of-indian-states",
       "title": "Famous Food of Every Indian State and Union Territory: A Complete Table",
       "source": "niche #20",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "positive-thinking",
       "title": "Positive Thinking: What the Research Really Shows and How to Practise It",
       "source": "plan #56",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-19",
       "slug": "area-of-equilateral-triangle",
       "title": "Area of Equilateral Triangle: Formula (√3/4)a², Proofs, Table and Solved Examples",
       "source": "plan #57",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -556,12 +556,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "neet-eligibility",
-    "famous-food-of-indian-states",
-    "positive-thinking",
-    "area-of-equilateral-triangle"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
