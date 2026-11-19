@@ -37,10 +37,12 @@ export function htmlToRicos(html) {
         const link = parseLink(c.getAttribute("href"));
         if (!link) { if ((c.getAttribute("href") || "").trim()) doc.badLinks++; inline(c, decos, out); continue; }
         doc.links.push({ href: link.href, internal: link.internal });
-        // Every outside link is published as a do-follow link (owner's decision, 19 Nov 2026).
+        // The first 2 links to other websites are do-follow; any after that are no-follow
+        // (owner's decision, 19 Nov 2026; at most 3 outside links are allowed).
+        const outside = doc.links.filter((l) => !l.internal).length;
         const linkData = link.internal
           ? { link: { url: link.href, target: "SELF" } }
-          : { link: { url: link.href, target: "BLANK", rel: { noreferrer: true } } };
+          : { link: { url: link.href, target: "BLANK", rel: outside <= 2 ? { noreferrer: true } : { noreferrer: true, nofollow: true } } };
         inline(c, [...decos.filter((d) => d.type !== "LINK"), { type: "LINK", linkData }], out);
         continue;
       }

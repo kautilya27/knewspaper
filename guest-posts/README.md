@@ -30,7 +30,7 @@ live automatically, without editorial review.
   the post, adds the `/post/<slug>` redirect and marks the submission live.
 
 Rules: 500–1,500 words; at least 2 subheadings, one of them an H2; at most 3 links to other
-websites (no more than 2 to the same site), all published as do-follow links with no "sponsored" label (owner's decision, 19 Nov 2026); slug, SEO title, meta description, image and alt text required.
+websites (no more than 2 to the same site), no "sponsored" label; the first 2 outside links are do-follow and a 3rd is no-follow (owner's decision, 19 Nov 2026); slug, SEO title, meta description, image and alt text required.
 A submission that breaks a rule is marked "Needs changes" with the reasons and uses no credit.
 
 ## Removing an article

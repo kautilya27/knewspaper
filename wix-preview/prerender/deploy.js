@@ -268,6 +268,8 @@ async () => {
     return `<article class="story story--tile${s.cover ? "" : " story--text"}">${cover}<div class="story__body"><h3 class="story__title "><a href="${pagePath(s.slug)}">${esc(s.title)}</a></h3>${metaLine(s)}</div></article>`;
   };
   const AD = '<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6382255537358474" data-ad-slot="1425864328" data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
+  // Wide screens only: a sticky 300×600 ad in the empty space beside the article (filled only when shown).
+  const SIDE_AD = '<aside class="side-ad" aria-label="Advertisement"><ins class="adsbygoogle side-ad__unit" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6382255537358474" data-ad-slot="1425864328"></ins><script>if(matchMedia("(min-width: 1400px)").matches){try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}}</script></aside>';
   const headingId = (t, used) => {
     let id = t.toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-").slice(0, 60) || "section";
     while (used.has(id)) id += "-x";
@@ -434,6 +436,7 @@ async () => {
     <div class="wrap article__layout${heads.length >= 3 ? " has-toc" : ""}">
       ${toc}
       <div class="prose" data-body>${bodyHtml}</div>
+      ${SIDE_AD}
     </div>
     ${AD}
     <section class="wrap shelf shelf--related" aria-labelledby="related-title"${related.length ? "" : " hidden"}>
