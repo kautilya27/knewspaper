@@ -13,7 +13,7 @@ If stress keeps going after the pressure has passed, stops you from working, stu
 | Does it ease? | Usually, once the situation passes | Not on its own; the work situation usually has to change | Often needs professional treatment |
 | Who to approach | Self-help first; a doctor if it lingers | Self-help plus changes at work; a doctor if your health suffers | A doctor or mental health professional |
 
-The NHS notes that physical stress symptoms like high blood pressure should settle when the stress does; if they don't, get checked. If the third column sounds familiar, read our guide to [anxiety symptoms and causes](https://www.knewspaper.in/post/anxiety-symptoms-and-causes).
+The NHS lists physical symptoms such as headaches, dizziness, chest pain or a faster heartbeat, and advises seeing a GP if you're struggling to cope or self-help isn't working. If the third column sounds familiar, read our guide to [anxiety symptoms and causes](https://www.knewspaper.in/post/anxiety-symptoms-and-causes).
 
 ## WHO's five stress skills, step by step
 
@@ -105,4 +105,4 @@ The guide and its audio exercises are free on WHO's website. WHO lists the guide
 
 ### Is Tele-MANAS really free?
 
-Yes. It is a toll-free Government of India service launched in October 2022. You can call 14416 or 1-800-891-4416 at any hour, and the Ministry of Health says it had taken over 18 lakh calls by February 2025.
+Yes. It is a toll-free Government of India service launched in October 2022. You can call 14416 or 1-800-891-4416 at any hour, and the government told Parliament in December 2025 that it had handled more than 29.8 lakh calls since launch.

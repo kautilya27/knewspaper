@@ -42,7 +42,7 @@ Name the event and your honest result: winner, finalist, or "built a working pro
 
 ### NPTEL and SWAYAM courses
 
-NPTEL courses, run by the IITs and IISc and offered on SWAYAM, are among the few online certifications Indian recruiters recognise easily, because the final exam is proctored. Under the scheme NPTEL describes in its course announcements, the final score is 25% assignments and 75% proctored exam, and the certificate category depends on that score:
+NPTEL courses, run by the IITs and IISc and offered on SWAYAM, are widely recognised, because the final exam is proctored. Under the scheme NPTEL describes in its course announcements, the final score is 25% assignments and 75% proctored exam, and the certificate category depends on that score:
 
 | Final score | What the certificate shows |
 |---|---|

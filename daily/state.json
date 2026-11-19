@@ -26,7 +26,8 @@
     50,
     48,
     51,
-    49
+    49,
+    55
   ],
   "published": [
     {
@@ -385,6 +386,34 @@
       "title": "Stress Management: WHO's 5 Skills, Daily Habits and When to See a Doctor",
       "source": "plan #51",
       "cover": true
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "student-resume",
+      "title": "Student Resume in India: What to Write When You Have No Work Experience",
+      "source": "plan #49",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "how-to-file-rti-online",
+      "title": "RTI Act Explained: What You Can Ask, How to File RTI Online and What to Do If There's No Reply",
+      "source": "civics #7",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "notice-period-rules",
+      "title": "Notice Period Rules in India: Can Your Employer Force You to Serve It, and How Buyout Works",
+      "source": "niche #19",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "high-fibre-foods",
+      "title": "High Fibre Foods in India: Fibre per 100 g in Dals, Millets, Fruits and Vegetables (ICMR-NIN Data)",
+      "source": "plan #55",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -487,9 +516,22 @@
     {
       "order": 46,
       "reason": "Narcissistic Personality Disorder Symptoms Causes: duplicate of narcissistic-personality-disorder-what-it-actually-is-and-how-to-recognise-it"
+    },
+    {
+      "order": 53,
+      "reason": "Goal Setting: no information gain / near-duplicate of goals-vs-systems and small-habits-big-changes-why-tiny-daily-actions-outperform-ambitious-goals (judged on 2026-11-19 without drafting)"
+    },
+    {
+      "order": 54,
+      "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "student-resume",
+    "how-to-file-rti-online",
+    "notice-period-rules",
+    "high-fibre-foods"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -504,7 +546,8 @@
     4,
     2,
     5,
-    6
+    6,
+    7
   ],
   "skippedCivics": [],
   "usedNiche": [
@@ -523,7 +566,9 @@
     14,
     13,
     15,
-    16
+    16,
+    17,
+    19
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -533,10 +578,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/student-resume",
-      "slug": "student-resume",
-      "source": "plan #49",
-      "note": "gate 1 FAIL (SIH comma typo; 'Article assistant' title), gate 2 FAIL (IMA NCC seats 32 -> 13 of 100 per UPSC CDS II 2026); all fixed 18 Nov afternoon; needs a fresh gate"
+      "dir": "daily/drafts/neet-eligibility",
+      "slug": "neet-eligibility",
+      "source": "niche #17",
+      "note": "gate 1 FAIL (panel quote/addressee, RTI overstatement, 2017 three-attempt cap missing) -> fixed; gate 2 FAIL (NIOS confirmation attributed to a Careers360 RTI report; verifiable source is NMC UGMEB public notice of 22 Feb 2025 via Medical Dialogues) -> fixed 19 Nov morning; needs a fresh gate. Gate 2 also could not verify online (search limit): GMER 2023 dates, FMGL start date, 21 Oct 2021 NMC meeting, oversight committee dropping the 2017 attempt cap, 50/40/45 percentiles, 'Chapter 8' reference."
     }
   ]
 }
