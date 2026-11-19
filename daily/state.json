@@ -27,7 +27,9 @@
     48,
     51,
     49,
-    55
+    55,
+    56,
+    57
   ],
   "published": [
     {
@@ -414,6 +416,34 @@
       "title": "High Fibre Foods in India: Fibre per 100 g in Dals, Millets, Fruits and Vegetables (ICMR-NIN Data)",
       "source": "plan #55",
       "cover": true
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "neet-eligibility",
+      "title": "NEET UG 2027 Eligibility: Age Limit, Number of Attempts, Subjects and Open-School Rules",
+      "source": "niche #17",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "famous-food-of-indian-states",
+      "title": "Famous Food of Every Indian State and Union Territory: A Complete Table",
+      "source": "niche #20",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "positive-thinking",
+      "title": "Positive Thinking: What the Research Really Shows and How to Practise It",
+      "source": "plan #56",
+      "cover": false
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "area-of-equilateral-triangle",
+      "title": "Area of Equilateral Triangle: Formula (√3/4)a², Proofs, Table and Solved Examples",
+      "source": "plan #57",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -526,7 +556,12 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "neet-eligibility",
+    "famous-food-of-indian-states",
+    "positive-thinking",
+    "area-of-equilateral-triangle"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -563,7 +598,9 @@
     15,
     16,
     17,
-    19
+    19,
+    18,
+    20
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -573,10 +610,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/neet-eligibility",
-      "slug": "neet-eligibility",
-      "source": "niche #17",
-      "note": "gate 1 FAIL (panel quote/addressee, RTI overstatement, 2017 three-attempt cap missing) -> fixed; gate 2 FAIL (NIOS confirmation attributed to a Careers360 RTI report; verifiable source is NMC UGMEB public notice of 22 Feb 2025 via Medical Dialogues) -> fixed 19 Nov morning; needs a fresh gate. Gate 2 also could not verify online (search limit): GMER 2023 dates, FMGL start date, 21 Oct 2021 NMC meeting, oversight committee dropping the 2017 attempt cap, 50/40/45 percentiles, 'Chapter 8' reference."
+      "dir": "daily/drafts/sim-on-aadhaar",
+      "slug": "sims-on-my-aadhaar",
+      "source": "niche #18",
+      "note": "19 Nov afternoon: gate 1 FAIL (9/6 limit origin: 2012 instructions restated by 7 Dec 2021 letter; photo screening from 23/24 Aug 2026 is d+1 post-facto until 30 Nov, not 'refused') -> fixed; gate 2 FAIL ('most recently taken numbers are cut' unverified) -> replaced with 'connections that aren't re-verified are disconnected'. Needs a fresh gate. Optional from gate 2: add 30-day outgoing suspension to 2021 timelines; 'Assam' in seoDescription; business-connection row rests on Aug 2023 PIB reforms; maybe link what-is-the-best-sim-network-in-india."
     }
   ]
 }

@@ -11,14 +11,14 @@ The NTA has not yet released the NEET UG 2027 information bulletin (as of 19 Nov
 | Number of attempts | No limit | No NMC regulation or NTA bulletin caps attempts |
 | Subjects | Physics, Chemistry, Biology/Biotechnology and English, with practicals | GMER 2023 and NEET UG 2026 bulletin (qualifying codes 01 to 07) |
 | Class 12 result awaited | Can apply; must pass before the first round of counselling | NEET UG 2026 bulletin, code 01 |
-| Marks to qualify NEET | 50th percentile (General, EWS), 40th (SC, ST, OBC-NCL), 45th (General PwBD) | NEET UG 2026 bulletin, Chapter 8 |
+| Marks to qualify NEET | 50th percentile (General, EWS), 40th (SC, ST, OBC-NCL), 45th (General PwBD) | NEET UG 2026 bulletin |
 | Nationality | Indian citizens, NRIs, OCI cardholders and foreign nationals | NEET UG 2026 bulletin |
 
 ## Is there a limit on NEET attempts?
 
 No. This is the most repeated myth about NEET, and it usually comes from mixing up three different rules.
 
-1. **The 2017 caps.** In January 2017 the rules for NEET (then run by CBSE) capped both age (25 for unreserved and 30 for reserved candidates) and attempts (three, counted from 2017), as Business Standard reported. The attempt cap was dropped in 2017 after the Supreme Court-appointed oversight committee opposed limits on attempts and age, according to Medical Dialogues, and this is where most "three attempts" claims online come from. The age cap lasted longer: according to ThePrint, the NMC decided at its meeting on 21 October 2021 that "there should not be any fixed upper age limit", and told the NTA on 9 March 2022.
+1. **The 2017 caps.** In January 2017 the rules for NEET (then run by CBSE) capped both age (25 for unreserved and 30 for reserved candidates) and attempts (three, counted from 2017), as Business Standard reported. In March 2017 the Supreme Court-appointed oversight committee opposed limits on attempts and age, according to Medical Dialogues. The three-attempt cap was dropped later and is not in any recent NTA information bulletin; the old rule is where most "three attempts" claims online come from. The age cap lasted longer: according to ThePrint, the NMC decided at its meeting on 21 October 2021 that "there should not be any fixed upper age limit", and told the NTA on 9 March 2022.
 2. **The four-attempt rule in GMER 2023.** The NMC's Graduate Medical Education Regulations 2023, notified on 2 June 2023, say an MBBS student gets no more than four attempts to clear the First Professional (first-year) exam, and must finish the course within nine years of admission, as reported by Medical Dialogues. This applies after you get an MBBS seat. It has nothing to do with how many times you can take NEET.
 3. **The 2026 recommendation.** On 9 October 2026, the Parliamentary Standing Committee on Education, Women, Children, Youth and Sports, in its 382nd report, recommended that the Education Ministry explore, with the Health Ministry, "possibilities of reasonable age limits and reasonable attempt limits to all major examinations including the NEET-UG", according to ThePrint. This is only a recommendation. No rule has been notified as of today.
 
