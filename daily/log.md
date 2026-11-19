@@ -755,3 +755,13 @@ The owner sent all four images. Converted to WebP (1670×942, q80; saved in `dai
 - famous-food-of-indian-states → c0f544_c0753a950b6440bea005a15a405ab0f6~mv2.webp (a gold cut-out map of India with state lines, surrounded by a thali, dosa, vada pav, litti, fish curry, momos, dhokla, idli, chole bhature, biryani, jalebi and more). Note: the map is stylised; its northern boundary should be checked against India's official map before the image is used anywhere else.
 - neet-eligibility → c0f544_1b4999efd24940608d2f3cfe7b6cf7f1~mv2.webp (stethoscope on books, anatomy torso and heart models, a checklist clipboard, calendar with a red pin, hourglass, alarm clock, notebook, a white coat with a caduceus). Note: the calendar has small garbled text; used as sent.
 All four set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 20 Nov morning run, so the pre-rendered pages show these covers from then.
+
+### 2026-11-19 (evening): owner requests in chat
+- Guest post: Riddhi Pithadiya's "IPO GMP Guide" (submitted 17 Nov; owner added her ₹499 single plan today) published by triggering the guest-posts workflow → https://www.knewspaper.in/post/ipo-gmp-guide-what-every-investor-must-know-about-gmp. At the owner's request the "Sponsored guest post" note was removed and its links made do-follow; five section headings promoted to H2 so the "In this article" box shows.
+- Guest-post rules changed (owner): no sponsored label; at most 3 outside links, the first 2 do-follow and a 3rd no-follow (publisher, Submit article page, terms, editorial-team page updated). No other article carried the sponsored note; ~48 older articles still have rel="sponsored" links (left as they are; owner not asked yet).
+- Side ad: sticky 300×600 AdSense unit beside articles on screens ≥1400px (deploy.js + styles.css); checked live, AdSense fills it.
+- Owner topic #6 queued: From final season.
+- Owner request: [How to Play GTA 6 on PC: What Actually Works Right Now (and What's a Scam)](https://www.knewspaper.in/post/how-to-play-gta-6-on-pc) (gaming). Gate 1 FAIL (unverifiable Forbes quote) → removed; gate 2 FAIL (prices credited to FPJ instead of Digit; Rockstar quote credited to Windows Central) → fixed; gate 3 (fresh agent, at the owner's direct request) PASS. Published, no cover. gta-6-pc-requirements corrected (Xbox One via Xbox Cloud Gaming; cloud not on PC) and linked to the new article. Day total 9.
+
+Image prompt:
+- How to Play GTA 6 on PC: What Actually Works Right Now (and What's a Scam): create image for this article topic without any text
