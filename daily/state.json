@@ -450,7 +450,7 @@
       "slug": "how-to-play-gta-6-on-pc",
       "title": "How to Play GTA 6 on PC: What Actually Works Right Now (and What's a Scam)",
       "source": "owner request (chat)",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -563,9 +563,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "how-to-play-gta-6-on-pc"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

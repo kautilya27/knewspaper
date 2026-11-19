@@ -765,3 +765,4 @@ All four set to cover true in `state.published` and removed from `pendingImages`
 
 Image prompt:
 - How to Play GTA 6 on PC: What Actually Works Right Now (and What's a Scam): create image for this article topic without any text
+- Cover from the owner: how-to-play-gta-6-on-pc → c0f544_88b17813c0064f59a4993ad5351c19a8~mv2.webp (gaming desk with PC, monitor showing a Miami-style sunset with palms and a sports car, controller, keyboard, headset, and a laptop showing a green tick and red cross; no text). Pre-render picks it up at the next rebuild.
