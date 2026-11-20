@@ -29,7 +29,9 @@
     49,
     55,
     56,
-    57
+    57,
+    58,
+    59
   ],
   "published": [
     {
@@ -451,6 +453,34 @@
       "title": "How to Play GTA 6 on PC: What Actually Works Right Now (and What's a Scam)",
       "source": "owner request (chat)",
       "cover": true
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "sims-on-my-aadhaar",
+      "title": "How Many SIMs Are on My Aadhaar? Check on Sanchar Saathi and Report Ones You Don't Use",
+      "source": "niche #18",
+      "cover": false
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "hindu-calendar-months",
+      "title": "Hindu Calendar Months: Names, English Equivalents and Amanta vs Purnimanta Explained",
+      "source": "niche #22",
+      "cover": false
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "great-speeches",
+      "title": "8 Great Speeches in History, Indian and World, and What Made Each One Work",
+      "source": "plan #58",
+      "cover": false
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "thank-you-email-after-interview",
+      "title": "How to Write an Interview Thank-You Email: Templates for Indian Job Seekers",
+      "source": "plan #59",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -563,7 +593,12 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "sims-on-my-aadhaar",
+    "hindu-calendar-months",
+    "great-speeches",
+    "thank-you-email-after-interview"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -602,7 +637,9 @@
     17,
     19,
     18,
-    20
+    20,
+    22,
+    21
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -612,10 +649,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/sim-on-aadhaar",
-      "slug": "sims-on-my-aadhaar",
-      "source": "niche #18",
-      "note": "19 Nov afternoon: gate 1 FAIL (9/6 limit origin: 2012 instructions restated by 7 Dec 2021 letter; photo screening from 23/24 Aug 2026 is d+1 post-facto until 30 Nov, not 'refused') -> fixed; gate 2 FAIL ('most recently taken numbers are cut' unverified) -> replaced with 'connections that aren't re-verified are disconnected'. Needs a fresh gate. Optional from gate 2: add 30-day outgoing suspension to 2021 timelines; 'Assam' in seoDescription; business-connection row rests on Aug 2023 PIB reforms; maybe link what-is-the-best-sim-network-in-india."
+      "dir": "daily/drafts/inner-line-permit",
+      "slug": "inner-line-permit",
+      "source": "niche #21",
+      "note": "20 Nov afternoon: gate 1 FAIL (Arunachal group size is 4 not 2; Dimapur 'online-only' unsupported; Sikkim QR system only proposed) -> fixed; Ladakh fees hedged. Gate 2 FAIL (missing Nagaland PAP waiver for foreigners 26 Nov-15 Dec every year per 16 Nov 2026 notification, UNI 17 Nov 2026; MHA-approval nationalities are Afghanistan/China/Pakistan (+Pakistani origin), not Pakistan/Bangladesh/China/Myanmar; Sikkim Jan 2026 change = paper PAP/RAP for foreigners ended; comma splice) -> all fixed. Needs a fresh gate; time-sensitive (Hornbill season starts 26 Nov)."
     }
   ]
 }

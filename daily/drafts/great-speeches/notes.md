@@ -1,0 +1,24 @@
+# Notes: great-speeches (plan #58, Self-Improvement, categorySlug career)
+
+## Information gain vs top results
+Top results for "great speeches in history": Art of Manliness (35 speeches; only one Indian, Gandhi; links to its own transcripts and americanrhetoric, no official archives, little on technique), TIME "11 speeches that changed the world", Stacker 100 greatest 20th-century speeches, Interesting Literature, History Hit, Listverse. All Western-heavy. Indian lists (Leverage Edu "Top 11 speeches of freedom fighters", The Better India, Zee web story) give few or no dates, no techniques, mostly no sources (Leverage Edu: only Nehru dated; credits YouTube videos). The competitor jamesclear.com/great-speeches could not be fetched (permission request timed out); used as search-intent only.
+Gap filled: a mixed Indian + world list, each with exact date/place, a short line checked against a reliable transcript, one concrete technique, where to read the original (Belur Math, Parliament digital library eparlib, PIB archive, Library of Congress, UK National Archives, Nelson Mandela Foundation); timely Ambedkar 25 Nov / Constitution Day angle; Churchill broadcast myth corrected; tips tied to specific speeches.
+
+## Sources per fact
+- Vivekananda date, "Sisters and Brothers of America", "I am proud to belong to a religion which has taught the world both tolerance and universal acceptance": https://belurmath.org/?p=7278 and https://belurmath.org/swami-vivekananda-speeches-at-the-parliament-of-religions-chicago-1893/ . Venue = site where Art Institute now stands: https://www.artic.edu/swami-vivekananda-and-his-1893-speech
+- Nehru: session 11 pm 14 Aug 1947, Constitution Hall New Delhi, quotes ("Long years ago...very substantially", "At the stroke of the midnight hour..."): https://www.constitutionofindia.net/debates/14-aug-1947/ ; official PDF https://eparlib.sansad.in/bitstream/123456789/762942/1/cad_14-08-1947.pdf
+- Gandhi: "Here is a Mantra, a short one that I give you", "The mantra is Do or Die", "We shall either free India or die in the attempt", date 8.8.1942 Bombay: https://archive.pib.gov.in/quitindia75/vignettes/QIMquotes.pdf ; Gowalia Tank Maidan and "All big leaders were arrested within twenty four hours": https://archive.pib.gov.in/quitindia75/OFea/Quit%20India%20Movement.pdf ; Congress passed resolution 8 Aug: https://www.smithsonianmag.com/history/speech-brought-india-brink-independence-180964366/
+- Ambedkar: "life of contradictions" sentences: https://www.scobserver.in/journal/the-doctors-wise-words-on-25-november-1949/ ; "Grammar of Anarchy", "Bhakti or hero-worship is a sure road to degradation and to eventual dictatorship", date 25 Nov 1949: https://www.barandbench.com/columns/dr-ambedkar-1949-constituent-assembly-speech ; official CAD PDF: https://eparlib.sansad.in/bitstream/123456789/763285/1/cad_25-11-1949.pdf ; SC hosts speech (search result main.sci.gov.in/AMB/pdf/Closing speech 25 Nov 1949.pdf; fetch blocked by robots).
+- Lincoln: 19 Nov 1863, ~270 words, two handwritten copies at LoC, closing phrase: https://lcm.loc.gov/issue/may-june-2026/four-score-and-seven-years-ago/
+- Churchill: 4 June 1940, Commons, 3.40–4.14 pm, not broadcast by him, BBC announcer read parts, recorded 1949: https://history.blog.gov.uk/2013/12/02/we-shall-fight-on-the-beaches-three-things-you-never-knew-about-churchills-most-famous-speech/ ; quoted lines: https://teachingamericanhistory.org/document/we-shall-fight-on-the-beaches/
+- King: date, Lincoln Memorial, ~250,000, left prepared text after Mahalia Jackson urged "the dream": https://www.britannica.com/topic/I-Have-A-Dream ; "four little children...content of their character" and 8 x "I have a dream": https://www.opb.org/article/2024/01/15/read-martin-luther-king-jr-i-have-a-dream-speech-in-its-entirety/ (NPR transcript republished)
+- Mandela: 20 Apr 1964, statement from dock, over four hours, closing lines, life sentences < 2 months later: https://nelsonmandela.org/news/entry/i-am-prepared-to-die ; Pretoria Supreme Court: https://sahistory.org.za/ve/archive/i-am-prepared-die-nelson-mandelas-statement-dock-opening-defence-case-rivonia-trial ; UN copy: https://static.un.org/en/events/mandeladay/court_statement_1964.shtml
+
+## Not verified / left out
+- jamesclear.com page not fetched (permission timed out).
+- Gandhi's speaking language and the exact volume of Collected Works: not stated.
+- Constitution Hall = today's Central Hall: not stated (not verified today).
+- Sarojini Naidu, Subhas Chandra Bose: not included (not verified).
+- Audience reaction to Vivekananda's opening (ovation): left out, not verified.
+- 26 Nov as Constitution Day and Ambedkar as Drafting Committee chairman: well-established facts, not re-fetched today.
+- "About two minutes" to say 270 words: arithmetic at normal speaking pace, not a sourced figure.
