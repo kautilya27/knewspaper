@@ -31,7 +31,9 @@
     56,
     57,
     58,
-    59
+    59,
+    60,
+    61
   ],
   "published": [
     {
@@ -502,6 +504,27 @@
       "title": "How Is Inflation Measured in India? CPI and WPI Explained With the New Base Year",
       "source": "civics #8",
       "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "types-of-sarees",
+      "title": "Types of Sarees in India by State: Weaves, GI Tags and How to Recognise Each",
+      "source": "niche #23",
+      "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "hiv-aids-symptoms-causes",
+      "title": "HIV and AIDS: Symptoms by Stage, How It Spreads, and Free Testing and Treatment in India",
+      "source": "plan #60",
+      "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "hra-exemption-calculation",
+      "title": "How to Calculate HRA Exemption: Formula, 3 Worked Examples and Rent Receipt Rules",
+      "source": "niche #24",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -621,7 +644,10 @@
     "thank-you-email-after-interview",
     "best-sample-papers",
     "from-last-season",
-    "how-is-inflation-measured-in-india"
+    "how-is-inflation-measured-in-india",
+    "types-of-sarees",
+    "hiv-aids-symptoms-causes",
+    "hra-exemption-calculation"
   ],
   "preparedImages": {
     "how to stop procrastinating": {
@@ -664,7 +690,9 @@
     18,
     20,
     22,
-    21
+    21,
+    23,
+    24
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -674,5 +702,18 @@
     6
   ],
   "skippedOwner": [],
-  "heldDrafts": []
+  "heldDrafts": [
+    {
+      "dir": "daily/drafts/cat-exam-day",
+      "slug": "cat-exam-day-guidelines",
+      "source": "trending",
+      "note": "time-sensitive: CAT is on 29 Nov 2026, useless after; gate-2 attribution fixes applied 21 Nov afternoon; gate it first in the 22 Nov morning run, drop if not published by 28 Nov"
+    },
+    {
+      "dir": "daily/drafts/bpd",
+      "slug": "borderline-personality-disorder",
+      "source": "plan #61",
+      "note": "gate-1 (NICE DBT wording) and gate-2 (quote NICE CG78 verbatim) fixes applied 21 Nov afternoon"
+    }
+  ]
 }
