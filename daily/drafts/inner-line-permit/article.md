@@ -42,27 +42,27 @@ You can also apply in person at a Nagaland House or the district Deputy Commissi
 ### State quirks worth knowing
 
 - **Arunachal Pradesh:** The tourist eILP is for Indian citizens only. For stays longer than 14 days, apply for a provisional or regular ILP instead.
-- **Nagaland:** Tourists do not need a local guarantor, but the form asks for a local contact. Nagaland's portal FAQ says you can also get a permit in person at a Nagaland House or the district Deputy Commissioner's office.
+- **Nagaland:** Tourists do not need a local guarantor, but the form asks for a local contact.
 - **Manipur:** You need a local resident's name, mobile number and address even for a temporary permit. A temporary permit cannot be renewed, so plan your dates carefully.
 - **Mizoram:** Tourists do not need a local sponsor online. Business visitors and workers do.
 
-Going to Kisama in December? Indian visitors need the Nagaland ILP, while foreign tourists are exempt from the PAP from 26 November to 15 December; our [Hornbill Festival guide](https://www.knewspaper.in/post/hornbill-festival) covers dates and travel.
+Going to Kisama in December? Indian visitors need the Nagaland ILP (foreigners, see the PAP waiver below); our [Hornbill Festival guide](https://www.knewspaper.in/post/hornbill-festival) covers dates and travel.
 
 ## Rules for foreign nationals in 2026
 
-- **Manipur, Mizoram and Nagaland are under the PAP regime again.** The Ministry of Home Affairs reimposed it in December 2024, Scroll and The Assam Tribune reported, ending a relaxation in place since 2011. One exception: under a Nagaland Home Department notification of 16 November 2026, issued on MHA directions and reported by UNI, foreign tourists do not need a PAP for Nagaland from 26 November to 15 December every year, the Hornbill Festival season; citizens of Afghanistan, China and Pakistan, and foreigners originating from those countries, still need prior MHA approval.
+- **Manipur, Mizoram and Nagaland:** PAP applies again (MHA, December 2024, reported by Scroll and The Assam Tribune). One exception: under a Nagaland Home Department notification of 16 November 2026, issued on MHA directions and reported by UNI, foreign tourists do not need a PAP for Nagaland from 26 November to 15 December every year, the Hornbill Festival season.
 - **Permits are now electronic only.** All PAPs and RAPs are issued through the e-FRRO portal, and no paper permits are given out, according to the Embassy of India in Bogotá. In January 2026 Sikkim stopped issuing physical (paper) PAPs and RAPs to foreigners; they must now be obtained online through e-FRRO, India Today NE reported. Apply at least 15 days ahead if you are already in India, and at least 30 days ahead from abroad.
 - **Andaman's day-visit window has been extended.** The Andaman and Nicobar Tourism Department says 29 islands remain outside the RAP regime. Eleven more are open for day visits until 31 December 2027.
 
 A few conditions are common in PAP areas, though details vary by state. You must usually travel in a group (Arunachal Pradesh Police says at least four people; individual tourists are not permitted), go with a registered tour operator, use only approved entry and exit points, and stay on approved circuits. Arunachal Police puts the PAP fee at US$30 and validity at 10 days, extendable by 7 days. Check e-FRRO for current figures.
 
-Citizens of Afghanistan, China and Pakistan, and foreign nationals of Pakistani origin, can get a PAP or RAP only with prior MHA clearance. In Andaman, Myanmar citizens also need MHA approval for Mayabunder and Diglipur.
+Citizens of Afghanistan, China and Pakistan, and foreign nationals originating from these countries, can get a PAP or RAP only with prior MHA clearance. In Andaman, Myanmar citizens also need MHA approval for Mayabunder and Diglipur.
 
 In August 2026 Ladakh began exploring a single PAP for most of the union territory (The Pioneer, Outlook Traveller). **It is only a proposal**; existing area-wise permits still apply.
 
 ## Sikkim, Ladakh and Lakshadweep: what Indians actually pay
 
-- **Sikkim:** You do not need a permit at Rangpo to enter. Since March 2025, hotels and homestays collect a ₹50 fee per tourist above five years of age, valid for 30 days, according to Business Standard. Permits for Nathu La, Tsomgo and North Sikkim are applied for through your tour operator. An online, QR-based permit system for these areas was announced in late 2025 but had not launched as of August 2026; permits still go through registered tour operators.
+- **Sikkim:** You do not need a permit at Rangpo to enter. Since March 2025, hotels and homestays collect a ₹50 fee per tourist above five years of age, valid for 30 days, according to Business Standard. Permits for Nathu La, Tsomgo and North Sikkim are applied for through your tour operator. An online, QR-based permit system for these areas was announced in late 2025 and was still under consultation in August 2026; permits still go through registered tour operators.
 - **Ladakh:** The Ladakh Home Department scrapped the ILP for Indians in August 2021. The Leh administration said the environment, Red Cross and wildlife fees stay, payable online at lahdclehpermit.in. Stay on marked roads: in June 2026, the Ladakh Wildlife Department fined four vehicle owners ₹50,000 each for driving off-road near Pangong and in other protected areas.
 - **Lakshadweep:** Under rules eased in 2026, you no longer need a police clearance certificate or a local sponsor, Onmanorama reported. You do need a confirmed booking at a registered resort or homestay. Apply at least 14 days before you travel, and list every island you plan to visit.
 

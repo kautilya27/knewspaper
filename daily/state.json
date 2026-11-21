@@ -481,6 +481,27 @@
       "title": "How to Write an Interview Thank-You Email: Templates for Indian Job Seekers",
       "source": "plan #59",
       "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "best-sample-papers",
+      "title": "Best Sample Papers for Every Class: Class 9 to 12 Board Exams (2027)",
+      "source": "owner #1",
+      "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "from-last-season",
+      "title": "From Season 5 (Final Season): Release Date Status, Where to Watch in India and What We Know",
+      "source": "owner #6",
+      "cover": false
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "how-is-inflation-measured-in-india",
+      "title": "How Is Inflation Measured in India? CPI and WPI Explained With the New Base Year",
+      "source": "civics #8",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -597,7 +618,10 @@
     "sims-on-my-aadhaar",
     "hindu-calendar-months",
     "great-speeches",
-    "thank-you-email-after-interview"
+    "thank-you-email-after-interview",
+    "best-sample-papers",
+    "from-last-season",
+    "how-is-inflation-measured-in-india"
   ],
   "preparedImages": {
     "how to stop procrastinating": {
@@ -614,7 +638,8 @@
     2,
     5,
     6,
-    7
+    7,
+    8
   ],
   "skippedCivics": [],
   "usedNiche": [
@@ -644,15 +669,10 @@
   "skippedNiche": [],
   "usedOwner": [
     2,
-    3
+    3,
+    1,
+    6
   ],
   "skippedOwner": [],
-  "heldDrafts": [
-    {
-      "dir": "daily/drafts/inner-line-permit",
-      "slug": "inner-line-permit",
-      "source": "niche #21",
-      "note": "20 Nov afternoon: gate 1 FAIL (Arunachal group size is 4 not 2; Dimapur 'online-only' unsupported; Sikkim QR system only proposed) -> fixed; Ladakh fees hedged. Gate 2 FAIL (missing Nagaland PAP waiver for foreigners 26 Nov-15 Dec every year per 16 Nov 2026 notification, UNI 17 Nov 2026; MHA-approval nationalities are Afghanistan/China/Pakistan (+Pakistani origin), not Pakistan/Bangladesh/China/Myanmar; Sikkim Jan 2026 change = paper PAP/RAP for foreigners ended; comma splice) -> all fixed. Needs a fresh gate; time-sensitive (Hornbill season starts 26 Nov)."
-    }
-  ]
+  "heldDrafts": []
 }
