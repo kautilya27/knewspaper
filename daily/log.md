@@ -890,3 +890,10 @@ Image prompts:
 - Area of a Rectangle: Formula, sq ft to sq m, Tiles and Path Problems: create image for this article topic without any text
 - Eisenhower Matrix Explained: Urgent vs Important, Its Real Origin and Indian Examples: create image for this article topic without any text
 - APAAR ID: What It Is, Is It Mandatory and How to Create One via DigiLocker: create image for this article topic without any text
+
+### 2026-11-22 (evening): covers from the owner for the afternoon articles
+The owner sent three images in chat. They were converted to WebP (1670×942, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL, and set as covers:
+- apaar-id → c0f544_b099b51133a4434aadb3cdb73daa61d6~mv2.webp. A laptop shows a student ID card (graduation cap, avatar, QR code) with an arrow to a locked cloud folder; a globe, books and the Indian flag are in the background. It has no text.
+- eisenhower-matrix → c0f544_56e5353ec5e84b2898f9c7ece8483dd8~mv2.webp. A whiteboard shows a four-box grid with an alarm light, a target, a checklist and a bin, on a desk with coffee. It has no text.
+- area-of-a-rectangle → c0f544_f79eb7f0ea0541df92a51f0e7ab1842a~mv2.webp. A notebook shows a gridded rectangle with dimension arrows, a tiled floor and a paved path around a lawn, next to a calculator, a tape measure and a set square. Note: the calculator keys and ruler markings are slightly garbled.
+All three were set to cover true in `state.published` and removed from `pendingImages` (now empty). Owner topics 7 and 8 (US visa application, US visa interview questions) were added to `owner-topics.csv`. The pre-render rebuild is left to the 23 Nov morning run, so the pre-rendered pages show these covers from then.

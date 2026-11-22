@@ -554,21 +554,21 @@
       "slug": "area-of-a-rectangle",
       "title": "Area of a Rectangle: Formula, sq ft to sq m, Tiles and Path Problems",
       "source": "plan #62",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-22",
       "slug": "eisenhower-matrix",
       "title": "Eisenhower Matrix Explained: Urgent vs Important, Its Real Origin and Indian Examples",
       "source": "plan #63",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-22",
       "slug": "apaar-id",
       "title": "APAAR ID: What It Is, Is It Mandatory and How to Create One via DigiLocker",
       "source": "niche #26",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -681,11 +681,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "area-of-a-rectangle",
-    "eisenhower-matrix",
-    "apaar-id"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
