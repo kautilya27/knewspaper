@@ -44,7 +44,7 @@ Both cover the same symptoms listed above. You may also hear the name "emotional
 
 ## What causes BPD?
 
-The exact cause is unknown. The [National Institute of Mental Health](https://www.nimh.nih.gov/health/publications/borderline-personality-disorder) says genetic, physical, environmental and social factors may all raise the risk:
+The exact cause is unknown. The [National Institute of Mental Health](https://www.nimh.nih.gov/health/publications/borderline-personality-disorder) says genetic, environmental and social factors may all raise the risk:
 
 - **Family history:** having a close relative with BPD may increase the risk.
 - **Brain differences:** studies find differences in areas that manage emotions and impulses, though NIMH says it is unclear whether these are a cause or a result.

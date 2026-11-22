@@ -1,6 +1,6 @@
 **Quick answer:** CAT 2026 is on **Sunday, 29 November 2026**, conducted by IIM Indore as a computer-based test in three two-hour slots: **8:30–10:30 am, 12:30–2:30 pm and 4:30–6:30 pm**. Reporting starts 90 minutes before your slot (7:00 am, 11:00 am and 3:00 pm, according to coaching sites Career Launcher and Cracku), and coaching sites put gate closing 15 minutes before the start; go by the times printed on your admit card. Carry a **printed admit card** and **one original photo ID**. Leave your phone, watch, calculator and bag behind.
 
-The paper has three sections in a fixed order: VARC, then DILR, then Quant. Each section gets 40 minutes, and you cannot move between them. A correct answer earns +3, a wrong MCQ costs −1, and a wrong type-in-the-answer (TITA) question costs nothing. Slot times are from IIM Indore's schedule as reported by The Hans India and CareerIndia, and reporting and gate-closing times are from coaching sites, not IIM Indore. Your admit card has the final word on your slot, reporting time, gate-closing time and centre.
+The paper has three sections in a fixed order: VARC, then DILR, then Quant. Each section gets 40 minutes, and you cannot move between them. A correct answer earns +3, a wrong MCQ costs −1, and a wrong type-in-the-answer (TITA) question costs nothing. Your admit card has the final word on your slot, reporting time and centre.
 
 ## CAT 2026 slot timings, reporting time and gate closing
 
@@ -12,7 +12,7 @@ The reporting and gate-closing times below are from coaching sites (Career Launc
 | Slot 2 (afternoon) | 11:00 am | 12:15 pm | 12:30 pm | 2:30 pm |
 | Slot 3 (evening) | 3:00 pm | 4:15 pm | 4:30 pm | 6:30 pm |
 
-IIM Indore gives each candidate one slot, and it is printed on the admit card. You can't change it. The 15 minutes between the gate closing and the start go on seating, logging in and reading the instructions on screen. If you arrive after the gate closes, you won't be let in.
+IIM Indore gives each candidate one slot, and it is printed on the admit card. You can't change it. If you arrive after the gate closes, you won't be let in.
 
 The test is held in about 170 cities, according to The Hans India and Career Launcher. If your centre is in an unfamiliar part of town, plan for Sunday-morning traffic or a late metro and aim to be there when reporting opens, not just before the gate closes.
 
@@ -22,7 +22,7 @@ Add four hours for slot 2 and eight hours for slot 3.
 
 1. **Night before:** Put the admit card printout, your original ID and a transparent water bottle in one envelope. Check the centre address on the card against a map.
 2. **6:15–6:30 am:** Leave home. Wear simple clothes without metal buttons or heavy jewellery, since frisking is strict.
-3. **7:00 am:** Reporting opens. Staff check your ID against the admit card and may take your photograph. At some centres IIM Indore is also using AI-based face recognition, a first for CAT according to Careers360. Mobile jammers are in use at select centres, reports The Hans India.
+3. **7:00 am:** Reporting opens. Staff check your ID against the admit card and may take your photograph. IIM Indore is also trying out AI-based face recognition at exam centres, a first for CAT according to Careers360. It is an extra check on top of manual verification, and nobody will be refused entry if the system fails to recognise them. Mobile jammers are in use at select centres, reports Careers360.
 4. **Around 8:15 am (check your admit card):** The gate closes. After this, nobody gets in.
 5. **8:15–8:30 am:** You're seated, then log in and read the instructions.
 6. **8:30–9:10 am:** VARC.
@@ -91,7 +91,7 @@ You can't edit the admit card yourself, and the application correction window cl
 
 ## After the exam: answer key and result
 
-IIM Indore usually releases candidates' response sheets first. A provisional answer key follows and a short online window to raise objections. Then come the final key and the scorecard on iimcat.ac.in. As of 21 November 2026, IIM Indore hasn't announced official dates for the answer key or the result. Coaching sites have published estimates, but those are guesses. Watch the official site in the first weeks of December.
+IIM Indore usually releases candidates' response sheets first. A provisional answer key follows and a short online window to raise objections. Then come the final key and the scorecard on iimcat.ac.in. IIM Indore hasn't announced dates for the answer key. The CAT 2026 information bulletin says results are likely to be declared by the first week of January 2027; coaching-site estimates of late December are guesses. Watch iimcat.ac.in for the official dates.
 
 Your CAT score is used by 22 IIMs and many non-IIM B-schools, according to Physics Wallah. If you're still working out where it can take you, see [why the CAT exam matters](https://www.knewspaper.in/post/why-cat-exam-is-important).
 
@@ -99,7 +99,7 @@ Your CAT score is used by 22 IIMs and many non-IIM B-schools, according to Physi
 
 ### What is the reporting time for CAT 2026?
 
-Reporting starts at 7:00 am for slot 1, 11:00 am for slot 2 and 3:00 pm for slot 3. Coaching sites put gate closing 15 minutes before the start (8:15 am, 12:15 pm, 4:15 pm). Check your admit card for the exact reporting and gate-closing times.
+Reporting starts at 7:00 am for slot 1, 11:00 am for slot 2 and 3:00 pm for slot 3. Gate closing is usually given as 8:15 am, 12:15 pm and 4:15 pm; your admit card has the exact times.
 
 ### Can I show the CAT admit card on my phone?
 

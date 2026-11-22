@@ -525,6 +525,27 @@
       "title": "How to Calculate HRA Exemption: Formula, 3 Worked Examples and Rent Receipt Rules",
       "source": "niche #24",
       "cover": true
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "cat-exam-day-guidelines",
+      "title": "CAT 2026 Exam Day Guidelines: Slot Timings, Reporting Time, What to Carry and Rules",
+      "source": "trending",
+      "cover": false
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "borderline-personality-disorder",
+      "title": "Borderline Personality Disorder: Symptoms, Causes, BPD vs Bipolar and Getting Help in India",
+      "source": "plan #61",
+      "cover": false
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "how-to-create-a-website-with-ai",
+      "title": "How to Create a Website With AI: Tools and Steps for Beginners in India",
+      "source": "owner #4",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -637,7 +658,11 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "cat-exam-day-guidelines",
+    "borderline-personality-disorder",
+    "how-to-create-a-website-with-ai"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -688,21 +713,16 @@
     2,
     3,
     1,
-    6
+    6,
+    4
   ],
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/cat-exam-day",
-      "slug": "cat-exam-day-guidelines",
-      "source": "trending",
-      "note": "time-sensitive: CAT is on 29 Nov 2026, useless after; gate-2 attribution fixes applied 21 Nov afternoon; gate it first in the 22 Nov morning run, drop if not published by 28 Nov"
-    },
-    {
-      "dir": "daily/drafts/bpd",
-      "slug": "borderline-personality-disorder",
-      "source": "plan #61",
-      "note": "gate-1 (NICE DBT wording) and gate-2 (quote NICE CG78 verbatim) fixes applied 21 Nov afternoon"
+      "dir": "daily/drafts/eci",
+      "slug": "election-commission-of-india-powers",
+      "source": "civics #9",
+      "note": "gate-1 fix (Delhi SIR Form 8 date) and gate-2 fix (2023 Act in force 2 Jan 2024) applied 22 Nov morning; all other facts passed twice; dated court statuses (Constitution Bench reference, Delhi SIR review on 2 Dec) need rechecking at the next gate; on publishing add 9 to usedCivics"
     }
   ]
 }
