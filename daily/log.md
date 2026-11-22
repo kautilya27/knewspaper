@@ -870,3 +870,4 @@ The owner sent a .docx and asked for it to be published. It is now live as [Why 
 - **Tracking:** not added to `state.published`, so the daily recheck leaves it alone. The source markdown is in `daily/drafts/godrej-elanor/`.
 - **Closest existing article:** how-infrastructure-development-can-influence-plot-values, which covers plots rather than flats and has no Pune focus.
 - **Pre-render rebuild:** left to the 22 Nov afternoon run.
+- **Cover added later:** the owner sent the image. infrastructure-development-residential-property-demand → c0f544_cd3e8c61782f42b993e8c052bbd287b0~mv2.webp. The image shows golden-hour apartment towers with a pool garden, an elevated metro line and station, a highway and a crane on a building under construction. It has no text. It is saved as WebP in `daily/images/`.
