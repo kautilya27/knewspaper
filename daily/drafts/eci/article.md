@@ -16,7 +16,7 @@ The Commission was set up on 25 January 1950, a day before the Constitution came
 
 The Commission has had three members since 1993. Under the 2023 appointments law, it acts unanimously as far as possible and by majority otherwise; the CEC has no veto.
 
-Its routine work includes fixing election phases, recognising parties and allotting symbols under the Election Symbols Order, 1968 (including after a split), watching candidates' spending (₹95 lakh for a Lok Sabha seat in larger states and ₹40 lakh for an Assembly seat, set in January 2022), and advising the President or Governor on disqualification of MPs and MLAs under Articles 103 and 192. It must act within the Representation of the People Acts of 1950 and 1951; Article 324 fills gaps only where those laws are silent.
+Its routine work includes fixing election phases, recognising parties and allotting symbols under the Election Symbols Order, 1968 (including after a split), watching candidates' spending (in larger states, ₹95 lakh for a Lok Sabha seat and ₹40 lakh for an Assembly seat, set in January 2022), and advising the President or Governor on disqualification of MPs and MLAs under Articles 103 and 192. It must act within the Representation of the People Acts of 1950 and 1951; Article 324 fills gaps only where those laws are silent.
 
 ## How commissioners are appointed
 
@@ -35,7 +35,7 @@ Parliament then passed the **Chief Election Commissioner and Other Election Comm
 
 ### Status of the court challenge (as of 22 November 2026)
 
-The Supreme Court refused to stay the law in January and March 2024, so appointments since then have been made under it. According to the Supreme Court Observer, a two-judge bench heard the case in May 2026, split on 23 September on whether a larger bench was needed, and sent it to the Chief Justice to set up a Constitution Bench. On 20 November, Deccan Herald reported, the court declined to hear a plea to recall that reference separately, saying it could be raised before the Constitution Bench. A separate challenge to Section 16 has been pending since January 2026, with no stay.
+The Supreme Court refused to stay the law in January and March 2024, so appointments since then have been made under it. According to the Supreme Court Observer, a two-judge bench heard the case in May 2026, split on 23 September on whether a larger bench was needed, and sent it to the Chief Justice; a five-judge Constitution Bench has since been formed. On 20 November, according to a PTI report, the court declined to separately hear a plea to recall that reference, saying it could be raised before that bench. A separate challenge to Section 16 has been pending since January 2026, with no stay.
 
 ## The Model Code of Conduct: rules without a statute
 
@@ -66,12 +66,12 @@ On 27 May 2026, a bench led by Chief Justice Surya Kant **upheld the Bihar SIR**
 - the Commission may examine citizenship only to decide roll eligibility, and its view is not a final ruling on citizenship;
 - doubtful cases go to the authority under the Citizenship Act, and wrongly deleted voters keep their appeal rights.
 
-About 47 lakh names were removed in Bihar, according to the Supreme Court Observer. After Phase II (12 more states and UTs), on 14 May 2026 the Commission announced Phase III in 16 states and three UTs, about 36.73 crore electors (All India Radio). State-level challenges continue. In Delhi, the court suggested in October that voters who moved within the city be allowed to use Form 8 (change of address) rather than Form 6, and on 19 November it said it would review progress on 2 December before deciding whether to extend the 30 November deadline.
+Bihar's final roll fell by a net 47 lakh, from 7.89 crore to 7.42 crore electors (about 69 lakh names removed, 65 lakh of them at the draft stage, and about 21.5 lakh added), according to PIB. After Phase II (12 more states and UTs), on 14 May 2026 the Commission announced Phase III in 16 states and three UTs, about 36.73 crore electors (All India Radio). State-level challenges continue. In Delhi, the court suggested in October that voters who moved within the city be allowed to use Form 8 (change of address) rather than Form 6, and on 19 November it said it would review progress on 2 December before deciding whether to extend the 30 November deadline.
 
 ## What the Election Commission cannot do
 
 - **Run local body polls.** Panchayat and municipal elections belong to each state's State Election Commission (Articles 243K and 243ZA).
-- **Decide election disputes.** These go to the High Court as election petitions.
+- **Decide election disputes.** These go to the High Court as election petitions (for President and Vice-President, to the Supreme Court).
 - **Decide defections.** Under the anti-defection law, the Speaker or Chairman decides.
 - **Freely deregister parties.** A 2002 Supreme Court judgment allows cancellation only if registration was got by fraud, the party drops allegiance to the Constitution, or the Centre declares it unlawful. The Commission has sought wider powers since at least 2016. In 2025 it "delisted" 808 registered unrecognised parties that had not contested for six years (PIB); in November 2025 the Kerala High Court stayed that for some petitioners, questioning whether the law allows it.
 - **Make election law.** Spending limits and qualifying dates are set by Parliament and the Union government, often on the Commission's advice.

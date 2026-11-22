@@ -33,7 +33,9 @@
     58,
     59,
     60,
-    61
+    61,
+    62,
+    63
   ],
   "published": [
     {
@@ -546,6 +548,27 @@
       "title": "How to Create a Website With AI: Tools and Steps for Beginners in India",
       "source": "owner #4",
       "cover": true
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "area-of-a-rectangle",
+      "title": "Area of a Rectangle: Formula, sq ft to sq m, Tiles and Path Problems",
+      "source": "plan #62",
+      "cover": false
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "eisenhower-matrix",
+      "title": "Eisenhower Matrix Explained: Urgent vs Important, Its Real Origin and Indian Examples",
+      "source": "plan #63",
+      "cover": false
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "apaar-id",
+      "title": "APAAR ID: What It Is, Is It Mandatory and How to Create One via DigiLocker",
+      "source": "niche #26",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -658,7 +681,11 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "area-of-a-rectangle",
+    "eisenhower-matrix",
+    "apaar-id"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -677,7 +704,12 @@
     7,
     8
   ],
-  "skippedCivics": [],
+  "skippedCivics": [
+    {
+      "order": 9,
+      "reason": "ECI powers draft failed the gate twice in the 22 Nov afternoon held-draft recheck (Bihar roll figures; outdated Constitution Bench status; then Bihar arithmetic and election-petition forum). Fixes from both gates are applied in daily/drafts/eci/; dropped per the held-drafts rule, owner may ask for it to be re-gated."
+    }
+  ],
   "usedNiche": [
     1,
     2,
@@ -702,7 +734,8 @@
     22,
     21,
     23,
-    24
+    24,
+    26
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -715,10 +748,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/eci",
-      "slug": "election-commission-of-india-powers",
-      "source": "civics #9",
-      "note": "gate-1 fix (Delhi SIR Form 8 date) and gate-2 fix (2023 Act in force 2 Jan 2024) applied 22 Nov morning; all other facts passed twice; dated court statuses (Constitution Bench reference, Delhi SIR review on 2 Dec) need rechecking at the next gate; on publishing add 9 to usedCivics"
+      "dir": "daily/drafts/oc-vs-cc",
+      "slug": "occupancy-certificate-vs-completion-certificate",
+      "source": "niche #25",
+      "note": "22 Nov afternoon: gate 1 FAIL (unsourced MahaRERA partial-OC claim, '3,699 lapsed projects' context; minor Delhi 20/30 days, s.14(2), Karnataka wording) -> fixed; gate 2 FAIL (Karnataka: add the June 2026 one-time power-connection relaxation up to 2,400 sq ft, applications closed 6 July 2026) -> fixed after gate 2. RERA sections and the three SC rulings passed twice. On publishing add 25 to usedNiche."
     }
   ]
 }
