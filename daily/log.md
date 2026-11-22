@@ -852,3 +852,10 @@ Image prompts:
 - CAT 2026 Exam Day Guidelines: Slot Timings, Reporting Time, What to Carry and Rules: create image for this article topic without any text
 - Borderline Personality Disorder: Symptoms, Causes, BPD vs Bipolar and Getting Help in India: create image for this article topic without any text
 - How to Create a Website With AI: Tools and Steps for Beginners in India: create image for this article topic without any text
+
+### 2026-11-22 (after the morning run): covers from the owner
+The owner sent three images in chat. They were converted to WebP (1670×942, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL, and set as covers:
+- cat-exam-day-guidelines → c0f544_e469b295e7d946a58ece487b668ccb27~mv2.webp. The image shows a desk with an admit card, ID card, wall clock, transparent bottle and checklist, a "no phone/watch" sign, and a metal detector at an exam hall. It has no text.
+- borderline-personality-disorder → c0f544_59c58b88d45e4e92a1e68ee71c4b266a~mv2.webp. The image is a collage of one woman in shifting moods (storm to sunshine), with a glowing head-and-brain held by hands.
+- how-to-create-a-website-with-ai → c0f544_92784ad8ed0f4ff5b366dafbdd1a4010~mv2.webp. The image shows a laptop with an AI chip linked by an arrow to a website layout, and India Gate through the window.
+All three were set to cover true in `state.published` and removed from `pendingImages`. The pre-render rebuild is left to the 22 Nov afternoon run, so the pre-rendered pages show these covers from then.

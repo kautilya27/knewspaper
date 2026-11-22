@@ -531,21 +531,21 @@
       "slug": "cat-exam-day-guidelines",
       "title": "CAT 2026 Exam Day Guidelines: Slot Timings, Reporting Time, What to Carry and Rules",
       "source": "trending",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-22",
       "slug": "borderline-personality-disorder",
       "title": "Borderline Personality Disorder: Symptoms, Causes, BPD vs Bipolar and Getting Help in India",
       "source": "plan #61",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-22",
       "slug": "how-to-create-a-website-with-ai",
       "title": "How to Create a Website With AI: Tools and Steps for Beginners in India",
       "source": "owner #4",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -658,11 +658,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "cat-exam-day-guidelines",
-    "borderline-personality-disorder",
-    "how-to-create-a-website-with-ai"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
