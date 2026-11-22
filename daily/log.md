@@ -859,3 +859,14 @@ The owner sent three images in chat. They were converted to WebP (1670×942, q80
 - borderline-personality-disorder → c0f544_59c58b88d45e4e92a1e68ee71c4b266a~mv2.webp. The image is a collage of one woman in shifting moods (storm to sunshine), with a glowing head-and-brain held by hands.
 - how-to-create-a-website-with-ai → c0f544_92784ad8ed0f4ff5b366dafbdd1a4010~mv2.webp. The image shows a laptop with an AI chip linked by an arrow to a website layout, and India Gate through the window.
 All three were set to cover true in `state.published` and removed from `pendingImages`. The pre-render rebuild is left to the 22 Nov afternoon run, so the pre-rendered pages show these covers from then.
+
+### 2026-11-22 (late morning): owner's article published (Godrej Elanor)
+The owner sent a .docx and asked for it to be published. It is now live as [Why Infrastructure Development Plays an Important Role in Residential Property Demand](https://www.knewspaper.in/post/infrastructure-development-residential-property-demand) (Real Estate, Knewspaper Editorial Team).
+- **Text:** kept as sent, the same as the allinsightz real-estate moves. The bold section titles became H2s, so the "In this article" box shows. The project-information block was split into three lines.
+- **Not applied:** the daily-article gate, the FAQ section and the "no In conclusion" rule (this is owner-supplied content).
+- **Links:** 4 to godrejelanor.com, all bold and opening in a new tab. Under the owner's 19 Nov guest-post rule, the first 2 are do-follow and the other 2 are nofollow. The phone number is kept.
+- **SEO:** seoTitle "Infrastructure and Residential Property Demand in Pune"; the excerpt and SEO description were written for it.
+- **Cover:** none. The image prompt is "Why Infrastructure Development Plays an Important Role in Residential Property Demand: create image for this article topic without any text".
+- **Tracking:** not added to `state.published`, so the daily recheck leaves it alone. The source markdown is in `daily/drafts/godrej-elanor/`.
+- **Closest existing article:** how-infrastructure-development-can-influence-plot-values, which covers plots rather than flats and has no Pune focus.
+- **Pre-render rebuild:** left to the 22 Nov afternoon run.
