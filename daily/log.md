@@ -820,3 +820,17 @@ Image prompts:
 - Types of Sarees in India by State: Weaves, GI Tags and How to Recognise Each: create image for this article topic without any text
 - HIV and AIDS: Symptoms by Stage, How It Spreads, and Free Testing and Treatment in India: create image for this article topic without any text
 - How to Calculate HRA Exemption: Formula, 3 Worked Examples and Rent Receipt Rules: create image for this article topic without any text
+
+### 2026-11-22 (early, after the 21 Nov afternoon run): covers from the owner
+The owner sent ten images in chat. Converted to WebP (1670×942, q80; saved in `daily/images/`), imported into Wix Media from the repo's raw URL, and set as covers:
+- sims-on-my-aadhaar → c0f544_20f7f5df3a71441bb2a83ec066c5ae04~mv2.webp (laptop listing three SIM cards, two ticked and one crossed, an Aadhaar-style card and a magnifying glass). Note: the card carries small garbled text and an emblem-like mark; used as sent.
+- hindu-calendar-months → c0f544_be0174fb3f1641cdb6aeac198c771166~mv2.webp (a scroll with a 12-segment seasonal wheel around a kalash, an open book showing new and full moon, a diya and a temple at dusk).
+- great-speeches → c0f544_33db03592b5f423ca32c09d443f59db7~mv2.webp (an empty podium with two microphones before a collage of India Gate, Red Fort, a memorial, Parliament House and the UN building; globe and books). Note: the memorial frieze has garbled lettering.
+- thank-you-email-after-interview → c0f544_5e6aae8420d6417ebc684d9e0ae8690a~mv2.webp (laptop with an email compose window, an interview-room inset and a sent-envelope tick).
+- best-sample-papers → c0f544_e6b41fa33a924a559aec972105f3d654~mv2.webp (a clipped stack of question papers, textbooks and a laptop with a checklist). Note: small garbled text on the top sheet.
+- from-last-season → c0f544_4e4b6f538cad48d5afbc103c5da3a7a6~mv2.webp (TV showing a fog-bound old house and water tower, popcorn, remote and a tablet with a play button).
+- how-is-inflation-measured-in-india → c0f544_6fe7771cae4143bea80794ad8efb07a2~mv2.webp (a grocery basket, rising red arrow, coin stacks, chart and factory clipboards before a domed government building with the flag; no person).
+- types-of-sarees → c0f544_77cc1c76631846538b76228b5ce18f12~mv2.webp (a stack of silk sarees, a handloom, cotton bolls and a patchwork map of India). Note: the map is stylised; its northern boundary should be checked against India's official map before the image is used anywhere else.
+- hiv-aids-symptoms-causes → c0f544_bec1c80664654372b287ef7318b1f46b~mv2.webp (red ribbon, a rapid test kit, blood tubes, condoms, a shield over a virus, stethoscope and a hospital).
+- hra-exemption-calculation → c0f544_5cf8cd38b0b04368aa4094dddb8fe66d~mv2.webp (a model house, calculator, coins, a clipboard form and a laptop showing calculator + rent receipt → tick). Note: calculator keys have small garbled labels.
+All ten set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 22 Nov morning run, so the pre-rendered pages show these covers from then.

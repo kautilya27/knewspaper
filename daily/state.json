@@ -461,70 +461,70 @@
       "slug": "sims-on-my-aadhaar",
       "title": "How Many SIMs Are on My Aadhaar? Check on Sanchar Saathi and Report Ones You Don't Use",
       "source": "niche #18",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-20",
       "slug": "hindu-calendar-months",
       "title": "Hindu Calendar Months: Names, English Equivalents and Amanta vs Purnimanta Explained",
       "source": "niche #22",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-20",
       "slug": "great-speeches",
       "title": "8 Great Speeches in History, Indian and World, and What Made Each One Work",
       "source": "plan #58",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-20",
       "slug": "thank-you-email-after-interview",
       "title": "How to Write an Interview Thank-You Email: Templates for Indian Job Seekers",
       "source": "plan #59",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "best-sample-papers",
       "title": "Best Sample Papers for Every Class: Class 9 to 12 Board Exams (2027)",
       "source": "owner #1",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "from-last-season",
       "title": "From Season 5 (Final Season): Release Date Status, Where to Watch in India and What We Know",
       "source": "owner #6",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "how-is-inflation-measured-in-india",
       "title": "How Is Inflation Measured in India? CPI and WPI Explained With the New Base Year",
       "source": "civics #8",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "types-of-sarees",
       "title": "Types of Sarees in India by State: Weaves, GI Tags and How to Recognise Each",
       "source": "niche #23",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "hiv-aids-symptoms-causes",
       "title": "HIV and AIDS: Symptoms by Stage, How It Spreads, and Free Testing and Treatment in India",
       "source": "plan #60",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-21",
       "slug": "hra-exemption-calculation",
       "title": "How to Calculate HRA Exemption: Formula, 3 Worked Examples and Rent Receipt Rules",
       "source": "niche #24",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -637,18 +637,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "sims-on-my-aadhaar",
-    "hindu-calendar-months",
-    "great-speeches",
-    "thank-you-email-after-interview",
-    "best-sample-papers",
-    "from-last-season",
-    "how-is-inflation-measured-in-india",
-    "types-of-sarees",
-    "hiv-aids-symptoms-causes",
-    "hra-exemption-calculation"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
