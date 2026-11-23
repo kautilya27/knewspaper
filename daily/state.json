@@ -35,7 +35,8 @@
     60,
     61,
     62,
-    63
+    63,
+    64
   ],
   "published": [
     {
@@ -569,6 +570,34 @@
       "title": "APAAR ID: What It Is, Is It Mandatory and How to Create One via DigiLocker",
       "source": "niche #26",
       "cover": true
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "occupancy-certificate-vs-completion-certificate",
+      "title": "Occupancy Certificate vs Completion Certificate: Why They Matter and How to Check Them",
+      "source": "niche #25",
+      "cover": false
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "full-and-final-settlement",
+      "title": "Full and Final Settlement: The 2-Day Rule, What's Included and What to Do If It's Delayed",
+      "source": "niche #28",
+      "cover": false
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "stop-spam-calls",
+      "title": "How to Stop Spam Calls and SMS in India: TRAI DND, 1909 and Chakshu Explained",
+      "source": "niche #27",
+      "cover": false
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "declaration-in-resume",
+      "title": "Declaration in Resume: Meaning, Format and Samples for Indian Job Seekers",
+      "source": "plan #64",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -681,7 +710,12 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "occupancy-certificate-vs-completion-certificate",
+    "full-and-final-settlement",
+    "stop-spam-calls",
+    "declaration-in-resume"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -731,7 +765,10 @@
     21,
     23,
     24,
-    26
+    26,
+    25,
+    28,
+    27
   ],
   "skippedNiche": [],
   "usedOwner": [
@@ -744,10 +781,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/oc-vs-cc",
-      "slug": "occupancy-certificate-vs-completion-certificate",
-      "source": "niche #25",
-      "note": "22 Nov afternoon: gate 1 FAIL (unsourced MahaRERA partial-OC claim, '3,699 lapsed projects' context; minor Delhi 20/30 days, s.14(2), Karnataka wording) -> fixed; gate 2 FAIL (Karnataka: add the June 2026 one-time power-connection relaxation up to 2,400 sq ft, applications closed 6 July 2026) -> fixed after gate 2. RERA sections and the three SC rulings passed twice. On publishing add 25 to usedNiche."
+      "dir": "daily/drafts/finance-commission",
+      "slug": "finance-commission-explained",
+      "source": "civics #10",
+      "note": "23 Nov morning: gate 1 FAIL (India Forum equity-weight claim misread: 60% already under the 15th FC; GST cess end-date contradiction) -> fixed; gate 2 FAIL (grand bargain described one-sidedly; debate section unbalanced; 'decide' vs 'recommend') -> fixed after gate 2 (debate rewritten into two balanced lists; Karnataka 5% cess-cap ask added from news reports, needs checking). All 16th/15th FC figures, weights, dates and state shares passed twice. On publishing add 10 to usedCivics."
     }
   ]
 }

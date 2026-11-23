@@ -21,7 +21,7 @@ The biggest difference: **WPI has no services**, so rent, school fees, doctor vi
 
 ## Inside the new CPI basket
 
-MoSPI sets the basket and weights from how households actually spend. The new series uses the Household Consumption Expenditure Survey (HCES) 2023-24 instead of 2011-12 spending patterns. Prices are collected monthly from 1,465 villages and 1,407 urban markets, recorded on tablets, and 12 online markets in large cities are tracked weekly.
+MoSPI sets the basket and weights from how households actually spend. The new series uses the Household Consumption Expenditure Survey (HCES) 2023-24 instead of 2011-12 spending patterns. Prices are collected monthly from 1,465 villages and 1,395 urban markets, recorded on tablets, and 12 online markets in cities with more than 25 lakh people are tracked weekly.
 
 Separate indices are published for rural, urban and combined (all-India). Here is how the main weights changed in the combined index, according to MoSPI:
 

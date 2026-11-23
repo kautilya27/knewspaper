@@ -29,7 +29,7 @@ The full Act is on the government's [India Code portal](https://www.indiacode.ni
 
 Three Supreme Court decisions shape how OC disputes are handled:
 
-- **Samruddhi Co-operative Housing Society v. Mumbai Mahalaxmi Construction (11 January 2022):** the court held that a builder's failure to obtain an OC is a deficiency in service under consumer protection law, and that flat owners can claim compensation. In that case the residents had only temporary water and power connections and paid property tax and water charges above the normal rates.
+- **Samruddhi Co-operative Housing Society v. Mumbai Mahalaxmi Construction (11 January 2022):** the court held that a builder's failure to obtain an OC is a deficiency in service under consumer protection law, and that flat owners can claim compensation. In that case the residents could not get regular water and power connections and paid property tax and water charges above the normal rates.
 - **Dharmendra Sharma v. Agra Development Authority (2024 INSC 667):** relying on its earlier ruling in *Debashis Sinha v. R.N.R. Enterprise* (2023), the court held that a buyer can refuse possession offered without the completion certificate and the fire safety clearance. It said the absence of these documents "vitiates the offer of possession".
 - **Rajendra Kumar Barjatya v. U.P. Avas Evam Vikas Parishad (17 December 2024):** the court directed that electricity, water and sewerage connections be given only after the completion or occupation certificate is produced. Banks must verify the certificate before sanctioning a loan secured against a building. Builders must also undertake to hand over possession only after obtaining it.
 
@@ -42,7 +42,7 @@ A part OC is valid for what it covers, and only that. Check that your tower and 
 ## How state rules differ: three examples
 
 - **Delhi:** a single occupancy-cum-completion certificate is issued. The bylaws give the authority 20 days to decide for moderate-risk buildings and 30 days for high-risk ones, and if it doesn't reply in time, the certificate is deemed to have been issued once fees are paid. No one may occupy a building or any part of it until the certificate is granted.
-- **Karnataka (Bengaluru):** after the Supreme Court's December 2024 order, many owners couldn't get power connections. The state government then used the Greater Bengaluru Governance Act, 2024 to exempt ground-plus-two or stilt-plus-three homes on plots of up to 1,200 sq ft from needing an OC, according to Deccan Herald. That permanent exemption applies only to these small homes within Greater Bengaluru. Separately, the state allowed one-time relief so that some larger homes without an OC could get power connections: a June 2026 order covered residential buildings on plots up to 2,400 sq ft completed by 31 May 2026, but applications closed on 6 July 2026, according to Deccan Herald.
+- **Karnataka:** after the Supreme Court's December 2024 order, many owners couldn't get power connections. The state government then used the Greater Bengaluru Governance Act, 2024 to exempt ground-plus-two or stilt-plus-three homes on plots of up to 1,200 sq ft from needing an OC, according to Deccan Herald. Karnataka has since extended a similar exemption to small homes in other urban local bodies (under the Karnataka Municipalities Act, as Deccan Herald reported in October 2025) and in gram panchayat areas, so it is no longer limited to Bengaluru. Separately, the state allowed one-time relief so that some larger homes without an OC could get power connections: a June 2026 order covered residential buildings on plots up to 2,400 sq ft completed by 31 May 2026, but applications had to be made by 6 July 2026, according to Deccan Herald.
 - **Maharashtra:** builders must upload the planning authority's OC to the MahaRERA website before the project can be marked complete. After a forged-documents case in Kalyan-Dombivli, MahaRERA asked planning authorities in June 2025 to confirm whether they had really issued the OCs uploaded for 3,699 lapsed projects, according to the Free Press Journal. The developers had uploaded these OCs in reply to MahaRERA notices, and the authorities were given 10 days to respond.
 
 ## Buyer's checklist: how to verify OC and CC
@@ -72,7 +72,7 @@ In many cities the CC is issued first and the OC follows after further checks. D
 
 ### Is it illegal to live in a flat without an OC?
 
-In many places, yes. Delhi's bylaws, for example, bar anyone from occupying a building or part of it until the certificate is granted. Exceptions exist, such as Greater Bengaluru's permanent exemption for small homes on plots of up to 1,200 sq ft.
+In many places, yes. Delhi's bylaws, for example, bar anyone from occupying a building or part of it until the certificate is granted. Exceptions exist, such as Karnataka's exemption for small homes (ground-plus-two or stilt-plus-three) on plots of up to 1,200 sq ft.
 
 ### Can I get a home loan for a flat without an OC?
 
