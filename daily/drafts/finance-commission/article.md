@@ -12,9 +12,9 @@ Article 280 sets up the Commission (a chairperson and four members), Article 270
 
 The pot that gets shared is called the **divisible pool**. It is the Centre's gross tax revenue minus three things: the cost of collecting taxes, taxes from Union Territories, and all cesses and surcharges.
 
-The 16th Finance Commission recommended that states get **41%** of this pool, the same as the 15th Commission. Many states had asked for 50%. According to the government's explanatory memorandum laid in Parliament on 1 February 2026, "The Government has accepted the above recommendations of the Commission" on the 41% share.
+The 16th Finance Commission recommended that states get **41%** of this pool, the same as the 15th Commission. Many states had asked for 50%, according to reports of their memoranda. According to the government's explanatory memorandum laid in Parliament on 1 February 2026, "The Government has accepted the above recommendations of the Commission" on the 41% share.
 
-For 2026-27, the Union Budget estimates the states' share of central taxes at **₹15,34,482 crore**, according to PRS Legislative Research's analysis of state finances. Gross tax revenue is budgeted at **₹44.04 lakh crore**. That means states get roughly **35% of everything the Centre collects** in taxes, not 41%. (This is our calculation from the two budget figures.)
+For 2026-27, the Union Budget estimates the states' share of central taxes at **₹15,26,255 crore**, according to PRS Legislative Research's Union Budget analysis. Gross tax revenue is budgeted at **₹44.04 lakh crore**. That means states get roughly **35% of everything the Centre collects** in taxes, not 41%. (This is our calculation from the two budget figures.)
 
 ### Why 41% becomes about 35%: cesses and surcharges
 
@@ -28,7 +28,7 @@ Once the 41% is fixed, each state's slice is decided by a weighted formula. Here
 
 | Criterion | What it measures | 15th FC (2021-26) | 16th FC (2026-31) |
 |---|---|---|---|
-| Income distance | How far a state's per capita GSDP is below the average of the top three large states; poorer states get more | 45% | 42.5% |
+| Income distance | How far a state's per capita GSDP is below the average of the top three states by per capita GSDP; poorer states get more | 45% | 42.5% |
 | Population | State's share of India's population, Census 2011 | 15% | 17.5% |
 | Demographic performance | Rewards states that controlled population growth (16th FC: growth 1971-2011; 15th FC used fertility rate) | 12.5% | 10% |
 | Area | Geographical area, with a minimum floor for small states | 15% | 10% |
@@ -55,7 +55,7 @@ Ratings agency ICRA calculated that 14 of the 28 states get a larger share than 
 
 Tax sharing is untied money that states can spend as they choose. The Commission also recommends grants. For 2026-31, according to PRS, the 16th Commission recommended **₹9.47 lakh crore** in grants:
 
-- **₹7.91 lakh crore for panchayats and municipalities**, more than double the 15th Commission's local body grants, according to ICRA.
+- **₹7.91 lakh crore for panchayats and municipalities**, about double the ₹3.9 lakh crore actually released to local bodies over 2021-26, according to ICRA.
 - **₹1.56 lakh crore** as the Centre's share for state disaster response and mitigation funds.
 
 The bigger change is what is missing. The 15th Commission gave about ₹2.9 lakh crore in **revenue deficit grants** to 17 states, according to ICRA. The 16th Commission recommended none. Its report argues that such grants "create an adverse incentive" and encourage states to be "profligate" instead of fixing the causes of their deficits. The government's memorandum only "takes note" of this part, rather than formally accepting it.
@@ -72,9 +72,9 @@ This is the most contested part of the system, and both sides have a case.
 
 ### What richer states argue
 
-- **They get back far less than they contribute.** The Karnataka government told the 16th Commission in 2025 that it gets back about 15 paise for every rupee it contributes in Union taxes, according to the *Deccan Chronicle*, and proposed that each state keep about 60% of what it contributes.
+- **They get back far less than they contribute.** The Karnataka government told the 16th Commission in August 2024 that it gets back about 15 paise for every rupee it contributes in Union taxes, according to the *Deccan Chronicle*, and proposed that each state keep about 60% of what it contributes.
 - **Population weight can penalise states that slowed population growth.** States with lower birth rates argue that a large weight on population rewards faster-growing states, even when a demographic criterion is added to offset this.
-- **Cesses and surcharges shrink the pool.** Because these stay with the Centre, states lose out as their share of central taxes grows. Karnataka asked the 16th Commission to cap cesses and surcharges at 5% of gross tax revenue, according to news reports of its memorandum.
+- **Cesses and surcharges shrink the pool.** Because these stay with the Centre, states lose out as cesses and surcharges take a bigger share of central taxes. Most states, not only richer ones, make this point. Karnataka's government asked the Commission in August 2024 to cap cesses and surcharges at 5% of gross tax revenue, according to PTI.
 
 ### What the other side argues
 
@@ -84,7 +84,7 @@ This is the most contested part of the system, and both sides have a case.
 
 ## How this connects to the Union Budget
 
-The Commission sets the formula for five years, but the actual rupees depend on how much tax the Centre collects, which is why the states' share appears each February in the Budget (see our [Union Budget explainer](https://www.knewspaper.in/post/union-budget-2024)). The government's [explanatory memorandum on the 16th Finance Commission report](https://www.indiabudget.gov.in/doc/16fc.pdf) lists what it accepted.
+The Commission recommends the formula for five years (the government accepted the 16th Commission's), but the actual rupees depend on how much tax the Centre collects, which is why the states' share appears each February in the Budget (see our [Union Budget explainer](https://www.knewspaper.in/post/union-budget-2024)). The government's [explanatory memorandum on the 16th Finance Commission report](https://www.indiabudget.gov.in/doc/16fc.pdf) lists what it accepted.
 
 ## Frequently asked questions
 

@@ -733,6 +733,10 @@
     {
       "order": 9,
       "reason": "ECI powers draft failed the gate twice in the 22 Nov afternoon held-draft recheck (Bihar roll figures; outdated Constitution Bench status; then Bihar arithmetic and election-petition forum). Fixes from both gates are applied in daily/drafts/eci/; dropped per the held-drafts rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 10,
+      "reason": "Finance Commission draft failed the gate twice in the 23 Nov afternoon held-draft recheck (gate 1: 'sets the formula' should be 'recommends'; gate 2: devolution figure was the states' budgets total Rs 15,34,482 cr, Union Budget figure is Rs 15,26,255 cr; Karnataka submission was Aug 2024 not 2025; local-body grants 'more than double' overstated). All fixes applied in daily/drafts/finance-commission/; dropped per the held-drafts rule, owner may ask for it to be re-gated."
     }
   ],
   "usedNiche": [
@@ -776,10 +780,28 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/finance-commission",
-      "slug": "finance-commission-explained",
-      "source": "civics #10",
-      "note": "23 Nov morning: gate 1 FAIL (India Forum equity-weight claim misread: 60% already under the 15th FC; GST cess end-date contradiction) -> fixed; gate 2 FAIL (grand bargain described one-sidedly; debate section unbalanced; 'decide' vs 'recommend') -> fixed after gate 2 (debate rewritten into two balanced lists; Karnataka 5% cess-cap ask added from news reports, needs checking). All 16th/15th FC figures, weights, dates and state shares passed twice. On publishing add 10 to usedCivics."
+      "dir": "daily/drafts/tatkal",
+      "slug": "tatkal-ticket-booking",
+      "source": "niche #30",
+      "note": "23 Nov afternoon: gate 1 FAIL (online Aadhaar OTP is on selected trains, not all; counter OTP 211 trains per Dec 2025 Lok Sabha reply) -> fixed; gate 2 FAIL (a 'July 2026 Parliament reply' on selected trains could not be verified; seoDescription 158 chars) -> fixed after gate 2 (now cites the Dec 2025 reply: 322 trains online; seoDescription 147). Time-sensitive-ish. On publishing add 30 to usedNiche."
+    },
+    {
+      "dir": "daily/drafts/fssai-home-food",
+      "slug": "fssai-registration-for-home-food-business",
+      "source": "niche #29",
+      "note": "23 Nov afternoon: all facts passed twice (2026 thresholds Rs 1.5 cr / Rs 50 cr from 1 Apr 2026, fees, no renewal, FoSCoS categories, Dec 2024 advisory). Gate 1 FAIL (broken link sentence; side-hustles link described a checklist that isn't there) -> fixed; gate 2 FAIL (digital-marketing and Zomato/Swiggy link sentences misdescribed the targets) -> fixed after gate 2 (now links freelancing-vs-entrepreneurship for Udyam/GST; Zomato link framed as customer comparison). On publishing add 29 to usedNiche."
+    },
+    {
+      "dir": "daily/drafts/high-blood-pressure",
+      "slug": "high-blood-pressure",
+      "source": "plan #65",
+      "note": "23 Nov afternoon: facts passed twice. Gate 1 FAIL ('75 by 25' credited to IHCI; it is the Health Ministry's May 2023 '75/25' initiative; length) -> fixed and trimmed; gate 2 FAIL (FAQ pronoun/how-often wording) -> fixed after gate 2. Length ~1,580 incl. table (gate 2 said not padded). On publishing add 65 to usedPlan."
+    },
+    {
+      "dir": "daily/drafts/nonverbal-communication",
+      "slug": "nonverbal-communication",
+      "source": "plan #66",
+      "note": "23 Nov afternoon: gate 1 FAIL (DePaulo 2003 figures wrong and 'found none' overstated) -> fixed; gate 2 FAIL (Sorokowska 135 cm 'average' contradicted the 76-140 cm range) -> fixed after gate 2. Optional: categorySlug health-fitness may fit career better; head-wobble 'south' line unsourced. On publishing add 66 to usedPlan."
     }
   ]
 }
