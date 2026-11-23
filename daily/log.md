@@ -919,3 +919,11 @@ Image prompts:
 - Full and Final Settlement: The 2-Day Rule, What's Included and What to Do If It's Delayed: create image for this article topic without any text
 - How to Stop Spam Calls and SMS in India: TRAI DND, 1909 and Chakshu Explained: create image for this article topic without any text
 - Declaration in Resume: Meaning, Format and Samples for Indian Job Seekers: create image for this article topic without any text
+
+### 2026-11-23 (after the morning run): covers from the owner
+The owner sent four images in chat. Converted to WebP (1536×1024, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL, and set as covers:
+- occupancy-certificate-vs-completion-certificate → c0f544_3f71c24dbe6149a58d0a7aa5b0f0d515~mv2.webp (two certificate clipboards, an apartment block, a model house under a magnifying glass, blueprints and a hard hat; no text).
+- full-and-final-settlement → c0f544_177a458c4d0e4432822720febaf99b47~mv2.webp (a checklist clipboard with rupee, laptop, calendar and certificate icons, cash, coins, an hourglass, a calculator and a packed office box; no text).
+- stop-spam-calls → c0f544_22c4847ed44848d0a18c4780c499aca4~mv2.webp (a phone with blocked calls and messages linked to tower, shield and alert icons; no text).
+- declaration-in-resume → c0f544_b7577ce2a57a4a87a2b48dab89717bad~mv2.webp (a resume with a highlighted signed tick box at the bottom, a pen, books and a laptop; no text).
+All four set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 23 Nov afternoon run, so the pre-rendered pages show these covers from then.

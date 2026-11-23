@@ -576,28 +576,28 @@
       "slug": "occupancy-certificate-vs-completion-certificate",
       "title": "Occupancy Certificate vs Completion Certificate: Why They Matter and How to Check Them",
       "source": "niche #25",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-23",
       "slug": "full-and-final-settlement",
       "title": "Full and Final Settlement: The 2-Day Rule, What's Included and What to Do If It's Delayed",
       "source": "niche #28",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-23",
       "slug": "stop-spam-calls",
       "title": "How to Stop Spam Calls and SMS in India: TRAI DND, 1909 and Chakshu Explained",
       "source": "niche #27",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-23",
       "slug": "declaration-in-resume",
       "title": "Declaration in Resume: Meaning, Format and Samples for Indian Job Seekers",
       "source": "plan #64",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -710,12 +710,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "occupancy-certificate-vs-completion-certificate",
-    "full-and-final-settlement",
-    "stop-spam-calls",
-    "declaration-in-resume"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
