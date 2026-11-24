@@ -1010,3 +1010,17 @@ The owner then asked to publish the `articles.docx` articles right away instead 
 - The Changing Landscape of Premium Residential Living in Modern Indian Cities: create image for this article topic without any text
 - The Growing Importance of Commercial Real Estate in India's Urban Development: create image for this article topic without any text
 - How Growing Suburban Development Is Transforming Mumbai's Residential Real Estate Market: create image for this article topic without any text
+
+### 2026-11-24 (evening): covers from the owner for the afternoon articles and the six owner articles
+The owner sent ten images in chat. Converted to WebP (1536×1024, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL (commit da55f69), and set as covers:
+- tds-on-rent → c0f544_b94bb280807e483e829abf104d51d4d6~mv2.webp (model house, keys, coins, calculator, clipboard and a laptop form with a tick; no text).
+- marriage-registration → c0f544_c820fd7d1a6f4d5398020c3abd8dbf7a~mv2.webp (a couple at a wedding mandap behind a desk with a certificate, rings, laptop, passport and two law books with religious symbols; no text).
+- varicose-veins → c0f544_5eac7f854a4048d29c83df5acd0bcf08~mv2.webp (a leg with varicose veins, a healthy vs faulty valve diagram, stockings and self-care icons; no text, but it shows a tablet strip and cream tube).
+- sim-binding → c0f544_78c37b9d82944debb4ea58e78b786984~mv2.webp (a phone linked to a SIM card with a calendar; note: it shows the WhatsApp logo).
+- infrastructure-development-residential-real-estate → c0f544_ebbe2194c9ff4dbcbd8c3cfe4e7ec5a3~mv2.webp (metro line and station, highway, towers with pool, cranes).
+- factors-before-buying-first-home → c0f544_5b627ee950ba49e4a08ff802b60b9077~mv2.webp (model apartment building, keys, calculator, checklist, icons).
+- benefits-of-building-villa-on-own-plot → c0f544_278eff02f5834b15a9d249c2ab2d88d4~mv2.webp (a villa beside a marked empty plot, blueprints, icons).
+- premium-residential-living-indian-cities → c0f544_7ded09f8e445410d8477f1f4aabac2ee~mv2.webp (balcony view of towers and pool, smart-home/gym/park circles).
+- commercial-real-estate-urban-development → c0f544_0ca88785053c454989f21b406cbbae94~mv2.webp (glass office towers, metro, crane, business icons).
+- suburban-development-mumbai-real-estate → c0f544_ff5b6f77d3c94e2faf82927d8f0b885d~mv2.webp (metro and highway through greenery, towers with pool, sea-link skyline at sunset).
+The four daily articles set to cover true in `state.published` and removed from `pendingImages`. The pre-render rebuild is left to the 25 Nov morning run, so the pre-rendered pages show these covers from then.

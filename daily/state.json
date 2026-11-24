@@ -642,28 +642,28 @@
       "slug": "tds-on-rent",
       "title": "TDS on Rent: When Tenants Must Deduct 2% and How to File Form 141 (Earlier 26QC)",
       "source": "niche #33",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "marriage-registration",
       "title": "Marriage Registration in India: Hindu Marriage Act vs Special Marriage Act, Documents, Portals",
       "source": "niche #32",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "varicose-veins",
       "title": "Varicose Veins: Symptoms, Causes, Warning Signs and Treatment Options in India",
       "source": "plan #70",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "sim-binding",
       "title": "SIM binding for WhatsApp explained: the 31 December deadline and what changes for you",
       "source": "trending",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -784,12 +784,7 @@
       "reason": "Core Values: no information gain; values-list pages dominate results and the site already covers goals-vs-systems, positive-thinking and self-confidence (judged 24 Nov afternoon without drafting, like rows 43 and 53)"
     }
   ],
-  "pendingImages": [
-    "tds-on-rent",
-    "marriage-registration",
-    "varicose-veins",
-    "sim-binding"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
