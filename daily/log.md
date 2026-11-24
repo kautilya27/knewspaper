@@ -993,3 +993,20 @@ Image prompts:
 - Marriage Registration in India: Hindu Marriage Act vs Special Marriage Act, Documents, Portals: create image for this article topic without any text
 - Varicose Veins: Symptoms, Causes, Warning Signs and Treatment Options in India: create image for this article topic without any text
 - SIM binding for WhatsApp explained: the 31 December deadline and what changes for you: create image for this article topic without any text
+
+### 2026-11-24 (evening, same session): owner's six real-estate articles published
+The owner then asked to publish the `articles.docx` articles right away instead of holding them for 25 Nov. All six are live (Real Estate, Knewspaper Editorial Team), text as sent; bold section titles became H2s; the Godrej Elanor project block split into three lines; outside links bold, opening in a new tab, first 2 per article do-follow and the rest nofollow (owner's 19 Nov rule). No gate, no FAQ section (owner content). Not added to `state.published`; `ownerArticlesHeld` set to published. Source markdown: `daily/owner-articles/2026-11-25/a1.md`–`a6.md`, metas in `metas.json`.
+- [How Infrastructure Development Is Transforming Residential Real Estate Markets](https://www.knewspaper.in/post/infrastructure-development-residential-real-estate) (3 links: shetherayamulund, puravankarathane, godrejelanor nofollow)
+- [Important Factors to Consider Before Buying Your First Residential Property](https://www.knewspaper.in/post/factors-before-buying-first-home) (piramalvaikunt, northimperialgreens, hiranandanibeliciathane nofollow)
+- [The Benefits of Building a Customised Villa on Your Own Plot of Land](https://www.knewspaper.in/post/benefits-of-building-villa-on-own-plot) (neolivgrandlife, villacerro, neolivegrandforest nofollow)
+- [The Changing Landscape of Premium Residential Living in Modern Indian Cities](https://www.knewspaper.in/post/premium-residential-living-indian-cities) (godrejelanor x4: 2 do-follow, 2 nofollow; contact number kept)
+- [The Growing Importance of Commercial Real Estate in India's Urban Development](https://www.knewspaper.in/post/commercial-real-estate-urban-development) (worldtradecentre, blanca-ekaiva, millennium155 nofollow)
+- [How Growing Suburban Development Is Transforming Mumbai's Residential Real Estate Market](https://www.knewspaper.in/post/suburban-development-mumbai-real-estate) (shetherayamulund)
+- Site rebuild: published true, 453 article pages (447 + 6), redirects 6 changed/6 ok.
+- No covers. Image prompts:
+- How Infrastructure Development Is Transforming Residential Real Estate Markets: create image for this article topic without any text
+- Important Factors to Consider Before Buying Your First Residential Property: create image for this article topic without any text
+- The Benefits of Building a Customised Villa on Your Own Plot of Land: create image for this article topic without any text
+- The Changing Landscape of Premium Residential Living in Modern Indian Cities: create image for this article topic without any text
+- The Growing Importance of Commercial Real Estate in India's Urban Development: create image for this article topic without any text
+- How Growing Suburban Development Is Transforming Mumbai's Residential Real Estate Market: create image for this article topic without any text

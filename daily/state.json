@@ -879,8 +879,8 @@
     {
       "date": "2026-11-25",
       "dir": "daily/owner-articles/2026-11-25",
-      "status": "waiting",
-      "note": "Owner (24 Nov, in chat): 'hold this for tomorrow and publish these articles'. Six owner-supplied real-estate articles; publish in the 25 Nov morning run following the folder's README (Godrej Elanor precedent of 22 Nov). Not counted in published/daily cap."
+      "status": "published",
+      "note": "Owner (24 Nov, in chat): 'hold this for tomorrow and publish these articles'. Six owner-supplied real-estate articles; publish in the 25 Nov morning run following the folder's README (Godrej Elanor precedent of 22 Nov). Not counted in published/daily cap. Owner then asked (24 Nov, same session) to publish right away: all six published 24 Nov evening."
     }
   ]
 }

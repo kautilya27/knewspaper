@@ -18,4 +18,4 @@ How to publish (same as the 22 Nov Godrej Elanor precedent, see log.md):
 - Not added to state.published and not counted in the daily cap of 10 (owner content, as on 22 Nov). No cover unless the owner sends images; list each image prompt in the report.
 - After publishing, rebuild the site (step 7), log it, and move this folder's status to "published" here.
 
-Status: waiting (publish on 25 Nov 2026).
+Status: published on 24 Nov 2026 (owner asked to publish right away). See log.md.
