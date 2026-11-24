@@ -60,7 +60,7 @@ If your basic is set differently, see how the 50% wage rule changes PF and gratu
 
 ## Your PF after you leave
 
-The EPF Scheme, 2026 replaced the 1952 scheme from July 2026. Three rules matter at exit:
+The EPF Scheme, 2026 replaced the 1952 scheme from 29 June 2026. Three rules matter at exit:
 
 - **Transfer:** Under paragraph 43 you apply on EPFO's portal; the scheme allows automated transfers but doesn't guarantee them. Check that your old employer has marked your date of exit.
 - **Full withdrawal:** Under paragraph 49(2), you can withdraw the full balance only after 12 months without covered employment. A proviso waives the wait for women members who resign in specified cases. Retirement at 55 and retrenchment are separate grounds.

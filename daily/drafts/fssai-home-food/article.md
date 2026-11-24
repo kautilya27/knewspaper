@@ -43,7 +43,7 @@ The "kind of business" you pick on FoSCoS decides whether you get registration o
 5. Pay ₹100 per year chosen.
 6. You get a 14-digit number starting with 2, on a certificate with a QR code.
 
-The authority has 7 days to grant registration (30 if it inspects). Answer any query within 30 days or the application lapses. Form B for a State licence needs more: a kitchen layout plan, equipment list and, for manufacturers, a water test report.
+The authority has 7 days to grant registration (if it orders an inspection, that happens within 30 days). Answer any query within 30 days or the application lapses. Form B for a State licence needs more: a kitchen layout plan, equipment list and, for manufacturers, a water test report.
 
 ## Kitchen basics FSSAI expects
 
@@ -74,9 +74,9 @@ A same-day tiffin isn't prepackaged in this sense, but the hygiene rules still a
 
 Listing on Swiggy or Zomato needs no extra FSSAI licence: the platform holds the e-commerce licence, and your registration is enough if the category and turnover fit. But you must have one. FSSAI's advisory of 3 December 2024 says no e-commerce food business may list a seller "without displaying their valid FSSAI License or Registration."
 
-It also says online claims ("sugar-free") must match your physical label. For how the two apps compare for customers, on fees, memberships and delivery, see our [Zomato vs Swiggy](https://www.knewspaper.in/post/zomato-or-swiggy) comparison.
+It also says online claims ("sugar-free") must match your physical label. For how the two apps compare, see our [Zomato vs Swiggy](https://www.knewspaper.in/post/zomato-or-swiggy) comparison.
 
-Your **own website or app** that takes orders is different. FSSAI's licensing FAQs say a business selling through its own e-commerce platform also needs an e-commerce licence, which is a Central licence at ₹7,500 a year. They don't address orders over WhatsApp or Instagram, so ask your district Designated Officer (food safety) before building a store. Other registrations such as Udyam and GST are covered in our [freelancing vs entrepreneurship](https://www.knewspaper.in/post/freelancing-vs-entrepreneurship) guide.
+Your **own website or app** that takes orders is different. FSSAI's licensing FAQs say a business selling through its own e-commerce platform also needs an e-commerce licence, which is a Central licence at ₹7,500 a year. They don't address orders over WhatsApp or Instagram, so ask your district Designated Officer (food safety) before building a store. If you are still deciding whether to run this as a side gig or a proper business, see our [freelancing vs entrepreneurship](https://www.knewspaper.in/post/freelancing-vs-entrepreneurship) guide.
 
 ## What happens if you skip it
 
@@ -105,4 +105,4 @@ Not if it was issued on or after 1 April 2026. Registrations are now valid until
 
 ### Which is better for a tiffin service: "Dabba Wallas" or "Caterer" on FoSCoS?
 
-If you deliver packed meals, the official category is "Home Based Canteens/Dabba Wallas", which gives registration for up to ₹1.5 crore turnover. "Caterer" is for food prepared for a group, such as events, and needs a State licence at any turnover.
+If you deliver packed meals, the official category is "Home Based Canteens/Dabba Wallas", which gives registration for up to ₹1.5 crore turnover. "Caterer" is for food prepared for a group, such as events, and needs at least a State licence at any turnover.

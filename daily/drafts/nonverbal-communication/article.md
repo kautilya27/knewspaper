@@ -9,9 +9,9 @@ The claim that a message is 7% words, 38% tone and 55% body language is credited
 - **Mehrabian and Wiener (1967)**, in the *Journal of Personality and Social Psychology*, played single words such as "dear" or "terrible" spoken in a positive, neutral or negative tone. Listeners judged the speaker's attitude more from the tone than from the word.
 - **Mehrabian and Ferris (1967)**, in the *Journal of Consulting Psychology*, paired black-and-white photos of faces with recorded tones of voice. The face counted for more than the voice.
 
-Combining the two gave the 7-38-55 split. But, as a [Donders Institute explainer](https://blog.donders.ru.nl/this-is-why-93-of-communication-is-nonverbal-is-a-myth/?lang=en) points out, the studies only looked at how people read **feelings and attitudes**, using single words, mostly when the word and the tone or face contradicted each other. Gestures and posture were not tested at all. The participants were also only women, a point Mehrabian's own account of the studies confirms.
+Combining the two gave the 7-38-55 split. But, as a [Donders Institute explainer](https://blog.donders.ru.nl/this-is-why-93-of-communication-is-nonverbal-is-a-myth/?lang=en) points out, the studies only looked at how people read **feelings and attitudes**, using single words, mostly when the word and the tone or face contradicted each other. Gestures and posture were not tested at all. The participants were also only women.
 
-Mehrabian himself has said, on his own website, that "unless a communicator is discussing their feelings or attitudes, these equations are not applicable." So the honest takeaway is narrower: **when someone's words and tone clash ("I'm fine" said through gritted teeth), people tend to believe the tone and the face.**
+Mehrabian himself has said, on his own website, that "unless a communicator is talking about their feelings or attitudes, these equations are not applicable." So the honest takeaway is narrower: **when someone's words and tone clash ("I'm fine" said through gritted teeth), people tend to believe the tone and the face.**
 
 ## Types of nonverbal communication
 
@@ -36,7 +36,7 @@ India is not one culture, and no gesture is used the same way by every Indian. W
 
 ### The head wobble (or tilt)
 
-The side-to-side tilt of the head is the cue foreigners ask about most. Depending on context it can mean yes, okay, I understand, thank you, or a soft "maybe" that avoids a flat no. It is seen across India and is often described as more frequent in the south. The [Cultural Atlas](https://theculturalatlas.org/indian-culture/indian-culture-communication), a cross-cultural reference guide, notes that Indians may tilt or shake the head side to side to show agreement and understanding.
+The side-to-side tilt of the head is the cue foreigners ask about most. Depending on context it can mean yes, okay, I understand, thank you, or a soft "maybe" that avoids a flat no. It is seen across India, though how often and how strongly people use it varies by region and person. The [Cultural Atlas](https://theculturalatlas.org/indian-culture/indian-culture-communication), a cross-cultural reference guide, notes that Indians may tilt or shake the head side to side to show agreement and understanding.
 
 With international teams, add a word ("Yes, done", "I'll check") instead of relying on the tilt alone; and if you are on the receiving end, ask a direct follow-up rather than assuming a yes.
 
@@ -52,7 +52,7 @@ Many Indians also keep disagreement indirect. As the Cultural Atlas puts it, "th
 
 ### Personal space
 
-Edward Hall's well-known four "zones" of personal distance (intimate, personal, social, public) were based on observations of Americans, and Hall himself warned that cultures draw these lines differently. A large 2017 study in the *Journal of Cross-Cultural Psychology* by Sorokowska and colleagues asked 8,943 people in 42 countries, India among them, how close a stranger could stand before they felt uncomfortable. Preferred distance from a stranger ranged from about 76 cm in Argentina to about 140 cm in Romania, and women generally wanted more space. A colleague who steps back may simply have a different comfort zone.
+Edward Hall's well-known four "zones" of personal distance (intimate, personal, social, public) were based on observations of Americans, and Hall himself warned that cultures draw these lines differently. A large 2017 study in the *Journal of Cross-Cultural Psychology* by Sorokowska and colleagues asked 8,943 people in 42 countries, India among them, how close a stranger could stand before they felt uncomfortable. Preferred distance from a stranger ranged from under 80 cm in Argentina to about 140 cm in Romania, and women generally wanted more space. A colleague who steps back may simply have a different comfort zone.
 
 ## What research does not support
 

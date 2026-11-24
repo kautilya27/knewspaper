@@ -92,7 +92,6 @@ Under the National Programme for Prevention and Control of Non-Communicable Dise
 - **Treatment:** In a Rajya Sabha reply in August 2025, the Health Ministry said patients diagnosed under NP-NCD get free medicines and regular follow-up at these facilities.
 - **The India Hypertension Control Initiative (IHCI)**, launched in 2017 by the Health Ministry, ICMR, state governments and WHO India, built this system of standard treatment and monthly refills. Separately, in May 2023 the Health Ministry launched the "75/25" initiative to put 7.5 crore people with high BP or diabetes on standard care by 2025.
 
-
 ## When to see a doctor
 
 - Your readings are 140/90 or more on two different days.
