@@ -965,3 +965,12 @@ Image prompts:
 - Nonverbal Communication: Types, Indian Cues and the 7-38-55 Myth Explained: create image for this article topic without any text
 - What Is GDP and How Does India Calculate It? The New 2022-23 Series Explained: create image for this article topic without any text
 - Nashik Kumbh Mela 2027: Dates, Amrit Snan Days, Nashik vs Trimbakeshwar and How to Plan: create image for this article topic without any text
+
+### 2026-11-24 (after the morning run): covers from the owner
+The owner sent five images in chat. Converted to WebP (1536×1024, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL, and set as covers:
+- nashik-kumbh-mela → c0f544_a09141ad9ebc45c68a405943387fb867~mv2.webp (bathers at a river ghat at sunrise, temples, saffron flags and hills, with a brass pot, marigolds and rudraksha beads in front; no text).
+- gdp-india → c0f544_8c82718b05314efa85e499de7b59fe02~mv2.webp (a tricolour map of India, a rising bar chart and arrow, coins, a pie chart, a calculator, and factory, farm and laptop tiles; no text).
+- nonverbal-communication → c0f544_396bc1ba56844e039eff09db971e8972~mv2.webp (two colleagues talking across a desk, surrounded by circles showing a handshake, eyes, crossed arms, a thumbs-up, namaste and facial expressions; no text).
+- fssai-registration-for-home-food-business → c0f544_74a37ce678c442f5aade73c8308bbb31~mv2.webp (home-cooked food in tubs, a pickle jar and a takeaway box beside a laptop with a checklist and two certificates on a clipboard). Note: the laptop screen shows an "fssai"-style logo, so this image contains text.
+- high-blood-pressure → c0f544_e43a7d92ad84422eb6e99c64882d542c~mv2.webp (a BP monitor and cuff, a heart with a pulse line, a stethoscope, a checklist, a red alarm light, and a blue India map with a rising chart; no text).
+All five set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 24 Nov afternoon run, so the pre-rendered pages show these covers from then.

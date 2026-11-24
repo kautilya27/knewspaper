@@ -606,35 +606,35 @@
       "slug": "high-blood-pressure",
       "title": "High Blood Pressure: Normal Range, Indian Data, Home Checks and When It's an Emergency",
       "source": "plan #65",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "fssai-registration-for-home-food-business",
       "title": "FSSAI Registration for a Home Food Business: Basic vs State Licence, Fees and FoSCoS Steps (2026)",
       "source": "niche #29",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "nonverbal-communication",
       "title": "Nonverbal Communication: Types, Indian Cues and the 7-38-55 Myth Explained",
       "source": "plan #66",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "gdp-india",
       "title": "What Is GDP and How Does India Calculate It? The New 2022-23 Series Explained",
       "source": "civics #11",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-24",
       "slug": "nashik-kumbh-mela",
       "title": "Nashik Kumbh Mela 2027: Dates, Amrit Snan Days, Nashik vs Trimbakeshwar and How to Plan",
       "source": "niche #31",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -747,13 +747,7 @@
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
     }
   ],
-  "pendingImages": [
-    "high-blood-pressure",
-    "fssai-registration-for-home-food-business",
-    "nonverbal-communication",
-    "gdp-india",
-    "nashik-kumbh-mela"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
