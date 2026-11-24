@@ -38,7 +38,8 @@
     63,
     64,
     65,
-    66
+    66,
+    70
   ],
   "published": [
     {
@@ -635,6 +636,34 @@
       "title": "Nashik Kumbh Mela 2027: Dates, Amrit Snan Days, Nashik vs Trimbakeshwar and How to Plan",
       "source": "niche #31",
       "cover": true
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "tds-on-rent",
+      "title": "TDS on Rent: When Tenants Must Deduct 2% and How to File Form 141 (Earlier 26QC)",
+      "source": "niche #33",
+      "cover": false
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "marriage-registration",
+      "title": "Marriage Registration in India: Hindu Marriage Act vs Special Marriage Act, Documents, Portals",
+      "source": "niche #32",
+      "cover": false
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "varicose-veins",
+      "title": "Varicose Veins: Symptoms, Causes, Warning Signs and Treatment Options in India",
+      "source": "plan #70",
+      "cover": false
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "sim-binding",
+      "title": "SIM binding for WhatsApp explained: the 31 December deadline and what changes for you",
+      "source": "trending",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -745,9 +774,22 @@
     {
       "order": 54,
       "reason": "Plain Text Resume Example: near-duplicate of how-to-make-a-resume (covers ATS/portal-friendly formats) and student-resume; thin gain (judged on 2026-11-19 without drafting)"
+    },
+    {
+      "order": 67,
+      "reason": "Sphere Shape: near-duplicate of volume-of-a-sphere and vertices-faces-edges (judged 24 Nov afternoon without drafting)"
+    },
+    {
+      "order": 68,
+      "reason": "Core Values: no information gain; values-list pages dominate results and the site already covers goals-vs-systems, positive-thinking and self-confidence (judged 24 Nov afternoon without drafting, like rows 43 and 53)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "tds-on-rent",
+    "marriage-registration",
+    "varicose-veins",
+    "sim-binding"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -807,7 +849,9 @@
     28,
     27,
     29,
-    31
+    31,
+    33,
+    32
   ],
   "skippedNiche": [
     {
@@ -823,5 +867,20 @@
     4
   ],
   "skippedOwner": [],
-  "heldDrafts": []
+  "heldDrafts": [
+    {
+      "dir": "daily/drafts/canva-resume",
+      "slug": "canva-resume",
+      "source": "plan #69",
+      "note": "written 24 Nov afternoon; gate 1 FAIL ('Pro removes those limits': Pro gives ~10x Free's AI use, not unlimited) - fixed; gate 2 FAIL (PDF Print presented as including bleed and crop marks; they are options) - fixed after gate 2. All other facts passed twice (Canva India pricing Rs 4,000/yr, PDF Standard 96 dpi/Print 300 dpi, DOCX only for Canva Docs, Naukri 2 MB, IIT Madras 2025-26 guidelines, UPSC portal). Needs a fresh gate, then publish. Not time-sensitive. Optional from gate 2: LinkedIn 2 MB rests on a 2021 Business Insider India piece; FAQ 3 'PDF or an image only' could say 'PDF or image (not Word)'."
+    }
+  ],
+  "ownerArticlesHeld": [
+    {
+      "date": "2026-11-25",
+      "dir": "daily/owner-articles/2026-11-25",
+      "status": "waiting",
+      "note": "Owner (24 Nov, in chat): 'hold this for tomorrow and publish these articles'. Six owner-supplied real-estate articles; publish in the 25 Nov morning run following the folder's README (Godrej Elanor precedent of 22 Nov). Not counted in published/daily cap."
+    }
+  ]
 }
