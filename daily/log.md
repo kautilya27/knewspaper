@@ -1052,3 +1052,11 @@ Image prompts:
 
 ### 2026-11-25 (after the morning run): afternoon schedule removed
 Owner confirmed in chat: "no 3:36 schedule from today". The scheduled task now runs once a day at 09:36 IST (cron `36 9 * * *`, Asia/Kolkata), and its prompt was updated to the 5-a-day, one-run rule. First run on the new schedule: 26 Nov 2026, 09:36 IST.
+
+### 2026-11-25 (afternoon): covers from the owner for the morning articles
+The owner sent four images in chat. Converted to WebP (1536×1024, q80), saved in `daily/images/`, imported into Wix Media from the repo's raw URL (commit e4573c0), and set as covers:
+- canva-resume → c0f544_86b3c30e333744a39db4a991611236fa~mv2.webp (laptop with a resume editor and a "C" app logo, an arrow to a finished resume with a green tick, a small laptop with a job-search icon; the "C" logo is the only lettering).
+- tenant-police-verification → c0f544_e3ed0344e4f849808023211959360b76~mv2.webp (laptop with a police-crest form and green ticks, model house and keys, police cap, India map, clipboard; no text).
+- fundamental-rights-vs-directive-principles → c0f544_24c4b12b646a403081abe8dce337a952~mv2.webp (golden scales on a Constitution-style book with the national emblem; rights icons on one pan, hospital/tree/school/wind turbines on the other; Parliament building and tricolour behind; no people, no text).
+- is-nios-valid → c0f544_772826cf1de74006be978de230f8798d~mv2.webp (laptop showing an open-book logo with a tick, graduation cap, books and scroll, with doctor/engineer/graduate/national-emblem icons; no text).
+All four set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 26 Nov morning run, so the pre-rendered pages show these covers from then.

@@ -671,28 +671,28 @@
       "slug": "canva-resume",
       "title": "Canva Resume: How to Make One That Job Portals Can Read (Free Plan Guide)",
       "source": "plan #69",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-25",
       "slug": "tenant-police-verification",
       "title": "Tenant Police Verification: State-by-State Online Process, Fees and Rules for Landlords",
       "source": "niche #34",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-25",
       "slug": "fundamental-rights-vs-directive-principles",
       "title": "Fundamental Rights vs Directive Principles: What's the Difference?",
       "source": "civics #12",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-25",
       "slug": "is-nios-valid",
       "title": "Is NIOS Valid? NIOS Certificates for NEET, JEE, CUET, College Admission and Government Jobs",
       "source": "niche #35",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -813,12 +813,7 @@
       "reason": "Core Values: no information gain; values-list pages dominate results and the site already covers goals-vs-systems, positive-thinking and self-confidence (judged 24 Nov afternoon without drafting, like rows 43 and 53)"
     }
   ],
-  "pendingImages": [
-    "canva-resume",
-    "tenant-police-verification",
-    "fundamental-rights-vs-directive-principles",
-    "is-nios-valid"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
