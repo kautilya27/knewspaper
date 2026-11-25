@@ -12,7 +12,7 @@ Note that under Section 8(5) of the Hindu Marriage Act, a Hindu marriage is not 
 
 | | Hindu Marriage Act, 1955 | Special Marriage Act, 1954 |
 |---|---|---|
-| Who can use it | Both partners Hindu, Buddhist, Jain or Sikh | Any two Indian citizens, whatever their religion (also used by same-religion couples who want a civil marriage) |
+| Who can use it | Both partners Hindu, Buddhist, Jain or Sikh | Any two people, whatever their religion or nationality (one partner can be a foreign national; also used by same-religion couples who want a civil marriage) |
 | When you apply | After the religious wedding | Before the marriage (Section 5), or after a wedding in another form (Sections 15 and 16) |
 | Minimum age | Groom 21, bride 18 | Groom 21, bride 18 (Section 4); for registering an earlier wedding under Section 15, both must be 21 |
 | Residence rule | Depends on state rules; usually one partner must live in the registrar's district | At least one partner must have lived in the Marriage Officer's district for 30 days before the notice |
@@ -70,7 +70,7 @@ If an application is stuck with no reason given, an [RTI application](https://ww
 
 ## Why the certificate matters for passports and visas
 
-**Indian passport.** You don't need a marriage certificate to add a spouse's name to an Indian passport: since the passport rule changes the Ministry of External Affairs announced in December 2016, a joint declaration with a photograph of the couple (Annexure J) can be used instead. Still, the certificate remains the simplest proof, especially for a surname change.
+**Indian passport.** You don't need a marriage certificate to add a spouse's name to an Indian passport: under current Passport Seva rules, a joint declaration with a photograph of the couple (Annexure J) can be used instead. Still, the certificate remains the simplest proof, especially for a surname change.
 
 **Foreign visas.** Spouse and family visas abroad need proof of the marriage, and a government certificate carries the most weight. The US State Department's India page says certificates come from the Registrar of Marriages in each district headquarters. It also says a "marriage agreement" or "deed of marriage" is *not* enough proof. Read its [India reciprocity page](https://travel.state.gov/content/travel/en/us-visas/Visa-Reciprocity-and-Civil-Documents-by-Country/India.html) if you are applying for a US visa.
 

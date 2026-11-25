@@ -9,31 +9,35 @@ Every day this job publishes **up to 3 new articles** (only ones that pass the q
 Each gets a featured image made with the owner's ChatGPT (in their Chrome), when Chrome is reachable.
 Never publish a duplicate of an article already on the site.
 
-## Temporary: up to 10 a day, 15 Nov (afternoon run) to 15 Dec 2026 (owner's decision of 15 Nov 2026)
+## Up to 5 a day, one run (owner's decision of 25 Nov 2026)
 
-Until 15 Dec 2026 (India time) this replaces the "up to 3" limit and the 2+1 topic mix below.
-After 15 Dec, go back to the normal rules.
+From 25 Nov 2026 the owner wants **at most 5 articles a day, in one run a day (about 09:36 IST)**.
+This replaces the "up to 3" limit and the 2+1 topic mix below, and the earlier temporary "up to 10 a
+day, two runs" rule (15 Nov to 15 Dec 2026), which no longer applies.
 
-- **Two runs a day** (about 09:36 and 15:36 IST), **up to 5 articles each**, so at most 10 a day.
-  The maximum is still not a target: every article must pass the quality gate (3b). The owner chose
-  "up to 10, keep the gate" knowing some days will publish fewer.
-- **Topic sources each run** (in this order of priority, skipping any that fail the duplicate or
-  information-gain checks):
-  1. Owner topics (2d) on their days, as before (morning run only).
-  2. Civics & economy (2b): **1 per day, every day** (morning run), not only Tue/Fri.
-  3. Niche-site topics (2c): **up to 2 per run, every day**. Add 20 rows when fewer than 10 are left.
-  4. Plan rows (`plan.csv`, in order, any category): **up to 2 per run**. The one-health-topic limit
-     is lifted, but take at most 2 health/psychology topics per run and keep the health safety rules.
-  5. Trending India topics: **up to 2 per run**.
-- **Owner articles held for a date:** if `state.ownerArticlesHeld` has an entry with `status: "waiting"` whose `date` is today or earlier (India time), publish those first in the morning run, following the README in its `dir` (owner-supplied text, published as sent, no gate), then set its status to `published` and log it. They don't count towards the run's 5 or the day's 10.
-- **Held drafts first:** if `state.heldDrafts` has entries, start each run by giving each one a fresh quality gate (new review agent, full 3b checklist). Publish those that pass (they count towards the run's 5), fix and gate once more those that fail, and drop any that fail twice in that run (log the reasons, remove from `heldDrafts`). Remove published ones from `heldDrafts`. Time-sensitive ones go first.
-- **Daily cap:** count the entries in `state.published` dated today (India time); never let the day's total go above 10, whatever the per-run limit.
-- **Morning run only:** recheck yesterday's articles (all of them, with one review agent per 3–4
+- **Afternoon run removed.** If this run starts in the afternoon (after 12:00 IST), publish nothing:
+  just send a short notification that the afternoon schedule still exists and should be removed
+  from the scheduled task (owner asked on 25 Nov 2026), then stop.
+- **Up to 5 articles per day.** The maximum is still not a target: every article must pass the
+  quality gate (3b). Fewer, or none, is a successful run.
+- **Topic sources** (in this order of priority, skipping any that fail the duplicate or
+  information-gain checks, and stopping at 5 in total):
+  1. Owner topics (2d) on their days (Wed, Sat, Sun): 1 per day.
+  2. Civics & economy (2b): **1 per day, every day**, not only Tue/Fri.
+  3. Niche-site topics (2c): **up to 2 a day**. Add 20 rows when fewer than 10 are left.
+  4. Plan rows (`plan.csv`, in order, any category): **up to 2 a day**, at most 2 health/psychology
+     topics, keeping the health safety rules.
+  5. Trending India topics: **up to 2 a day**.
+- **Owner articles held for a date:** if `state.ownerArticlesHeld` has an entry with `status: "waiting"` whose `date` is today or earlier (India time), publish those first, following the README in its `dir` (owner-supplied text, published as sent, no gate), then set its status to `published` and log it. They don't count towards the day's 5.
+- **Held drafts first:** if `state.heldDrafts` has entries, start the run by giving each one a fresh quality gate (new review agent, full 3b checklist). Publish those that pass (they count towards the day's 5), fix and gate once more those that fail, and drop any that fail twice in that run (log the reasons, remove from `heldDrafts`). Remove published ones from `heldDrafts`. Time-sensitive ones go first.
+- **Daily cap:** count the entries in `state.published` dated today (India time); never let the day's total go above 5.
+- **Every run:** recheck yesterday's articles (all of them, with one review agent per 3–4
   articles) and do step 6 (missing images).
-- Rebuild the site (step 7) once at the end of each run. Each run starts by pulling `main`, so it
-  sees the other run's `state.json`; commit and push at the end of each run.
-- If a run is running long, publish what has passed the gate, save state and stop; the next run
+- Rebuild the site (step 7) once at the end of the run; commit and push at the end.
+- If the run is running long, publish what has passed the gate, save state and stop; the next run
   carries on. Never skip the gate to save time.
+- **Search budget:** WebSearch is shared by all agents in a run (about 200 searches). Start the
+  gates early and don't launch more drafts than the day can publish, so the gates don't run out.
 
 ## Quality comes before the number (read this first)
 

@@ -3,7 +3,7 @@
 You are an independent reviewer. You did not write this draft. Read the `article.md` and `meta.json`
 in the folder given to you (ignore any `notes.md`: judge the article on its own). Use WebSearch /
 WebFetch ONLY for web pages; if a page can't be fetched, do not use curl or any other tool to get it.
-Today is 24 November 2026 (Tuesday). The site is www.knewspaper.in, an Indian explainer site.
+Today is 25 November 2026 (Wednesday). The site is www.knewspaper.in, an Indian explainer site.
 
 Answer PASS or FAIL with reasons on each check:
 1. Every fact, figure, date and rule is correct as of today: check the important ones yourself with

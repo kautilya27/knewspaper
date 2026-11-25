@@ -17,7 +17,7 @@ This guide covers only the Canva part. For what to write in each section, see ou
 
 ### PDF Standard or PDF Print?
 
-Canva's help centre describes **PDF Standard** as meant for on-screen use (96 dpi) and **PDF Print** as meant for printing, at 300 dpi, with options to add bleed and crop marks. A resume you upload or email should be PDF Standard. You don't need bleed or crop marks on an uploaded file, and PDF Print also makes the file bigger.
+Canva's help centre lists **PDF Standard** at 96 dpi and **PDF Print** at 300 dpi, with options to add bleed and crop marks. A resume you upload or email should be PDF Standard. You don't need bleed or crop marks on an uploaded file, and PDF Print also makes the file bigger.
 
 ## How to pick a Canva template that software can read
 

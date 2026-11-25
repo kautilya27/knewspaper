@@ -53,7 +53,7 @@ A reading above 180/120 is dangerous. The American Heart Association advises wai
 - Difficulty speaking or confusion
 - Severe headache with nausea or vomiting
 
-Don't wait to see if it settles, and don't take extra doses of any medicine on your own. If the reading is that high but you have no symptoms, contact your doctor the same day.
+Don't wait to see if it settles, and don't take extra doses of any medicine on your own. If the reading is that high but you have no symptoms, contact your doctor immediately.
 
 ## How to check your BP correctly at home
 

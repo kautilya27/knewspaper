@@ -39,7 +39,8 @@
     64,
     65,
     66,
-    70
+    70,
+    69
   ],
   "published": [
     {
@@ -664,6 +665,34 @@
       "title": "SIM binding for WhatsApp explained: the 31 December deadline and what changes for you",
       "source": "trending",
       "cover": true
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "canva-resume",
+      "title": "Canva Resume: How to Make One That Job Portals Can Read (Free Plan Guide)",
+      "source": "plan #69",
+      "cover": false
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "tenant-police-verification",
+      "title": "Tenant Police Verification: State-by-State Online Process, Fees and Rules for Landlords",
+      "source": "niche #34",
+      "cover": false
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "fundamental-rights-vs-directive-principles",
+      "title": "Fundamental Rights vs Directive Principles: What's the Difference?",
+      "source": "civics #12",
+      "cover": false
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "is-nios-valid",
+      "title": "Is NIOS Valid? NIOS Certificates for NEET, JEE, CUET, College Admission and Government Jobs",
+      "source": "niche #35",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -784,7 +813,12 @@
       "reason": "Core Values: no information gain; values-list pages dominate results and the site already covers goals-vs-systems, positive-thinking and self-confidence (judged 24 Nov afternoon without drafting, like rows 43 and 53)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "canva-resume",
+    "tenant-police-verification",
+    "fundamental-rights-vs-directive-principles",
+    "is-nios-valid"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -802,7 +836,8 @@
     6,
     7,
     8,
-    11
+    11,
+    12
   ],
   "skippedCivics": [
     {
@@ -846,7 +881,9 @@
     29,
     31,
     33,
-    32
+    32,
+    34,
+    35
   ],
   "skippedNiche": [
     {
@@ -864,10 +901,10 @@
   "skippedOwner": [],
   "heldDrafts": [
     {
-      "dir": "daily/drafts/canva-resume",
-      "slug": "canva-resume",
-      "source": "plan #69",
-      "note": "written 24 Nov afternoon; gate 1 FAIL ('Pro removes those limits': Pro gives ~10x Free's AI use, not unlimited) - fixed; gate 2 FAIL (PDF Print presented as including bleed and crop marks; they are options) - fixed after gate 2. All other facts passed twice (Canva India pricing Rs 4,000/yr, PDF Standard 96 dpi/Print 300 dpi, DOCX only for Canva Docs, Naukri 2 MB, IIT Madras 2025-26 guidelines, UPSC portal). Needs a fresh gate, then publish. Not time-sensitive. Optional from gate 2: LinkedIn 2 MB rests on a 2021 Business Insider India piece; FAQ 3 'PDF or an image only' could say 'PDF or image (not Word)'."
+      "dir": "daily/drafts/us-visa",
+      "slug": "how-to-apply-for-us-visa",
+      "source": "owner #7",
+      "note": "written 25 Nov morning; gate 1 FAIL (five dated/sourced claims: Business Today used for the free-reschedule rule; unverified $750 expedite pilot; social-media rule dated 25 Mar 2026 instead of 15 Dec 2025; third-country rule dated 12 Dec 2025 instead of 6 Sep 2025; unverified 'June 2026 Federal Register' fee sentence) - all fixed. Not re-gated this run: the run's shared WebSearch budget ran out. Needs a fresh gate, then publish; record as owner #7 in usedOwner when published. Re-check the appointment-portal names (USVisaScheduling.com / ustraveldocs.com/in) on in.usembassy.gov; gate 1 could not open it. Fees confirmed: $185 B/F, $205 H (since 17 Jun 2023); visa integrity fee not listed on the official fee page (text hedged)."
     }
   ],
   "ownerArticlesHeld": [

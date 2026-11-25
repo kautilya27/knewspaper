@@ -41,7 +41,7 @@ This Kumbh is unusual because it is held in two places about 30 km apart:
 - **Ramkund, Panchavati (Nashik city):** a bathing tank on the Godavari. The **Vaishnava** akharas (the bairagi orders, devotees of Vishnu and Rama) take their Amrit Snan here.
 - **Kushavarta Tirtha, Trimbakeshwar:** a sacred tank near the Trimbakeshwar Shiva temple, one of the 12 Jyotirlingas, close to the source of the Godavari. The **Shaiva** akharas (the sanyasi orders, devotees of Shiva) and the Udasin akharas bathe here.
 
-According to historical accounts, the Mela was once held only at Trimbak. In 1789, Shaiva sanyasis and Vaishnava bairagis clashed over the order of bathing. After that, the Peshwa administration moved the Vaishnava baths to Ramkund in Nashik. That split continues today, which is why Trimbakeshwar's final snan (12 September) falls a day after Nashik's (11 September).
+According to historical accounts, the Mela was once held only at Trimbak. In 1789, Shaiva sanyasis and Vaishnava bairagis clashed over the order of bathing. After that, the Peshwa administration moved the Vaishnava baths to Ramkund in Nashik. That split continues today: Vaishnava akharas bathe at Ramkund and Shaiva akharas at Kushavarta. The two venues also follow different tithis for the last snan, which is why Trimbakeshwar's (12 September, Vaman Dwadashi) falls a day after Nashik's (11 September, Bhadrapada Shuddha Ekadashi).
 
 **Which one should you visit?** It depends on what matters to you:
 
@@ -80,8 +80,8 @@ According to the administration's plan (Free Press Journal, October 2026):
 
 What this means for you:
 
-- **Go on a non-Amrit Snan day if you can.** The ghats are open throughout, and the akhara processions and peak crowds are concentrated on the four dates.
-- **Follow the official channels.** The authority's website, [simhasthamahakumbh.maharashtra.gov.in](https://simhasthamahakumbh.maharashtra.gov.in), went live in November 2026. It will carry bathing timings, transport and parking details, and emergency contacts.
+- **Go on a non-Amrit Snan day if you can.** The ghats are open throughout, and the akhara processions and peak crowds are concentrated on the Amrit Snan dates.
+- **Follow the official channels.** The authority's website, [simhasthamahakumbh.maharashtra.gov.in](https://simhasthamahakumbh.maharashtra.gov.in), was unveiled at the flag-hoisting ceremony on 31 October 2026. It will carry bathing timings, transport and parking details, and emergency contacts.
 - **Plan for a lot of walking.** Keep children and elderly relatives close and agree on a meeting point.
 - **Don't push forward when a gate is held.** The pause in the holding area is how the system prevents a crush.
 - **Book early and flexibly.** Rooms for August–September 2027 will go fast; take refundable bookings until timings are published.
