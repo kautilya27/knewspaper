@@ -1049,3 +1049,6 @@ Image prompts:
 - Tenant Police Verification: State-by-State Online Process, Fees and Rules for Landlords: create image for this article topic without any text
 - Fundamental Rights vs Directive Principles: What's the Difference?: create image for this article topic without any text (symbolic scene, no real people: e.g. an open Constitution book with scales of justice)
 - Is NIOS Valid? NIOS Certificates for NEET, JEE, CUET, College Admission and Government Jobs: create image for this article topic without any text
+
+### 2026-11-25 (after the morning run): afternoon schedule removed
+Owner confirmed in chat: "no 3:36 schedule from today". The scheduled task now runs once a day at 09:36 IST (cron `36 9 * * *`, Asia/Kolkata), and its prompt was updated to the 5-a-day, one-run rule. First run on the new schedule: 26 Nov 2026, 09:36 IST.
