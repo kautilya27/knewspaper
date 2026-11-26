@@ -700,21 +700,21 @@
       "slug": "how-to-apply-for-us-visa",
       "title": "How to Apply for a US Visa From India: DS-160 Form and Interview Steps",
       "source": "owner #7",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-26",
       "slug": "how-a-bill-becomes-law-in-india",
       "title": "How Does a Bill Become a Law in India? Every Stage, From Parliament to the Governor",
       "source": "civics #13",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-26",
       "slug": "hexagon-shape",
       "title": "Hexagon Shape: Types, Angles, Area Formula, Diagonals and Solved Examples",
       "source": "plan #72",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -839,11 +839,7 @@
       "reason": "Stress Relievers: duplicate of stress-management (judged 26 Nov without drafting)"
     }
   ],
-  "pendingImages": [
-    "how-to-apply-for-us-visa",
-    "how-a-bill-becomes-law-in-india",
-    "hexagon-shape"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",

@@ -1080,3 +1080,10 @@ Image prompts:
 - How to Apply for a US Visa From India: DS-160 Form and Interview Steps: create image for this article topic without any text
 - How Does a Bill Become a Law in India? Every Stage, From Parliament to the Governor: create image for this article topic without any text (symbolic scene, no real people: e.g. a parliament building silhouette with a scroll and a pen)
 - Hexagon Shape: Types, Angles, Area Formula, Diagonals and Solved Examples: create image for this article topic without any text
+
+### 2026-11-26 (after the morning run): covers from the owner for today's articles
+The owner sent three images in chat. Converted to WebP (q80, original sizes), saved in `daily/images/`, imported into Wix Media from the repo's raw URL (commit d1d7586), and set as covers:
+- hexagon-shape → c0f544_75bf2c7e7cc94baf8a2a6a789e0c8a97~mv2.webp (1536×1024; a large hexagon divided into triangles, hexagon-type and angle panels, books, compass, set square, calculator; no text).
+- how-a-bill-becomes-law-in-india → c0f544_c2d53bdf7fc4450fb988473d2aa11839~mv2.webp (1448×1086; Parliament House with a ring of scenes from drafting to voting to a signing at a desk, tricolour; generic illustrated people, none of them identifiable; no text).
+- how-to-apply-for-us-visa → c0f544_44e96bd5aaf240c99fd11258f0c71249~mv2.webp (1448×1086; an applicant filling a form on a laptop, biometrics kiosk, queue, interview window, passport and documents; no text).
+All three set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 27 Nov morning run, so the pre-rendered pages show these covers from then.
