@@ -1087,3 +1087,6 @@ The owner sent three images in chat. Converted to WebP (q80, original sizes), sa
 - how-a-bill-becomes-law-in-india → c0f544_c2d53bdf7fc4450fb988473d2aa11839~mv2.webp (1448×1086; Parliament House with a ring of scenes from drafting to voting to a signing at a desk, tricolour; generic illustrated people, none of them identifiable; no text).
 - how-to-apply-for-us-visa → c0f544_44e96bd5aaf240c99fd11258f0c71249~mv2.webp (1448×1086; an applicant filling a form on a laptop, biometrics kiosk, queue, interview window, passport and documents; no text).
 All three set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 27 Nov morning run, so the pre-rendered pages show these covers from then.
+
+### 2026-11-26: guest-post credits for account@ampli5.digital
+Owner asked in chat to give account@ampli5.digital 10 credits. Added "Membership: 10 articles" (plan b86d4fef-…) as a paid offline order for member a4073691-43e4-40b0-9c1b-346674ef60ee: order 41231a97-c224-30d2-a190-fd906986684c, ACTIVE, PAID, valid until 26 Nov 2027.
