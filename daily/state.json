@@ -40,7 +40,8 @@
     65,
     66,
     70,
-    69
+    69,
+    72
   ],
   "published": [
     {
@@ -693,6 +694,27 @@
       "title": "Is NIOS Valid? NIOS Certificates for NEET, JEE, CUET, College Admission and Government Jobs",
       "source": "niche #35",
       "cover": true
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "how-to-apply-for-us-visa",
+      "title": "How to Apply for a US Visa From India: DS-160 Form and Interview Steps",
+      "source": "owner #7",
+      "cover": false
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "how-a-bill-becomes-law-in-india",
+      "title": "How Does a Bill Become a Law in India? Every Stage, From Parliament to the Governor",
+      "source": "civics #13",
+      "cover": false
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "hexagon-shape",
+      "title": "Hexagon Shape: Types, Angles, Area Formula, Diagonals and Solved Examples",
+      "source": "plan #72",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -811,9 +833,17 @@
     {
       "order": 68,
       "reason": "Core Values: no information gain; values-list pages dominate results and the site already covers goals-vs-systems, positive-thinking and self-confidence (judged 24 Nov afternoon without drafting, like rows 43 and 53)"
+    },
+    {
+      "order": 71,
+      "reason": "Stress Relievers: duplicate of stress-management (judged 26 Nov without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "how-to-apply-for-us-visa",
+    "how-a-bill-becomes-law-in-india",
+    "hexagon-shape"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -832,7 +862,8 @@
     7,
     8,
     11,
-    12
+    12,
+    13
   ],
   "skippedCivics": [
     {
@@ -884,6 +915,14 @@
     {
       "order": 30,
       "reason": "Tatkal draft failed the gate twice in the 24 Nov morning held-draft recheck (gate 1: April 2026 chart change described as from ~8 h, skipping a step; gate 2: the Dec 2025 chart change (from 30 Dec 2025: 8 pm previous day for 05:00-14:00 trains, at least 10 h ahead otherwise) was missing, and the April 2026 change was only the 72/24/8 cancellation slabs). Fix from gate 2 applied in daily/drafts/tatkal/; dropped per the held-drafts rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 36,
+      "reason": "Cyber-fraud reporting draft failed the gate twice on 26 Nov (gate 1: Home Ministry figures attributed to a Rajya Sabha reply instead of a Lok Sabha written reply; e-Zero FIR Rs 10 lakh threshold presented as national; gate 2: e-Zero FIR count of 18 states out of date, government told the Supreme Court on 4 Aug 2026 it works in 19). All fixes applied in daily/drafts/cyber-fraud/; dropped per the gate rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 37,
+      "reason": "Relieving-letter draft failed the gate twice on 26 Nov (gate 1: Rs 18,000 supervisor limit attributed to a Jan 2026 notification that was under the Code on Wages, and an FAQ overstating 'courts' from one interim Bombay HC ruling; gate 2: 1946 Central Rules quote described the unamended Standing Order 16, omitted by Schedule I-B). All fixes applied in daily/drafts/relieving-letter/; dropped per the gate rule, owner may ask for it to be re-gated."
     }
   ],
   "usedOwner": [
@@ -891,17 +930,11 @@
     3,
     1,
     6,
-    4
+    4,
+    7
   ],
   "skippedOwner": [],
-  "heldDrafts": [
-    {
-      "dir": "daily/drafts/us-visa",
-      "slug": "how-to-apply-for-us-visa",
-      "source": "owner #7",
-      "note": "written 25 Nov morning; gate 1 FAIL (five dated/sourced claims: Business Today used for the free-reschedule rule; unverified $750 expedite pilot; social-media rule dated 25 Mar 2026 instead of 15 Dec 2025; third-country rule dated 12 Dec 2025 instead of 6 Sep 2025; unverified 'June 2026 Federal Register' fee sentence) - all fixed. Not re-gated this run: the run's shared WebSearch budget ran out. Needs a fresh gate, then publish; record as owner #7 in usedOwner when published. Re-check the appointment-portal names (USVisaScheduling.com / ustraveldocs.com/in) on in.usembassy.gov; gate 1 could not open it. Fees confirmed: $185 B/F, $205 H (since 17 Jun 2023); visa integrity fee not listed on the official fee page (text hedged)."
-    }
-  ],
+  "heldDrafts": [],
   "ownerArticlesHeld": [
     {
       "date": "2026-11-25",

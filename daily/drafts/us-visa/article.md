@@ -1,6 +1,6 @@
 **Quick answer:** To apply for a US visa from India, choose your visa type (B1/B2 for tourism or business), fill the DS-160 form online, create a profile on the official appointment system linked from the US Embassy India website, pay the $185 fee, book a biometrics slot at a Visa Application Centre and an interview slot, attend both, and track your passport until it returns with the visa.
 
-Several rules changed in 2025 and 2026, and many guides online still describe the old ones. Almost everyone now needs an in-person interview, you should apply in your country of nationality or residence, and you get only one free reschedule. The fees and rules below were checked against US State Department pages on 25 November 2026.
+Several rules changed in 2025 and 2026, and many guides online still describe the old ones. Almost everyone now needs an in-person interview, you should apply in your country of nationality or residence, and you get only one free reschedule. The fees and rules below were checked against US State Department pages on 26 November 2026.
 
 ## Step 1: Choose the right visa
 
@@ -32,7 +32,7 @@ Start from the visa section of the US Embassy and Consulates in India (in.usemba
 
 In your profile, enter your passport details and DS-160 number, then pay the fee shown in the system. Never pay through an agent's personal account.
 
-**What about the $250 "visa integrity fee"?** A US law signed on 4 July 2025 created it, and many websites already add it to their cost totals. But as of 25 November 2026, the State Department's official fee page does not list it. Pay it only if it appears on that page or in your payment account.
+**What about the $250 "visa integrity fee"?** A US law signed on 4 July 2025 created it, and many websites already add it to their cost totals. But as of 26 November 2026, the State Department's official fee page does not list it. Some reports say a few posts collect it at visa issuance, after approval; if you are asked for it, follow the instructions from the embassy or consulate.
 
 ## Step 4: Book the two appointments
 
@@ -67,7 +67,7 @@ For spouses, the State Department's India page lists certificates from the Regis
 
 Under section 214(b) of US immigration law, the officer starts by assuming that a visitor intends to immigrate. Your answers should therefore show what brings you back to India: your job, family, studies or business. Keep them short and truthful, and make sure they match your DS-160.
 
-**Students and H-1B applicants:** since 15 December 2025 the State Department has asked F, M, J, H-1B and H-4 applicants to set all their social media profiles to "public".
+**Students and H-1B applicants:** the State Department asks F, M and J applicants (since June 2025) and H-1B and H-4 applicants (since 15 December 2025) to set all their social media profiles to "public".
 
 ## Step 6: Track your passport
 

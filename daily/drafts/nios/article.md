@@ -35,7 +35,7 @@ The JEE and CUET rows quote the 2026 documents. NTA released the JEE Main 2027 b
 
 ### The top 20 percentile problem for IITs and NITs
 
-If you score below 75% in Class 12, you can still qualify for an IIT or NIT seat by being in the top 20 percentile of your board. Normally that cut-off comes from your own board. In JoSAA's official lists of top 20 percentile cut-offs for the 2025 and 2026 Class 12 exams, NIOS is marked "NR" (not received from the board) in every category.
+If you score below 75% in Class 12, you can still qualify for an IIT or NIT seat by being in the top 20 percentile of your board. Normally that cut-off comes from your own board. In JoSAA's 2025 list of top 20 percentile cut-offs for Class 12, NIOS is marked "NR" (not received from the board) in every category.
 
 The JEE Advanced 2026 brochure says what happens then. You must get a certificate from your board showing you're in its top 20 percentile. If you can't, the CBSE's category-wise cut-off is used, so an NIOS student can still qualify by clearing that. For an NIOS student, the safe target is 75% (65% for SC, ST and PwD). Our [JEE Main vs JEE Advanced guide](https://www.knewspaper.in/post/jee-main-vs-jee-advanced) explains how the two exams feed into IIT and NIT admission.
 
@@ -81,7 +81,7 @@ Yes. The AIU granted NIOS equivalence with other recognised boards in 1991. In S
 
 ### Can NIOS students get into IITs?
 
-Yes, if they qualify JEE Advanced and meet the Class 12 rule: 75% aggregate (65% for SC, ST, PwD) or the top 20 percentile of their board. NIOS did not send top 20 percentile data to JoSAA for 2025 or 2026, so aiming for 75% is the safer route.
+Yes, if they qualify JEE Advanced and meet the Class 12 rule: 75% aggregate (65% for SC, ST, PwD) or the top 20 percentile of their board. NIOS did not send top 20 percentile data to JoSAA in 2025, so aiming for 75% is the safer route.
 
 ### Is NIOS valid for government jobs?
 
