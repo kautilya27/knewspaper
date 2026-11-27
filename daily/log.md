@@ -1109,3 +1109,10 @@ Image prompts:
 - Divisibility Rules from 2 to 13: Table, Worked Examples and Why They Work: create image for this article topic without any text
 - IRCTC Cancellation Charges 2026: Refund Rules by Class, Waitlist, Tatkal and TDR: create image for this article topic without any text
 - Gallstones: Symptoms, Causes, Emergency Signs and What Indian Readers Should Know: create image for this article topic without any text
+
+### 2026-11-27 (after the morning run): covers from the owner for today's articles
+The owner sent three images in chat. Converted to WebP (q80, original sizes), saved in `daily/images/`, imported into Wix Media from the repo's raw URL (commit e2093d3), and set as covers:
+- divisibility-rules → c0f544_73893f35d37e405cab89ff4efead606f~mv2.webp (1672×941; easel board with rows of coloured beads grouped into equal sets, blocks split into groups, books, magnifier, gears, puzzle pieces; no text).
+- irctc-cancellation-charges → c0f544_41fa7d8ef8254ab59841dbf73b1e272a~mv2.webp (1536×1024; laptop with a ticket and a red cancel button, station platform and blue coaches, seat/berth/queue/clock icons, coins with a refund arrow, clipboard with a green shield; a stylised "R" logo resembling IRCTC's appears on the laptop and ticket; no words).
+- gallstones-symptoms-causes → c0f544_c155fe0d10c14c15ba531009a4e78e34~mv2.webp (1536×1024; liver and gallbladder with a close-up of stones, symptom circles (tummy pain, nausea, shoulder pain, yellow eye), risk icons and a hospital with a siren; no text).
+All three set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 28 Nov morning run, so the pre-rendered pages show these covers from then.

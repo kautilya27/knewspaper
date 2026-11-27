@@ -723,21 +723,21 @@
       "slug": "divisibility-rules",
       "title": "Divisibility Rules from 2 to 13: Table, Worked Examples and Why They Work",
       "source": "plan #77",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-27",
       "slug": "irctc-cancellation-charges",
       "title": "IRCTC Cancellation Charges 2026: Refund Rules by Class, Waitlist, Tatkal and TDR",
       "source": "niche #39",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-27",
       "slug": "gallstones-symptoms-causes",
       "title": "Gallstones: Symptoms, Causes, Emergency Signs and What Indian Readers Should Know",
       "source": "plan #75",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -874,11 +874,7 @@
       "reason": "Effective Communication: no information gain; generic soft-skill topic dominated by HelpGuide/MindTools, overlaps nonverbal-communication (judged 27 Nov without drafting)"
     }
   ],
-  "pendingImages": [
-    "divisibility-rules",
-    "irctc-cancellation-charges",
-    "gallstones-symptoms-causes"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
