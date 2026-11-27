@@ -405,3 +405,4 @@ a.kicker:hover { text-decoration: underline; }
 /* Side ad beside the article on wide screens (owner's request, 19 Nov 2026). */
 .side-ad{display:none}
 @media (min-width: 1400px){.article__layout{max-width:1440px}.article__layout.has-toc{grid-template-columns:220px minmax(0,700px) 300px;gap:48px}.article__layout:not(.has-toc){display:grid;grid-template-columns:minmax(0,700px) 300px;justify-content:center;gap:56px}.article__layout:not(.has-toc)>.prose{margin-inline:0}.side-ad{display:block;position:sticky;top:170px;align-self:start;width:300px;min-height:600px}}
+@media (min-width: 1400px){.article__layout.no-side-ad.has-toc{grid-template-columns:220px minmax(0,700px)}.article__layout.no-side-ad:not(.has-toc){display:block}.article__layout.no-side-ad:not(.has-toc)>.prose{margin-inline:auto}.article__layout.no-side-ad>.side-ad{display:none}}

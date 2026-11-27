@@ -24,7 +24,7 @@ live automatically, without editorial review.
 - **Submissions**: the `GuestSubmissions` CMS collection. A logged-in member can add items
   and read only their own; nobody but the site owner can change them.
 - **Credits used**: the `GuestLedger` collection (owner only), one row per published article.
-- **Publisher**: `publish.mjs`, run every 10 minutes by `.github/workflows/guest-posts.yml`.
+- **Publisher**: `publish.mjs`, scheduled every 10 minutes by `.github/workflows/guest-posts.yml`. GitHub runs schedules late (in Nov 2026 only every 6–9 hours), so the pages promise "usually within 12 hours" (owner's decision, 27 Nov 2026); run the workflow by hand (Actions → Publish guest posts → Run workflow) to publish one sooner.
   It checks each new submission (`wix-preview/src/assets/guest-rules.js`, the same rules the
   page shows), finds a free credit on the writer's active plan, uploads the image, publishes
   the post, adds the `/post/<slug>` redirect and marks the submission live.

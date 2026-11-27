@@ -347,3 +347,14 @@ async function init() {
   if (saved) quickPost(slug).then((p) => p && savePost(p)).catch(() => {});
 }
 init();
+
+// Wide screens: if the side ad stays empty (unfilled, or blocked: no status after 4 s),
+// close its column so the article centres (owner, 27 Nov 2026).
+const sideAd = document.querySelector(".side-ad");
+if (sideAd && matchMedia("(min-width: 1400px)").matches) {
+  const ins = sideAd.querySelector("ins"), layout = sideAd.parentNode;
+  const update = () => { const s = ins && ins.getAttribute("data-ad-status"); if (s) layout.classList.toggle("no-side-ad", s !== "filled"); };
+  update();
+  if (ins) new MutationObserver(update).observe(ins, { attributes: true, attributeFilter: ["data-ad-status"] });
+  setTimeout(() => { if (!ins || ins.getAttribute("data-ad-status") !== "filled") layout.classList.add("no-side-ad"); }, 4000);
+}

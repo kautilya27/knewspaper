@@ -397,7 +397,7 @@ form.addEventListener("submit", async (e) => {
     try { localStorage.removeItem(DRAFT_KEY); } catch {}
     const title = fields.title;
     say(status, useCredit
-      ? `Submitted. It goes live within about 15 minutes at ${SITE}/post/${fields.slug}. You can follow it on your My account page.`
+      ? `Submitted. It usually goes live within 12 hours at ${SITE}/post/${fields.slug}. You can follow it on your My account page.`
       : "Saved. Now buy your plan by email; your article goes live once we've added the plan to your account. You can follow it on your My account page.", "ok");
     {
       const key = planKey;

@@ -66,7 +66,7 @@ function renderCredits() {
 }
 
 const STATUS = {
-  queued: ["In the queue", "Goes live within about 15 minutes."],
+  queued: ["In the queue", "Usually goes live within 12 hours."],
   publishing: ["Publishing", "Goes live in a moment."],
   awaiting_payment: ["Waiting for your plan", "Buy the plan by email. It goes live once we've added the plan to your account."],
   live: ["Live", ""],
