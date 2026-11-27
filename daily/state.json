@@ -41,7 +41,9 @@
     66,
     70,
     69,
-    72
+    72,
+    75,
+    77
   ],
   "published": [
     {
@@ -715,6 +717,27 @@
       "title": "Hexagon Shape: Types, Angles, Area Formula, Diagonals and Solved Examples",
       "source": "plan #72",
       "cover": true
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "divisibility-rules",
+      "title": "Divisibility Rules from 2 to 13: Table, Worked Examples and Why They Work",
+      "source": "plan #77",
+      "cover": false
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "irctc-cancellation-charges",
+      "title": "IRCTC Cancellation Charges 2026: Refund Rules by Class, Waitlist, Tatkal and TDR",
+      "source": "niche #39",
+      "cover": false
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "gallstones-symptoms-causes",
+      "title": "Gallstones: Symptoms, Causes, Emergency Signs and What Indian Readers Should Know",
+      "source": "plan #75",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -837,9 +860,25 @@
     {
       "order": 71,
       "reason": "Stress Relievers: duplicate of stress-management (judged 26 Nov without drafting)"
+    },
+    {
+      "order": 73,
+      "reason": "Self Discipline: no information gain; overlaps how-to-stop-procrastinating, goals-vs-systems, small-habits and how-to-build-self-confidence (judged 27 Nov without drafting)"
+    },
+    {
+      "order": 74,
+      "reason": "Work Experience Resume: near-duplicate of how-to-make-a-resume and student-resume (judged 27 Nov without drafting)"
+    },
+    {
+      "order": 76,
+      "reason": "Effective Communication: no information gain; generic soft-skill topic dominated by HelpGuide/MindTools, overlaps nonverbal-communication (judged 27 Nov without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "divisibility-rules",
+    "irctc-cancellation-charges",
+    "gallstones-symptoms-causes"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -869,6 +908,10 @@
     {
       "order": 10,
       "reason": "Finance Commission draft failed the gate twice in the 23 Nov afternoon held-draft recheck (gate 1: 'sets the formula' should be 'recommends'; gate 2: devolution figure was the states' budgets total Rs 15,34,482 cr, Union Budget figure is Rs 15,26,255 cr; Karnataka submission was Aug 2024 not 2025; local-body grants 'more than double' overstated). All fixes applied in daily/drafts/finance-commission/; dropped per the held-drafts rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 14,
+      "reason": "Repo rate draft failed the gate twice on 27 Nov (gate 1: RBI's 1 Oct 2025 amendments made the fixed-rate switch optional and let banks cut spread components within 3 years; gate 2: publishing of minutes is Section 45ZL, not 45ZI). All fixes applied in daily/drafts/repo-rate/; dropped per the gate rule, owner may ask for it to be re-gated."
     }
   ],
   "usedNiche": [
@@ -905,7 +948,8 @@
     33,
     32,
     34,
-    35
+    35,
+    39
   ],
   "skippedNiche": [
     {
@@ -919,6 +963,10 @@
     {
       "order": 37,
       "reason": "Relieving-letter draft failed the gate twice on 26 Nov (gate 1: Rs 18,000 supervisor limit attributed to a Jan 2026 notification that was under the Code on Wages, and an FAQ overstating 'courts' from one interim Bombay HC ruling; gate 2: 1946 Central Rules quote described the unamended Standing Order 16, omitted by Schedule I-B). All fixes applied in daily/drafts/relieving-letter/; dropped per the gate rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 38,
+      "reason": "Analogue paneer draft failed the gate twice on 27 Nov (gate 1: state-ban list incomplete and MP described as an unconfirmed announcement; gate 2: 'banned outright' overstated Karnataka/Himachal orders, Chhattisgarh factories were ordered sealed not sealed, Himachal not the 'fifth state'). All fixes applied in daily/drafts/analogue-paneer/; dropped per the gate rule, owner may ask for it to be re-gated."
     }
   ],
   "usedOwner": [
