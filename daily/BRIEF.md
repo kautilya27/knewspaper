@@ -300,6 +300,13 @@ Run `wix-preview/prerender/deploy.js` verbatim as `code` (`hasMutations: true`) 
 `files` = `=== FILE: edits.json ===` / `[]` / `§END`. It pre-renders every article (including
 today's), updates the sitemap and adds the `/post/<slug>` addresses. Check that the result says
 `published: true` and that `pages` went up by the number of articles published today.
+**Size limit (27 Nov 2026):** the uploaded site may hold at most 20 MB (Wix's limit for uploaded
+sites; buying media storage doesn't raise it). After the 27 Nov slimming the rebuild writes about
+18.6 MB, and each new article adds roughly 35–40 KB. Report the result's `mb` in the log. If `mb` is
+19.5 or more, or the rebuild fails with "Site exceeds 20 MiB",
+send the owner a push notification at once (articles stay published in Wix, but new ones won't get their
+pre-rendered page or sitemap entry until space is freed); the owner is choosing between pre-rendering only
+some articles and moving to Wix's Astro setup.
 
 ### 8. Save progress
 Write `daily/state.json` and append today's summary to `daily/log.md` (date, the 3 articles with

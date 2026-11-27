@@ -264,7 +264,8 @@ async () => {
     return bits.length ? `<p class="meta">${bits.join("")}</p>` : "";
   };
   const tile = (s) => {
-    const cover = s.cover ? `<div class="story__media"><img class="cover" src="${esc(fill(s.cover, 480, 320))}" srcset="${esc(srcset(s.cover, [320, 480, 640], 0.667))}" sizes="(min-width: 900px) 25vw, 50vw" width="480" height="320" alt="${esc(s.coverAlt)}" loading="lazy" decoding="async"></div>` : "";
+    // One image size (480 px) keeps every article page small: the site has a 20 MB upload limit.
+    const cover = s.cover ? `<div class="story__media"><img class="cover" src="${esc(fill(s.cover, 480, 320))}" width="480" height="320" alt="${esc(s.coverAlt)}" loading="lazy" decoding="async"></div>` : "";
     return `<article class="story story--tile${s.cover ? "" : " story--text"}">${cover}<div class="story__body"><h3 class="story__title "><a href="${pagePath(s.slug)}">${esc(s.title)}</a></h3>${metaLine(s)}</div></article>`;
   };
   const AD = '<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6382255537358474" data-ad-slot="1425864328" data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
@@ -524,15 +525,19 @@ async () => {
   // readers reach every article from the topic menu without waiting for scripts.
   const livePosts = byDate;
   const catsUsed = cats.filter((c) => livePosts.some((p) => (p.categoryIds || []).includes(c.id)));
-  const rowHtml = (p) => {
+  // The newest FULL_ROWS articles in each list get a picture, summary and date; older ones are
+  // a title link only, so every article stays linked without filling the 20 MB upload limit.
+  const FULL_ROWS = 40;
+  const rowHtml = (p, full = true) => {
+    if (!full) return `<article class="story story--row story--text"><div class="story__body"><h2 class="story__title "><a href="${pagePath(p.slug)}">${esc(p.title)}</a></h2></div></article>`;
     const s = summary(p);
     const c = (p.categoryIds || []).map((id) => catById.get(id)).find(Boolean);
     const kick = c ? `<a class="kicker" href="${catHref(c.slug)}">${esc(c.label)}</a>` : "";
-    const img = s.cover ? `<div class="story__media"><img class="cover" src="${esc(fill(s.cover, 440, 293))}" srcset="${esc(srcset(s.cover, [240, 360, 480], 0.667))}" sizes="(min-width: 640px) 220px, 34vw" width="440" height="293" alt="${esc(s.coverAlt)}" loading="lazy" decoding="async"></div>` : "";
+    const img = s.cover ? `<div class="story__media"><img class="cover" src="${esc(fill(s.cover, 440, 293))}" width="440" height="293" alt="${esc(s.coverAlt)}" loading="lazy" decoding="async"></div>` : "";
     const meta = [s.dateISO ? `<time datetime="${esc(s.dateISO)}">${esc(dateLabel(s.dateISO))}</time>` : "", s.minutes ? `<span>${s.minutes} min read</span>` : ""].filter(Boolean).join("");
     return `<article class="story story--row${s.cover ? "" : " story--text"}"><div class="story__body">${kick}<h2 class="story__title "><a href="${pagePath(p.slug)}">${esc(p.title)}</a></h2>${p.excerpt ? `<p class="story__dek">${esc(p.excerpt)}</p>` : ""}${meta ? `<p class="meta">${meta}</p>` : ""}</div>${img}</article>`;
   };
-  const staticRows = (list) => `<div class="rows" data-rows data-static>${list.map(rowHtml).join("")}</div><!--/rows-->`;
+  const staticRows = (list) => `<div class="rows" data-rows data-static>${list.map((p, i) => rowHtml(p, i < FULL_ROWS)).join("")}</div><!--/rows-->`;
   const setRows = (h, list) => h.replace(/<p class="feed-status"[^>]*data-status>[^<]*<\/p>/, '<p class="feed-status" role="status" aria-live="polite" data-status></p>').replace(/<div class="rows" data-rows data-static>[\s\S]*?<!--\/rows-->|<div class="rows" data-rows><\/div>/, () => staticRows(list));
   const catShell = text["category.html"];
   for (const c of catsUsed) {
