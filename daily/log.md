@@ -1146,3 +1146,10 @@ Image prompts:
 - US Visa Interview Questions: Common Questions and How to Answer Them (B1/B2 and F-1): create image for this article topic without any text
 - Classical Dances of India: The Recognised Forms, Their States and How to Tell Them Apart: create image for this article topic without any text
 - Chia Seeds Benefits: What the Evidence Really Shows, and How It Differs From Sabja: create image for this article topic without any text
+
+### 2026-11-28 (after the morning run): covers from the owner for today's articles
+The owner sent three images in chat. Converted to WebP (q80, original sizes), saved in `daily/images/`, imported into Wix Media from the repo's raw URL (commit e5bc137), and set as covers:
+- chia-seeds-benefits → c0f544_c7a442f3031541cc859b9f9c48bcc818~mv2.webp (1536×1024; bowls of chia and sabja, soaked glasses, a close-up split of both gels, benefit icons (muscle, gut, scale, heart, glucose meter, shield); no text). Note: the icons suggest weight/sugar benefits the article says are weakly supported.
+- classical-dances-of-india → c0f544_2fb7cf70d84d4e9db1fe40af7d665314~mv2.webp (1672×941; eight dancers in classical costumes around a map of India with pins; illustrated, no identifiable people; no text).
+- us-visa-interview-questions → c0f544_7e288db609274308bc19b102dec3e6a0~mv2.webp (1536×1024; applicant facing an officer at a desk, US flag, Statue of Liberty, passport and visa, icons for work/study/home/travel/family; no text).
+All three set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 29 Nov morning run, so the pre-rendered pages show these covers from then.

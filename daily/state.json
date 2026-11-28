@@ -745,21 +745,21 @@
       "slug": "chia-seeds-benefits",
       "title": "Chia Seeds Benefits: What the Evidence Really Shows, and How It Differs From Sabja",
       "source": "plan #80",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-28",
       "slug": "classical-dances-of-india",
       "title": "Classical Dances of India: The Recognised Forms, Their States and How to Tell Them Apart",
       "source": "niche #40",
-      "cover": false
+      "cover": true
     },
     {
       "date": "2026-11-28",
       "slug": "us-visa-interview-questions",
       "title": "US Visa Interview Questions: Common Questions and How to Answer Them (B1/B2 and F-1)",
       "source": "owner #8",
-      "cover": false
+      "cover": true
     }
   ],
   "skippedPlan": [
@@ -904,11 +904,7 @@
       "reason": "How to Write a Resume: duplicate of how-to-make-a-resume (judged 28 Nov without drafting)"
     }
   ],
-  "pendingImages": [
-    "chia-seeds-benefits",
-    "classical-dances-of-india",
-    "us-visa-interview-questions"
-  ],
+  "pendingImages": [],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
