@@ -43,7 +43,8 @@
     69,
     72,
     75,
-    77
+    77,
+    80
   ],
   "published": [
     {
@@ -738,6 +739,27 @@
       "title": "Gallstones: Symptoms, Causes, Emergency Signs and What Indian Readers Should Know",
       "source": "plan #75",
       "cover": true
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "chia-seeds-benefits",
+      "title": "Chia Seeds Benefits: What the Evidence Really Shows, and How It Differs From Sabja",
+      "source": "plan #80",
+      "cover": false
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "classical-dances-of-india",
+      "title": "Classical Dances of India: The Recognised Forms, Their States and How to Tell Them Apart",
+      "source": "niche #40",
+      "cover": false
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "us-visa-interview-questions",
+      "title": "US Visa Interview Questions: Common Questions and How to Answer Them (B1/B2 and F-1)",
+      "source": "owner #8",
+      "cover": false
     }
   ],
   "skippedPlan": [
@@ -872,9 +894,21 @@
     {
       "order": 76,
       "reason": "Effective Communication: no information gain; generic soft-skill topic dominated by HelpGuide/MindTools, overlaps nonverbal-communication (judged 27 Nov without drafting)"
+    },
+    {
+      "order": 78,
+      "reason": "Writing Skills: no information gain; generic soft-skill topic dominated by MindTools-style pages, overlaps effective-communication/nonverbal-communication (judged 28 Nov without drafting)"
+    },
+    {
+      "order": 79,
+      "reason": "How to Write a Resume: duplicate of how-to-make-a-resume (judged 28 Nov without drafting)"
     }
   ],
-  "pendingImages": [],
+  "pendingImages": [
+    "chia-seeds-benefits",
+    "classical-dances-of-india",
+    "us-visa-interview-questions"
+  ],
   "preparedImages": {
     "how to stop procrastinating": {
       "id": "c0f544_54c5cc8fb1e545f9a4c89f8d7a5da9f0~mv2.jpg",
@@ -908,6 +942,10 @@
     {
       "order": 14,
       "reason": "Repo rate draft failed the gate twice on 27 Nov (gate 1: RBI's 1 Oct 2025 amendments made the fixed-rate switch optional and let banks cut spread components within 3 years; gate 2: publishing of minutes is Section 45ZL, not 45ZI). All fixes applied in daily/drafts/repo-rate/; dropped per the gate rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 15,
+      "reason": "Fiscal deficit draft failed the gate twice on 28 Nov (gate 1: ICRA's Aditi Nayar quote went beyond her words; D K Srivastava's view misstated as 'less transparent'; gate 2: Pronab Sen statement not found in the cited Business Standard pieces; Srivastava 'debt above safe levels for years' paraphrase beyond his text). All figures verified against Budget at a Glance 2026-27; all fixes applied in daily/drafts/fiscal-deficit/; dropped per the gate rule, owner may ask for it to be re-gated. April-October 2026 CGA data due 30 Nov would need adding."
     }
   ],
   "usedNiche": [
@@ -945,7 +983,8 @@
     32,
     34,
     35,
-    39
+    39,
+    40
   ],
   "skippedNiche": [
     {
@@ -963,6 +1002,10 @@
     {
       "order": 38,
       "reason": "Analogue paneer draft failed the gate twice on 27 Nov (gate 1: state-ban list incomplete and MP described as an unconfirmed announcement; gate 2: 'banned outright' overstated Karnataka/Himachal orders, Chhattisgarh factories were ordered sealed not sealed, Himachal not the 'fifth state'). All fixes applied in daily/drafts/analogue-paneer/; dropped per the gate rule, owner may ask for it to be re-gated."
+    },
+    {
+      "order": 41,
+      "reason": "Shoe size chart draft failed the gate twice on 28 Nov (gate 1: Adidas vs Nike/Nivia mm gap overstated as 3-5 mm and UK 4 EU attribution reversed; gate 2: measuring steps credited to both Nike and Walkaroo though Nike says big toe and no evening advice, Walkaroo re-measuring advice split by age, UK 6 comparison wrong, Adidas kids' age-band names). All fixes applied in daily/drafts/shoe-size/; dropped per the gate rule, owner may ask for it to be re-gated."
     }
   ],
   "usedOwner": [
@@ -971,7 +1014,8 @@
     1,
     6,
     4,
-    7
+    7,
+    8
   ],
   "skippedOwner": [],
   "heldDrafts": [],
@@ -981,6 +1025,13 @@
       "dir": "daily/owner-articles/2026-11-25",
       "status": "published",
       "note": "Owner (24 Nov, in chat): 'hold this for tomorrow and publish these articles'. Six owner-supplied real-estate articles; publish in the 25 Nov morning run following the folder's README (Godrej Elanor precedent of 22 Nov). Not counted in published/daily cap. Owner then asked (24 Nov, same session) to publish right away: all six published 24 Nov evening."
+    }
+  ],
+  "ownerTopicNotes": [
+    {
+      "date": "2026-11-28",
+      "order": 5,
+      "note": "GEO (owner #5) not drafted: knowthecompany.com could not be read (WebFetch permission not granted in the unattended run; no search results from the domain). Row left open (not in usedOwner/skippedOwner) per the row's 'skip and report' rule; took owner #8 instead."
     }
   ]
 }

@@ -1,0 +1,29 @@
+# Notes: us-visa-interview-questions (owner topic, owner-topics.csv row 8)
+
+Researched 28 November 2026 with WebSearch/WebFetch only.
+
+## Sources for key facts
+
+- 214(b): presumption of immigrant intent, "strong ties" (job, home, family/friends), officer weighs circumstances, travel plans, finances and ties; H-1B/L exempt from the ties requirement; refusal applies to that application only, no appeal; reapply with new DS-160, new fee, new interview when there is new information or significant change; 221(g) one-year window to submit documents: https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-denials.html
+- 9 FAM 403.10 (refusals): burden of proof on applicant; demographic profile "is not grounds for a visa refusal"; 214(b) not a permanent ineligibility; written refusal letter required; no waiver; officers must not encourage or discourage reapplying (cut from final text): https://fam.state.gov/FAM/09FAM/09FAM040310.html
+- 9 FAM 402.5 (students): bona fide student; readily available funds for the first year and adequate funds for later years; young applicants "not expected to have a long-range plan", officer looks at present intent; interview in English and reading aloud if the I-20 requires English proficiency and no arrangements are made; no re-evaluation of school's TOEFL/IELTS-based admission unless fraud is suspected: https://fam.state.gov/fam/09FAM/09FAM040205.html
+- Visitor visa page: documents to bring (passport valid 6 months beyond stay, DS-160 confirmation, fee receipt, photo if upload failed); evidence of purpose, intent to depart, ability to pay may be requested; someone else may pay; invitation letter/Affidavit of Support not needed and "not one of the factors"; wilful misrepresentation "may result in the permanent refusal of a visa": https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html/visa
+- Interview waiver narrowing effective 2 September 2025 (announced 25 July 2025), nearly all applicants including under-14 and over-79 need interviews; superseded by the 18 September 2025 update (effective 1 October 2025): https://travel.state.gov/content/travel/en/News/visas-news/interview-waiver-update-july-25-2025.html (the 18 Sept page itself could not be fetched today; its content is described in the sibling article verified on 26 Nov)
+- Country of nationality/residence rule (page last updated 12 Dec 2025; fees for out-of-country applications not refunded/transferred): https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html
+- Social media / online presence: F, M, J announced 18 June 2025 with "public" settings instruction (Yale OISS summary of the State press release): https://oiss.yale.edu/news/department-of-state-announces-enhanced-social-media-vetting-and-resumption-of-visa-interview-scheduling ; later expansion (page updated 25 March 2026, expansion from 30 March): https://travel.state.gov/content/travel/en/News/visas-news/announcement-of-expanded-screening-and-vetting-for-visa-applicants.html ; latest expansion to I, TN, TD "effective October 1" listing categories already covered (F, M, J, H-1B, H-4 etc.; B1/B2 not listed): https://travel.state.gov/en/newsroom/visas/2026/announcement-of-expanded-screening-and-vetting-for-visa-applicants.html
+- US Embassy India: minors must attend in person at every age ("Visa Friday" post, 14 Aug 2026), reported by Business Today 15 Aug 2026: https://businesstoday.in/nri/visa/story/us-visa-rule-change-embassy-clarifies-whether-minors-need-to-be-present-for-in-person-interviews-a-rule-parents-often-miss-549250-2026-08-15
+- US Embassy New Delhi on birth tourism denials (X post, reported 12 Dec 2025): https://www.geo.tv/latest/638894-us-to-deny-tourists-visa-applications-aimed-at-giving-birth-to-secure-citizenship
+- Passport kept on approval, VAC biometrics before interview, post locations: taken from the sibling article /home/claude/knewspaper/daily/drafts/us-visa/article.md (verified 26 Nov 2026).
+
+## Information gain vs top results
+
+Top results (BankBazaar, Atlys, DavidsonMorris, NNU Immigration, Tata AIG) are long lists of questions with generic tips. BankBazaar and Atlys never mention 214(b) or immigrant intent, cover none of the 2025–26 changes, and give no guidance on refusal/reapplication. This article adds: what each question tests, tied to 214(b) and the Foreign Affairs Manual (including the F-1 "present intent / no long-range plan" rule, first-year funds and the English-proficiency rule); the fact that invitation letters/affidavits of support are not a decision factor; the 2025–26 changes (waiver narrowing, residence rule, social-media vetting scope, minors must attend, birth-tourism statement); and a clear explanation of 214(b) vs 221(g) vs misrepresentation and when reapplying makes sense. No scripted answers.
+
+## Could not verify / left out
+
+- in.usembassy.gov pages could not be fetched (robots.txt unreachable); India-specific security rules (phones, bags), arrival times and the on-the-day sequence at the consulate are therefore not stated; the article tells readers to check their appointment letter.
+- travel.state.gov student-visa page and the 18 Sept 2025 waiver page: fetch permission timed out on first attempt (student page later fetched; it still says interviews are required for ages 14–79, which conflicts with the 2025 updates and the Embassy's Aug 2026 statement; the article follows the newer statements). The visitor-visa page has the same outdated 14–79 wording.
+- Typical interview length: not stated by an official source, left out.
+- DS-160 social media identifier question for B1/B2: not verified today, left out.
+- State press release on state.gov (June 2025) could not be fetched; date confirmed via Yale OISS.
+- The $250 visa integrity fee is not discussed (covered in the sibling article).

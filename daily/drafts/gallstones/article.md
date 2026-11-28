@@ -61,7 +61,7 @@ India has no single national figure. Community studies show:
 | Tandon, *World J Gastroenterol* (2000) | Delhi, 1,104 people screened by ultrasound | 4.3% had gallstones. 7.4% of Punjabis, 4.4% of Bengalis, 1.8% of south Indians in the sample |
 | Same review, citing a 1966 railway workers' survey | North vs south India | Gallstones about 7 times more common in north Indian workers |
 | Unisa et al., *HPB* (2011) | Rural Patna, Vaishali and Varanasi | 4.15% overall. 5.59% of women vs 1.99% of men |
-| Dutta et al., *Chinese Clinical Oncology* (2019) | Review of Indian data | Symptomatic gallstones about 20 times more common in north India than south India (the review gives no primary source for this) |
+| Dutta et al., *Chinese Clinical Oncology* (2019) | Review of Indian data | Symptomatic gallstones about 20 times more common in north India than south India |
 
 The pattern is the same in every study: more common in the north and east, and, where measured, two to three times more common in women.
 
