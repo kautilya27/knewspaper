@@ -1153,3 +1153,6 @@ The owner sent three images in chat. Converted to WebP (q80, original sizes), sa
 - classical-dances-of-india → c0f544_2fb7cf70d84d4e9db1fe40af7d665314~mv2.webp (1672×941; eight dancers in classical costumes around a map of India with pins; illustrated, no identifiable people; no text).
 - us-visa-interview-questions → c0f544_7e288db609274308bc19b102dec3e6a0~mv2.webp (1536×1024; applicant facing an officer at a desk, US flag, Statue of Liberty, passport and visa, icons for work/study/home/travel/family; no text).
 All three set to cover true in `state.published` and removed from `pendingImages` (now empty). The pre-render rebuild is left to the 29 Nov morning run, so the pre-rendered pages show these covers from then.
+
+### 2026-11-28: guest-post credit for team.orsella@gmail.com
+Owner asked in chat to give team.orsella@gmail.com the ₹499 plan (1 credit). Added "Single guest post" (plan 57bd1c30-…) as a paid offline order for member ee3a562b-5f73-42d6-91c3-958234ded865 (orsella): order d9e1559b-01c1-375a-b1c2-891caf576274, ACTIVE, PAID, valid until 28 Nov 2027. (The order showed DRAFT for under a minute before turning ACTIVE/PAID on its own; no mark-as-paid needed.)
